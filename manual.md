@@ -50,9 +50,9 @@ GitHub?
 ### When the project is about to be closed?
 * Om möjligt, sätt ihop en kodbok med beskrivningar av fil, variabler och koder. Spara gärna 
 ned den i olika format så att en annan läsare kan använda det som passar.
-• Spara data i originalformat med all metadata på plats.
-• Spara samma filer i “icke-proprietärt” format, dvs data som tab- eller semikolon-separerade textfiler och andra filer som ren text.
-• I textfiler försvinner alla kod- och variabelförklaringar, så spara helst ner även de förklaringarna i annan textfil.
+* Spara data i originalformat med all metadata på plats.
+* Spara samma filer i “icke-proprietärt” format, dvs data som tab- eller semikolon-separerade textfiler och andra filer som ren text.
+* I textfiler försvinner alla kod- och variabelförklaringar, så spara helst ner även de förklaringarna i annan textfil.
 ## A template for reseachers at the medical faculty at UMU
 ### Variable names
 ### Code labels/explanations
@@ -73,22 +73,19 @@ Hänvisa till Eloranta et al? Eller UB? Behövs detta avsnitt alls?
 ## File formats
 Vad menar vi här?
 ## References
-• Broman, K. W., & Woo, K. H. (2018). Data Organization in Spreadsheets. The 
-American Statistician, 72(1), 2–10. 
-https://doi.org/10.1080/00031305.2017.1375989
-• Wickham, H. (2014). Tidy Data. Journal of Statistical Software, 59(10), 1–23. 
-https://doi.org/10.18637/jss.v059.i10
-• FAIR-principles
+* Broman, K. W., & Woo, K. H. (2018). Data Organization in Spreadsheets. The American Statistician, 72(1), 2–10. https://doi.org/10.1080/00031305.2017.1375989
+* Wickham, H. (2014). Tidy Data. Journal of Statistical Software, 59(10), 1–23. https://doi.org/10.18637/jss.v059.i10
+* FAIR-principles
 ## Other sources
-• SND?
-• Reproducible research?
-• R for Data Science?
+* SND?
+* Reproducible research?
+* R for Data Science?
 ## Appendix
 ### How should syntax/scripts be organized?
 A basic recommendation is to have different scripts for different tasks, typically
-• Import of data file
-• Data cleaning
-• Analysis, possibly in steps
+* Import of data file
+* Data cleaning
+* Analysis, possibly in steps
 ### More on scripts in different software
 #### R
 #### SAS
@@ -99,13 +96,8 @@ If different syntax files, a “master” syntax file can use “INSERT FILE” 
 ### Some bad examples
 ### Documentation of variables in Excel
 Min (RL) tanke här är att ge förslag på hur filinformation ska sparas ner om man nu nödvändigtvis vill ha det i Excel, eller kanske allra helst csv-format. Typ:
-• En flik/fil med grundläggande information om datamaterialet: projektnamn, år, ansvarig,... Eventuellt referenser till metodbeskrivningar?
-• En flik/fil med variabelnamn och variabelförklaringar, helst i separata kolumner
-• En flik/fil med variabelnamn och kodförklaringar, gärna med en rad per variabel och flera kolumner för koder och förklaringar, typ “sex|1|man|2|kvinna|” (utan |). 
-Den strukturen är rätt lätt att importera till SPSS och generera syntax för VALUE 
+* En flik/fil med grundläggande information om datamaterialet: projektnamn, år, ansvarig,... Eventuellt referenser till metodbeskrivningar?
+* En flik/fil med variabelnamn och variabelförklaringar, helst i separata kolumner
+* En flik/fil med variabelnamn och kodförklaringar, gärna med en rad per variabel och flera kolumner för koder och förklaringar, typ “sex|1|man|2|kvinna|” (utan |). Den strukturen är rätt lätt att importera till SPSS och generera syntax för VALUE
 LABELS. Samtidigt är den hyfsat generell och någorlunda lättläst.
-• Annan information, ex enheter (“mmol/ml”), helst med variabelnamn och enhet 
-(eller annat) som separata kolumner.
-Detta kan vara bra för arkiveringsvinkeln också i och med att det kan sparas ner i ett 
-icke-proprietärt filformat. Eller är detta överflödigt och/eller kan lämnas till UB:s 
-förslag/mallar?
+* Annan information, ex enheter (“mmol/ml”), helst med variabelnamn och enhet (eller annat) som separata kolumner. Detta kan vara bra för arkiveringsvinkeln också i och med att det kan sparas ner i ett icke-proprietärt filformat. Eller är detta överflödigt och/eller kan lämnas till UB:s förslag/mallar?
