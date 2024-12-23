@@ -1,5 +1,3 @@
-.[TOC].
-
 ## Background
 ### Why is a good structure in research data so important?
 ### Different common needs
