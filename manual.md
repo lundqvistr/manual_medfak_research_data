@@ -29,6 +29,7 @@ Kör på Broman & Woo Manual
 ### Missing values
 ### Avoid having empty cells in the raw data set
 ### Make the data sets rectangular
+Vad tänkte vi här? Vad skulle ett altenativ vara? Flera rektanglar? Exempel från Broman$Woo?
 ### No calculations in the raw data files
 Calculations, avser det formler i Excel-blad? Det är förstås inte bra, men hit hör kanske också färgade celler? 
 ### Pros and cons of using syntax/scripts
