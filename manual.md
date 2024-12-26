@@ -79,7 +79,8 @@ Vad menar vi här?
 ## References
 * Broman, K. W., & Woo, K. H. (2018). Data Organization in Spreadsheets. The American Statistician, 72(1), 2–10. https://doi.org/10.1080/00031305.2017.1375989
 * Wickham, H. (2014). Tidy Data. Journal of Statistical Software, 59(10), 1–23. https://doi.org/10.18637/jss.v059.i10
-* FAIR-principles
+* FAIR-principles, https://www.go-fair.org/fair-principles/
+  eller annan hänvisning?
 ## Other sources
 * SND?
 * Reproducible research?
