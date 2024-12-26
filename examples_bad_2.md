@@ -1,3 +1,5 @@
+Bad format:
+
 |id|date|diag|main_diag|
 |---|---|---|---|
 |1|2021-11-20|I10.1|1|
