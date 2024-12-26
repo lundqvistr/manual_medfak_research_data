@@ -1,4 +1,4 @@
-de## Background
+## Background
 ### Why is a good structure in research data so important?
 ### Different common needs
 #### The PhD student or individual researcher
