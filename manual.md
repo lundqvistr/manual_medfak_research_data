@@ -13,6 +13,9 @@ Här tänkte jag mig (RL) något om vikten av att arbeta med samma “mall” n�
 ### For whom is this document written?
 ### How to use the document
 ### Tidy data
+- Each column corresponds to one variable in the dataset
+- Each row corresponds to one observation
+- All variables in the dataset have the same unit of observation
 ### FAIR data
 ### Data management plans
 ## Principles for data file organization
