@@ -8,7 +8,7 @@
 #### The exact meaning of variables in the data is hard to decipher
 #### Data is not stable
 #### The data structure is not totally consistent between all involved
-Här tänkte jag mig (RL) något om vikten av att arbeta med samma “mall” när det exempelvis är flera regioner är central inblandade i att samla ihop data.
+Här tänkte jag mig (RL) något om vikten av att arbeta med samma “mall” när det exempelvis är flera regioner inblandade i att samla ihop data.
 #### ?
 ### For whom is this document written?
 ### How to use the document
