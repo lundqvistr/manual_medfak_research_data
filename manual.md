@@ -1,4 +1,4 @@
-## Background
+de## Background
 ### Why is a good structure in research data so important?
 ### Different common needs
 #### The PhD student or individual researcher
@@ -92,10 +92,11 @@ A basic recommendation is to have different scripts for different tasks, typical
 * Data cleaning
 * Analysis, possibly in steps
 ### More on scripts in different software
+? Ska detta med?
 #### R
 #### SAS
 #### SPSS
-If different syntax files, a “master” syntax file can use “INSERT FILE” to invoke sub files.
+- If different syntax files, a “master” syntax file can use “INSERT FILE” to invoke sub files.
 #### Stata
 ### Some good examples
 ### Some bad examples
