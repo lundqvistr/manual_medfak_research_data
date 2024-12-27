@@ -102,7 +102,7 @@ A basic recommendation is to have different scripts for different tasks, typical
 #### R
 #### SAS
 #### SPSS
-- If different syntax files, a “master” syntax file can use “INSERT FILE” to invoke sub files.
+- If different syntax files, a “master” syntax file can use ```INSERT FILE``` to invoke sub files.
 #### Stata
 ### Some good examples
 ### Some bad examples
