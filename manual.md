@@ -11,6 +11,11 @@
 Här tänkte jag mig (RL) något om vikten av att arbeta med samma “mall” när det exempelvis är flera regioner inblandade i att samla ihop data.
 #### ?
 ### For whom is this document written?
+### What aspects are *not* covered in this document?
+#### Storage of data
+#### Open Data and repositories
+#### Archiving
+- 
 ### How to use the document
 ### Tidy data
 - Each column corresponds to one variable in the dataset
