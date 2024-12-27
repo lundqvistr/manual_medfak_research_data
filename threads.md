@@ -1,1 +1,2 @@
 - Programvara för manuell inmatning? Excel? Databasprogram? Det finns t ex inst som förordar Access.
+- Kommentar om kommentarer eller funderingar vid manuell inmatning? Det som ofta blir "3, ev 4" eller liknande.
