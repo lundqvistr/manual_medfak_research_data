@@ -15,7 +15,6 @@ Här tänkte jag mig (RL) något om vikten av att arbeta med samma “mall” n�
 #### Storage of data
 #### Open Data and repositories
 #### Archiving
-- 
 ### How to use the document
 ### Tidy data
 - Each column corresponds to one variable in the dataset
