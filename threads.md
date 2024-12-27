@@ -1,1 +1,1 @@
-- Programvara för manuell inmatning? Excel? Databasprogram? Det finns t ex inst som flrordar Access.
+- Programvara för manuell inmatning? Excel? Databasprogram? Det finns t ex inst som förordar Access.
