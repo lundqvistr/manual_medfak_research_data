@@ -1,3 +1,5 @@
+[comment] Ska det in något någonstans om programvara? Att ambitionen här är att vara generell men att det som föreslås kan se rätt olika ut och fungera olika i system?
+
 ## Background
 ### For whom is this document written
 Data is stored in different forms and for different purposes. Some forms are suited for tasks such as follow-up of individual patients in their daily care. Here the use of the file can be simplified by using a visually complex layout and use of colors, bold text or the like. The goal is usually to collect and use data for each individual, not to calculate summaries such as means for several individuals.
@@ -19,6 +21,7 @@ Here we are concerned with the latter use.
 #### ?
 ### What aspects are *not* covered in this document?
 #### Storage of data
+[comment] Finns det något vi kan hänvisa till här? UMU? Regionerna?
 #### Open Data and repositories
 #### Archiving
 ### How to use the document
