@@ -98,6 +98,7 @@ Vad menar vi här?
 * SND?
 * Reproducible research?
 * R for Data Science?
+* Corti, L., Van den Eynden, V., Bishop, L., Woollard, M. (2019), Managing and Sharing Research Data - A Guide to Good Practice, Second Edition, SAGE Publications Ltd.
 ## Appendix
 ### How should syntax/scripts be organized?
 A basic recommendation is to have different scripts for different tasks, typically
