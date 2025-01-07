@@ -1,11 +1,11 @@
-[comment] Ska det in något någonstans om programvara? Att ambitionen här är att vara generell men att det som föreslås kan se rätt olika ut och fungera olika i system?
+[comment] Ska det in något någonstans om programvara, att det kan vara olika lätt att få in metadata? Att ambitionen här är att vara generell men att det som föreslås kan se rätt olika ut och fungera olika i system?
 
 ## Background
 ### For whom is this document written
 Data is stored in different forms and for different purposes. Some forms are suited for tasks such as follow-up of individual patients in their daily care. Here the use of the file can be simplified by using a visually complex layout and use of colors, bold text or the like. The goal is usually to collect and use data for each individual, not to calculate summaries such as means for several individuals.
 
-Another purpose is research where the goal is to summarize important aspects of the individual records, and where data on individuals usually is not important. This latter kind of use most often requires a layout for the data which is different from the fo mer one. 
-Here we are concerned with the latter use.
+Another purpose is research where the goal is to summarize important aspects of the individual records, and where data on individuals usually is not important. This latter kind of use most often requires a layout for the data which is different from the fo mer one. Here we are concerned with the latter use.
+Further, the data considered is of the kind usually called _quantitative_. Considerations for the structure in qualitative data must be found elsewhere.
 ### Why is a good structure in research data so important?
 ### Different common needs
 #### The PhD student or individual researcher
