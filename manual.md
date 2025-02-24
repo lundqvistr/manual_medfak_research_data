@@ -17,12 +17,12 @@ Further, the data considered is of the kind usually called _quantitative_. Consi
 #### Data is not stable
 #### The data structure is not totally consistent for all involved
 
-[comment]: # (Här tänkte jag mig (RL) något om vikten av att arbeta med samma “mall” när det exempelvis är flera regioner inblandade i att samla ihop data.)
+[//]: # (Här tänkte jag mig (RL) något om vikten av att arbeta med samma “mall” när det exempelvis är flera regioner inblandade i att samla ihop data.)
 
 #### ?
 ### What aspects are _not_ covered in this document?
 #### Storage of data
-[comment] Finns det något vi kan hänvisa till här? UMU? Regionerna?
+[//]: # (Finns det något vi kan hänvisa till här? UMU? Regionerna?)
 #### Open Data and repositories
 #### Archiving
 ### How to use the document
@@ -116,9 +116,9 @@ A basic recommendation is to have different scripts for different tasks, typical
 ### Some good examples
 ### Some bad examples
 ### Documentation of variables in Excel
-Min (RL) tanke här är att ge förslag på hur filinformation ska sparas ner om man nu nödvändigtvis vill ha det i Excel, eller kanske allra helst csv-format. Typ:
+[//]: # (Min (RL) tanke här är att ge förslag på hur filinformation ska sparas ner om man nu nödvändigtvis vill ha det i Excel, eller kanske allra helst csv-format. Typ:
 * En flik/fil med grundläggande information om datamaterialet: projektnamn, år, ansvarig,... Eventuellt referenser till metodbeskrivningar?
 * En flik/fil med variabelnamn och variabelförklaringar, helst i separata kolumner
 * En flik/fil med variabelnamn och kodförklaringar, gärna med en rad per variabel och flera kolumner för koder och förklaringar, typ “sex|1|man|2|kvinna|” (utan |). Den strukturen är rätt lätt att importera till SPSS och generera syntax för ```VALUE
 LABELS```. Samtidigt är den hyfsat generell och någorlunda lättläst.
-* Annan information, ex enheter (“mmol/ml”), helst med variabelnamn och enhet (eller annat) som separata kolumner. Detta kan vara bra för arkiveringsvinkeln också i och med att det kan sparas ner i ett icke-proprietärt filformat. Eller är detta överflödigt och/eller kan lämnas till UB:s förslag/mallar?
+* Annan information, ex enheter (“mmol/ml”), helst med variabelnamn och enhet (eller annat) som separata kolumner. Detta kan vara bra för arkiveringsvinkeln också i och med att det kan sparas ner i ett icke-proprietärt filformat. Eller är detta överflödigt och/eller kan lämnas till UB:s förslag/mallar?)
