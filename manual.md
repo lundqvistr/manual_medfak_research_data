@@ -2,9 +2,9 @@
 
 ## Background
 ### For whom is this document written
-Data is stored in different forms and for different purposes. Some forms are suited for tasks such as follow-up of individual patients in their daily care. Here the use of the file can be simplified by using a visually complex layout and use of colors, bold text or the like. The goal is usually to collect and use data for each individual, not to calculate summaries such as means for several individuals.
+Data is stored in different forms and for different purposes. Some forms are suited for tasks such as follow-up of individual patients in their daily care. Then the use of the file can be simplified by using a visually complex layout and use of colors, bold text or the like. The goal is in this case usually to collect and use data for each individual, not to calculate summaries such as means for several individuals.
 
-Another purpose is research where the goal is to summarize important aspects of the individual records, and where data on individuals usually is not important. This latter kind of use most often requires a layout for the data which is different from the fo mer one. Here we are concerned with the latter use.
+Another purpose is research where the goal is to summarize important aspects of the individual records, and where data on individuals usually is not important. This latter kind of use most often requires a layout for the data which is different from the fo mer one. Here we are concerned with this latter use.
 
 Further, the data considered is of the kind usually called _quantitative_. Considerations for the structure in qualitative data must be found elsewhere.
 ### Why is a good structure in research data so important?
@@ -15,12 +15,12 @@ Further, the data considered is of the kind usually called _quantitative_. Consi
 ### Common problems
 #### The exact meaning of variables in the data is hard to decipher
 #### Data is not stable
-#### The data structure is not totally consistent between all involved
+#### The data structure is not totally consistent for all involved
 
 [comment]: # (Här tänkte jag mig (RL) något om vikten av att arbeta med samma “mall” när det exempelvis är flera regioner inblandade i att samla ihop data.)
 
 #### ?
-### What aspects are *not* covered in this document?
+### What aspects are _not_ covered in this document?
 #### Storage of data
 [comment] Finns det något vi kan hänvisa till här? UMU? Regionerna?
 #### Open Data and repositories
