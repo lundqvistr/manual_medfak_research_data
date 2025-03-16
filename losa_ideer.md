@@ -10,3 +10,6 @@
   - T10: Julia Otten, Marcus Schnitt-Egenolf...
   - Doktorander? Eller ska det bli indirekt, via handledare, fakultet,...
   - Forum/kanal för handledare? Docentutbildning?
+  - Biblioteket? Vem?
+- Behöver regioner komma med på något sätt? Inte alls givet.
+  
