@@ -6,4 +6,7 @@
   - En doktorand kanske jobbar med UMU-dator och använder UMU-resurser
   - En annan kanske håller sig till regionens resurser
 - Betyder det att institutioner och regioner kan behöva sätta ihop egna manualer som komplement? Eller går manualen att skriva så att frågetecken på ett lösare sätt hänvisas till andra som inte nödvändigtvis behäver sätta ihop egna manualer? Det senare ter sig som det enda realistiska.
-- 
+- Vilka är inblandade vid UMU, vilka kan tänkas vara intresserade och eventuellt ha förslag och synpunkter?
+  - T10: Julia Otten, Marcus Schnitt-Egenolf...
+  - Doktorander? Eller ska det bli indirekt, via handledare, fakultet,...
+  - Forum/kanal för handledare? Docentutbildning?
