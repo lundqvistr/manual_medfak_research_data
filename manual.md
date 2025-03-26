@@ -2,44 +2,62 @@
 
 ## Background
 ### For whom is this document written
+The authors of the present document have extensive experience from working as biostatisticians. We have seen horrible examples of data filkes. The basic courses of biostatistics ...does not teach this, despite being a fundemental part of the data analysis, and is a time consuming task. 
 Data is stored in different forms and for different purposes. Some forms are suited for tasks such as follow-up of individual patients in their daily care. Then the use of the file can be simplified by using a visually complex layout and use of colors, bold text or the like. The goal is in this case usually to collect and use data for each individual, not to calculate summaries such as means for several individuals.
 
 Another purpose is research where the goal is to summarize important aspects of the individual records, and where data on individuals usually is not important. This latter kind of use most often requires a layout for the data which is different from the fo mer one. Here we are concerned with this latter use.
 
 Further, the data considered is of the kind usually referred to as _quantitative_. Considerations for the structure in qualitative data must be found elsewhere.
 ### Why is a good structure in research data so important?
-### Different common needs
-#### The PhD student or individual researcher
-#### The research team
-#### The research environment, now and later
-### Common problems
+Important for you and and your project in your currect work. Good quality research requires "ordning reda"
+Reproducability/open data/open science
+Archiving
+Cooperation/sharing; other people will need to understand what you have done 
+
+Different needs (integreras i ovanstående stolpar)
+  - The PhD student or individual researcher
+  - The research team
+  - The research environment, now and later
+
+Räkna inte med att det program du arbetar i är det enda program som kommer användas för att jobba med dina data. Du, eller någon annan, kommer oftast behöva använda något annat program. 
+    
+### Example of common problems
+  - inconsistencies in naming variables makes coding and writing challenging.
+  - lack of documention makes information on data and data calculations go lost
+  - storing data in vizually appealing format of e.g. excel files rather than prioritizing  functional formats. 
 #### The exact meaning of variables in the data is hard to decipher
 #### Data is not stable
+A database if a dynamic, ändras kontinuerligt. 
 #### The data structure is not totally consistent for all involved
 
-[//]: # (Här tänkte jag mig (RL) något om vikten av att arbeta med samma “mall” när det exempelvis är flera regioner inblandade i att samla ihop data.)
+<!---[//]: # (Här tänkte jag mig (RL) något om vikten av att arbeta med samma “mall” när det exempelvis är flera regioner inblandade i att samla ihop data.)-->
 
 #### ?
+### FAIR data
 ### What aspects are _not_ covered in this document?
 #### Storage of data
 [//]: # (Finns det något vi kan hänvisa till här? UMU? Regionerna?)
 #### Open Data and repositories
+#### Data management plans
+IMportant to have one, data structure important part of the DMP, but how the DMP should be written is not covered. Ref till SND. 
 #### Archiving
+
 ### How to use the document
+This document is suggested template for how to structure reseach data files at the medical faculty of umeå university. Our hope is that spreading document to new PhD-student and supervisor will promote good routines on ..., and ultimately lead to higher research quality.
+
+## Principles for data file organization
 ### Tidy data
 - Each column corresponds to one variable in the dataset
 - Each row corresponds to one observation
 - All variables in the dataset have the same unit of observation
-### FAIR data
-### Data management plans
-## Principles for data file organization
-### Tidy data
-Referens
+ref
 #### Each variable must have its own column
 #### Each observation must have its own row
 #### Each value must have its own cell
 ### Variable names
-Kör på Broman & Woo 
+Välj en styleguide
+We are recomending the use of google's r style guide. 
+Use english language, avoid e.g. å ä ö.
 ### Codes should usually be assigned good labels/explanations
 ### Use English names/terms
 ### Choose good names for things
