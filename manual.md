@@ -31,7 +31,6 @@ What are the typical needs for different users?
 #### The research team
 
 #### The research environment, now and later
-
     
 ### Example of common problems
   - inconsistencies in naming variables makes coding and writing challenging.
@@ -101,8 +100,8 @@ ref
 Our recommendation is to use a basically simple structure since it works everywhere:
 - Do not use diacritical letters (å, ä, ö or the like) in variable names
 - Use only lower case letters
- -- Do not begin variable names with upper case letters
- -- Do not use names with mixed cases, such as the so called SnakeCase
+     - Do not begin variable names with upper case letters
+     - Do not use names with mixed cases, such as the so called SnakeCase
 - Use names in english
 - Separate parts in names with underscore ("_")
 - Do not use spaces in variable names
@@ -113,6 +112,7 @@ You can also locate a style guide for your software of choice, such as [Google's
 The most important advice is however to be as _consistent_ as possible irrespective of the chosen structure. 
 
 ### Where codes are used, give them good labels/explanations
+Codes used for categorical variables should be assigned explanations. In case your system does not support such details, then you should at least provide external documentation of what the codes mean, i e a [_codebook_](#data-dictionary-/-codebooks)
 
 ### Missing values
 
