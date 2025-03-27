@@ -4,7 +4,7 @@
 ### For whom is this document written
 The authors of the present document have extensive experience from working as biostatisticians. We have all seen many examples of data files structured in a way that have been demanding for both ourselves and the users. Usually, a typical basic course of biostatistics does not cover the aspects we aim at here, namely how to set up a good data structure, despite this being a fundamental part of analysing data.
 
-Data is stored in different forms and for different purposes. Some forms are suited for tasks such as follow-up of individual patients in their daily care. Then the use of the file can be simplified by using a "visual layout", colors, bold text or the like. The goal is in this case usually to collect and use data for each individual, not to calculate summaries such as means for several individuals.
+Research data is stored in different forms and for different purposes. Some forms are suited for tasks such as follow-up of individual patients in their daily care. Then the use of the file can be simplified by using a "visual layout", colors, bold text or the like. The goal is in this case usually to collect and use data for each individual, not to calculate summaries such as means for several individuals.
 
 Another purpose is research where the goal is to summarize important aspects of the individual records, and where data on individuals usually is not important. This latter kind of use most often requires a layout for the data which is different from the fo mer one. Here we are concerned with this latter use.
 
@@ -15,28 +15,35 @@ Having a good structure is simply fundamental for working efficiently, both for 
 
 #### Reproducability/open data/open science
 There has been an increasing emphasis in many areas on _reproducibility_, on _open data_ and _open science_. None of these goals can be attained if the underlying data sets are poorly documented, stored in dormats noone can access and the like.
+<!---Något om att "open science" inte är självklart enkelt i medicinsk forskning?--->
 
 #### Cooperation/sharing
-Many research projects have an after-life. There could be other researchers interested to make a followup on the same individuals years after the forst study was closed. A supervisor might want to put data in the hands of new PhD students. You could be contacted by other researchers who are interested in your work, ending a renewed joint project. In all those and many other situations there is a definite need for the original datasets to be well structured.
+Many research projects have an afterlife. There could be other researchers interested to make a followup on the same individuals several years after the first study. A supervisor might want to put previously collected data in the hands of new PhD students. You could be contacted by other researchers who are interested in your work, ending in a new joint project. In all those and many other situations there is a definite need for the original datasets to be well structured.
 
 #### Archiving/transparency
 When research projects have reached their final days, most just wither away. Given the resources spent, this seems as a poor outcome. It is both a matter of making it possible to wake projects for future research and part of making the research efforts transparent. The latter could simply be seen as an important part of maintaining the publics' trust in the scientific community. So the research data should eventually be stored and archived in a manner that makes it possible to dig up even dead projects. 
 
 ### Different needs (integreras i ovanstående stolpar? Eller som ett eget avsnitt? Här blir det den senare varianten)
 What are the typical needs for different users? 
+
 #### The PhD student or individual researcher
+
 #### The research team
+
 #### The research environment, now and later
 
-Räkna inte med att det program du arbetar i är det enda program som kommer användas för att jobba med dina data. Du, eller någon annan, kommer oftast behöva använda något annat program. 
     
 ### Example of common problems
   - inconsistencies in naming variables makes coding and writing challenging.
   - lack of documention makes information on data and data calculations go lost
-  - storing data in vizually appealing format of e.g. excel files rather than prioritizing  functional formats. 
+  - storing data in vizually appealing format of e.g. excel files rather than prioritizing  functional formats.
+  - exchange of data between different software systems
+  - 
 #### The exact meaning of variables in the data is hard to decipher
+
 #### Data is not stable
 A database if a dynamic, ändras kontinuerligt. 
+
 #### The data structure is not totally consistent for all involved
 
 <!---[//]: # (Här tänkte jag mig (RL) något om vikten av att arbeta med samma “mall” när det exempelvis är flera regioner inblandade i att samla ihop data.)-->
@@ -48,7 +55,7 @@ A database if a dynamic, ändras kontinuerligt.
 ### What aspects are _not_ covered in this document?
 
 #### Storage of data
-[//]: # (Finns det något vi kan hänvisa till här? UMU? Regionerna?)
+<!---Finns det något vi kan hänvisa till här? UMU? Regionerna?-->
 
 #### Open Data and repositories
 
@@ -58,7 +65,7 @@ Important to have one, data structure important part of the DMP, but how the DMP
 #### Archiving
 
 #### Suggestions or style guides for particular software systems
-The software in use encompass a range of systems, from spreadsheets to more compehensive systems such as as R. If you seaarch for style guides or more general suggestions for how a particular system should be used, you can probably find many sources. We do not claim that the suggestions made here are the only ones or the best. We do however claim that the approach here is simple enough to use in _all_ systems. So if you stick to the suggestions found here, your life will become simpler and naturally also better.
+The software systems in use encompass a range of systems, from spreadsheets to more compehensive systems specifically designed for statistical analyses. If you search for style guides or more general suggestions for how a particular system should be used, you can probably find many sources. We do not claim that the suggestions made here are the only ones or the best. We do however claim that the approach here is simple enough to use in _all_ systems. So if you stick to the suggestions found here, your life will become simpler and naturally also better.
 
 ### How to use the document
 This document is suggested as a template for how to structure reseach data files at the medical faculty of umeå university. Our hope is that spreading document to new PhD-student and supervisor will promote good routines on ..., and ultimately lead to higher research quality.
@@ -73,18 +80,27 @@ In case you are not involved in medical research, we still hope that the suggest
 - All variables in the dataset have the same unit of observation
 ref
 
-#### Each variable must have its own column
+#### Each variable correpsonds to one variable in the dataset
 
-#### Each observation must have its own row
+#### Each row corresponds to one observation
 
-#### Each value must have its own cell
+#### All variables in the dataset have the same unit of observation
 
 ### Variable names
-Välj en styleguide
-We are recomending the use of google's r style guide. 
-Use english language, avoid e.g. å ä ö.
+Our recommendation is to use a basically simple structure since it works everywhere:
+- Do not use diacritical letters (å, ä, ö or the like) in variable names
+- Use only lower case letters
+- Use names in english
+- Do not use names with mixed cases, such as the so called SnakeCase
+- Separate parts in names with underscore ("_")
+- Do not use spaces in variable names
+- Name variables so that the names provide a sufficiently clear description of the content. Short and meaningful is worth striving for.
 
-### Codes should usually be assigned good labels/explanations
+You can also locate a style guide for your software of choice, such as [Google's R style guide](https://google.github.io/styleguide/Rguide.html#:~:text=R%20is%20a%20high-level%20programming%20language%20used%20primarily,the%20Tidyverse%20Style%20Guide%20by%20Hadley%20Wickham%20license) or [The DIME Analytics Stata Style Guide](https://worldbank.github.io/dime-data-handbook/coding.html#the-dime-analytics-stata-style-guide). It is however important to realize that there are many such guides, and they might not be telling the same storry. 
+
+The most important advice is however to be as consistent as possible irrespective of the chosen structure. 
+
+### Where codes are used, give them good labels/explanations
 
 ### Use English names/terms
 
