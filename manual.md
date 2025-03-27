@@ -1,23 +1,32 @@
-[//]: # (Ska det in något någonstans om programvara, att det kan vara olika lätt att få in metadata? Att ambitionen här är att vara generell men att det som föreslås kan se rätt olika ut och fungera olika i system?)
+<!---Ska det in något någonstans om programvara, att det kan vara olika lätt att få in metadata? Att ambitionen här är att vara generell men att det som föreslås kan se rätt olika ut och fungera olika i system?-->
 
 ## Background
 ### For whom is this document written
-The authors of the present document have extensive experience from working as biostatisticians. We have seen horrible examples of data filkes. The basic courses of biostatistics ...does not teach this, despite being a fundemental part of the data analysis, and is a time consuming task. 
-Data is stored in different forms and for different purposes. Some forms are suited for tasks such as follow-up of individual patients in their daily care. Then the use of the file can be simplified by using a visually complex layout and use of colors, bold text or the like. The goal is in this case usually to collect and use data for each individual, not to calculate summaries such as means for several individuals.
+The authors of the present document have extensive experience from working as biostatisticians. We have all seen many examples of data files structured in a way that have been demanding for bout ourselves and the users. Usually, a typical basic course of biostatistics does not cover the aspects we aim at here, namely how to set up a good structure in data, despite being a fundamental part of data analysis.
+
+Data is stored in different forms and for different purposes. Some forms are suited for tasks such as follow-up of individual patients in their daily care. Then the use of the file can be simplified by using a "visual layout", colors, bold text or the like. The goal is in this case usually to collect and use data for each individual, not to calculate summaries such as means for several individuals.
 
 Another purpose is research where the goal is to summarize important aspects of the individual records, and where data on individuals usually is not important. This latter kind of use most often requires a layout for the data which is different from the fo mer one. Here we are concerned with this latter use.
 
 Further, the data considered is of the kind usually referred to as _quantitative_. Considerations for the structure in qualitative data must be found elsewhere.
-### Why is a good structure in research data so important?
-Important for you and and your project in your currect work. Good quality research requires "ordning reda"
-Reproducability/open data/open science
-Archiving
-Cooperation/sharing; other people will need to understand what you have done 
 
-Different needs (integreras i ovanstående stolpar)
-  - The PhD student or individual researcher
-  - The research team
-  - The research environment, now and later
+### Why is a good structure in research data so important?
+Having a good structure is simply fundamental for working efficiently, both for yourself during the project and in other contexts.
+
+#### Reproducability/open data/open science
+There has been an increasing emphasis in many areas on _reproducibility_, on _open data_ and _open science_. None of these goals can be attained if the underlying data sets are poorly documented, stored in dormats noone can access and the like.
+
+#### Cooperation/sharing
+Many research projects have an after-life. There could be other researchers interested to make a followup on the same individuals years after the forst study was closed. A supervisor might want to put data in the hands of new PhD students. You could be contacted by other researchers who are interested in your work, ending a renewed joint project. In all those and many other situations there is a definite need for the original datasets to be well structured.
+
+#### Archiving/transparency
+When research projects have reached their final days, most just wither away. Given the resources spent, this seems as a poor outcome. It is both a matter of making it possible to wake projects for future research and part of making the research efforts transparent. The latter could simply be seen as an important part of maintaining the publics' trust in the scientific community. So the research data should eventually be stored and archived in a manner that makes it possible to dig up even dead projects. 
+
+### Different needs (integreras i ovanstående stolpar? Eller som ett eget avsnitt? Här blir det den senare varianten)
+What are the typical needs for different users? 
+#### The PhD student or individual researcher
+#### The research team
+#### The research environment, now and later
 
 Räkna inte med att det program du arbetar i är det enda program som kommer användas för att jobba med dina data. Du, eller någon annan, kommer oftast behöva använda något annat program. 
     
