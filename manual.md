@@ -39,6 +39,7 @@ What are the typical needs for different users?
   - storing data in vizually appealing format of e.g. excel files rather than prioritizing  functional formats.
   - exchange of data between different software systems
   - 
+
 #### The exact meaning of variables in the data is hard to decipher
 
 #### Data is not stable
@@ -46,41 +47,51 @@ A database if a dynamic, ändras kontinuerligt.
 
 #### The data structure is not totally consistent for all involved
 
-<!---[//]: # (Här tänkte jag mig (RL) något om vikten av att arbeta med samma “mall” när det exempelvis är flera regioner inblandade i att samla ihop data.)-->
+<!---Här tänkte jag mig (RL) något om vikten av att arbeta med samma “mall” när det exempelvis är flera regioner inblandade i att samla ihop data.)-->
 
 #### ?
 
-### FAIR data
+### FAIR data. Eller? Är detta ett begrepp vi ska bekymra oss om?
+FAIR data should be understood as Findable, Accessible, Interoperable and Reusable.
+- Findable: Metadata and data should be easy to find for both humans and computers.
+- Accessible: When the data has been found the required data, the user needs to know how the data can be accessed, possibly including authentication and authorisation. (Krångligt)
+- Interoperable: (Också krångligt)
+- Resusable: (Också krångligt)
 
 ### What aspects are _not_ covered in this document?
 
+#### FAIR data?
+
 #### Storage of data
-<!---Finns det något vi kan hänvisa till här? UMU? Regionerna?-->
+Researchers and students involved in the kind of research we have focused throughout this document are active in different organizational settings: mainly within universities, mainly in clinical work or mixtures of the two, within a smaller group or with a multicenter approach spanning an entire country or several countries. Depending on the organization you find yourself in, there are hopefully structures in place for storing your research data in a secure way. However, the practical arrangements are so different that it is not possible to make any general suggestions.
 
 #### Open Data and repositories
+Open Data and Open Science are concepts worth striving for. However, there are limitations to what can be made open when it comes to data in typical medical research. It is also an area where both practical and legal issues have to be considered, and the expertise in such matters is not found among the authors of this document.
 
 #### Data management plans
-Important to have one, data structure important part of the DMP, but how the DMP should be written is not covered. Ref till SND. 
+The concept of data management plans (DMP) has become increasingly emphasized in many contexts. There are funding agencies which require that applications should contain such DMP's.  The basic idea is that a DMP should provide information on how research data is managed throughout the project, and the purpose is to ensure that data is handled securely, legally, ethically. A good souce is of [Checklist for data management plans](https://snd.se/en/resources/checklist-data-management-plans) provided by [the Swedish National Data Service (SND)](https://snd.se/en).
 
 #### Archiving
+There are legal requirements for the archiving of completed research projects: what, how, for how long are typical questions. Universities and health care providers have their own implementations for the procedures involved.  
 
 #### Suggestions or style guides for particular software systems
-The software systems in use encompass a range of systems, from spreadsheets to more compehensive systems specifically designed for statistical analyses. If you search for style guides or more general suggestions for how a particular system should be used, you can probably find many sources. We do not claim that the suggestions made here are the only ones or the best. We do however claim that the approach here is simple enough to use in _all_ systems. So if you stick to the suggestions found here, your life will become simpler and naturally also better.
+The software systems in use encompass a range of systems, from spreadsheets to more compehensive systems specifically designed for statistical analyses. If you search for style guides or more general suggestions for how a particular system should be used, you can probably find many sources. We do not claim that the suggestions made here are the only ones or the best. We do however claim that the approach here is simple enough to use in _all_ systems. So if you stick to the suggestions found here, your (research) life will become both simpler and better.
 
 ### How to use the document
-This document is suggested as a template for how to structure reseach data files at the medical faculty of umeå university. Our hope is that spreading document to new PhD-student and supervisor will promote good routines on ..., and ultimately lead to higher research quality.
+This document is suggested as a template for how to structure reseach data files at the Medical faculty of Umeå University. Our hope is that spreading document to new PhD-student and supervisor will promote good routines on ..., and ultimately lead to higher research quality.
 
 In case you are not involved in medical research, we still hope that the suggestions made here are relevant to you. After all, even though there are many fields in science, there are also many common tasks in the analysis of the data.  
 
 ## Principles for data file organization
 
 ### Tidy data
+
 - Each column corresponds to one variable in the dataset
 - Each row corresponds to one observation
 - All variables in the dataset have the same unit of observation
 ref
 
-#### Each variable correpsonds to one variable in the dataset
+#### Each variable corresponds to one variable in the dataset
 
 #### Each row corresponds to one observation
 
@@ -90,21 +101,18 @@ ref
 Our recommendation is to use a basically simple structure since it works everywhere:
 - Do not use diacritical letters (å, ä, ö or the like) in variable names
 - Use only lower case letters
+ -- Do not begin variable names with upper case letters
+ -- Do not use names with mixed cases, such as the so called SnakeCase
 - Use names in english
-- Do not use names with mixed cases, such as the so called SnakeCase
 - Separate parts in names with underscore ("_")
 - Do not use spaces in variable names
 - Name variables so that the names provide a sufficiently clear description of the content. Short and meaningful is worth striving for.
 
 You can also locate a style guide for your software of choice, such as [Google's R style guide](https://google.github.io/styleguide/Rguide.html#:~:text=R%20is%20a%20high-level%20programming%20language%20used%20primarily,the%20Tidyverse%20Style%20Guide%20by%20Hadley%20Wickham%20license) or [The DIME Analytics Stata Style Guide](https://worldbank.github.io/dime-data-handbook/coding.html#the-dime-analytics-stata-style-guide). It is however important to realize that there are many such guides, and they might not be telling the same storry. 
 
-The most important advice is however to be as consistent as possible irrespective of the chosen structure. 
+The most important advice is however to be as _consistent_ as possible irrespective of the chosen structure. 
 
 ### Where codes are used, give them good labels/explanations
-
-### Use English names/terms
-
-### Choose good names for things
 
 ### Missing values
 
