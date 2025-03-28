@@ -90,7 +90,7 @@ In case you are not involved in medical research, we still hope that the suggest
 
 ## Principles for data file organization
 
-<!---Börja med punklista, följt av punkterna i rubrikform?-->
+<!---Börja med punklista, följt av punkterna i rubrikform? Eller direkt som rubriker?-->
 ### Tidy data
 - Each column corresponds to one variable in the dataset
 - Each row corresponds to one observation
@@ -98,6 +98,7 @@ In case you are not involved in medical research, we still hope that the suggest
 <!---ref?-->
 
 #### Each variable corresponds to one variable in the dataset
+<!---Ngt om multiple response? Egen punkt eller något inlagt här?-->
 
 #### Each row corresponds to one observation
 
@@ -137,12 +138,9 @@ Calculations, avser det formler i Excel-blad? Det är förstås inte bra, men hi
 
 ### Manual corrections or corrections in scripts?
 
-### Be consistent
-
 ## Work flow
 
-### Structure of project documents
-Referera till UB. 
+### Referera till UB på ngt sätt? 
 
 ### The raw data file
 Föreslå att skrivskydda rådata?
@@ -167,23 +165,9 @@ ned den i olika format så att en annan läsare kan använda det som passar.
 * Spara samma filer i “icke-proprietärt” format, dvs data som tab- eller semikolon-separerade textfiler och andra filer som ren text.
 * I textfiler försvinner alla kod- och variabelförklaringar, så spara helst ner även de förklaringarna i annan textfil.
 
-## A template for reseachers at the medical faculty at UMU
-
-### Variable names
-
-### Code labels/explanations
-
-## Date variables
-
-### Missing values
-
-### Multiple response
-
-## Data dictionary/codebooks
-
-### Why codebook?
-
-### When is a codebook especially important?
+### Data dictionary/codebooks
+- Why codebook?
+- When is a codebook especially important?
 
 ## The structure of data files and folders
 Hänvisa till Eloranta et al? Eller UB? Behövs detta avsnitt alls?
