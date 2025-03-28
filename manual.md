@@ -14,16 +14,19 @@ Further, the data considered is of the kind usually referred to as _quantitative
 Having a good structure is simply fundamental for working efficiently, both for yourself during the project and in other contexts.
 
 #### Reproducability/open data/open science
-There has been an increasing emphasis in many areas on _reproducibility_, on _open data_ and _open science_. None of these goals can be attained if the underlying data sets are poorly documented, stored in dormats noone can access and the like.
+There has been an increasing emphasis in many areas on _reproducibility_, on _open data_ and _open science_. None of these goals can be attained if the underlying data sets are poorly documented, stored in formats no one can access and the like.
 <!---Något om att "open science" inte är självklart enkelt i medicinsk forskning?--->
 
-#### Cooperation/sharing
+#### Projects often live long 
 Many research projects have an afterlife. There could be other researchers interested to make a followup on the same individuals several years after the first study. A supervisor might want to put previously collected data in the hands of new PhD students. You could be contacted by other researchers who are interested in your work, ending in a new joint project. In all those and many other situations there is a definite need for the original datasets to be well structured.
+
+#### Cooperation
+Some projects are from the start set up as based on more than one researcher or research group. Data can be collected in multiple centres, and the combined data set can also be used in multiple centres. In such cases, there is a definite need for well-designed data structures. 
 
 #### Archiving/transparency
 When research projects have reached their final days, most just wither away. Given the resources spent, this seems as a poor outcome. It is both a matter of making it possible to wake projects for future research and part of making the research efforts transparent. The latter could simply be seen as an important part of maintaining the publics' trust in the scientific community. So the research data should eventually be stored and archived in a manner that makes it possible to dig up even dead projects. 
 
-### Different needs (integreras i ovanstående stolpar? Eller som ett eget avsnitt? Här blir det den senare varianten)
+### Different needs (integreras i ovanstående stolpar? Eller som ett eget avsnitt? Här blir det den senare varianten. Eller behövs detta alls? Mycket står ju ovan.)
 What are the typical needs for different users? 
 
 #### The PhD student or individual researcher
@@ -32,15 +35,19 @@ What are the typical needs for different users?
 
 #### The research environment, now and later
     
+<!---Hmmm... Punktlistan, räcker den? Eller behövs det förklarande text? Om det senare, ska punklistan göras om till rubriker?-->
 ### Example of common problems
-  - inconsistencies in naming variables makes coding and writing challenging.
-  - lack of documention makes information on data and data calculations go lost
-  - storing data in vizually appealing format of e.g. excel files rather than prioritizing  functional formats.
-  - exchange of data between different software systems
-  - 
+  - Inconsistencies in naming variables can make coding and writing challenging
+  - Lack of documention of codes can make calculations or creation of new derived variables more or less impossible
+  - Data structured in vizually appealing format - parts of data placed in different spots in the file, colored cells,... - is often difficult to process for statistical analysis
+  - Data stored in different file formats can make compilation of files difficult, and hinder exchange of data
+  - Dates, often a difficult kind of data, stored in one system can be hard to define as real dates in another system 
+  - Exchange of data between different software systems
+  - Data sets collected in more than one centre are often marred by inconsistencies in the formats used by the centres involved, making the compilation of data challenging
 
 #### The exact meaning of variables in the data is hard to decipher
 
+<!---Hör väl egentligen inte hit, detta är mer ett argument för skript/syntax-->
 #### Data is not stable
 A database if a dynamic, ändras kontinuerligt. 
 
@@ -62,33 +69,33 @@ FAIR data should be understood as Findable, Accessible, Interoperable and Reusab
 #### FAIR data?
 
 #### Storage of data
-Researchers and students involved in the kind of research we have focused throughout this document are active in different organizational settings: mainly within universities, mainly in clinical work or mixtures of the two, within a smaller group or with a multicenter approach spanning an entire country or several countries. Depending on the organization you find yourself in, there are hopefully structures in place for storing your research data in a secure way. However, the practical arrangements are so different that it is not possible to make any general suggestions.
+Researchers and students involved in the kind of research we have focused throughout this document are active in different organizational settings: mainly within universities, mainly in clinical work or mixtures of the two, within a smaller group or with a multicenter approach spanning an entire country or several countries. Depending on the organization you find yourself in, there are hopefully structures in place for storing your research data in a secure way. However, the practical arrangements are so different that it is not possible to provide any specific suggestions here.
 
 #### Open Data and repositories
 Open Data and Open Science are concepts worth striving for. However, there are limitations to what can be made open when it comes to data in typical medical research. It is also an area where both practical and legal issues have to be considered, and the expertise in such matters is not found among the authors of this document.
 
 #### Data management plans
-The concept of data management plans (DMP) has become increasingly emphasized in many contexts. There are funding agencies which require that applications should contain such DMP's.  The basic idea is that a DMP should provide information on how research data is managed throughout the project, and the purpose is to ensure that data is handled securely, legally, ethically. A good souce is of [Checklist for data management plans](https://snd.se/en/resources/checklist-data-management-plans) provided by [the Swedish National Data Service (SND)](https://snd.se/en).
+The concept of data management plans (DMP) has become increasingly emphasized in many contexts. There are funding agencies which require that applications should contain such DMP's.  The basic idea is that a DMP should provide information on how research data is managed throughout the project, and the purpose is to ensure that data is handled securely, legally and ethically. A good source is [Checklist for data management plans](https://snd.se/en/resources/checklist-data-management-plans) provided by [the Swedish National Data Service (SND)](https://snd.se/en).
 
 #### Archiving
 There are legal requirements for the archiving of completed research projects: what, how, for how long are typical questions. Universities and health care providers have their own implementations for the procedures involved.  
 
 #### Suggestions or style guides for particular software systems
-The software systems in use encompass a range of systems, from spreadsheets to more compehensive systems specifically designed for statistical analyses. If you search for style guides or more general suggestions for how a particular system should be used, you can probably find many sources. We do not claim that the suggestions made here are the only ones or the best. We do however claim that the approach here is simple enough to use in _all_ systems. So if you stick to the suggestions found here, your (research) life will become both simpler and better.
+The software systems in use encompass a range of systems, from spreadsheets to more comprehensive systems specifically designed for statistical analyses. If you search for style guides or more general suggestions for how a particular system should be used, you can probably find many sources. We do not claim that the suggestions made here are the only ones or the best. We do however claim that the approach suggested here is simple enough to use in _all_ systems. So if you stick to the suggestions found here, your (research) life will become both simpler and better.
 
 ### How to use the document
-This document is suggested as a template for how to structure reseach data files at the Medical faculty of Umeå University. Our hope is that spreading document to new PhD-student and supervisor will promote good routines on ..., and ultimately lead to higher research quality.
+This document is suggested as a template for how to structure reseach data files at the Medical faculty of Umeå University. Our hope is that the document will be a good support to PhD-students, supervisors, new and not so new researchers. The ambition is simply that it will promote good routines on how to work with data which naturally is an essential part of much research. We also hope that it will facilitate efficient and effective work, and ultimately lead to higher quality in our research findings.
 
 In case you are not involved in medical research, we still hope that the suggestions made here are relevant to you. After all, even though there are many fields in science, there are also many common tasks in the analysis of the data.  
 
 ## Principles for data file organization
 
+<!---Börja med punklista, följt av punkterna i rubrikform?-->
 ### Tidy data
-
 - Each column corresponds to one variable in the dataset
 - Each row corresponds to one observation
 - All variables in the dataset have the same unit of observation
-ref
+<!---ref?-->
 
 #### Each variable corresponds to one variable in the dataset
 
@@ -97,18 +104,20 @@ ref
 #### All variables in the dataset have the same unit of observation
 
 ### Variable names
-Our recommendation is to use a basically simple structure since it works everywhere:
+Our recommendation is to use a simple structure since it works everywhere:
 - Do not use diacritical letters (å, ä, ö or the like) in variable names
 - Use only lower case letters
      - Do not begin variable names with upper case letters
      - Do not use names with mixed cases, such as the so called SnakeCase
 - Use names in english
 - Separate parts in names with underscore ("_")
-- Do not use spaces in variable names
-- Name variables so that the names provide a sufficiently clear description of the content. Short and meaningful is worth striving for.
+    - Do not use spaces to separate parts
+- Name variables so that the names provide a sufficiently clear description of the content. They do not have to be exhaustive. Short and meaningful is worth striving for.
 
-You can also locate a style guide for your software of choice, such as [Google's R style guide](https://google.github.io/styleguide/Rguide.html#:~:text=R%20is%20a%20high-level%20programming%20language%20used%20primarily,the%20Tidyverse%20Style%20Guide%20by%20Hadley%20Wickham%20license) or [The DIME Analytics Stata Style Guide](https://worldbank.github.io/dime-data-handbook/coding.html#the-dime-analytics-stata-style-guide). It is however important to realize that there are many such guides, and they might not be telling the same storry. 
+### Style guides?
+There are many style guides for the use of software, such as [Google's R style guide](https://google.github.io/styleguide/Rguide.html#:~:text=R%20is%20a%20high-level%20programming%20language%20used%20primarily,the%20Tidyverse%20Style%20Guide%20by%20Hadley%20Wickham%20license) or [The DIME Analytics Stata Style Guide](https://worldbank.github.io/dime-data-handbook/coding.html#the-dime-analytics-stata-style-guide). It is however important to realize that there are many such guides, and they might not be telling the same storry. 
 
+### Consistency
 The most important advice is however to be as _consistent_ as possible irrespective of the chosen structure. 
 
 ### Where codes are used, give them good labels/explanations
