@@ -6,7 +6,7 @@ The authors of the present document have extensive experience from working as bi
 
 Research data is stored in different forms and for different purposes. Some forms are suited for tasks such as follow-up of individual patients in their daily care. Then the use of the file can be simplified by using a "visual layout", colors, bold text or the like. The goal is in this case usually to collect and use data for each individual, not to calculate summaries such as means for several individuals.
 
-Another purpose is research where the goal is to summarize important aspects of the individual records, and where data on individuals usually is not important. This latter kind of use most often requires a layout for the data which is different from the fo mer one. Here we are concerned with this latter use.
+Another purpose is research where the goal is to summarize important aspects of the individual records, and where data on individuals usually is not important. This latter kind of use most often requires a layout for the data which is different from the former one. Here we are concerned with this latter use.
 
 Further, the data considered is of the kind usually referred to as _quantitative_. Considerations for the structure in qualitative data must be found elsewhere.
 
@@ -115,39 +115,52 @@ Our recommendation is to use a simple structure since it works everywhere:
     - Do not use spaces to separate parts
 - Name variables so that the names provide a sufficiently clear description of the content. They do not have to be exhaustive. Short and meaningful is worth striving for.
 
+### Create and maintain a codebook
+A codebook describes the contents, structure, and layout of a data collection. More specifically explanations of variables, units for measurement variables, explanation of codes used in categorical variables, codes used for missing values and other attributes of the variables in your dataset. There are routines in the software most comonly used to generate such codebooks, but it could also consist of an Excel file with one sheet containing explanations for variable names, another sheet with explanations of the codes used. A short example is found in one of the appendices. 
+
 ### Style guides?
 There are many style guides for the use of software, such as [Google's R style guide](https://google.github.io/styleguide/Rguide.html#:~:text=R%20is%20a%20high-level%20programming%20language%20used%20primarily,the%20Tidyverse%20Style%20Guide%20by%20Hadley%20Wickham%20license) or [The DIME Analytics Stata Style Guide](https://worldbank.github.io/dime-data-handbook/coding.html#the-dime-analytics-stata-style-guide). It is however important to realize that there are many such guides, and they might not be telling the same storry. 
-
-### Consistency
-The most important advice is however to be as _consistent_ as possible irrespective of the chosen structure. 
 
 ### Where codes are used, give them good labels/explanations
 Codes used for categorical variables should be assigned explanations. In case your system does not support such details, then you should at least provide external documentation of what the codes mean, i e a [_codebook_](#data-dictionary-/-codebooks)
 
 ### Missing values
 
-### Avoid having empty cells in the raw data set
+#### Avoid having empty cells in the raw data set
+
+#### ? 
 
 ### Make the data sets rectangular
-Vad tänkte vi här? Vad skulle ett altenativ vara? Flera rektanglar? Exempel från Broman & Woo?
+<!---Vad tänkte vi här? Vad skulle ett altenativ vara? Flera rektanglar? Exempel från Broman & Woo?-->
 
 ### No calculations in the raw data files
-Calculations, avser det formler i Excel-blad? Det är förstås inte bra, men hit hör kanske också färgade celler? 
+<!---Calculations, avser det formler i Excel-blad? Det är förstås inte bra, men hit hör kanske också färgade celler?-->
 
-### Pros and cons of using syntax/scripts
 
-### Manual corrections or corrections in scripts?
+### Consistency
+The most important advice is however to be as _consistent_ as possible irrespective of the chosen structure. 
 
 ## Work flow
 
-### Referera till UB på ngt sätt? 
+### The structure of data files and folders
+Hänvisa till Eloranta et al? Eller UB? Behövs detta avsnitt alls?
+
+#### Documents
+
+#### Data
+
+#### Programs
+
+#### Output and results
+
+### Syntax/scripts/do files
+
+#### Pros and cons of using syntax/scripts
+
+### Manual corrections or corrections in scripts?
 
 ### The raw data file
-Föreslå att skrivskydda rådata?
-
-#### Data file created from scratch
-
-#### Already available data files
+Föreslå att skrivskydda rådata? Lösenordsskydd?
 
 ### How should additions and corrections to data files be made?
 Upprepning, rubriken “Manual corrections...” tar upp samma sak. Vad är rätt placering?
@@ -159,38 +172,20 @@ Lägga till datum till de filnamnen?
 GitHub?
 
 ### When the project is about to be closed?
-* Om möjligt, sätt ihop en kodbok med beskrivningar av fil, variabler och koder. Spara gärna 
-ned den i olika format så att en annan läsare kan använda det som passar.
-* Spara data i originalformat med all metadata på plats.
-* Spara samma filer i “icke-proprietärt” format, dvs data som tab- eller semikolon-separerade textfiler och andra filer som ren text.
-* I textfiler försvinner alla kod- och variabelförklaringar, så spara helst ner även de förklaringarna i annan textfil.
-
-### Data dictionary/codebooks
-- Why codebook?
-- When is a codebook especially important?
-
-## The structure of data files and folders
-Hänvisa till Eloranta et al? Eller UB? Behövs detta avsnitt alls?
-
-### Folders
-
-### Files
-
-#### Data files
-
-#### Output and results
-
-#### Syntax/scripts/do files
-
-#### Other project related documents
+- Create codebooks for your data files.
+- Save the codebook in different formats: as plain text, pdf, Word, Excel, any format which could be suitable for another reader.
+- Save the data in the format used in ypor software system.
+- Save the data in other formats: CSV, tab separated, Excel, SAS,... Here the most important are the "non-proprietary" formats (CSV, tab separated) since such files should be possible to read in all systems.
 
 ## File formats
 Vad menar vi här?
 
+## Referera till UB på ngt sätt? 
+
 ## References
-* Broman, K. W., & Woo, K. H. (2018). Data Organization in Spreadsheets. The American Statistician, 72(1), 2–10. https://doi.org/10.1080/00031305.2017.1375989
-* Wickham, H. (2014). Tidy Data. Journal of Statistical Software, 59(10), 1–23. https://doi.org/10.18637/jss.v059.i10
-* FAIR-principles, https://www.go-fair.org/fair-principles/
+- Broman, K. W., & Woo, K. H. (2018). Data Organization in Spreadsheets. The American Statistician, 72(1), 2–10. https://doi.org/10.1080/00031305.2017.1375989
+- Wickham, H. (2014). Tidy Data. Journal of Statistical Software, 59(10), 1–23. https://doi.org/10.18637/jss.v059.i10
+- FAIR-principles, https://www.go-fair.org/fair-principles/
   eller annan hänvisning?
 
 ## Other sources
@@ -199,7 +194,15 @@ Vad menar vi här?
 * R for Data Science?
 * Corti, L., Van den Eynden, V., Bishop, L., Woollard, M. (2019), Managing and Sharing Research Data - A Guide to Good Practice, Second Edition, SAGE Publications Ltd.
 
-## Appendix
+## Appendices
+
+### Codebook in Excel
+<!---Min (RL) tanke här är att ge förslag på hur filinformation ska sparas ner om man nu nödvändigtvis vill ha det i Excel, eller kanske allra helst csv-format. Typ:
+* En flik/fil med grundläggande information om datamaterialet: projektnamn, år, ansvarig,... Eventuellt referenser till metodbeskrivningar?
+* En flik/fil med variabelnamn och variabelförklaringar, helst i separata kolumner
+* En flik/fil med variabelnamn och kodförklaringar, gärna med en rad per variabel och flera kolumner för koder och förklaringar, typ “sex|1|man|2|kvinna|” (utan |). Den strukturen är rätt lätt att importera till SPSS och generera syntax för ```VALUE
+LABELS```. Samtidigt är den hyfsat generell och någorlunda lättläst.
+* Annan information, ex enheter (“mmol/ml”), helst med variabelnamn och enhet (eller annat) som separata kolumner. Detta kan vara bra för arkiveringsvinkeln också i och med att det kan sparas ner i ett icke-proprietärt filformat. Eller är detta överflödigt och/eller kan lämnas till UB:s förslag/mallar?-->
 
 ### How should syntax/scripts be organized?
 A basic recommendation is to have different scripts for different tasks, typically
@@ -223,10 +226,3 @@ A basic recommendation is to have different scripts for different tasks, typical
 
 ### Some bad examples
 
-### Documentation of variables in Excel
-<!---Min (RL) tanke här är att ge förslag på hur filinformation ska sparas ner om man nu nödvändigtvis vill ha det i Excel, eller kanske allra helst csv-format. Typ:
-* En flik/fil med grundläggande information om datamaterialet: projektnamn, år, ansvarig,... Eventuellt referenser till metodbeskrivningar?
-* En flik/fil med variabelnamn och variabelförklaringar, helst i separata kolumner
-* En flik/fil med variabelnamn och kodförklaringar, gärna med en rad per variabel och flera kolumner för koder och förklaringar, typ “sex|1|man|2|kvinna|” (utan |). Den strukturen är rätt lätt att importera till SPSS och generera syntax för ```VALUE
-LABELS```. Samtidigt är den hyfsat generell och någorlunda lättläst.
-* Annan information, ex enheter (“mmol/ml”), helst med variabelnamn och enhet (eller annat) som separata kolumner. Detta kan vara bra för arkiveringsvinkeln också i och med att det kan sparas ner i ett icke-proprietärt filformat. Eller är detta överflödigt och/eller kan lämnas till UB:s förslag/mallar?-->
