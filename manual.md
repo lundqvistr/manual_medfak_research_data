@@ -13,7 +13,7 @@ Further, the data considered is of the kind usually referred to as _quantitative
 ### Why is a good structure in research data so important?
 Having a good structure is simply fundamental for working efficiently, both for yourself during the project and in other contexts.
 
-#### Reproducability/open data/open science
+#### Reproducibility/open data/open science
 There has been an increasing emphasis in many areas on _reproducibility_, on _open data_ and _open science_. None of these goals can be attained if the underlying data sets are poorly documented, stored in formats no one can access and the like.
 <!---Något om att "open science" inte är självklart enkelt i medicinsk forskning?--->
 
