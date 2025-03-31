@@ -58,33 +58,31 @@ A database if a dynamic, ändras kontinuerligt.
 #### ?
 
 ### FAIR data. Eller? Är detta ett begrepp vi ska bekymra oss om?
-FAIR data should be understood as Findable, Accessible, Interoperable and Reusable.
-- Findable: Metadata and data should be easy to find for both humans and computers.
-- Accessible: When the data has been found the required data, the user needs to know how the data can be accessed, possibly including authentication and authorisation. (Krångligt)
-- Interoperable: (Också krångligt)
-- Resusable: (Också krångligt)
+<!---Har gjort det till ett avsnitt av typen "Täcks inte här", se nedan. Det känns som om det drar för långt, och det är dessutom vi borde kunna lämna till biblioteket. En enskild forskare kan gott och väl nöja sig med våra förslag, det vore bra nog. Vill de dessutom gå igenom FAIR-processen är det väl inte fel. Men det seneare utan en bra struktur vore inte så lyckat.--->
 
 ### What aspects are _not_ covered in this document?
 
-#### FAIR data?
+#### FAIR data
+The concept of FAIR data (Findable, Accessible, Interoperable and Reusable) has been discussed during the last decade. As the [GO FAIR](https://www.go-fair.org) network describes the ambitions: "The ultimate goal of FAIR is to optimise the reuse of data. To achieve this, metadata and data should be well-described so that they can be replicated and/or combined in different settings". <!---Referens: rubriken "Reusable" på https://www.go-fair.org/fair-principles/--->
+The focus is on systems and structures to make data available and is part of a "movement" emphasizing "open data" and open science". This implies a focus on both legal and practical arrangements - repositories, identifiers for data,... - and are as such commendable. The suggestions put forward in this document certainly are in line with the suggestions made by the GO FAIR network. However, we limit the scope for this document to more direct suggestions for how you should work with your own data sets to simplify your research life. The possible extension into making research data comply to the FAIR principles is covered by university libraries, see for example [UMU: Research data](https://www.umu.se/bibliotek/forskningsdata). The recommendations made here should make this process smoother.
 
 #### Storage of data
 Researchers and students involved in the kind of research we have focused throughout this document are active in different organizational settings: mainly within universities, mainly in clinical work or mixtures of the two, within a smaller group or with a multicenter approach spanning an entire country or several countries. Depending on the organization you find yourself in, there are hopefully structures in place for storing your research data in a secure way. However, the practical arrangements are so different that it is not possible to provide any specific suggestions here.
 
 #### Open Data and repositories
-Open Data and Open Science are concepts worth striving for. However, there are limitations to what can be made open when it comes to data in typical medical research. It is also an area where both practical and legal issues have to be considered, and the expertise in such matters is not found among the authors of this document.
+_Open Data_ and _Open Science_ are concepts worth striving for. However, there are limitations to what can be made open when it comes to data in typical medical research. It is also an area where both practical and legal issues have to be considered, and the expertise in such matters is not found among the authors of this document.
 
 #### Data management plans
-The concept of data management plans (DMP) has become increasingly emphasized in many contexts. There are funding agencies which require that applications should contain such DMP's.  The basic idea is that a DMP should provide information on how research data is managed throughout the project, and the purpose is to ensure that data is handled securely, legally and ethically. A good source is [Checklist for data management plans](https://snd.se/en/resources/checklist-data-management-plans) provided by [the Swedish National Data Service (SND)](https://snd.se/en).
+The concept of data management plans (DMP) has become increasingly emphasized in many contexts. Funding agencies increasinlgy require that applications contain such DMP's.  The basic idea is that a DMP should provide information on how research data is managed throughout the project, and the purpose is to ensure that data is handled securely, legally and ethically. A good source is [Checklist for data management plans](https://snd.se/en/resources/checklist-data-management-plans) provided by [the Swedish National Data Service (SND)](https://snd.se/en).
 
 #### Archiving
 There are legal requirements for the archiving of completed research projects: what, how, for how long are typical questions. Universities and health care providers have their own implementations for the procedures involved.  
 
 #### Suggestions or style guides for particular software systems
-The software systems in use encompass a range of systems, from spreadsheets to more comprehensive systems specifically designed for statistical analyses. If you search for style guides or more general suggestions for how a particular system should be used, you can probably find many sources. We do not claim that the suggestions made here are the only ones or the best. We do however claim that the approach suggested here is simple enough to use in _all_ systems. So if you stick to the suggestions found here, your (research) life will become both simpler and better.
+The software systems in use encompass a range of systems, from spreadsheets to more comprehensive systems specifically designed for statistical analyses. If you search for style guides or more general suggestions for how a particular system should be used, you can probably find many sources. 
 
 ### How to use the document
-This document is suggested as a template for how to structure reseach data files at the Medical faculty of Umeå University. Our hope is that the document will be a good support to PhD-students, supervisors, new and not so new researchers. The ambition is simply that it will promote good routines on how to work with data which naturally is an essential part of much research. We also hope that it will facilitate efficient and effective work, and ultimately lead to higher quality in our research findings.
+This document is suggested as a template for how to structure reseach data files at the Medical faculty of Umeå University. Our hope is that the document will be a good support to PhD-students, supervisors, new and not so new researchers. We do not claim that the suggestions made here are the only ones or the best. We do however claim that the approach suggested is simple enough to use in _all_ systems. We simply hope that it will be beneficial for the quality in both your own and others' research findings.
 
 In case you are not involved in medical research, we still hope that the suggestions made here are relevant to you. After all, even though there are many fields in science, there are also many common tasks in the analysis of the data.  
 
