@@ -18,13 +18,13 @@ There has been an increasing emphasis in many areas on _reproducibility_, on _op
 <!---Något om att "open science" inte är självklart enkelt i medicinsk forskning?--->
 
 #### Projects often live long 
-Many research projects have an afterlife. There could be other researchers interested to make a followup on the same individuals several years after the first study. A supervisor might want to put previously collected data in the hands of new PhD students. You could be contacted by other researchers who are interested in your work, ending in a new joint project. In all those and many other situations there is a definite need for the original datasets to be well structured.
+Many research projects have an afterlife. After some years, you might yourself want to do a follow-up study: what are the longterm effects? There could be other researchers interested to make such a followup. A supervisor might want to put previously collected data in the hands of new PhD students. You could be contacted by other researchers who are interested in your work, ending in a new joint project. In all those and many other situations there is a definite need for the original datasets to be well structured and well documented.
 
 #### Cooperation
 Some projects are from the start set up as based on more than one researcher or research group. Data can be collected in multiple centres, and the combined data set can also be used in multiple centres. In such cases, there is a definite need for well-designed data structures. 
 
 #### Archiving/transparency
-When research projects have reached their final days, most just wither away. Given the resources spent, this seems as a poor outcome. It is both a matter of making it possible to wake projects for future research and part of making the research efforts transparent. The latter could simply be seen as an important part of maintaining the publics' trust in the scientific community. So the research data should eventually be stored and archived in a manner that makes it possible to dig up even dead projects. 
+When research projects have reached their final days, many just wither away. Given the resources spent, this seems as a poor outcome. It is both a matter of making it possible to wake projects for future research and part of making the research efforts transparent. The latter could simply be seen as an important part of maintaining the publics' trust in the scientific community. So the research data should eventually be stored and archived in a manner that makes it possible to dig up even dead projects. 
 
 ### Different needs (integreras i ovanstående stolpar? Eller som ett eget avsnitt? Här blir det den senare varianten. Eller behövs detta alls? Mycket står ju ovan.)
 What are the typical needs for different users? 
