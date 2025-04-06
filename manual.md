@@ -1,14 +1,15 @@
-<!---Ska det in något någonstans om programvara, att det kan vara olika lätt att få in metadata? Att ambitionen här är att vara generell men att det som föreslås kan se rätt olika ut och fungera olika i system?-->
+<!---Ska det in något någonstans om programvara, att det kan vara olika lätt att få in metadata? Att ambitionen här är att vara generell men att det som föreslås kan se rätt olika ut och fungera olika i system? -Ja, gärna tycker jag. /Per-->
 
 ## Background
 ### For whom is this document written
-The authors of the present document have extensive experience from working as biostatisticians. We have all seen many examples of data files structured in a way that have been demanding for both ourselves and the users. Usually, a typical basic course of biostatistics does not cover the aspects we aim at here, namely how to set up a good data structure, despite this being a fundamental part of analysing data.
+The authors of the present document all have extensive experience from working as biostatisticians, where we often recive data from many different projects. We have all seen many examples of data files structured in a way that have been demanding for both ourselves and the users. Usually, a typical basic course of biostatistics does not cover the aspects we aim at here, namely how to set up a good data structure, despite this being a fundamental part of analysing data. A PhD student who has only recently begun his or her research career cannot be expected to know how to structure a data file in a way that facilitates research on the data for many years to come. Thus, the student is therefore dependent on their supervisor having sufficient knowledge in this area—and also on that knowledge being effectively communicated early in the doctoral training. This is a fragile system. Our hope is that this document can be handed to both inexperienced and experienced researchers who are working on compiling a data file, and offer useful guidance on how to avoid issues related to data management, analysis, and archiving, facilitating work for all researchers/staff involved, both during and after the course of the research project.
 
 Research data is stored in different forms and for different purposes. Some forms are suited for tasks such as follow-up of individual patients in their daily care. Then the use of the file can be simplified by using a "visual layout", colors, bold text or the like. The goal is in this case usually to collect and use data for each individual, not to calculate summaries such as means for several individuals.
 
 Another purpose is research where the goal is to summarize important aspects of the individual records, and where data on individuals usually is not important. This latter kind of use most often requires a layout for the data which is different from the former one. Here we are concerned with this latter use.
 
 Further, the data considered is of the kind usually referred to as _quantitative_. Considerations for the structure in qualitative data must be found elsewhere.
+
 
 ### Why is a good structure in research data so important?
 Having a good structure is simply fundamental for working efficiently, both for yourself during the project and in other contexts.
@@ -82,7 +83,7 @@ There are legal requirements for the archiving of completed research projects: w
 The software systems in use encompass a range of systems, from spreadsheets to more comprehensive systems specifically designed for statistical analyses. If you search for style guides or more general suggestions for how a particular system should be used, you can probably find many sources. 
 
 ### How to use the document
-This document is suggested as a template for how to structure reseach data files at the Medical faculty of Umeå University. Our hope is that the document will be a good support to PhD-students, supervisors, new and not so new researchers. We do not claim that the suggestions made here are the only ones or the best. We do however claim that the approach suggested is simple enough to use in _all_ systems. We simply hope that it will be beneficial for the quality in both your own and others' research findings.
+This document is suggested as a template for how to structure reseach data files at the Medical faculty of Umeå University. Our hope is that the document will be a good support to PhD-students, supervisors, new and not so new researchers. We do not claim that the suggestions made here are the only ones or the best. We do however claim that the approach suggested is simple enough to use in _all_ systems. We simply hope that it will be beneficial for the quality in both your own and others' research findings. Our hope is that if data file structures are harmonized, it will promote collaboration across research groups. For this reason, the level of detail is occasionally high. 
 
 In case you are not involved in medical research, we still hope that the suggestions made here are relevant to you. After all, even though there are many fields in science, there are also many common tasks in the analysis of the data.  
 
@@ -102,16 +103,32 @@ In case you are not involved in medical research, we still hope that the suggest
 
 #### All variables in the dataset have the same unit of observation
 
-### Variable names
-Our recommendation is to use a simple structure since it works everywhere:
+### Variable names 
+Our recommendation is to use a simple structure since it works everywhere. Be consistent. 
+#### Use names in english
 - Do not use diacritical letters (å, ä, ö or the like) in variable names
-- Use only lower case letters
+Good example:
+Bad example:
+#### Keep your variable names short
+Name variables so that the names provide a sufficiently clear description of the content. They do not have to be exhaustive. Short and meaningful is worth striving for.
+Good example:
+Bad example:
+
+#### Use only lower case letters
      - Do not begin variable names with upper case letters
      - Do not use names with mixed cases, such as the so called SnakeCase
-- Use names in english
-- Separate parts in names with underscore ("_")
-    - Do not use spaces to separate parts
-- Name variables so that the names provide a sufficiently clear description of the content. They do not have to be exhaustive. Short and meaningful is worth striving for.
+Good example:
+Bad example:
+
+#### Separate parts in names with underscore ("_")
+    - Do not use spaces, dots (".") or upper case letters to separate parts
+Good example:
+Bad example:
+
+#### Variables measured at the same time point.
+Given that the data set is in a wide format (se section x.x.x), variables measures at different time points should be given excectly the same name, except for suffix. 
+Good example:
+Bad example:
 
 ### Create and maintain a codebook
 A codebook describes the contents, structure, and layout of a data collection. More specifically explanations of variables, units for measurement variables, explanation of codes used in categorical variables, codes used for missing values and other attributes of the variables in your dataset. There are routines in the software most comonly used to generate such codebooks, but it could also consist of an Excel file with one sheet containing explanations for variable names, another sheet with explanations of the codes used. A short example is found in one of the appendices. 
