@@ -105,28 +105,39 @@ In case you are not involved in medical research, we still hope that the suggest
 Our recommendation is to use a simple structure since it works everywhere. Be consistent. 
 #### Use names in english
 - Do not use diacritical letters (å, ä, ö or the like) in variable names
+
 Bad example:
+
 Good example:
+
 #### Keep your variable names short
 Name variables so that the names provide a sufficiently clear description of the content. They do not have to be exhaustive. Short and meaningful is worth striving for.
+
 Bad example:
+
 Good example:
 
 #### Use only lower case letters
 - Do not begin variable names with upper case letters
 - Do not use names with mixed cases, such as the so called SnakeCase
+
 Bad example:
+
 Good example:
 
 #### Separate parts in names with underscore ("_")
 - Do not use spaces, dots (".") or upper case letters to separate parts
+
 Good example:
+
 Bad example:
 
 #### Variables measured at the same time point.
 Given that the data set is in a wide format (see [Wide or long format?](wide-or-long-format), variables measures at different time points should be given excectly the same name, except for suffix. 
-Good example:
+
 Bad example:
+
+Good example:
 
 ### Create and maintain a codebook
 A codebook describes the contents, structure, and layout of a data collection. More specifically explanations of variables, units for measurement variables, explanation of codes used in categorical variables, codes used for missing values and other attributes of the variables in your dataset. There are routines in the software most comonly used to generate such codebooks, but it could also consist of an Excel file with one sheet containing explanations for variable names, another sheet with explanations of the codes used. A short example is found in one of the appendices. 
@@ -138,9 +149,18 @@ There are many style guides for the use of software, such as [Google's R style g
 Codes used for categorical variables should be assigned explanations. In case your system does not support such details, then you should at least provide external documentation of what the codes mean, i e a [_codebook_](#data-dictionary-/-codebooks)
 
 ### Wide or long format?
-Many datasets consists of data points from one measurement period, and the basic structure can be fairly simple "rectangular" set of data.  It is however also common with datasets where _time_ is a fundamental variable. Follow-up of patients makes it necessary to have data on patients from baseline, from 3 months, 12 monts and possibly later that that. The structure in such cases has to take these different times into account, and there are basically two ways to do so: wide formats and long formats.
+Many datasets consists of data points from one measurement period, and the basic structure can be a fairly simple "rectangular" set of data.  It is however also common with datasets where _time_ is a fundamental variable. Follow-up of patients makes it necessary to have data on patients from baseline, from 3 months, 12 monts and possibly later that that. The structure in such cases has to take these different times into account, and there are basically two ways to do so: wide formats and long formats.
 
 There is no simple correct structure for such data, it can even be necessary to have both structures in parallel due to the details in how your software works. As a consequence, switching from one format to the other is a common task. It can however be quite demanding, so it could be wise to consult a statistician in order when the need arises.
+
+Naturally this also applies for other cases where there is some repetition of similar measurements: different places, different parts of the body,...
+
+Data from such instances in time can be also be stored in different ways:
+- As one file for each point in time
+- As different worksheets in the the same spreadsheet
+- With all the observations in one single file
+
+If the structure is one of the two first you will probably have to join the parts together sooner or later. Such joining is described in [Data on the same individuals...](data-on-the-same-individuals-in-more-than-one-place).
 
 #### Wide format
 Here the basic observation is one "individual". One row per individual, several variables for each timepoint.
@@ -154,7 +174,10 @@ The basic observation in such a structure is the combination of individual _and_
 
 #### ? 
 
-### Data on the same individuals in more than one file?
+### Data on the same individuals in more than one place?
+When data for the same individuals is stored in different places, it is usually necessary to join or "match" the parts together. Such procedures can be made in any decent statistical software. It could however be quite demanding to make it work, so do not hesitate to consult a statistician.
+
+### Advide for manual entry of data
 
 ### Make the data sets rectangular
 <!---Vad tänkte vi här? Vad skulle ett altenativ vara? Flera rektanglar? Exempel från Broman & Woo?-->
