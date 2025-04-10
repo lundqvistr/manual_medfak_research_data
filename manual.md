@@ -125,6 +125,17 @@ Bad example:
 
 Good example:
 
+#### Do not include explanations of codes in the variable name
+
+Bad example: diabetes_1_yes_0_no
+An even worse example: Type of primary event: 1= IS; 2=ICH; 3=SE; 4: Bleeding BARC 3a,b,c or 5; 5: All cause of death
+
+Good example: diabetes
+
+Another good example: type_primary_event 
+
+Explanations of codes are of course essential, but set these up in some other way. Any decent statistical software has support for such explanations. If you work with spreadsheets, you could at least use comments. You should also set up and maintain a [codebook](create-and-maintain-a-codebook).
+
 #### Separate parts in names with underscore ("_")
 - Do not use spaces, dots (".") or upper case letters to separate parts
 
@@ -132,7 +143,7 @@ Good example:
 
 Bad example:
 
-#### Variables measured at the same time point.
+#### Variables measured at the same time point
 Given that the data set is in a wide format (see [Wide or long format?](wide-or-long-format), variables measures at different time points should be given excectly the same name, except for suffix. 
 
 Bad example:
@@ -177,7 +188,12 @@ The basic observation in such a structure is the combination of individual _and_
 ### Data on the same individuals in more than one place?
 When data for the same individuals is stored in different places, it is usually necessary to join or "match" the parts together. Such procedures can be made in any decent statistical software. It could however be quite demanding to make it work, so do not hesitate to consult a statistician.
 
-### Advide for manual entry of data
+It is also very important that variables with any kind of repetition, in time or otherwise, have the same names and formats when data in parts are to be joined, see [Variables measured at the same time point](variables-measured-at-the-same-time-point).
+
+And of course, there has to be a common "key" variable in all parts meant to be joined: "personnummer" or some other identifying variable. 
+
+### Advice for manual entry of data
+If you are going to enter data manually, the
 
 ### Make the data sets rectangular
 <!---Vad tänkte vi här? Vad skulle ett altenativ vara? Flera rektanglar? Exempel från Broman & Woo?-->
