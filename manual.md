@@ -113,13 +113,13 @@ Bad example:
 Good example:
 
 #### Use only lower case letters
-     - Do not begin variable names with upper case letters
-     - Do not use names with mixed cases, such as the so called SnakeCase
+- Do not begin variable names with upper case letters
+- Do not use names with mixed cases, such as the so called SnakeCase
 Bad example:
 Good example:
 
 #### Separate parts in names with underscore ("_")
-    - Do not use spaces, dots (".") or upper case letters to separate parts
+- Do not use spaces, dots (".") or upper case letters to separate parts
 Good example:
 Bad example:
 
