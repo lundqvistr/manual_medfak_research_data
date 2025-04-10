@@ -42,36 +42,34 @@ What are the typical needs for different users?
   - Lack of documention of codes can make calculations or creation of new derived variables more or less impossible
   - Data structured in vizually appealing format - parts of data placed in different spots in the file, colored cells,... - is often difficult to process for statistical analysis
   - Data stored in different file formats can make compilation of files difficult, and hinder exchange of data
-  - Dates, often a difficult kind of data, stored in one system can be hard to define as real dates in another system 
-  - Exchange of data between different software systems
+  - Dates can be stored in a number of formats, and the process to convert dates into a format that works in your software can be hard 
+  - Exchange of data between different software systems can be difficult
   - Data sets collected in more than one centre are often marred by inconsistencies in the formats used by the centres involved, making the compilation of data challenging
 
 #### The exact meaning of variables in the data is hard to decipher
 
-<!---Hör väl egentligen inte hit, detta är mer ett argument för skript/syntax-->
-#### Data is not stable
-A database if a dynamic, ändras kontinuerligt. 
+
+#### Data is often not stable
+A database is often a changing entity. New data points might be added, others can be deleted. New derived variables are created during the project. A structure whoch is well-defined in advance can make the subsequent work a lot smoother. 
 
 #### The data structure is not totally consistent for all involved
-
-<!---Här tänkte jag mig (RL) något om vikten av att arbeta med samma “mall” när det exempelvis är flera regioner inblandade i att samla ihop data.)-->
+<!---Här tänkte jag mig (RL) något om vikten av att arbeta med samma “mall” när det exempelvis är flera regioner inblandade i att samla ihop data. Fast det är väl inpetat i sista punkten ovan?-->
 
 #### ?
-
-### FAIR data. Eller? Är detta ett begrepp vi ska bekymra oss om?
-<!---Har gjort det till ett avsnitt av typen "Täcks inte här", se nedan. Det känns som om det drar för långt, och det är dessutom vi borde kunna lämna till biblioteket. En enskild forskare kan gott och väl nöja sig med våra förslag, det vore bra nog. Vill de dessutom gå igenom FAIR-processen är det väl inte fel. Men det seneare utan en bra struktur vore inte så lyckat.--->
 
 ### What aspects are _not_ covered in this document?
 
 #### FAIR data
-The concept of FAIR data (Findable, Accessible, Interoperable and Reusable) has been discussed during the last decade. As the [GO FAIR](https://www.go-fair.org) network describes the ambitions: "The ultimate goal of FAIR is to optimise the reuse of data. To achieve this, metadata and data should be well-described so that they can be replicated and/or combined in different settings". <!---Referens: rubriken "Reusable" på https://www.go-fair.org/fair-principles/--->
+The concept of FAIR data (Findable, Accessible, Interoperable and Reusable) has been discussed during the last decade. As the [GO FAIR](https://www.go-fair.org) network describes the ambitions: 
+> The ultimate goal of FAIR is to optimise the reuse of data. To achieve this, metadata and data should be well-described so that they can be replicated and/or combined in different settings. 
+
 The focus is on systems and structures to make data available and is part of a "movement" emphasizing "open data" and open science". This implies a focus on both legal and practical arrangements - repositories, identifiers for data,... - and are as such commendable. The suggestions put forward in this document certainly are in line with the suggestions made by the GO FAIR network. However, we limit the scope for this document to more direct suggestions for how you should work with your own data sets to simplify your research life. The possible extension into making research data comply to the FAIR principles is covered by university libraries, see for example [UMU: Research data](https://www.umu.se/bibliotek/forskningsdata). The recommendations made here should make this process smoother.
 
 #### Storage of data
-Researchers and students involved in the kind of research we have focused throughout this document are active in different organizational settings: mainly within universities, mainly in clinical work or mixtures of the two, within a smaller group or with a multicenter approach spanning an entire country or several countries. Depending on the organization you find yourself in, there are hopefully structures in place for storing your research data in a secure way. However, the practical arrangements are so different that it is not possible to provide any specific suggestions here.
+Researchers and students involved in the kind of research we have focused throughout this document are active in different organizational settings: mainly within universities, mainly in clinical work or mixtures of the two, within a smaller group or with a multicenter approach spanning an entire country or even several countries. Depending on the organization you find yourself in, there are hopefully structures in place for storing your research data in a secure way. However, the practical arrangements are so different that it is not possible to provide any specific suggestions here.
 
 #### Open Data and repositories
-_Open Data_ and _Open Science_ are concepts worth striving for. However, there are limitations to what can be made open when it comes to data in typical medical research. It is also an area where both practical and legal issues have to be considered, and the expertise in such matters is not found among the authors of this document.
+_Open Data_ and _Open Science_ are concepts worth striving for. However, there are limitations to what can be made open when it comes to data in typical medical research. It is also an area where both practical and legal issues have to be considered, so it is often necessary to consult legal and technical staff.
 
 #### Data management plans
 The concept of data management plans (DMP) has become increasingly emphasized in many contexts. Funding agencies increasinlgy require that applications contain such DMP's.  The basic idea is that a DMP should provide information on how research data is managed throughout the project, and the purpose is to ensure that data is handled securely, legally and ethically. A good source is [Checklist for data management plans](https://snd.se/en/resources/checklist-data-management-plans) provided by [the Swedish National Data Service (SND)](https://snd.se/en).
@@ -89,7 +87,7 @@ In case you are not involved in medical research, we still hope that the suggest
 
 ## Principles for data file organization
 
-<!---Börja med punklista, följt av punkterna i rubrikform? Eller direkt som rubriker?-->
+<!---Börja med punktlista, följt av punkterna i rubrikform? Eller direkt som rubriker?-->
 ### Tidy data
 - Each column corresponds to one variable in the dataset
 - Each row corresponds to one observation
@@ -107,18 +105,18 @@ In case you are not involved in medical research, we still hope that the suggest
 Our recommendation is to use a simple structure since it works everywhere. Be consistent. 
 #### Use names in english
 - Do not use diacritical letters (å, ä, ö or the like) in variable names
-Good example:
 Bad example:
+Good example:
 #### Keep your variable names short
 Name variables so that the names provide a sufficiently clear description of the content. They do not have to be exhaustive. Short and meaningful is worth striving for.
-Good example:
 Bad example:
+Good example:
 
 #### Use only lower case letters
      - Do not begin variable names with upper case letters
      - Do not use names with mixed cases, such as the so called SnakeCase
-Good example:
 Bad example:
+Good example:
 
 #### Separate parts in names with underscore ("_")
     - Do not use spaces, dots (".") or upper case letters to separate parts
@@ -126,7 +124,7 @@ Good example:
 Bad example:
 
 #### Variables measured at the same time point.
-Given that the data set is in a wide format (se section x.x.x), variables measures at different time points should be given excectly the same name, except for suffix. 
+Given that the data set is in a wide format (see [Wide or long format?](wide-or-long-format), variables measures at different time points should be given excectly the same name, except for suffix. 
 Good example:
 Bad example:
 
@@ -139,11 +137,24 @@ There are many style guides for the use of software, such as [Google's R style g
 ### Where codes are used, give them good labels/explanations
 Codes used for categorical variables should be assigned explanations. In case your system does not support such details, then you should at least provide external documentation of what the codes mean, i e a [_codebook_](#data-dictionary-/-codebooks)
 
+### Wide or long format?
+Many datasets consists of data points from one measurement period, and the basic structure can be fairly simple "rectangular" set of data.  It is however also common with datasets where _time_ is a fundamental variable. Follow-up of patients makes it necessary to have data on patients from baseline, from 3 months, 12 monts and possibly later that that. The structure in such cases has to take these different times into account, and there are basically two ways to do so: wide formats and long formats.
+
+There is no simple correct structure for such data, it can even be necessary to have both structures in parallel due to the details in how your software works. As a consequence, switching from one format to the other is a common task. It can however be quite demanding, so it could be wise to consult a statistician in order when the need arises.
+
+#### Wide format
+Here the basic observation is one "individual". One row per individual, several variables for each timepoint.
+
+#### Long format
+The basic observation in such a structure is the combination of individual _and_ timepoint. There are one row for each such combination, resulting in several rows for each individual
+
 ### Missing values
 
 #### Avoid having empty cells in the raw data set
 
 #### ? 
+
+### Data on the same individuals in more than one file?
 
 ### Make the data sets rectangular
 <!---Vad tänkte vi här? Vad skulle ett altenativ vara? Flera rektanglar? Exempel från Broman & Woo?-->
