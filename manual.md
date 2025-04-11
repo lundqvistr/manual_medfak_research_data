@@ -194,7 +194,7 @@ It is also very important that variables with any kind of repetition, in time or
 And of course, there has to be a common "key" variable in all parts meant to be joined: "personnummer" or some other identifying variable. 
 
 ### Advice for manual entry of data
-!---Ska vi ha med ett sådant avsnitt--->
+<!---Ska vi ha med ett sådant avsnitt alls?--->
 The recommendations made in this document are meant to be valid for data you get from other sources you as well as data you enter manually yourself. In the latter case there are however some aspects which could make the process less demanding.
 
 #### Entry in a spreadsheet or in statistical software?
@@ -203,7 +203,7 @@ The recommendations made in this document are meant to be valid for data you get
 
 #### Different worksheets or different files for data in the same individuals
 
-#### If there are questions, put commments in separate columns
+#### If there are questions, put comments in separate columns
 
 Bad example:
 
