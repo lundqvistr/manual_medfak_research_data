@@ -3,6 +3,7 @@
 ## Tekniskt/innehåll/...
 - Programvara för manuell inmatning? Excel? Databasprogram? Det finns t ex inst som förordar Access.
 - Lägga in kommentar om kommentarer eller funderingar vid manuell inmatning? Det som ofta blir "3, ev 4" eller liknande.
+- Ska vi ta med något om avidentifierade/pseudonymiserade material? En del verkar rätt rädda för att ha med löpnummer i filer överhuvudtaget, andra verkar inte ha några hämningar alls.
 
 ## Målgrupp
 - Ska manual begränsas till doktorander, eller ska den paketeras för en mer allmän målgrupp? Studenter? Handledare? Forskare?
