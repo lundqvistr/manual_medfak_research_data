@@ -127,12 +127,13 @@ Good example:
 
 #### Do not include explanations of codes in the variable name
 
-Bad example: diabetes_1_yes_0_no
-An even worse example: Type of primary event: 1= IS; 2=ICH; 3=SE; 4: Bleeding BARC 3a,b,c or 5; 5: All cause of death
+Bad example: `diabetes_1_yes_0_no`
 
-Good example: diabetes
+An even worse example: `Type of primary event: 1= IS; 2=ICH; 3=SE; 4: Bleeding BARC 3a,b,c or 5; 5: All cause of death`
 
-Another good example: type_primary_event 
+Good example: `diabetes`
+
+Another good example: `type_primary_event`
 
 Explanations of codes are of course essential, but set these up in some other way. Any decent statistical software has support for such explanations. If you work with spreadsheets, you could at least use comments. You should also set up and maintain a [codebook](create-and-maintain-a-codebook).
 
@@ -193,7 +194,20 @@ It is also very important that variables with any kind of repetition, in time or
 And of course, there has to be a common "key" variable in all parts meant to be joined: "personnummer" or some other identifying variable. 
 
 ### Advice for manual entry of data
-If you are going to enter data manually, the
+!---Ska vi ha med ett sådant avsnitt--->
+The recommendations made in this document are meant to be valid for data you get from other sources you as well as data you enter manually yourself. In the latter case there are however some aspects which could make the process less demanding.
+
+#### Entry in a spreadsheet or in statistical software?
+
+#### Keep the structure simple in order to minimize errors
+
+#### Different worksheets or different files for data in the same individuals
+
+#### If there are questions, put commments in separate columns
+
+Bad example:
+
+Good example:
 
 ### Make the data sets rectangular
 <!---Vad tänkte vi här? Vad skulle ett altenativ vara? Flera rektanglar? Exempel från Broman & Woo?-->
@@ -218,9 +232,21 @@ Hänvisa till Eloranta et al? Eller UB? Behövs detta avsnitt alls?
 
 #### Output and results
 
+### Import of files from others
+<!---Fundering: ska vi skriva något om detta, dvs hur de kan tänka när de får filer från andra, ex SoS? Typ "Se gärna till att du får filer i flera format, CSV/tab _och_ SAS eller annat format filleverantören själv arbetar med." Och "Vid inläsning av fil kan allt fungera om det är ett proprietärt format, men det kan också krångla. Ibland är det enklast att läsa in rena filer eftersom det går att styra inläsningen i mer detalj då." Eller är det för mycket vid sidan?--->
+
 ### Syntax/scripts/do files
+We strongly recommend that you should work with "syntax" as a way to run your processing of data, i e setting up "code" which is stored in specific files for whatever you want to achieve, which subsequently can be executed. It is not uncommon that users begin with using menus rather than syntax, so it could be preceived as a hurdle. However, our experience that there are many advantages with using syntax, and not that many disadvantages:
+
+- You can add explanatory comments in the syntax files, making it much easier afterwars to see what you have done
+- A syntax files is a rather complete record of what you have done
+- If data is changed, e g additions of new records or teh deletion of others, then going through all steps already done through the use of menus is often not possible or at least very demanding. With syntax it is often a matter of a few clicks.
+- In many statistical procedures there are options which might not be available in the menus
+
+Depending on the software, the creation of syntax can be more or less straightforward, but it can always be done. Put in another way, one reason, along with several others, why we would not recommend use of spreadsheets for more systematic statistical work is that there is not any simple way to run such software with syntax.
 
 #### Pros and cons of using syntax/scripts
+<!---Behövs kanske inte?--->
 
 ### Manual corrections or corrections in scripts?
 
