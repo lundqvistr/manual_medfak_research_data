@@ -1,6 +1,8 @@
 # Lösa idéer och frågor
 
 ## Tekniskt/innehåll/...
+- Något om hur de ska tänka kring datser de får med ev tveksamma variabelnamn, dåligt dokumenterade variabler,... Nya variabler ska rimligen habteras klokt, men gur ska man tänka krin gamla?
+- Läbgs samma linje, någon tidig beskrivning av att texten framförallt handlar om arbetet innan data samlas in, i början, och när nya variabler skapas?
 - Programvara för manuell inmatning? Excel? Databasprogram? Det finns t ex inst som förordar Access.
 - Lägga in kommentar om kommentarer eller funderingar vid manuell inmatning? Det som ofta blir "3, ev 4" eller liknande.
 - Ska vi ta med något om avidentifierade/pseudonymiserade material? En del verkar rätt rädda för att ha med löpnummer i filer överhuvudtaget, andra verkar inte ha några hämningar alls.
