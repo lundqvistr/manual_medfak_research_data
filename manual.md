@@ -27,35 +27,15 @@ Some projects are from the start set up as based on more than one researcher or 
 #### Archiving/transparency
 When research projects have reached their final days, many just wither away. Given the resources spent, this seems as a poor outcome. It is both a matter of making it possible to wake projects for future research and part of making the research efforts transparent. The latter could simply be seen as an important part of maintaining the publics' trust in the scientific community. So the research data should eventually be stored and archived in a manner that makes it possible to dig up even dead projects. 
 
-### Different needs (integreras i ovanstående stolpar? Eller som ett eget avsnitt? Här blir det den senare varianten. Eller behövs detta alls? Mycket står ju ovan.)
-What are the typical needs for different users? 
-
-#### The PhD student or individual researcher
-
-#### The research team
-
-#### The research environment, now and later
-    
-<!---Hmmm... Punktlistan, räcker den? Eller behövs det förklarande text? Om det senare, ska punklistan göras om till rubriker?-->
 ### Example of common problems
   - Inconsistencies in naming variables can make coding and writing challenging
   - Lack of documention of codes can make calculations or creation of new derived variables more or less impossible
   - Data structured in vizually appealing format - parts of data placed in different spots in the file, colored cells,... - is often difficult to process for statistical analysis
+  - A database is often a changing entity. New data points might be added, others can be deleted. New derived variables are created during the project. A structure which is well-defined in advance can make the subsequent work a lot smoother.
   - Data stored in different file formats can make compilation of files difficult, and hinder exchange of data
   - Dates can be stored in a number of formats, and the process to convert dates into a format that works in your software can be hard 
   - Exchange of data between different software systems can be difficult
   - Data sets collected in more than one centre are often marred by inconsistencies in the formats used by the centres involved, making the compilation of data challenging
-
-#### The exact meaning of variables in the data is hard to decipher
-
-
-#### Data is often not stable
-A database is often a changing entity. New data points might be added, others can be deleted. New derived variables are created during the project. A structure whoch is well-defined in advance can make the subsequent work a lot smoother. 
-
-#### The data structure is not totally consistent for all involved
-<!---Här tänkte jag mig (RL) något om vikten av att arbeta med samma “mall” när det exempelvis är flera regioner inblandade i att samla ihop data. Fast det är väl inpetat i sista punkten ovan?-->
-
-#### ?
 
 ### What aspects are _not_ covered in this document?
 
@@ -81,7 +61,13 @@ There are legal requirements for the archiving of completed research projects: w
 The software systems in use encompass a range of systems, from spreadsheets to more comprehensive systems specifically designed for statistical analyses. If you search for style guides or more general suggestions for how a particular system should be used, you can probably find many sources. 
 
 ### How to use the document
-This document is suggested as a template for how to structure reseach data files at the Medical faculty of Umeå University. Our hope is that the document will be a good support to PhD-students, supervisors, new and not so new researchers. We do not claim that the suggestions made here are the only ones or the best. We do however claim that the approach suggested is simple enough to use in _all_ systems. We simply hope that it will be beneficial for the quality in both your own and others' research findings. Our hope is that if data file structures are harmonized, it will promote collaboration across research groups. For this reason, the level of detail is occasionally high. 
+This document is suggested as a template for how to structure reseach data files at the Medical faculty of Umeå University. Our hope is that the document will be a good support to PhD-students, supervisors, new and not so new researchers. We do not claim that the suggestions made here are the only ones or the best. We do however claim that the approach suggested is simple enough to use in _all_ systems. 
+
+The recommendations made here are valid and relevant for projects especially in the beginning. Having well-designed structures from the outset will usually not increase the total amount of time and resources spent on data management, but rather simplify subsequent work. However, in many projects data comes from other sources: external databases, data collected by others or the like. In such cases, there might be a lot of variables already named, having more or less complete documentation, and the structures might not be in line with the recommendations found in this document. Then you have to make a decision about if "old" structures should be changed or not. 
+
+There is not any simple rule for how to proceed in such cases. You could limit your efforts to only new derived variables, or you could set out to change all of the old variables. Our recommendation is that whatever approach is chosen, you should try to make these decisions early in the process. It does not become easier to set up a good structure for the data later.
+
+We hope that use of the recommendations made here will be beneficial for the quality of your own research. We also hope that if the recommendations are followed in a broader context at the medical faculty at UMU, this will simplify collaboration across research groups. ~~For this reason, the level of detail is occasionally high.~~ 
 
 In case you are not involved in medical research, we still hope that the suggestions made here are relevant to you. After all, even though there are many fields in science, there are also many common tasks in the analysis of the data.  
 
