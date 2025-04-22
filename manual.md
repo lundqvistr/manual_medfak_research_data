@@ -406,7 +406,7 @@ GitHub?
 
 ### When the project is about to be closed?
 - Create codebooks for your data files.
-- Save the codebook in different formats: as plain text, pdf, Word, Excel, any format which could be suitable for another reader.
+- Save the codebook in different formats: as plain text, pdf, HTML, Word, Excel, any format which could be suitable for another reader.
 - Save the data in the format used in your software system.
 - Save the data in other formats: CSV, tab separated, Excel, SAS,... Here the most important are the "non-proprietary" formats (CSV, tab separated) since such files should be possible to read in all systems.
 
