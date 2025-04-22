@@ -10,19 +10,21 @@ The recommendations made here are valid and relevant for projects especially in 
 
 In case you are not involved in medical research, we still hope that the suggestions made here are relevant to you. After all, even though there are many fields in science, there are also many common tasks in the analysis of the data.   We do not claim that the suggestions made here are the only ones or the best. We do however claim that the approach suggested is simple enough to use in _all_ systems. 
 
-
 ### For whom is this document written?
 The targeted audience is staff in any way involved in research - PhD students, supervisors,... - inexperienced and experienced alike.
 
 ### How to use this document
-In many projects data comes from other sources: external databases, data collected by others or the like. In such cases, there might be a lot of variables already named, having more or less complete documentation, and the structures might not be in line with the recommendations found in this document. Then you have to make a decision about if "old" structures should be changed or not. There is not any simple rule for how to proceed in such cases. You could limit your efforts to only new derived variables, or you could set out to change all of the old variables. Our recommendation is that whatever approach is chosen, you should try to make these decisions early in the process. It does not become easier to set up a good structure for the data later.
+?Vad ska in här? Kan rubrik och avsnitt strykas?
 
-### For what type of data is this document written?
+### For what kind of data is this document written?
 Research data is stored in different forms and for different purposes. Some forms are suited for tasks such as _follow-up of individual patients_ in their daily care. Then the use of the file can be simplified by using a "visual layout", colors, bold text or the like. The goal in such cases usually is to collect and use data for each individual, not to calculate summaries such as means for several individuals.
 
 Another purpose is _research_ where the goal is to summarize important aspects of the individual records, and where data on individuals usually is not important. This latter kind of use most often requires a layout for the data which is different from the former one. Here we are concerned with this latter use.
 
 Further, the data considered is of the kind usually referred to as _quantitative_. Considerations for the structure in qualitative data must be found elsewhere.
+
+### The scope for the recommendations made here
+In many research projects, data comes from several sources: your own manually entered data, external databases, data collected by others or the like. the suggestions made are meant to be of use especially when you are setting up your own structure. In the case of data from other sources, you are not in complete control yourself. There might be a lot of variables already named, having more or less complete documentation, and the structures might not be in line with the recommendations made here. Then you have to make a decision about if "old" structures should be changed or not. There is not any simple rule for how to proceed in such cases. You could limit your efforts to only new derived variables, or you could set out to change all of the old variables. Our recommendation is that whatever approach is chosen, you should try to make these decisions early in the process. It does not become easier to set up a good structure for the data later.
 
 ### Why is a good structure in research data so important?
 Having a good structure is simply fundamental for working efficiently, both for yourself during the project and in other contexts.
@@ -31,7 +33,7 @@ Having a good structure is simply fundamental for working efficiently, both for 
 Many research projects have an afterlife. After some years, you might yourself want to do a follow-up study: what are the longterm effects? There could be other researchers interested to make such a followup. A supervisor might want to put previously collected data in the hands of new PhD students. You could be contacted by other researchers who are interested in your work, ending in a new joint project. In all those and many other situations there is a definite need for the original datasets to be well structured and well documented.
 
 #### Cooperation
-Some projects are from the start set up as based on more than one researcher or research group. Data can be collected in multiple centres, and the combined data set can also be used in multiple centres. In such cases, there is a definite need for well-designed data structures. 
+Some projects are from the start set up as based on more than one researcher or research group. Data can be collected in multiple centres, and the combined dataset can also be used in multiple centres. In such cases, there is a definite need for well-designed data structures. 
 
 Stryks?
 ~~For this reason, the level of detail is occasionally high.~~
@@ -40,7 +42,7 @@ Stryks?
 When research projects have reached their final days, many just wither away. Given the resources spent, this seems as a poor outcome. It is both a matter of making it possible to wake projects for future research and part of making the research efforts transparent. The latter could simply be seen as an important part of maintaining the publics' trust in the scientific community. So the research data should eventually be stored and archived in a manner that makes it possible to dig up even dead projects. 
 
 #### Reproducibility/open data/open science
-There has been an increasing emphasis in many areas on _reproducibility_, on _open data_ and _open science_. None of these goals can be attained if the underlying data sets are poorly documented, stored in formats no one can access and the like. However, there are limitations to what can be made open when it comes to data in typical medical research. It is also an area where both practical and legal issues have to be considered, so it is often necessary to consult legal and technical staff.
+There has been an increasing emphasis in many areas on _reproducibility_, on _open data_ and _open science_. None of these goals can be attained if the underlying datasets are poorly documented, stored in formats no one can access and the like. However, there are limitations to what can be made open when it comes to data in typical medical research. It is also an area where both practical and legal issues have to be considered, so it is often necessary to consult legal and technical staff.
 
 ### What aspects are _not_ covered in this document?
 
@@ -51,7 +53,7 @@ A structured approach to storage of data and other documents in a research proje
 The concept of FAIR data (Findable, Accessible, Interoperable and Reusable) has been discussed during the last decade. As the [GO FAIR](https://www.go-fair.org) network describes the ambitions: 
 > The ultimate goal of FAIR is to optimise the reuse of data. To achieve this, metadata and data should be well-described so that they can be replicated and/or combined in different settings. 
 
-The focus is on systems and structures to make data available and is part of a "movement" emphasizing "open data" and open science". This implies a focus on both legal and practical arrangements - repositories, identifiers for data,... - and are as such commendable. The suggestions put forward in this document certainly are in line with the suggestions made by the GO FAIR network. However, we limit the scope for this document to more direct suggestions for how you should work with your own data sets to simplify your research life. The possible extension into making research data comply to the FAIR principles is covered by university libraries, see for example [UMU: Research data](https://www.umu.se/bibliotek/forskningsdata). The recommendations made here should make this process smoother.
+The focus is on systems and structures to make data available and is part of a "movement" emphasizing "open data" and open science". This implies a focus on both legal and practical arrangements - repositories, identifiers for data,... - and are as such commendable. The suggestions put forward in this document certainly are in line with the suggestions made by the GO FAIR network. However, we limit the scope for this document to more direct suggestions for how you should work with your own datasets to simplify your research life. The possible extension into making research data comply to the FAIR principles is covered by university libraries, see for example [UMU: Research data](https://www.umu.se/bibliotek/forskningsdata). The recommendations made here should make this process smoother.
 
 #### Storage of data
 Researchers and students involved in the kind of research we have focused upon here are active in different organizational settings: mainly within universities, mainly in clinical work or mixtures of the two, within a smaller group or with a multicenter approach spanning an entire country or even several countries. Depending on the organization you find yourself in, there are hopefully structures in place for storing your research data in a secure way. However, the practical arrangements are so different that it is not possible to provide any specific suggestions here.
@@ -78,7 +80,7 @@ The list of problems when dealing with research data can be made very long. Ther
     - New derived variables are created during the project.
   - Dates can be stored in a number of formats, and the process to convert dates into a format that works in your software can be hard 
   - Exchange of data between different software systems can be difficult
-  - Data sets collected in more than one centre are often marred by inconsistencies in the formats used by the centres involved, making the compilation of data challenging
+  - datasets collected in more than one centre are often marred by inconsistencies in the formats used by the centres involved, making the compilation of data challenging
 
 ### Definitions
 
@@ -97,7 +99,7 @@ Unit of observation |
 <!---https://www.tablesgenerator.com/markdown_tables-->
 
 #### Each column corresponds to one variable in the dataset
-Bad example:
+Bad example (kanske ett dåligt sådant?):
 country | year | type |count
 ---  | --- | --- | ---
 Afghanistan | 1999 |cases | 745
@@ -141,7 +143,7 @@ Brazil       | 2000  | 80488  | 174504898
 | --- | --- | --- |
 | 1 | 34 | "male" |
 
-#### Make the data sets rectangular - kanske överflödigt
+#### Make the datasets rectangular - kanske överflödigt
 <!---Vad tänkte vi här? Vad skulle ett altenativ vara? Flera rektanglar? Exempel från Broman & Woo?-->
 
 ### Variable names 
@@ -197,7 +199,7 @@ Categorical variables consist of markers for categories, such as age group. The 
 If you work with spreadsheets, you could at least use comments.
 
 #### Variables measured at the different point
-Given that the data set is in a wide format (see [Wide or long format?](wide-or-long-format), variables measures at different time points should be given excectly the same name, except for a (short) suffix. 
+Given that the dataset is in a wide format (see [Wide or long format?](wide-or-long-format), variables measures at different time points should be given excectly the same name, except for a (short) suffix. 
 
 Bad example: `Hba1c_at_baseline`, `hba1c_at_3month_followup`, `hba1c_12_mon_fu`
 
@@ -252,16 +254,16 @@ Example:
 | 2 | f | 33 | 3 |
 
 ### Missing values
-Few data sets are free from missing values. Survey respondents might have left questions unanswered. In a study of the effects of some treatment, participants drop out from the followup for a number of reasons. Medical records often have gaps for variables which at the time for registration were not considered as sufficiently important to register. Such gaps should be treated with care. A general advice is to put effort into keeping track of such gaps since the subsequent analyses could be hampered. Some typical problems:
+Few datasets are free from missing values. Survey respondents might have left questions unanswered. In a study of the effects of some treatment, participants drop out from the followup for a number of reasons. Medical records often have gaps for variables which at the time for registration were not considered as sufficiently important to register. Such gaps should be treated with care. A general advice is to put effort into keeping track of such gaps since the subsequent analyses could be hampered. Some typical problems:
 
 - There could be many types of reasons for a missing value. In order to make readers of your results trust your findings, you should be able to keep track of and report such reasons and the frequence with which they have occurred.
 - Depending on software, missing values are in some systems coded with numerical values, such as 999 eller -999. If these are not defined as missing values, any calculation of such a variable will be flawed.
 
-You should also scan through your data and codebooks accompanying your data and look for indications of how missing values have been dealt with. A general advice, especially when you work with data sets delivered to you, is to in an early stage to go through the variables by sorting (both ascending and descending order) or in any other way search make your self aquainted with your data.
+You should also scan through your data and codebooks accompanying your data and look for indications of how missing values have been dealt with. A general advice, especially when you work with datasets delivered to you, is to in an early stage to go through the variables by sorting (both ascending and descending order) or in any other way search make your self aquainted with your data.
 
 The treatment of missing values is also software dependent, see [Some notes for specific software systems](some-notes-for-specific-software-systems). 
 
-#### Avoid having empty cells in the raw data set
+#### Avoid having empty cells in the raw dataset
 
 #### Ytterligare punkter...
 
@@ -271,7 +273,7 @@ It is sometimes good to store data for the same individuals in different files. 
 It is also very important that variables with any kind of repetition, in time or otherwise, have the same names and formats when data in parts are to be joined, see [Variables measured at the same time point](variables-measured-at-the-same-time-point).
 
 ### Compilation of data split into pieces into one dataset
-Data stored in separate parts must in most cases be compiled into one data set. The most straightforward matching is when you have one row for each individual in all files, a 1-to-1 matching. Another kind of matching is when you want to assign information from one file with unique records for each individual into a file with many rows for the individuals involved, a so called 1-to-many matching. 
+Data stored in separate parts must in most cases be compiled into one dataset. The most straightforward matching is when you have one row for each individual in all files, a 1-to-1 matching. Another kind of matching is when you want to assign information from one file with unique records for each individual into a file with many rows for the individuals involved, a so called 1-to-many matching. 
 
 These matching procedures can be made in any decent statistical software. It could however be quite demanding to make it work, so do not hesitate to consult a statistician.
 
@@ -317,11 +319,58 @@ Bad example:
 
 ## Other aspects
 
-### Don't do this in your data!
+### Don't do this in your data! (Flyttas till mer allmänt ställe?)
 - Don't calculate the time between events by manual calculations based on your calendar. There are always better ways to do this in your software.
 - Don't try to combine data stored in separate files by manual cut-and-paste operations.
 
 These commeents are of course not absolute, there could be cases with small datasets where manual handling could be reasonable. However, as soon as the dataset covers more than one screen on your computer, consider more structured ways to work.
+
+### Multiple response
+One fairly common type of data which needs extra attention is when there could be one more more answers, as for example to the question "Out of the following medicines, which have been prescribed during the last year? One or more alternatives can be marked" followed by possible alternatives such as "olika antibiotika".
+
+This kind of data can be dealt with in more than one way:
+
+#### Only a few combinations, mostly only one of the alternative is chosen 
+One single variable:
+id | medicine
+--- | ---
+1 | a
+2 | a 
+3 | b 
+4 | ab
+5 | c
+
+One possible and common drawback is that there could be many different combinations, so an effective summary of the variable might be hard to set up.
+
+#### Many possible combinations
+One column/variable for each alternative, where each alternative is a binary variable either with 0's and 1's or simply 1's:
+id | med_1 | med_2 | med_3
+--- | --- | --- |---
+1 | 1 | 0 | 0 
+2 | 1 | 0 | 0 
+3 | 0 | 1 | 0
+4 | 1 | 1 | 0
+5 | 0 | 0 | 1
+
+This is usually the best approach, both because the data can easily be summarized and because all information is available and fairly strightforward to set up into other formats. 
+
+#### Many possible combinations converted into one numerical value
+The 0's and 1's in the previous example could be seen as a binary number which in turn could be converted in a decimal value:
+id | med_1 | med_2 | med_3
+--- | --- | --- |---
+1 | 8 
+2 | 8 
+3 | 4
+4 | 9
+5 | 1
+
+All information is there, the values are unique, but the readability is still low. It is however a very compact format which could be expanded into the formats above.
+
+
+
+
+
+
 
 ### Import of files from others
 <!---Fundering: ska vi skriva något om detta, dvs hur de kan tänka när de får filer från andra, ex SoS? Typ "Se gärna till att du får filer i flera format, CSV/tab _och_ SAS eller annat format filleverantören själv arbetar med." Och "Vid inläsning av fil kan allt fungera om det är ett proprietärt format, men det kan också krångla. Ibland är det enklast att läsa in rena filer eftersom det går att styra inläsningen i mer detalj då." Eller är det för mycket vid sidan?--->
