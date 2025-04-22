@@ -14,10 +14,6 @@ Further, the data considered is of the kind usually referred to as _quantitative
 ### Why is a good structure in research data so important?
 Having a good structure is simply fundamental for working efficiently, both for yourself during the project and in other contexts.
 
-#### Reproducibility/open data/open science
-There has been an increasing emphasis in many areas on _reproducibility_, on _open data_ and _open science_. None of these goals can be attained if the underlying data sets are poorly documented, stored in formats no one can access and the like.
-<!---Något om att "open science" inte är självklart enkelt i medicinsk forskning?--->
-
 #### Projects often live long 
 Many research projects have an afterlife. After some years, you might yourself want to do a follow-up study: what are the longterm effects? There could be other researchers interested to make such a followup. A supervisor might want to put previously collected data in the hands of new PhD students. You could be contacted by other researchers who are interested in your work, ending in a new joint project. In all those and many other situations there is a definite need for the original datasets to be well structured and well documented.
 
@@ -26,6 +22,10 @@ Some projects are from the start set up as based on more than one researcher or 
 
 #### Archiving/transparency
 When research projects have reached their final days, many just wither away. Given the resources spent, this seems as a poor outcome. It is both a matter of making it possible to wake projects for future research and part of making the research efforts transparent. The latter could simply be seen as an important part of maintaining the publics' trust in the scientific community. So the research data should eventually be stored and archived in a manner that makes it possible to dig up even dead projects. 
+
+#### Reproducibility/open data/open science
+There has been an increasing emphasis in many areas on _reproducibility_, on _open data_ and _open science_. None of these goals can be attained if the underlying data sets are poorly documented, stored in formats no one can access and the like.
+<!---Något om att "open science" inte är självklart enkelt i medicinsk forskning?--->
 
 ### Example of common problems
   - Inconsistencies in naming variables can make coding and writing challenging
