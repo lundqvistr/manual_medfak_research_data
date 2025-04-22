@@ -31,7 +31,7 @@ There has been an increasing emphasis in many areas on _reproducibility_, on _op
   - Inconsistencies in naming variables can make coding and writing challenging
   - Lack of documention of codes can make calculations or creation of new derived variables more or less impossible
   - Data structured in vizually appealing format - parts of data placed in different spots in the file, colored cells,... - is often difficult to process for statistical analysis
-  - A database is often a changing entity. New data points might be added, others can be filter out from analysis. New derived variables are created during the project. A structure which is well-defined in advance can make the subsequent work a lot smoother.
+  - A database is often a changing entity. New data points might be added, others can be filtered out from analysis. New derived variables are created during the project. A structure which is well-defined in advance can make the subsequent work a lot smoother.
   - Data stored in different file formats can make compilation of files difficult, and hinder exchange of data
   - Dates can be stored in a number of formats, and the process to convert dates into a format that works in your software can be hard 
   - Exchange of data between different software systems can be difficult
