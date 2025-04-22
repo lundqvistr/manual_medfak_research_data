@@ -63,13 +63,15 @@ There are legal requirements for the archiving of completed research projects: _
 The software systems in use encompass a range of systems, from spreadsheets to more comprehensive systems specifically designed for statistical analyses. If you search for style guides or more general suggestions for how a particular system should be used, you can probably find many sources. 
 
 ### How to use the document
+(En hel del av texten här är "motiverande" snarare än att det beskrivs hur texten ska användas. Flyttas till inledningen?)
+
 This document is suggested as a template for how to structure reseach data files at the Medical faculty of Umeå University. Our hope is that the document will be a good support to PhD-students, supervisors, new and not so new researchers. We do not claim that the suggestions made here are the only ones or the best. We do however claim that the approach suggested is simple enough to use in _all_ systems. 
 
 The recommendations made here are valid and relevant for projects especially in the beginning. Having well-designed structures from the outset will usually not increase the total amount of time and resources spent on data management, but rather simplify subsequent work. However, in many projects data comes from other sources: external databases, data collected by others or the like. In such cases, there might be a lot of variables already named, having more or less complete documentation, and the structures might not be in line with the recommendations found in this document. Then you have to make a decision about if "old" structures should be changed or not. 
 
 There is not any simple rule for how to proceed in such cases. You could limit your efforts to only new derived variables, or you could set out to change all of the old variables. Our recommendation is that whatever approach is chosen, you should try to make these decisions early in the process. It does not become easier to set up a good structure for the data later.
 
-We hope that use of the recommendations made here will be beneficial for the quality of your own research. We also hope that if the recommendations are followed in a broader context at the medical faculty at UMU, this will simplify collaboration across research groups. ~~For this reason, the level of detail is occasionally high.~~ 
+We hope that use of the recommendations made here will be beneficial for the quality of your own research. We also hope that if the recommendations are followed in a broader context at the medical faculty at UMU, this will simplify collaboration across research groups. For this reason, the level of detail is occasionally high.
 
 In case you are not involved in medical research, we still hope that the suggestions made here are relevant to you. After all, even though there are many fields in science, there are also many common tasks in the analysis of the data.  
 
@@ -81,6 +83,7 @@ In case you are not involved in medical research, we still hope that the suggest
 - Each row corresponds to one observation
 - All variables in the dataset have the same unit of observation
 <!---ref?-->
+<!---Exempel?-->
 
 #### Each variable corresponds to one variable in the dataset
 <!---Ngt om multiple response? Egen punkt eller något inlagt här?-->
@@ -88,30 +91,31 @@ In case you are not involved in medical research, we still hope that the suggest
 #### Each row corresponds to one observation
 
 #### All variables in the dataset have the same unit of observation
+<!---Kan behöäva utvecklas...-->
 
 ### Variable names 
 Our recommendation is to use a simple structure since it works everywhere. Be consistent. 
 #### Use names in english
 - Do not use diacritical letters (å, ä, ö or the like) in variable names
 
-Bad example:
+Bad example: `Överlämnats`
 
-Good example:
+Good example: `overlamnats`
 
 #### Keep your variable names short
 Name variables so that the names provide a sufficiently clear description of the content. They do not have to be exhaustive. Short and meaningful is worth striving for.
 
-Bad example:
+Bad example: `type_of_primary_cardiovascular_event`
 
-Good example:
+Good example: `cv_type`
 
 #### Use only lower case letters
 - Do not begin variable names with upper case letters
 - Do not use names with mixed cases, such as the so called SnakeCase
 
-Bad example:
+Bad example: `RespondenStatus`
 
-Good example:
+Good example: `respondent_status`
 
 #### Do not include explanations of codes in the variable name
 
@@ -135,9 +139,11 @@ Bad example:
 #### Variables measured at the same time point
 Given that the data set is in a wide format (see [Wide or long format?](wide-or-long-format), variables measures at different time points should be given excectly the same name, except for suffix. 
 
-Bad example:
+Bad example: `Hba1c_at_baseline`, `hba1c_at_3month_followup`, `hba1c_12_mon_fu`
 
-Good example:
+Good example: `hba1c_0`, `hba1c_3m`, `hba1c_12m`
+
+If you have a long format for this kind of data, then the `hba1c` data naturally should consist of one variable with the actual `hba1c` levels and another (`time`) with values such as 0, 3, 12 for each observation.
 
 ### Create and maintain a codebook
 A codebook describes the contents, structure, and layout of a data collection. More specifically explanations of variables, units for measurement variables, explanation of codes used in categorical variables, codes used for missing values and other attributes of the variables in your dataset. There are routines in the software most comonly used to generate such codebooks, but it could also consist of an Excel file with one sheet containing explanations for variable names, another sheet with explanations of the codes used. A short example is found in one of the appendices. 
