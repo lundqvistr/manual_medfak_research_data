@@ -4,7 +4,7 @@ The authors of the present document work as biostatisticians ~~all have extensiv
 Our hope is that this document can offer useful guidance on how to avoid issues related to data management, analysis, and archiving, facilitating work for all researchers/staff involved, both during and after the course of the research project. We also hope that if the recommendations are followed in a broader context at the medical faculty at UMU, this will simplify collaboration across research groups. Ultimately, the goal is to increase the quality of the research. 
 
 ### What is this document?
-This document is a suggested template for how to structure reseach data files at the Medical faculty of Umeå University. 
+This document is intended as a template for how to structure reseach data files at the Medical faculty of Umeå University. 
 
 The recommendations made here are valid and relevant for projects especially in their beginning stages. Having well-designed structures from the outset will usually not increase the total amount of time and resources spent on data management, but rather simplify subsequent work. 
 
