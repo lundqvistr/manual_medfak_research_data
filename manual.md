@@ -87,7 +87,7 @@ Löptext... Common problems includes:
 ### Definitions
 - Observation
 - Variable
-- unit observation
+- Unit of observation
 
 ### Tidy data - what is it?
 - Each column corresponds to one variable in the dataset
@@ -96,7 +96,6 @@ Löptext... Common problems includes:
 <!---ref?-->
 <!---Exempel?-->
 <!---https://www.tablesgenerator.com/markdown_tables-->
-
 
 
 #### Each column corresponds to one variable in the dataset
@@ -122,6 +121,7 @@ Löptext... Common problems includes:
 | id | age | sex |
 | --- | --- | --- |
 | 1 | 34 | "male" |
+
 #### All variables in the dataset have the same unit of observation
 <!---Kan behöäva utvecklas...-->
 ##### Bad example
@@ -139,12 +139,13 @@ Löptext... Common problems includes:
 
 ### Variable names 
 Our recommendation is to use a simple structure since it works everywhere. Be consistent. 
+
 #### Use names in english
 - Do not use diacritical letters (å, ä, ö or the like) in variable names
 
-Bad example: `överlämnats`
+Bad example: `Åtgärd`
 
-Good example: `nåt på engelska`
+Good example: `remedy`
 
 #### Separate parts in names with underscore ("_")
 - Do not use spaces, dots (".") or upper case letters to separate parts
@@ -152,6 +153,7 @@ Good example: `nåt på engelska`
 Good example:
 
 Bad example:
+
 #### Keep your variable names short
 Name variables so that the names provide a sufficiently clear description of the content. They do not have to be exhaustive. Short and meaningful is worth striving for.
 
@@ -177,7 +179,15 @@ Good example: `diabetes`
 
 Another good example: `type_primary_event`
 
-Explanations of codes are of course essential, but set these up in some other way. Any decent statistical software has support for such explanations. If you work with spreadsheets, you could at least use comments. You should also set up and maintain a [codebook](create-and-maintain-a-codebook).
+### Variables can sometimes be assigned explanatory "labels"
+Variables should of course be understandable. This is however not always that simple to achieve, especially if a variable name is sort and there are many versions of the content, e g `dog1` and `dog5` for a child being allergic (yes/no) to dogs at 1 and 5 years of age respectively. In In such cases, it is critical to assign good explanations to the variables. How this is done depends on your software. Irrespective of how you set up such explanatory labels, you should always keep a system for this kind of information. 
+
+If the software you use allows such labels to be set, then your analyses will also be simplied with such labels since the output - tables and graphs - will make direct use of these labels in full text. 
+
+### Codes should be assigned explanations
+Categorical variables consist of markers for categories, such as age group. The data _can_ consist of text in full text, such as "25-64", "65-". It could alsoe be the case that you work with numerical values, in which case these values must be assigned explanations. The suggestions made for variables are valid or codes too: they should not be longer than needed, and and informative. These codes are an important part of your [codebook](create-and-maintain-a-codebook).
+
+If you work with spreadsheets, you could at least use comments.
 
 #### Variables measured at the different point
 Given that the data set is in a wide format (see [Wide or long format?](wide-or-long-format), variables measures at different time points should be given excectly the same name, except for a (short) suffix. 
@@ -187,9 +197,6 @@ Bad example: `Hba1c_at_baseline`, `hba1c_at_3month_followup`, `hba1c_12_mon_fu`
 Good example: `hba1c_0`, `hba1c_3m`, `hba1c_12m`
 
 If you have a long format for this kind of data, then the `hba1c` data should consist of one variable with the actual `hba1c` levels and another (`time`) with values such as 0, 3, 12 for each observation.
-
-### Where codes are used, give them good labels/explanations
-Codes used for categorical variables should be assigned explanations. In case your system does not support such details, then you should at least provide external documentation of what the codes mean, i e a [_codebook_](#data-dictionary-/-codebooks)
 
 ### Create and maintain a codebook
 A codebook describes the contents, structure, and layout of a data collection. More specifically explanations of variables, units for measurement variables, explanation of codes used in categorical variables, codes used for missing values and other attributes of the variables in your dataset. There are routines in the software most comonly used to generate such codebooks, but it could also consist of an Excel file with one sheet containing explanations for variable names, another sheet with explanations of the codes used. A short example of a Excel code book is found in one of appendix 2.
@@ -214,39 +221,61 @@ If the structure is one of the two first you will probably have to join the part
 
 #### Wide format
 Here the basic observation is one "individual". One row per individual, several variables for each timepoint.
+
 Example:
+
+| id | sex | hba1c_1 | hba1c_2  | hba1c_3  | 
+| --- | --- | ---| --- | ---|
+| 1 | m | 34 | 36 | 38 |
+| 2 | m | 32 | 32 | 33 |
+
 
 #### Long format
 The basic observation in such a structure is the combination of individual _and_ timepoint. There are one row for each such combination, resulting in several rows for each individual
-Example: 
-### Missing values
-Generell inledning.  Beware!! Koder 999 eller -999 bör undvikas. Måste kolla genom data. 
-Also software dependent. 
-#### R
-use NA and a seperate variable for describing type of missing. 
-#### stata
-#### SPSS
-#### SAS
 
-Bad examples 
-Good examples
+Example: 
+
+| id | sex | hba1c | time  |
+| --- | --- | ---| --- |
+| 1 | m | 34 | 1 |
+| 1 | m | 36 | 2 |
+| 1 | m | 38 | 3 |
+| 2 | f | 32 | 1 |
+| 2 | f | 32 | 2 |
+| 2 | f | 33 | 3 |
+
+### Missing values
+Few data sets are free from missing values. Survey respondents might have left questions unanswered. In a study of the effects of some treatment, participants drop out from the followup for a number of reasons. Medical records often have gaps for variables which at the time for registration were not considered as sufficiently important to register. Such gaps should be treated with care. A general advice is to put effort into keeping track of such gaps since the subsequent analyses could be hampered. Some typical problems:
+
+- There could be many types of reasons for a missing value. In order to make readers of your results trust your findings, you should be able to keep track of and report such reasons and the frequence with which they have occurred.
+- Depending on software, missing values are in some systems coded with numerical values, such as 999 eller -999. If these are not defined as missing values, any calculation of such a variable will be flawed.
+
+You should also scan through your data and codebooks accompanying your data and look for indications of how missing values have been dealt with. A general advice, especially when you work with data sets delivered to you, is to in an early stage to go through the variables by sorting (both ascending and descending order) or in any other way search make your self aquainted with your data.
+
+The treatment of missing values is also software dependent, see [Some notes for specific software systems](some-notes-for-specific-software-systems). 
+
 #### Avoid having empty cells in the raw data set
 
 #### Ytterligare punkter...
 
-### Data on the same individuals in more than one place?
-When data for the same individuals is stored in different places, it is usually necessary to join or "match" the parts together. Such procedures can be made in any decent statistical software. It could however be quite demanding to make it work, so do not hesitate to consult a statistician.
-
+### Data on the same individuals in more than one place
+It is sometimes good to store data for the same individuals in different files. However, those files must often be combined into one single file before you can begin with your analyses. Then it is nexecary to have a common "key" variable in all parts meant to be joined: "personnummer" or some other identifying variable. The "key" could also consist of more than one variable, e g `id` _and_ `time`if the basic unit of observations is one particular individual at a specific point in time.
+ 
 It is also very important that variables with any kind of repetition, in time or otherwise, have the same names and formats when data in parts are to be joined, see [Variables measured at the same time point](variables-measured-at-the-same-time-point).
-And of course, there has to be a common "key" variable in all parts meant to be joined: "personnummer" or some other identifying variable. 
 
-Sometimes on data file in wide format is to merged with a data file in long format. 
+### Compilation of data split into pieces into one dataset
+Data stored in separate parts must in most cases be compiled into one data set. The most straightforward matching is when you have one row for each individual in all files, a 1-to-1 matching. Another kind of matching is when you want to assign information from one file with unique records for each individual into a file with many rows for the individuals involved, a so called 1-to-many matching. 
+
+These matching procedures can be made in any decent statistical software. It could however be quite demanding to make it work, so do not hesitate to consult a statistician.
 
 ### Advice for manual entry of data
-<!---Ska vi ha med ett sådant avsnitt alls?--->
-The recommendations made in this document are meant to be valid for data you get from other sources you as well as data you enter manually yourself. In the latter case there are however some aspects which could make the process less demanding.
+The recommendations made in this document are meant to be valid for any kind of data, irrespective of whether the source is someone else or if you have entered data manually yourself. Such manual entry is an important stage where you should strive to minimize the risk for errors and to make the entry process as smooth as possible.
 
-#### Entry in a spreadsheet or in statistical software?
+#### Systems for data entry
+Data could be entered in a number of ways:
+
+Excel/spreadsheets
+: Possible and available, but not particlarly safe. 
 
 #### Keep the structure simple in order to minimize errors
 
@@ -255,6 +284,7 @@ The recommendations made in this document are meant to be valid for data you get
 #### If there are questions, put comments in separate columns
 
 Bad example:
+
 
 Good example:
 
@@ -266,6 +296,12 @@ Bad example:
 
 
 ## Other aspects
+
+### Don't do this in your data!
+- Don't calculate the time between events by manual calculations based on your calendar. There are always better ways to do this in your software.
+- Don't try to combine data stored in separate files by manual cut-and-paste operations.
+
+These commeents are of course not absolute, there could be cases with small datasets where manual handling could be reasonable. However, as soon as the dataset covers more than one screen on your computer, consider more structured ways to work.
 
 ### Import of files from others
 <!---Fundering: ska vi skriva något om detta, dvs hur de kan tänka när de får filer från andra, ex SoS? Typ "Se gärna till att du får filer i flera format, CSV/tab _och_ SAS eller annat format filleverantören själv arbetar med." Och "Vid inläsning av fil kan allt fungera om det är ett proprietärt format, men det kan också krångla. Ibland är det enklast att läsa in rena filer eftersom det går att styra inläsningen i mer detalj då." Eller är det för mycket vid sidan?--->
@@ -339,14 +375,27 @@ A basic recommendation is to have different scripts for different tasks, typical
 ### More on scripts in different software
 ? Ska detta med?
 
+### Some notes for specific software systems 
+
 #### R
+
+##### Missing values
 
 #### SAS
 
+##### Missing values
+
 #### SPSS
+
+##### Missing values
+
+##### Syntax files
+
 - If different syntax files, a “master” syntax file can use ```INSERT FILE``` to invoke sub files.
 
 #### Stata
+
+##### Missing values
 
 ### Some good examples
 
