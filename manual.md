@@ -274,19 +274,32 @@ The recommendations made in this document are meant to be valid for any kind of 
 #### Systems for data entry
 Data could be entered in a number of ways:
 
-Excel/spreadsheets
-: Possible and available, but not particlarly safe. 
+System | Comments 
+--- | ---
+Excel/spreadsheets | Possible, flexible and available, but not particlarly safe. If spreadsheets are used, consider adding "validation" to the data entry.|
+Statistical software (SPSS, Stata R,...) | Works similarly to spreadsheets, perhaps less flexxible and usually wwithout validation procedures | 
+Redcap or other systems for "case report forms" | Works quite well, validation is possible, data can be exported to formats suitable for import into statistical software |
+Database systems: MS Access, SQL,... | Perhaps the safest tool, however setting up a good database structure is not always that straightforward |
 
 #### Keep the structure simple in order to minimize errors
+Whatever structure, one single file for all data or data split in separate parts, make your utmost to set up a simple structure which is easy for all involved parties to understand and follow. Simplicity and ease of use is the best way to minimize errors and to avoid timeconsuming pitfalls.
 
 #### Different worksheets or different files for data in the same individuals
+Tas bort?
 
-#### If there are questions, put comments in separate columns
+#### If there are questions, put comments in adjoining columns
 
 Bad example:
-
+| id | sex | hba1c_1 | hba1c_2  | hba1c_3  | 
+| --- | --- | ---| --- | ---|
+| 1 | m | 34 | 36? | 38 |
+| 2 | m | 32 | 32 | 33 (error?) |
 
 Good example:
+| id | sex | hba1c_1 | hba1c_1_c | hba1c_2  | hba1c_2_c | hba1c_3 | hba1c_3_c  | 
+| --- | --- | ---| --- | ---| --- | --- | ---|
+| 1 | m | 34 | | 36 |? | 38 | |
+| 2 | m | 32 | | 32 |  | 33 | error? |
 
 ### No calculations in the raw data files
 <!---Calculations, avser det formler i Excel-blad? Det är förstås inte bra, men hit hör kanske också färgade celler?-->
