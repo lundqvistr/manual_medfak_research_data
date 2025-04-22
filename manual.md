@@ -8,7 +8,9 @@ This document is intended as a template for how to structure reseach data files 
 
 The recommendations made here are valid and relevant for projects especially in their beginning stages. Having well-designed structures from the outset will usually not increase the total amount of time and resources spent on data management, but rather simplify subsequent work. 
 
-In case you are not involved in medical research, we still hope that the suggestions made here are relevant to you. After all, even though there are many fields in science, there are also many common tasks in the analysis of the data.   We do not claim that the suggestions made here are the only ones or the best. We do however claim that the approach suggested is simple enough to use in _all_ systems. 
+In case you are not involved in medical research, we still hope that the suggestions made here are relevant to you. After all, even though there are many fields in science, there are also many common tasks in the analysis of the data.
+
+We cannot claim that the suggestions made here are the only possible ways to work or the unequivocally "best" ways. We do however claim that the approach suggested is simple enough to use in _all_ systems. 
 
 ### For whom is this document written?
 The targeted audience is staff in any way involved in research - PhD students, supervisors,... - inexperienced and experienced alike.
