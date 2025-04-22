@@ -34,6 +34,8 @@ There has been an increasing emphasis in many areas on _reproducibility_, on _op
   - A database is often a changing entity. New data points might be added, others can be filtered out from analysis. New derived variables are created during the project. A structure which is well-defined in advance can make the subsequent work a lot smoother.
   - Data stored in unsuitable file formats can make compilation of files difficult, and hinder exchange of data
   - Dates can be stored in a number of formats, and the process to convert dates into a format that works in your software can be hard 
+  
+  <!---Här är det väl en upprepning av punkten ovan om "Data stored..."? En kvar?--->
   - Exchange of data between different software systems can be difficult
   - Data sets collected in more than one centre are often marred by inconsistencies in the formats used by the centres involved, making the compilation of data challenging
 
