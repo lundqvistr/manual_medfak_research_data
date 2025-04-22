@@ -1,21 +1,18 @@
-<!---Ska det in något någonstans om programvara, att det kan vara olika lätt att få in metadata? Att ambitionen här är att vara generell men att det som föreslås kan se rätt olika ut och fungera olika i system? -Ja, gärna tycker jag. /Per-->
-
 ## Introduction
-The authors of the present document all have extensive experience from working as biostatisticians, where we often recive data from many different projects. We have all seen many examples of data files structured in a way that have been demanding for both ourselves and the users. Usually, a typical basic course of biostatistics does not cover the aspects we aim at here, namely how to set up a good data structure, despite this being a fundamental part of analysing data. A PhD student who has only recently begun his or her research career cannot be expected to know how to structure a data file in a way that facilitates research on the data for many years to come. Thus, the student is therefore dependent on their supervisor having sufficient knowledge in this area—and also on that knowledge being effectively communicated early in the doctoral training. This is a fragile system. 
+The authors of the present document works as biostatisticians ~~all have extensive experience from working as biostatisticians~~, where we often receive data from many different projects. We have ~~~all~~ seen many examples of data files structured in ways that have been demanding for both ourselves and the final users. Usually, a typical basic course of biostatistics does not cover the aspects we aim at here, namely how to set up a good data structure, despite this being a fundamental part of analysing data. A PhD student who has only recently begun his or her research career cannot be expected to know how to structure a data file in a way that facilitates research on the data for many years to come. Thus, the student is therefore dependent on their supervisor having sufficient knowledge in this area, and also on that knowledge being effectively communicated early in the doctoral training. This is a fragile system. 
 
 Our hope is that this document can offer useful guidance on how to avoid issues related to data management, analysis, and archiving, facilitating work for all researchers/staff involved, both during and after the course of the research project. We also hope that if the recommendations are followed in a broader context at the medical faculty at UMU, this will simplify collaboration across research groups. Ultimately, the goal is to increase the quality of the research. 
 
 ### What is this document?
 This document is a suggested template for how to structure reseach data files at the Medical faculty of Umeå University. 
 
-The recommendations made here are valid and relevant for projects especially in the beginning. Having well-designed structures from the outset will usually not increase the total amount of time and resources spent on data management, but rather simplify subsequent work. 
+The recommendations made here are valid and relevant for projects especially in their beginning stages. Having well-designed structures from the outset will usually not increase the total amount of time and resources spent on data management, but rather simplify subsequent work. 
 
 In case you are not involved in medical research, we still hope that the suggestions made here are relevant to you. After all, even though there are many fields in science, there are also many common tasks in the analysis of the data.   We do not claim that the suggestions made here are the only ones or the best. We do however claim that the approach suggested is simple enough to use in _all_ systems. 
 
 
 ### For whom is this document written?
-Any researcher or research staff, inexperienced and experienced, who are working on compiling a data file. Our hope is that the document will be a good support to PhD-students, supervisors, new and not so new researchers.
-
+The targeted audience is staff in any way involved in research - PhD students, supervisors,... - inexperienced and experienced alike.
 
 ### How to use this document
 In many projects data comes from other sources: external databases, data collected by others or the like. In such cases, there might be a lot of variables already named, having more or less complete documentation, and the structures might not be in line with the recommendations found in this document. Then you have to make a decision about if "old" structures should be changed or not. There is not any simple rule for how to proceed in such cases. You could limit your efforts to only new derived variables, or you could set out to change all of the old variables. Our recommendation is that whatever approach is chosen, you should try to make these decisions early in the process. It does not become easier to set up a good structure for the data later.
@@ -27,7 +24,6 @@ Another purpose is _research_ where the goal is to summarize important aspects o
 
 Further, the data considered is of the kind usually referred to as _quantitative_. Considerations for the structure in qualitative data must be found elsewhere.
 
-
 ### Why is a good structure in research data so important?
 Having a good structure is simply fundamental for working efficiently, both for yourself during the project and in other contexts.
 
@@ -37,19 +33,19 @@ Many research projects have an afterlife. After some years, you might yourself w
 #### Cooperation
 Some projects are from the start set up as based on more than one researcher or research group. Data can be collected in multiple centres, and the combined data set can also be used in multiple centres. In such cases, there is a definite need for well-designed data structures. 
 
-For this reason, the level of detail is occasionally high.
+Stryks?
+~~For this reason, the level of detail is occasionally high.~~
 
 #### Archiving/transparency
 When research projects have reached their final days, many just wither away. Given the resources spent, this seems as a poor outcome. It is both a matter of making it possible to wake projects for future research and part of making the research efforts transparent. The latter could simply be seen as an important part of maintaining the publics' trust in the scientific community. So the research data should eventually be stored and archived in a manner that makes it possible to dig up even dead projects. 
 
 #### Reproducibility/open data/open science
-There has been an increasing emphasis in many areas on _reproducibility_, on _open data_ and _open science_. None of these goals can be attained if the underlying data sets are poorly documented, stored in formats no one can access and the like.However, there are limitations to what can be made open when it comes to data in typical medical research. It is also an area where both practical and legal issues have to be considered, so it is often necessary to consult legal and technical staff.
-<!---Något om att "open science" inte är självklart enkelt i medicinsk forskning?--->
+There has been an increasing emphasis in many areas on _reproducibility_, on _open data_ and _open science_. None of these goals can be attained if the underlying data sets are poorly documented, stored in formats no one can access and the like. However, there are limitations to what can be made open when it comes to data in typical medical research. It is also an area where both practical and legal issues have to be considered, so it is often necessary to consult legal and technical staff.
 
 ### What aspects are _not_ covered in this document?
 
 ### The structure of data files and folders
-This is important. Hänvisa till Eloranta et al? Eller UB? Behövs detta avsnitt alls?
+A structured approach to storage of data and other documents in a research project is of course important. However, the level in this document is on a somewhat lower level with a focus on more practical aspects of data. A good source for more details on structures on the higher level is an article by Eloranta et al, as well as information at the [UMU library web](https://www.umu.se/bibliotek/forskningsdata/samla-och-organisera/)?
 
 #### FAIR data
 The concept of FAIR data (Findable, Accessible, Interoperable and Reusable) has been discussed during the last decade. As the [GO FAIR](https://www.go-fair.org) network describes the ambitions: 
@@ -69,27 +65,30 @@ There are legal requirements for the archiving of completed research projects: _
 #### Suggestions or style guides for particular software systems
 The software systems in use encompass a range of systems, from spreadsheets to more comprehensive systems specifically designed for statistical analyses. If you search for style guides or more general suggestions for how a particular system should be used, you can probably find many sources. 
 
-
-
 ## Principles for data file organization
 The most important advice is however to be as _consistent_ as possible irrespective of the chosen structure. 
 
 ### Examples of common problems
-Löptext... Common problems includes:
+The list of problems when dealing with research data can be made very long. There are however some more common problems:
   - Inconsistencies in naming variables can make coding and writing challenging
-  - Lack of documention of codes can make calculations or creation of new derived variables more or less impossible
+  - Lack of documention of variable content and codes used can make calculations or creation of new derived variables more or less impossible
   - Data structured in vizually appealing format - parts of data placed in different spots in the file, colored cells,... - is often difficult to process for statistical analysis
-  - A database is often a changing entity. New data points might be added, others can be filtered out from analysis. New derived variables are created during the project. A structure which is well-defined in advance can make the subsequent work a lot smoother.
+  - A database is often a changing entity. A structure which is not well-defined in advance can make the subsequent work a lot more difficult than needed.
+    - New data points might be added, others can be filtered out from analysis.
+    - New derived variables are created during the project.
   - Dates can be stored in a number of formats, and the process to convert dates into a format that works in your software can be hard 
   - Exchange of data between different software systems can be difficult
   - Data sets collected in more than one centre are often marred by inconsistencies in the formats used by the centres involved, making the compilation of data challenging
 
 ### Definitions
-- Observation
-- Variable
-- Unit of observation
 
-### Tidy data - what is it?
+Concept/term | Intended meaning
+--- | ---
+Observation | 
+Variable | 
+Unit of observation | 
+
+### Tidy data
 - Each column corresponds to one variable in the dataset
 - Each row corresponds to one observation
 - All variables in the dataset have the same unit of observation -förklara vad som menas
@@ -97,21 +96,29 @@ Löptext... Common problems includes:
 <!---Exempel?-->
 <!---https://www.tablesgenerator.com/markdown_tables-->
 
-
 #### Each column corresponds to one variable in the dataset
+Bad example:
+country | year | type |count
+---  | --- | --- | ---
+Afghanistan | 1999 |cases | 745
+Afghanistan | 1999 | population | 19987071
+Afghanistan | 2000 | cases | 2666
+Afghanistan | 2000 | population | 20595360
+Brazil | 1999 | cases | 37737
+Brazil | 1999 |population | 172006362
+
+Better example: 
+country |    year | cases | population
+--- | --- | --- | --- 
+Afghanistan  | 1999  | 745   | 19987071
+Afghanistan  | 2000  | 2666   | 20595360
+Brazil       | 1999  | 37737  | 172006362
+Brazil       | 2000  | 80488  | 174504898
+
 <!---Ngt om multiple response? Egen punkt eller något inlagt här?-->
 
-##### Bad example
-| id | age | sex |
-| --- | --- | --- |
-| 1 | 34 | "male" |
-
-##### Good example
-| id | age | sex |
-| --- | --- | --- |
-| 1 | 34 | "male" |
-
 #### Each row corresponds to one observation
+
 ##### Bad example
 | id | age | sex |
 | --- | --- | --- |
