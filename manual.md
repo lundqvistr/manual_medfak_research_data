@@ -26,13 +26,17 @@ Another purpose is _research_ where the goal is to summarize important aspects o
 Further, the data considered is of the kind usually referred to as _quantitative_. Considerations for the structure in qualitative data must be found elsewhere.
 
 ### The scope for the recommendations made here
-In many research projects, data comes from several sources: your own manually entered data, external databases, data collected by others or the like. the suggestions made are meant to be of use especially when you are setting up your own structure. In the case of data from other sources, you are not in complete control yourself. There might be a lot of variables already named, having more or less complete documentation, and the structures might not be in line with the recommendations made here. Then you have to make a decision about if "old" structures should be changed or not. There is not any simple rule for how to proceed in such cases. You could limit your efforts to only new derived variables, or you could set out to change all of the old variables. Our recommendation is that whatever approach is chosen, you should try to make these decisions early in the process. It does not become easier to set up a good structure for the data later.
+In many research projects, data comes from several sources: your own manually entered data, external databases, data collected by others or the like. The suggestions made are meant to be of use especially when you are setting up your own structure. 
+
+In the case of data from other sources, you are not in complete control yourself. There might be a lot of variables already named, having more or less complete documentation, and the structures might not be in line with the recommendations made here. Then you have to make a decision about if "old" structures should be changed or not. There is not any simple rule for how to proceed in such cases. You could limit your efforts to only new derived variables, or you could set out to change all of the old variables. 
+
+Our recommendation is that whatever approach is chosen, you should try to make these decisions early in the process. It does not become easier to set up a good structure for the data later.
 
 ### Why is a good structure in research data so important?
 Having a good structure is simply fundamental for working efficiently, both for yourself during the project and in other contexts.
 
 #### Projects often live long 
-Many research projects have an afterlife. After some years, you might yourself want to do a follow-up study: what are the longterm effects? There could be other researchers interested to make such a followup. A supervisor might want to put previously collected data in the hands of new PhD students. You could be contacted by other researchers who are interested in your work, ending in a new joint project. In all those and many other situations there is a definite need for the original datasets to be well structured and well documented.
+Many research projects have an afterlife. After some years, you might yourself want to do a follow-up study: what are the longterm effects? There could be other researchers interested to make such a followup. A supervisor might want to put previously collected data in the hands of new PhD students. You could be contacted by other researchers who are interested in your work, ending in a new joint project. In all those and many other situations there is a definite need for the original datasets to be well-structured and well-documented.
 
 #### Cooperation
 Some projects are from the start set up as based on more than one researcher or research group. Data can be collected in multiple centres, and the combined dataset can also be used in multiple centres. In such cases, there is a definite need for well-designed data structures. 
@@ -49,7 +53,7 @@ There has been an increasing emphasis in many areas on _reproducibility_, on _op
 ### What aspects are _not_ covered in this document?
 
 ### The structure of data files and folders
-A structured approach to storage of data and other documents in a research project is of course important. However, the level in this document is on a somewhat lower level with a focus on more practical aspects of data. A good source for more details on structures on the higher level is an article by Eloranta et al, as well as information at the [UMU library web](https://www.umu.se/bibliotek/forskningsdata/samla-och-organisera/)?
+A structured approach to storage of data and other documents in a research project is of course important. However, the level in this document is on a somewhat lower level with a focus on more practical aspects of data management. A good source for more details on structures on the higher level is an [article](https://lakartidningen.se/klinik-och-vetenskap-1/2013/02/att-strukturera-och-dokumentera-forskningsprojekt/) by Eloranta et al, as well as information at the [UMU library web](https://www.umu.se/bibliotek/forskningsdata/samla-och-organisera/).
 
 #### FAIR data
 The concept of FAIR data (Findable, Accessible, Interoperable and Reusable) has been discussed during the last decade. As the [GO FAIR](https://www.go-fair.org) network describes the ambitions: 
@@ -67,7 +71,7 @@ The concept of data management plans (DMP) has become increasingly emphasized in
 There are legal requirements for the archiving of completed research projects: _what_, _how_, _for how long_ are typical questions. Universities and health care providers have their own implementations for the procedures involved.  
 
 #### Suggestions or style guides for particular software systems
-The software systems in use encompass a range of systems, from spreadsheets to more comprehensive systems specifically designed for statistical analyses. If you search for style guides or more general suggestions for how a particular system should be used, you can probably find many sources. 
+Software used for statistical analyses encompass a range of systems, from spreadsheets to more comprehensive systems specifically designed for statistics. If you search for style guides or more general suggestions for how a particular system should be used, you can probably find many sources. A couple of examples can be found here, see [Style guides](style-guides). 
 
 ## Principles for data file organization
 The most important advice is however to be as _consistent_ as possible irrespective of the chosen structure. 
@@ -124,26 +128,26 @@ Brazil       | 2000  | 80488  | 174504898
 #### Each row corresponds to one observation
 
 ##### Bad example
-| id | age | sex |
-| --- | --- | --- |
-| 1 | 34 | "male" |
+ id | age | sex 
+ --- | --- | --- 
+ 1 | 34 | "male" 
 
 ##### Good example
-| id | age | sex |
-| --- | --- | --- |
-| 1 | 34 | "male" |
+ id | age | sex 
+ --- | --- | --- 
+ 1 | 34 | "male" 
 
 #### All variables in the dataset have the same unit of observation
 <!---Kan behöäva utvecklas...-->
 ##### Bad example
-| id | age | sex |
-| --- | --- | --- |
-| 1 | 34 | "male" |
+ id | age | sex 
+ --- | --- | --- 
+ 1 | 34 | "male" 
 
 ##### Good example
-| id | age | sex |
-| --- | --- | --- |
-| 1 | 34 | "male" |
+ id | age | sex 
+ --- | --- | --- 
+ 1 | 34 | "male" 
 
 #### Make the datasets rectangular - kanske överflödigt
 <!---Vad tänkte vi här? Vad skulle ett altenativ vara? Flera rektanglar? Exempel från Broman & Woo?-->
@@ -213,7 +217,7 @@ If you have a long format for this kind of data, then the `hba1c` data should co
 A codebook describes the contents, structure, and layout of a data collection. More specifically explanations of variables, units for measurement variables, explanation of codes used in categorical variables, codes used for missing values and other attributes of the variables in your dataset. There are routines in the software most comonly used to generate such codebooks, but it could also consist of an Excel file with one sheet containing explanations for variable names, another sheet with explanations of the codes used. A short example of a Excel code book is found in one of appendix 2.
 
 
-### Style guides?
+### Style guides
 There are many style guides for the use of specific softwares, such as [Google's R style guide](https://google.github.io/styleguide/Rguide.html#:~:text=R%20is%20a%20high-level%20programming%20language%20used%20primarily,the%20Tidyverse%20Style%20Guide%20by%20Hadley%20Wickham%20license) or [The DIME Analytics Stata Style Guide](https://worldbank.github.io/dime-data-handbook/coding.html#the-dime-analytics-stata-style-guide). It is however important to realize that there are many such guides, and they might not be telling the same story. 
 
 ### Wide or long format?
@@ -235,10 +239,10 @@ Here the basic observation is one "individual". One row per individual, several 
 
 Example:
 
-| id | sex | hba1c_1 | hba1c_2  | hba1c_3  | 
-| --- | --- | ---| --- | ---|
-| 1 | m | 34 | 36 | 38 |
-| 2 | m | 32 | 32 | 33 |
+ id | sex | hba1c_1 | hba1c_2  | hba1c_3  
+ --- | --- | ---| --- | ---
+ 1 | m | 34 | 36 | 38 
+ 2 | m | 32 | 32 | 33 
 
 
 #### Long format
@@ -246,14 +250,14 @@ The basic observation in such a structure is the combination of individual _and_
 
 Example: 
 
-| id | sex | hba1c | time  |
-| --- | --- | ---| --- |
-| 1 | m | 34 | 1 |
-| 1 | m | 36 | 2 |
-| 1 | m | 38 | 3 |
-| 2 | f | 32 | 1 |
-| 2 | f | 32 | 2 |
-| 2 | f | 33 | 3 |
+ id | sex | hba1c | time  
+ --- | --- | ---| --- 
+ 1 | m | 34 | 1 
+ 1 | m | 36 | 2|
+ 1 | m | 38 | 3 
+ 2 | f | 32 | 1 
+ 2 | f | 32 | 2 
+ 2 | f | 33 | 3 
 
 ### Missing values
 Few datasets are free from missing values. Survey respondents might have left questions unanswered. In a study of the effects of some treatment, participants drop out from the followup for a number of reasons. Medical records often have gaps for variables which at the time for registration were not considered as sufficiently important to register. Such gaps should be treated with care. A general advice is to put effort into keeping track of such gaps since the subsequent analyses could be hampered. Some typical problems:
@@ -301,34 +305,35 @@ Tas bort?
 #### If there are questions, put comments in adjoining columns
 
 Bad example:
-| id | sex | hba1c_1 | hba1c_2  | hba1c_3  | 
-| --- | --- | ---| --- | ---|
-| 1 | m | 34 | 36? | 38 |
-| 2 | m | 32 | 32 | 33 (error?) |
+ id | sex | hba1c_1 | hba1c_2  | hba1c_3  
+ --- | --- | ---| --- | ---
+ 1 | m | 34 | 36? | 38 
+ 2 | m | 32 | 32 | 33 (error?) 
 
 Good example:
-| id | sex | hba1c_1 | hba1c_1_c | hba1c_2  | hba1c_2_c | hba1c_3 | hba1c_3_c  | 
-| --- | --- | ---| --- | ---| --- | --- | ---|
-| 1 | m | 34 | | 36 |? | 38 | |
-| 2 | m | 32 | | 32 |  | 33 | error? |
+ id | sex | hba1c_1 | hba1c_1_c | hba1c_2  | hba1c_2_c | hba1c_3 | hba1c_3_c   
+ --- | --- | ---| --- | ---| --- | --- | ---
+ 1 | m | 34 | | 36 |? | 38 | 
+ 2 | m | 32 | | 32 |  | 33 | error? 
 
 ### No calculations in the raw data files
 <!---Calculations, avser det formler i Excel-blad? Det är förstås inte bra, men hit hör kanske också färgade celler?-->
 
 Bad example:
 
-
+### Consistency again
+It is often not so easy to be consistent. During the research process where you assign namnes to new derived variables, add explanatory labels to the variables and to codes used,  maintain a codebook, there are a number of steps where choices have to be made and where inconsistencies can enter. And as authors of this document we cannot calim that we succeed in being entirely consistent ourselves. The basic message here is however that you should strive to be as consistent as possible. The more, the better. And you shouldn't hope that it will get any easier in the future. The gaps left behind today often will not be covered later.
 
 ## Other aspects
 
 ### Don't do this in your data! (Flyttas till mer allmänt ställe?)
 - Don't calculate the time between events by manual calculations based on your calendar. There are always better ways to do this in your software.
-- Don't try to combine data stored in separate files by manual cut-and-paste operations.
+- Don't try to combine data stored in separate files by manual cut-and-paste operations. See [Compilation of data split into pieces into one dataset](compilation-of-data-split-into-pieces-into-one-dataset).
 
 These commeents are of course not absolute, there could be cases with small datasets where manual handling could be reasonable. However, as soon as the dataset covers more than one screen on your computer, consider more structured ways to work.
 
 ### Multiple response
-One fairly common type of data which needs extra attention is when there could be one more more answers, as for example to the question "Out of the following medicines, which have been prescribed during the last year? One or more alternatives can be marked" followed by possible alternatives such as "olika antibiotika".
+One fairly common type of data which needs extra attention is when there could be one more more answers, as for example to the question "Which of the following medicines have been prescribed during the last year? One or more alternatives can be marked" followed by possible alternatives such as "substance A", "substance B" and so on.
 
 This kind of data can be dealt with in more than one way:
 
@@ -357,9 +362,9 @@ id | med_1 | med_2 | med_3
 This is usually the best approach, both because the data can easily be summarized and because all information is available and fairly strightforward to set up into other formats. 
 
 #### Many possible combinations converted into one numerical value
-The 0's and 1's in the previous example could be seen as a binary number which in turn could be converted in a decimal value:
-id | med_1 | med_2 | med_3
---- | --- | --- |---
+The 0's and 1's in the previous example could be seen as a binary number which in turn could be converted in a decimal value (e g the binary sequence "100" is equal to "8" in the decimal system):
+id | med
+--- | ---
 1 | 8 
 2 | 8 
 3 | 4
@@ -368,11 +373,7 @@ id | med_1 | med_2 | med_3
 
 All information is there, the values are unique, but the readability is still low. It is however a very compact format which could be expanded into the formats above.
 
-
-
-
-
-
+(Ska detta med binära tal med alls? Känns mer som en kul grej...)
 
 ### Import of files from others
 <!---Fundering: ska vi skriva något om detta, dvs hur de kan tänka när de får filer från andra, ex SoS? Typ "Se gärna till att du får filer i flera format, CSV/tab _och_ SAS eller annat format filleverantören själv arbetar med." Och "Vid inläsning av fil kan allt fungera om det är ett proprietärt format, men det kan också krångla. Ibland är det enklast att läsa in rena filer eftersom det går att styra inläsningen i mer detalj då." Eller är det för mycket vid sidan?--->
@@ -458,11 +459,20 @@ A basic recommendation is to have different scripts for different tasks, typical
 
 #### SPSS
 
+##### Variable attributes
+
 ##### Missing values
+In SPSSl, there are two kinds of missing values, _system missing_ and _user missing_. The former is simply an empty cell in a numerical variable marked with a dot ("."), the latter is a cell with a numeric value which is defined as missing. Both types work the same way in the data processing. The user defined type makes it possible to define different reasons for the missing mechanism, e g "77: no answer", "88: wrong answer", "99: no known reason for missing" or the like. 
+
+It is common to use "impossible" values to define user missing, e g -9 in a variable for height, or 999 in a variable containing answers to a question with five alternatives in a questionnaire. 
+
+The use of numerical values to define missing values makes subsequent processing of the data relatively simple, but there is also a definite drawback: all values intendded to be markers for missing values must be dfined as such. In case you get datasets from other sources, take your time to chewck if such values have been used. If you do not set the missing defintions correctly, all calculations based on variables with these gaps will be erroneous. In case you use procedures for imputation of missing values, then these procedures will also not work properly if there are values which should be defined as missing values but are not.
+
+For string variables, there is no specific code for a missing value, it is simply shown as an empty cell. You _can_ define missing values for string variables, but it not that common. A more common approach is to convert categorical string variables into numeric ones (see e g `Transform/Automatic Recode`) followed by defining numerical values as user missing.
 
 ##### Syntax files
 
-- If different syntax files, a “master” syntax file can use ```INSERT FILE``` to invoke sub files.
+- If different syntax files, a "master" syntax file can use ```INSERT FILE``` to invoke sub files.
 
 #### Stata
 
