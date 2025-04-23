@@ -19,7 +19,7 @@ The targeted audience is staff in any way involved in research - PhD students, s
 ?Vad ska in här? Kan rubrik och avsnitt strykas?
 
 ### For what kind of data is this document written?
-Research data is stored in different forms and for different purposes. Some forms are suited for tasks such as _follow-up of individual patients_ in their daily care. Then the use of the file can be simplified by using a "visual layout", colors, bold text or the like. The goal in such cases usually is to collect and use data for each individual, not to calculate summaries such as means for several individuals.
+Data is stored in different forms and for different purposes. Some forms are suited for tasks such as _follow-up of individual patients_ in their daily care. Then the use of the file can be simplified by using a "visual layout", colors, bold text or the like. The goal in such cases usually is to collect and use data for each individual, not to calculate summaries such as means for several individuals.
 
 Another purpose is _research_ where the goal is to summarize important aspects of the individual records, and where data on individuals usually is not important. This latter kind of use most often requires a layout for the data which is different from the former one. Here we are concerned with this latter use.
 
