@@ -52,7 +52,7 @@ There has been an increasing emphasis in many areas on _reproducibility_, on _op
 
 ### What aspects are _not_ covered in this document?
 
-### The structure of data files and folders
+#### The structure of data files and folders
 A structured approach to storage of data and other documents in a research project is of course important. However, the level in this document is on a somewhat lower level with a focus on more practical aspects of data management. A good source for more details on structures on the higher level is an [article](https://lakartidningen.se/klinik-och-vetenskap-1/2013/02/att-strukturera-och-dokumentera-forskningsprojekt/) by Eloranta et al, as well as information at the [UMU library web](https://www.umu.se/bibliotek/forskningsdata/samla-och-organisera/).
 
 #### FAIR data
@@ -65,7 +65,7 @@ The focus is on systems and structures to make data available and is part of a "
 Researchers and students involved in the kind of research we have focused upon here are active in different organizational settings: mainly within universities, mainly in clinical work or mixtures of the two, within a smaller group or with a multicenter approach spanning an entire country or even several countries. Depending on the organization you find yourself in, there are hopefully structures in place for storing your research data in a secure way. However, the practical arrangements are so different that it is not possible to provide any specific suggestions here.
 
 #### Data management plans
-The concept of data management plans (DMP) has become increasingly emphasized in many contexts. Funding agencies increasinlgy require that applications contain such DMP's.  The basic idea is that a DMP should provide information on how research data is managed throughout the project, and the purpose is to ensure that data is handled securely, legally and ethically. A good source is [Checklist for data management plans](https://snd.se/en/resources/checklist-data-management-plans) provided by [the Swedish National Data Service (SND)](https://snd.se/en).
+The concept of data management plans (DMP) has become emphasized in many contexts. Funding agencies increasingly require that applications contain such DMP's.  The basic idea is that a DMP should provide information on how research data is managed throughout the project, and the purpose is to ensure that data is handled securely, legally and ethically. A good source is [Checklist for data management plans](https://snd.se/en/resources/checklist-data-management-plans) provided by [the Swedish National Data Service (SND)](https://snd.se/en).
 
 #### Archiving
 There are legal requirements for the archiving of completed research projects: _what_, _how_, _for how long_ are typical questions. Universities and health care providers have their own implementations for the procedures involved.  
@@ -74,7 +74,7 @@ There are legal requirements for the archiving of completed research projects: _
 Software used for statistical analyses encompass a range of systems, from spreadsheets to more comprehensive systems specifically designed for statistics. If you search for style guides or more general suggestions for how a particular system should be used, you can probably find many sources. A couple of examples can be found here, see [Style guides](style-guides). 
 
 ## Principles for data file organization
-The most important advice is however to be as _consistent_ as possible irrespective of the chosen structure. 
+The most important advice is to be as _consistent_ as possible irrespective of the chosen structure. 
 
 ### Examples of common problems
 The list of problems when dealing with research data can be made very long. There are however some more common problems:
@@ -86,7 +86,7 @@ The list of problems when dealing with research data can be made very long. Ther
     - New derived variables are created during the project.
   - Dates can be stored in a number of formats, and the process to convert dates into a format that works in your software can be hard 
   - Exchange of data between different software systems can be difficult
-  - datasets collected in more than one centre are often marred by inconsistencies in the formats used by the centres involved, making the compilation of data challenging
+  - Datasets collected in more than one centre are often marred by inconsistencies in the formats used by the centres involved, making the compilation of data challenging
 
 ### Definitions
 
