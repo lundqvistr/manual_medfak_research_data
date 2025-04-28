@@ -97,6 +97,7 @@ Variable |
 Unit of observation | 
 
 ### Tidy data
+There are many ways to organize data where subsequent processing can be difficult. The ways in which they should be organized to make processing easier is however not that many. Some general recommendations:
 - Each column corresponds to one variable in the dataset
 - Each row corresponds to one observation
 - All variables in the dataset have the same unit of observation -förklara vad som menas
@@ -105,40 +106,38 @@ Unit of observation |
 <!---https://www.tablesgenerator.com/markdown_tables-->
 
 #### Each column corresponds to one variable in the dataset
-Bad example (kanske ett dåligt sådant?):
-country | year | type |count
----  | --- | --- | ---
-Afghanistan | 1999 |cases | 745
-Afghanistan | 1999 | population | 19987071
-Afghanistan | 2000 | cases | 2666
-Afghanistan | 2000 | population | 20595360
-Brazil | 1999 | cases | 37737
-Brazil | 1999 |population | 172006362
+Bad example
 
-Better example: 
-country |    year | cases | population
---- | --- | --- | --- 
-Afghanistan  | 1999  | 745   | 19987071
-Afghanistan  | 2000  | 2666   | 20595360
-Brazil       | 1999  | 37737  | 172006362
-Brazil       | 2000  | 80488  | 174504898
+id | female | male | age
+--- | --- | --- | ---
+1 | yes |  | 34
+2 |  | yes | 38
+3 |  | yes | 42
 
-<!---Ngt om multiple response? Egen punkt eller något inlagt här?-->
+Good example
+
+id | sex | age
+--- | --- | ---
+1 | f | 34
+2 | m | 38
+3 | m | 42
+
+When the dategories are mutually exclusive, there is only need for one variable/column.
 
 #### Each row corresponds to one observation
 
 ##### Bad example
- id | age | sex 
- --- | --- | --- 
- 1 | 34 | "male" 
-
-##### Good example
- id | age | sex 
- --- | --- | --- 
- 1 | 34 | "male" 
+ id | variable | value 
+ --- | --- | ---
+ 1 | sex | female
+ 1 | age | 34
+ 2 | sex | male
+ 2 | age | 38
+ 3 | sex | male
+ 3 | age | 42
 
 #### All variables in the dataset have the same unit of observation
-<!---Kan behöäva utvecklas...-->
+<!---Kan behöva utvecklas...-->
 ##### Bad example
  id | age | sex 
  --- | --- | --- 
@@ -165,9 +164,11 @@ Good example: `remedy`
 #### Separate parts in names with underscore ("_")
 - Do not use spaces, dots (".") or upper case letters to separate parts
 
-Good example:
+Bad example: `Type of primary cardiovascular event`
 
-Bad example:
+Better example: `type_of_primary_cardiovascular_event`
+
+An even better example: `cv_type`
 
 #### Keep your variable names short
 Name variables so that the names provide a sufficiently clear description of the content. They do not have to be exhaustive. Short and meaningful is worth striving for.
