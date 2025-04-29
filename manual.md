@@ -148,9 +148,9 @@ When the dategories are mutually exclusive, there is only need for one variable/
 id | time | sex | age | hba1c
 --- | --- | --- | --- | ---
 1 | 1 | f | 34 | 32
-ska vara tom... | 2 |   |    | 29
+nbsp; | 2 |   |    | 29
 2 | 1 | m | 38 | 33
- ska vara tom... | 2 |   |    | 30
+ nbsp; | 2 |   |    | 30
 3 | 1 | m | 38 | 31
  &nbsp; | 2 |   |    | 32
 
