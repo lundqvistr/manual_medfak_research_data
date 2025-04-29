@@ -106,15 +106,15 @@ There are many ways to organize data where subsequent processing can be difficul
 <!---https://www.tablesgenerator.com/markdown_tables-->
 
 #### Each column corresponds to one variable in the dataset
-Bad example
+##### Bad example
 
 id | female | male | age
 --- | --- | --- | ---
-1 | yes |  | 34
-2 |  | yes | 38
-3 |  | yes | 42
+1 | yes |     | 34
+2 |     | yes | 38
+3 |     | yes | 42
 
-Good example
+##### Good example
 
 id | sex | age
 --- | --- | ---
@@ -122,7 +122,7 @@ id | sex | age
 2 | m | 38
 3 | m | 42
 
-When the dategories are mutually exclusive, there is only need for one variable/column.
+When the dategories are mutually exclusive, there is only need for one variable/column. When there can be more than one category, as when the question is "Which of the following medications have been prescribed?", this could be dealt with in several ways, see [Multiple response](multiple-response).
 
 #### Each row corresponds to one observation
 
@@ -135,6 +135,36 @@ When the dategories are mutually exclusive, there is only need for one variable/
  2 | age | 38
  3 | sex | male
  3 | age | 42
+
+##### A better example
+ id | sex | age
+ --- | --- | ---
+1 | f | 34
+2 | m | 38
+3 | m | 42
+
+ ##### Another bad example
+
+id | time | sex | age | hba1c
+--- | --- | --- | --- | ---
+1 | 1 | f | 34 | 32
+  | 2 |   |    | 29
+2 | 1 | m | 38 | 33
+  | 2 |   |    | 30
+3 | 1 | m | 38 | 31
+  | 2 |   |    | 32
+
+##### A better example 
+id | time | sex | age | hba1c
+--- | --- | --- | --- | ---
+1 | 1 | f | 34 | 32
+1 | 2 | f | 34 | 29
+2 | 1 | m | 38 | 33
+2 | 2 | m | 38 | 30
+3 | 1 | m | 38 | 31
+3 | 2 | m | 38 | 32
+
+If the unit of observation is a unique combination of more than one variable , such as here with id and time, then all cells should be filled with the correct content.
 
 #### All variables in the dataset have the same unit of observation
 <!---Kan behöva utvecklas...-->
@@ -359,6 +389,16 @@ id | med_1 | med_2 | med_3
 3 | 0 | 1 | 0
 4 | 1 | 1 | 0
 5 | 0 | 0 | 1
+
+or 
+
+id | med_1 | med_2 | med_3
+--- | --- | --- |---
+1 | 1 |   |  
+2 | 1 |   |  
+3 |   | 1 | 
+4 | 1 | 1 | 
+5 |   |   | 1
 
 This is usually the best approach, both because the data can easily be summarized and because all information is available and fairly strightforward to set up into other formats. 
 
