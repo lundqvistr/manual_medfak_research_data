@@ -435,22 +435,18 @@ We strongly recommend that you should work with "syntax" as a way to run your pr
 
 Depending on the software, the creation of syntax can be more or less straightforward, but it can always be done. Put in another way, one reason, along with several others, why we would not recommend use of spreadsheets for more systematic statistical work is that there is not any simple way to run such software with syntax.
 
-#### Why use syntax/scripts
-<!---Behövs kanske inte?--->
-[The structure of data files and folders](#the-structure-of-data-files-and-folders)
-### Manual corrections or corrections in scripts?
-
 ### The raw data file
-Föreslå att skrivskydda rådata? Lösenordsskydd?
+The original datafiles containg raw data should be kept unchanged, preferably also in some other folder than files cleaned files and/or files with new derived variables. It could also be set as write protected.
 
 ### How should additions and corrections to data files be made?
-Upprepning, rubriken “Manual corrections...” tar upp samma sak. Vad är rätt placering?
+It is easier to say how aditions and changes should _not_ be made: avoid manual changes in the datafiles. Such changes seldom leave any trace, and it could become impossible to  to understand what changes have beeen. A better approach is to use scripts/syntax. If scripts are not used, then all such changes should be clearly documented in a log book.
+
+It is also good practice to make changes in new copies of the file rather than keeping one single file, see [Version control](#version-control).
 
 ### Backup
 
 ### Version control
-Lägga till datum till de filnamnen?
-GitHub?
+There are systems available for version control, e g "git" or "github", which are particularly suitable for R users. For users of other systems, git does not really support a smooth work process, so other alternatives should be used. A simple solution is to add the current date in the file names whenever a change is made. In that way, you might end up with perhaps many different but similar versions of the files. However, that is a small problem, and one that you can solve in the later stages of the process when there are files you clearly do not need anymore.
 
 ### When the project is about to be closed?
 - Create codebooks for your data files.
@@ -473,7 +469,8 @@ Vad menar vi här?
 * SND?
 * Reproducible research?
 * R for Data Science?
-* Corti, L., Van den Eynden, V., Bishop, L., Woollard, M. (2019), Managing and Sharing Research Data - A Guide to Good Practice, Second Edition, SAGE Publications Ltd.
+* Corti, L., Van den Eynden, V., Bishop, L., Woollard, M. (2019), Managing and Sharing Research Data - A Guide to Good Practice, Second Edition, SAGE Publications Ltd
+* Collier, J., Using SPSS Syntax: A Beginner's Guide, 2009, SAGE
 
 ## Appendices
 
