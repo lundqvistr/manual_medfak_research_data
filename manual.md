@@ -225,7 +225,7 @@ Good example: `diabetes`
 
 Another good example: `type_primary_event`
 
-### Variables can sometimes be assigned explanatory "labels"
+### If possible, assigned explanatory "labels" to variables
 Variables should of course be understandable. This is however not always that simple to achieve, especially if a variable name is sort and there are many versions of the content, e g `dog1` and `dog5` for a child being allergic (yes/no) to dogs at 1 and 5 years of age respectively. In In such cases, it is critical to assign good explanations to the variables. How this is done depends on your software. Irrespective of how you set up such explanatory labels, you should always keep a system for this kind of information. 
 
 If the software you use allows such labels to be set, then your analyses will also be simplied with such labels since the output - tables and graphs - will make direct use of these labels in full text. 
@@ -235,14 +235,14 @@ Categorical variables consist of markers for categories, such as age group. The 
 
 If you work with spreadsheets, you could at least use comments.
 
-#### Variables measured at the different point
+#### Variables measured at different points
 Given that the dataset is in a wide format (see [Wide or long format?](#wide-or-long-format), variables measures at different time points should be given excectly the same name, except for a (short) suffix. 
 
 Bad example: `Hba1c_at_baseline`, `hba1c_at_3month_followup`, `hba1c_12_mon_fu`
 
 Good example: `hba1c_0`, `hba1c_3m`, `hba1c_12m`
 
-If you have a long format for this kind of data, then the `hba1c` data should consist of one variable with the actual `hba1c` levels and another (`time`) with values such as 0, 3, 12 for each observation.
+If you have a [long](#wide-or-long-format) format for this kind of data, then the `hba1c` data should consist of one variable with the actual `hba1c` levels and another (`time`) with values such as 0, 3, 12 for each observation.
 
 ### Create and maintain a codebook
 A codebook describes the contents, structure, and layout of a data collection. More specifically explanations of variables, units for measurement variables, explanation of codes used in categorical variables, codes used for missing values and other attributes of the variables in your dataset. There are routines in the software most comonly used to generate such codebooks, but it could also consist of an Excel file with one sheet containing explanations for variable names, another sheet with explanations of the codes used. A short example of a Excel code book is found in one of appendix 2.
@@ -305,7 +305,7 @@ The treatment of missing values is also software dependent, see [Some notes for 
 #### Ytterligare punkter...
 
 ### Data on the same individuals in more than one place
-It is sometimes good to store data for the same individuals in different files. However, those files must often be combined into one single file before you can begin with your analyses. Then it is nexecary to have a common "key" variable in all parts meant to be joined: "personnummer" or some other identifying variable. The "key" could also consist of more than one variable, e g `id` _and_ `time`if the basic unit of observations is one particular individual at a specific point in time.
+It is sometimes good to store data for the same individuals in different files. However, those files must often be combined into one single file before you can begin with your analyses. Then it is necessary to have a common "key" variable in all parts meant to be joined: "personnummer" or some other identifying variable. The "key" could also consist of more than one variable, e g `id` _and_ `time`if the basic unit of observations is one particular individual at a specific point in time.
  
 It is also very important that variables with any kind of repetition, in time or otherwise, have the same names and formats when data in parts are to be joined, see [Variables measured at the same time point](#variables-measured-at-the-same-time-point).
 
@@ -322,13 +322,13 @@ Data could be entered in a number of ways:
 
 System | Comments 
 --- | ---
-Excel/spreadsheets | Possible, flexible and available, but not particlarly safe. If spreadsheets are used, consider adding "validation" to the data entry.|
-Statistical software (SPSS, Stata R,...) | Works similarly to spreadsheets, perhaps less flexxible and usually wwithout validation procedures | 
-Redcap or other systems for "case report forms" | Works quite well, validation is possible, data can be exported to formats suitable for import into statistical software |
-Database systems: MS Access, SQL,... | Perhaps the safest tool, however setting up a good database structure is not always that straightforward |
+Excel/spreadsheets | Possible, flexible and available, but not particlarly safe. Consider adding "validation" to the data entry.
+Statistical software (SPSS, Stata R,...) | Works similarly to spreadsheets, perhaps less flexible and usually without validation procedures 
+Redcap or other systems for "case report forms" | Works quite well, validation is possible, data can be exported to formats suitable for import into statistical software 
+Database systems: MS Access, SQL,... | Perhaps the safest tool, however setting up a good database structure is not always that straightforward 
 
 #### Keep the structure simple in order to minimize errors
-Whatever structure, one single file for all data or data split in separate parts, make your utmost to set up a simple structure which is easy for all involved parties to understand and follow. Simplicity and ease of use is the best way to minimize errors and to avoid timeconsuming pitfalls.
+Whatever structure, one single file for all data or data split in separate parts, make your utmost to set up a simple structure which is easy for all involved parties to understand and follow. Simplicity, consistency and ease of use is the best way to minimize errors and to avoid timeconsuming pitfalls.
 
 #### Different worksheets or different files for data in the same individuals
 Tas bort?
@@ -353,7 +353,7 @@ Good example:
 Bad example:
 
 ### Consistency again
-It is often not so easy to be consistent. During the research process where you assign namnes to new derived variables, add explanatory labels to the variables and to codes used,  maintain a codebook, there are a number of steps where choices have to be made and where inconsistencies can enter. And as authors of this document we cannot calim that we succeed in being entirely consistent ourselves. The basic message here is however that you should strive to be as consistent as possible. The more, the better. And you shouldn't hope that it will get any easier in the future. The gaps left behind today often will not be covered later.
+It is often not so easy to be consistent. During the research process where you assign namns to new derived variables, add explanatory labels to the variables and to codes used,  maintain a codebook, there are a number of steps where choices have to be made and where inconsistencies can enter. And as authors of this document we cannot claim that we succeed in being entirely consistent ourselves. The basic message here is however that you should strive to be as consistent as possible. The more consistent, the better. And you shouldn't hope that it will get any easier in the future. The gaps left behind today often will not be covered later.
 
 ## Other aspects
 
@@ -403,7 +403,7 @@ id | med_1 | med_2 | med_3
 This is usually the best approach, both because the data can easily be summarized and because all information is available and fairly strightforward to set up into other formats. 
 
 #### Many possible combinations converted into one numerical value
-The 0's and 1's in the previous example could be seen as a binary number which in turn could be converted in a decimal value (e g the binary sequence "100" is equal to "8" in the decimal system):
+The 0's and 1's in the previous example could be seen as a binary number which in turn could be converted in a decimal value (e g the binary sequence "100" is equal to "8" in the decimal system). The other way round, i e conversion of a decimal number into a binary number is naturally possible and not too difficult.
 id | med
 --- | ---
 1 | 8 
@@ -417,14 +417,20 @@ All information is there, the values are unique, but the readability is still lo
 (Ska detta med binära tal med alls? Känns mer som en kul grej...)
 
 ### Import of files from others
-<!---Fundering: ska vi skriva något om detta, dvs hur de kan tänka när de får filer från andra, ex SoS? Typ "Se gärna till att du får filer i flera format, CSV/tab _och_ SAS eller annat format filleverantören själv arbetar med." Och "Vid inläsning av fil kan allt fungera om det är ett proprietärt format, men det kan också krångla. Ibland är det enklast att läsa in rena filer eftersom det går att styra inläsningen i mer detalj då." Eller är det för mycket vid sidan?--->
+It is common to have datasets coming from other sources: Socialstyrelsen, other data bases and the like, where their export is done into files in formats you do not use yourself. For example are files from Socialstyrelsen often SAS files, and you might work wth SPSS, Stata or R. Files of this kind can almost always be imported directly into your statistical software. 
+
+There can still be problems though depending on the structure in the files you receive. One common example is when a numeric variabels such as dates are formatted as "string" variables rather than numeric variables. Such variables can ususally be converted into the format you need, but the time needed for such conversions can be quite demanding. 
+
+As a general rule, try to communicate with the organization, preferably _before_ they send files to you, with the original files in order to see if they can send files in formats which are as easy for you to work with as possible. Do not simply accept files of the format they use.
+
+Another advice is to see if you can get the source to send files in both _their_ preferred format and other formats. It might be possible for them to send SPSS, Stat or R data files. They can also always export data files into non-proprietary formats such as comma or tab-delimited files. You can always import such files yourself. In this process, you are usually able to control the finer details of the import, so even it this could be seen as a rather laborious workaround, it can still take less time than converting variables _after_ import. 
 
 ### Syntax/scripts/do files
 We strongly recommend that you should work with "syntax" as a way to run your processing of data, i e setting up "code" which is stored in specific files for whatever you want to achieve, which subsequently can be executed. It is not uncommon that users begin with using menus rather than syntax, so it could be preceived as a hurdle. However, our experience that there are many advantages with using syntax, and not that many disadvantages:
 
 - You can add explanatory comments in the syntax files, making it much easier afterwars to see what you have done
 - A syntax files is a rather complete record of what you have done
-- If data is changed, e g additions of new records or teh deletion of others, then going through all steps already done through the use of menus is often not possible or at least very demanding. With syntax it is often a matter of a few clicks.
+- If data is changed, e g additions of new records or the deletion of others, then going through all steps already done through the use of menus is often not possible or at least very demanding. With syntax it is often a matter of a few clicks.
 - In many statistical procedures there are options which might not be available in the menus
 
 Depending on the software, the creation of syntax can be more or less straightforward, but it can always be done. Put in another way, one reason, along with several others, why we would not recommend use of spreadsheets for more systematic statistical work is that there is not any simple way to run such software with syntax.
