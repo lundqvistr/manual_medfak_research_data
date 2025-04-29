@@ -71,7 +71,7 @@ The concept of data management plans (DMP) has become emphasized in many context
 There are legal requirements for the archiving of completed research projects: _what_, _how_, _for how long_ are typical questions. Universities and health care providers have their own implementations for the procedures involved.  
 
 #### Suggestions or style guides for particular software systems
-Software used for statistical analyses encompass a range of systems, from spreadsheets to more comprehensive systems specifically designed for statistics. If you search for style guides or more general suggestions for how a particular system should be used, you can probably find many sources. A couple of examples can be found here, see [Style guides](style-guides). 
+Software used for statistical analyses encompass a range of systems, from spreadsheets to more comprehensive systems specifically designed for statistics. If you search for style guides or more general suggestions for how a particular system should be used, you can probably find many sources. A couple of examples can be found here, see [Style guides](#style-guides). 
 
 ## Principles for data file organization
 The most important advice is to be as _consistent_ as possible irrespective of the chosen structure. 
