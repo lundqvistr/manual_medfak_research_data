@@ -122,7 +122,7 @@ id | sex | age
 2 | m | 38
 3 | m | 42
 
-When the dategories are mutually exclusive, there is only need for one variable/column. When there can be more than one category, as when the question is "Which of the following medications have been prescribed?", this could be dealt with in several ways, see [Multiple response](multiple-response).
+When the dategories are mutually exclusive, there is only need for one variable/column. When there can be more than one category, as when the question is "Which of the following medications have been prescribed?", this could be dealt with in several ways, see [Multiple response](#multiple-response).
 
 #### Each row corresponds to one observation
 
@@ -231,12 +231,12 @@ Variables should of course be understandable. This is however not always that si
 If the software you use allows such labels to be set, then your analyses will also be simplied with such labels since the output - tables and graphs - will make direct use of these labels in full text. 
 
 ### Codes should be assigned explanations
-Categorical variables consist of markers for categories, such as age group. The data _can_ consist of text in full text, such as "25-64", "65-". It could alsoe be the case that you work with numerical values, in which case these values must be assigned explanations. The suggestions made for variables are valid or codes too: they should not be longer than needed, and and informative. These codes are an important part of your [codebook](create-and-maintain-a-codebook).
+Categorical variables consist of markers for categories, such as age group. The data _can_ consist of text in full text, such as "25-64", "65-". It could alsoe be the case that you work with numerical values, in which case these values must be assigned explanations. The suggestions made for variables are valid or codes too: they should not be longer than needed, and and informative. These codes are an important part of your [codebook](#create-and-maintain-a-codebook).
 
 If you work with spreadsheets, you could at least use comments.
 
 #### Variables measured at the different point
-Given that the dataset is in a wide format (see [Wide or long format?](wide-or-long-format), variables measures at different time points should be given excectly the same name, except for a (short) suffix. 
+Given that the dataset is in a wide format (see [Wide or long format?](#wide-or-long-format), variables measures at different time points should be given excectly the same name, except for a (short) suffix. 
 
 Bad example: `Hba1c_at_baseline`, `hba1c_at_3month_followup`, `hba1c_12_mon_fu`
 
@@ -263,7 +263,7 @@ Data from such instances in time can be also be stored in different ways:
 - As different worksheets in the the same spreadsheet
 - With all the observations in one single file
 
-If the structure is one of the two first you will probably have to join the parts together sooner or later. Such joining is described in [Data on the same individuals...](data-on-the-same-individuals-in-more-than-one-place).
+If the structure is one of the two first you will probably have to join the parts together sooner or later. Such joining is described in [Data on the same individuals...](#data-on-the-same-individuals-in-more-than-one-place).
 
 #### Wide format
 Here the basic observation is one "individual". One row per individual, several variables for each timepoint.
@@ -298,7 +298,7 @@ Few datasets are free from missing values. Survey respondents might have left qu
 
 You should also scan through your data and codebooks accompanying your data and look for indications of how missing values have been dealt with. A general advice, especially when you work with datasets delivered to you, is to in an early stage to go through the variables by sorting (both ascending and descending order) or in any other way search make your self aquainted with your data.
 
-The treatment of missing values is also software dependent, see [Some notes for specific software systems](some-notes-for-specific-software-systems). 
+The treatment of missing values is also software dependent, see [Some notes for specific software systems](#some-notes-for-specific-software-systems). 
 
 #### Avoid having empty cells in the raw dataset
 
@@ -307,7 +307,7 @@ The treatment of missing values is also software dependent, see [Some notes for 
 ### Data on the same individuals in more than one place
 It is sometimes good to store data for the same individuals in different files. However, those files must often be combined into one single file before you can begin with your analyses. Then it is nexecary to have a common "key" variable in all parts meant to be joined: "personnummer" or some other identifying variable. The "key" could also consist of more than one variable, e g `id` _and_ `time`if the basic unit of observations is one particular individual at a specific point in time.
  
-It is also very important that variables with any kind of repetition, in time or otherwise, have the same names and formats when data in parts are to be joined, see [Variables measured at the same time point](variables-measured-at-the-same-time-point).
+It is also very important that variables with any kind of repetition, in time or otherwise, have the same names and formats when data in parts are to be joined, see [Variables measured at the same time point](#variables-measured-at-the-same-time-point).
 
 ### Compilation of data split into pieces into one dataset
 Data stored in separate parts must in most cases be compiled into one dataset. The most straightforward matching is when you have one row for each individual in all files, a 1-to-1 matching. Another kind of matching is when you want to assign information from one file with unique records for each individual into a file with many rows for the individuals involved, a so called 1-to-many matching. 
@@ -359,7 +359,7 @@ It is often not so easy to be consistent. During the research process where you 
 
 ### Don't do this in your data! (Flyttas till mer allmänt ställe?)
 - Don't calculate the time between events by manual calculations based on your calendar. There are always better ways to do this in your software.
-- Don't try to combine data stored in separate files by manual cut-and-paste operations. See [Compilation of data split into pieces into one dataset](compilation-of-data-split-into-pieces-into-one-dataset).
+- Don't try to combine data stored in separate files by manual cut-and-paste operations. See [Compilation of data split into pieces into one dataset](#compilation-of-data-split-into-pieces-into-one-dataset).
 
 These commeents are of course not absolute, there could be cases with small datasets where manual handling could be reasonable. However, as soon as the dataset covers more than one screen on your computer, consider more structured ways to work.
 
@@ -431,7 +431,7 @@ Depending on the software, the creation of syntax can be more or less straightfo
 
 #### Why use syntax/scripts
 <!---Behövs kanske inte?--->
-[The structure of data files and folders](the-structure-of-data-files-and-folders)
+[The structure of data files and folders](#the-structure-of-data-files-and-folders)
 ### Manual corrections or corrections in scripts?
 
 ### The raw data file
