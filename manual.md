@@ -504,19 +504,35 @@ A basic recommendation is to have different scripts for different tasks, typical
 #### SPSS
 
 ##### Variable attributes
+In SPSS, variables have _attributes_ such as `type` (numeric, string, date,...), `missing`, `measure` (nominal, ordinal, scale) and some other aspects of the variables at hand. The `measure` attribute is particularly important since calculations or representations of your variables are in many routines determined by this attribute: in Custom Tables, for a scale variable the default is to calculate a mean, whereas the default for a nominal variable is a count. As a general rule, it is recommended that attributes are set for your variables of interest. However, in those routines where the measure attribute is important, you can make temporary change the measure level.
+
+You can also define your own attributes, which could be a way to store other types of metadata, units for measurements is one simple example. In the menu system, the place to define such attributes is `Data/Define Variable Properties`. 
 
 ##### Missing values
-In SPSSl, there are two kinds of missing values, _system missing_ and _user missing_. The former is simply an empty cell in a numerical variable marked with a dot ("."), the latter is a cell with a numeric value which is defined as missing. Both types work the same way in the data processing. The user defined type makes it possible to define different reasons for the missing mechanism, e g "77: no answer", "88: wrong answer", "99: no known reason for missing" or the like. 
+Some sources recommend that missing vallues in numeric variables should not be coded with numeric values, but rather by other means. This does however _not_ work in SPSS. A numeric variable can only contain numeric values, any attempt to use both numbers and string data in the same variable results in it being defined as a string variable. 
 
-It is common to use "impossible" values to define user missing, e g -9 in a variable for height, or 999 in a variable containing answers to a question with five alternatives in a questionnaire. 
+The way missing values for numeric variables is treated in SPSS is to use the _system missing_ and _user defined missing_ status. _System missing_ is simply an empty cell, displayed as a dot (.) in the cell. _User defined missing_ means that you can define a spciefic number as a missing value, which makes the system exclude that cell in all calculations. You can also set more than one value to discern between different reasons for the missing mechanism, e g "77: no answer", "88: wrong answer", "99: no known reason for missing" or the like. This also requires that labels are assigned to these different values.
 
-The use of numerical values to define missing values makes subsequent processing of the data relatively simple, but there is also a definite drawback: all values intendded to be markers for missing values must be dfined as such. In case you get datasets from other sources, take your time to chewck if such values have been used. If you do not set the missing defintions correctly, all calculations based on variables with these gaps will be erroneous. In case you use procedures for imputation of missing values, then these procedures will also not work properly if there are values which should be defined as missing values but are not.
+It is generally common to use "impossible" values to define user missing, e g -9 in a variable for height, or 999 in a variable containing answers to a question with five alternatives in a questionnaire. 
+
+The use of numerical values to define missing values makes subsequent processing of the data relatively simple, but there is also a definite drawback: all values intended to be markers for missing values _must_ be defined as such. In case you get datasets from other sources, take your time to chewck if such values have been used. If you do not set the missing defintions correctly, all calculations based on variables with these gaps will be erroneous. In case you use procedures for imputation of missing values, then these procedures will also not work properly if there are values which should be defined as missing values but are not.
+
+Besides using syntax for the definition of missing values, you can also use `Data/Define Variable Properties` in the menu system.
 
 For string variables, there is no specific code for a missing value, it is simply shown as an empty cell. You _can_ define missing values for string variables, but it not that common. A more common approach is to convert categorical string variables into numeric ones (see e g `Transform/Automatic Recode`) followed by defining numerical values as user missing.
 
-##### Syntax files
+##### Codebook
+Codebooks can be produced by use of `Analyze/Reports/Codebook`. The result can preferably be placed as the single output in an output window which subsequentluy can be saved as an SPSS output file, but perhaps eve better as a pdf or HTML file.
 
-- If different syntax files, a "master" syntax file can use ```INSERT FILE``` to invoke sub files.
+The structure in the codebook is also determined by the attributes set for your variables, most importantly the measure attribute. In order to make the best documentation of the data, it is clerarly recommended that you assign "correct" attributes to your variables as fully as possible. 
+
+##### Syntax files
+The overall recommendation is that you use syntax for your processing. With time, you might learn how to write syntax directly for some commands. However, the easiest tool is usually the `Paste` button found in almost everywhere. So press `Paste` instead of `OK`. Often directly, sometimes after you have experimented with different versions by use of menus and the OK button, but after which you press the Paste button when you think you have come up with a more definite version.
+
+The syntax files can also become quite large. As a way to split the commands into more mangeable chunks, see [How should syntax/scripts be organized?](#how-should-syntax/scripts-be-organized?), you can use a "master" syntax file to invoke sub files by ```INSERT FILE```.
+
+#### Help
+Help files can be found for almost every part of the menu system. If you have an open syntax file, pressing F1 will open the help file for the actual command your marker is placed in. You can also see the Help menu in the menu system.
 
 #### Stata
 
