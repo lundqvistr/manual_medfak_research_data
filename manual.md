@@ -524,12 +524,12 @@ For string variables, there is no specific code for a missing value, it is simpl
 ##### Codebook
 Codebooks can be produced by use of `Analyze/Reports/Codebook`. The result can preferably be placed as the single output in an output window which subsequentluy can be saved as an SPSS output file, but perhaps eve better as a pdf or HTML file.
 
-The structure in the codebook is also determined by the attributes set for your variables, most importantly the measure attribute. In order to make the best documentation of the data, it is clerarly recommended that you assign "correct" attributes to your variables as fully as possible. 
+The structure in the codebook is also determined by the attributes set for your variables, most importantly the measure attribute. In order to make the best documentation of the data, it is clearly recommended that you assign "correct" attributes to your variables as fully as possible. 
 
 ##### Syntax files
 The overall recommendation is that you use syntax for your processing. With time, you might learn how to write syntax directly for some commands. However, the easiest tool is usually the `Paste` button found in almost everywhere. So press `Paste` instead of `OK`. Often directly, sometimes after you have experimented with different versions by use of menus and the OK button, but after which you press the Paste button when you think you have come up with a more definite version.
 
-The syntax files can also become quite large. As a way to split the commands into more mangeable chunks, see [How should syntax/scripts be organized?](#how-should-syntax/scripts-be-organized?), you can use a "master" syntax file to invoke sub files by ```INSERT FILE```.
+The syntax files can also become quite large. As a way to split the commands into more manageable chunks, see [How should syntax/scripts be organized?](#how-should-syntax-scripts-be-organized?), you can use a "master" syntax file to invoke sub files by `INSERT FILE`.
 
 #### Help
 Help files can be found for almost every part of the menu system. If you have an open syntax file, pressing F1 will open the help file for the actual command your marker is placed in. You can also see the Help menu in the menu system.
