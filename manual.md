@@ -13,7 +13,7 @@ In case you are not involved in medical research, we still hope that the suggest
 We do not claim that the suggestions made here are the only possible ways to work or the unequivocally "best" ways. We do however claim that the approach suggested is simple enough to use in most or even all research projects, and that adherence to the suggestions can be expected to make your life in research smoother. 
 
 ### For whom is this document written?
-The targeted audience is staff in any way involved in research - PhD students, supervisors,... - inexperienced and experienced alike.
+The primary audience is of course those new in research, such as PhD students. There are however others involved which also could make use of the recommendations. It is first of all not a given that time spent in research always results in effective and efficient procedures, experience is simply not enough. We also hope that the document can be used by supervisors to ease the way for their students. So the targeted audience is a general one: staff in any way involved in research - PhD students, supervisors,... - inexperienced and experienced alike. 
 
 ### How to use this document
 ?Vad ska in här? Kan rubrik och avsnitt strykas?
@@ -148,11 +148,11 @@ When the dategories are mutually exclusive, there is only need for one variable/
 id | time | sex | age | hba1c
 --- | --- | --- | --- | ---
 1 | 1 | f | 34 | 32
-nbsp; | 2 |   |    | 29
+&nbsp; | 2 |   |    | 29
 2 | 1 | m | 38 | 33
- nbsp; | 2 |   |    | 30
+&nbsp; | 2 |   |    | 30
 3 | 1 | m | 38 | 31
- &nbsp; | 2 |   |    | 32
+&nbsp; | 2 |   |    | 32
 
 ##### A better example 
 id | time | sex | age | hba1c
@@ -185,11 +185,11 @@ If the unit of observation is a unique combination of more than one variable , s
 Our recommendation is to use a simple structure since it works everywhere. Be consistent. 
 
 #### Use names in english
-- Do not use diacritical letters (å, ä, ö or the like) in variable names
+- Do not use diacritics such as _å_, _ä_, _ö_ or the like in variable names
 
 Bad example: `Åtgärd`
 
-Good example: `remedy`
+Good example: `treatment`
 
 #### Separate parts in names with underscore ("_")
 - Do not use spaces, dots (".") or upper case letters to separate parts
@@ -209,7 +209,7 @@ Good example: `cv_type`
 
 #### Use only lower case letters
 - Do not begin variable names with upper case letters
-- Do not use names with mixed cases, such as the so called SnakeCase
+- Do not use names with mixed cases ("SnakeCase")
 
 Bad example: `RespondenStatus`
 
@@ -298,7 +298,9 @@ Few datasets are free from missing values. Survey respondents might have left qu
 
 You should also scan through your data and codebooks accompanying your data and look for indications of how missing values have been dealt with. A general advice, especially when you work with datasets delivered to you, is to in an early stage to go through the variables by sorting (both ascending and descending order) or in any other way search make your self aquainted with your data.
 
-The treatment of missing values is also software dependent, see [Some notes for specific software systems](#some-notes-for-specific-software-systems). 
+Generally, it is good to deal with missing values explicitly so that one can distinguish between truly missing values and unintentionally missing values. In other words, it is recommended to work with files where gaps in your original data have been filled. If you find empty cells later on in the process, you know that their origin lies in the calculations you have made. 
+
+An approach which works in all systems is to accompany a variable with missing values with another separate variable/column where the reasons for the missingness is recorded. This could however result in a large amount of variables. There are also other built-in mechanisms to deal with missing data in different software systems, see [Some notes for specific software systems](#some-notes-for-specific-software-systems). 
 
 #### Avoid having empty cells in the raw dataset
 
@@ -521,8 +523,12 @@ Besides using syntax for the definition of missing values, you can also use `Dat
 
 For string variables, there is no specific code for a missing value, it is simply shown as an empty cell. You _can_ define missing values for string variables, but it not that common. A more common approach is to convert categorical string variables into numeric ones (see e g `Transform/Automatic Recode`) followed by defining numerical values as user missing.
 
+Another issue is the way SPSS treat missing values in assignments:
+ - Use of operators such as "+" for addition yield missing values when there are missing values: `COMPUTE sum=var1+var2.`gives a missing a value if one or both of var1 and var2 are missing.
+ - Use of functions such as `SUM` uses all non-missing values: `COMPUTE sum=SUM(var1, var2).` sums the content of `var1` and `var2` when one or both them are non-missing.
+
 ##### Codebook
-Codebooks can be produced by use of `Analyze/Reports/Codebook`. The result can preferably be placed as the single output in an output window which subsequentluy can be saved as an SPSS output file, but perhaps eve better as a pdf or HTML file.
+Codebooks can be produced by use of `Analyze/Reports/Codebook`. The result can preferably be placed as the single output in an output window which subsequently can be saved as an SPSS output file, but perhaps eve better as a pdf or HTML file.
 
 The structure in the codebook is also determined by the attributes set for your variables, most importantly the measure attribute. In order to make the best documentation of the data, it is clearly recommended that you assign "correct" attributes to your variables as fully as possible. 
 
