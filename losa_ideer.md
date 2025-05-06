@@ -1,15 +1,22 @@
 # Lösa idéer och frågor
 
 ## Tekniskt/innehåll/...
-- Något om hur de ska tänka kring datser de får med ev tveksamma variabelnamn, dåligt dokumenterade variabler,... Nya variabler ska rimligen habteras klokt, men gur ska man tänka krin gamla?
-- Läbgs samma linje, någon tidig beskrivning av att texten framförallt handlar om arbetet innan data samlas in, i början, och när nya variabler skapas?
-- Programvara för manuell inmatning? Excel? Databasprogram? Det finns t ex inst som förordar Access.
-- Lägga in kommentar om kommentarer eller funderingar vid manuell inmatning? Det som ofta blir "3, ev 4" eller liknande.
 - Ska vi ta med något om avidentifierade/pseudonymiserade material? En del verkar rätt rädda för att ha med löpnummer i filer överhuvudtaget, andra verkar inte ha några hämningar alls.
+- Ngt i intro om att den som följer manualens rekommendationer kan få hjälp att minimera fel
+- Varna för att konstruera "kombinerade" variabler, typ "män >34 år" istället för att ha två separata variabler
+- I Tidy data, eller ngn annanstans, ta upp detta att för lagring och inmatning av data kan det vara smart at använda flera "tabeller": en med baslinjedata, en rad per individ, och en med uppföljningsdata, flera rader per skalle. Och att det för analysen är bäst att föra ihop allt i en rektangulär form.
+- snake_sase->CamelCase och tvärtom i texten
+- Exempel på "hård" kodning av missing: en kolumn med data innehållande missing och en tillhörande kolumn med registrering av orsak till missing
+- Skriv om "Avoid having empty cells..." till "No empty cells..."  för rådata
+- Betona att rådata ska vara rått: inga beräknade värden (bmi, medelvärden,...)
+- Flika in att de inte behöver vara rädda för att ha data i flera filer. Passar bäst i avsnittet om matchning?
+- Diagram/grafisk beskrivning av flödet ![image](https://github.com/user-attachments/assets/4a34b5a4-f0bc-4fa4-9e1c-c9dfda9478f6)
+- Tid, hur räkna? Månader inte bra, kalenderår tveksamt. Dagar? Decimalår?
+- Lägg in missing i exempel på bad/good
+- 
+    
 
 ## Målgrupp
-- Ska manual begränsas till doktorander, eller ska den paketeras för en mer allmän målgrupp? Studenter? Handledare? Forskare?
-- Om en bredare målgrupp, behövs det särskilda skrivningar, eller kan den enkelt skrivas för en allmän målgrupp?
 - Det kan bli så att frågor måste utelämnas, t ex om det finns olika praktiska vinklar i en viss institution eller region.
   - En doktorand kanske jobbar med UMU-dator och använder UMU-resurser
   - En annan kanske håller sig till regionens resurser
