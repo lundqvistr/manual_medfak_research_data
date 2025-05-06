@@ -225,7 +225,7 @@ Good example: `diabetes`
 
 Another good example: `type_primary_event`
 
-### If possible, assigned explanatory "labels" to variables
+### If possible, assign explanatory "labels" to variables
 Variables should of course be understandable. This is however not always that simple to achieve, especially if a variable name is sort and there are many versions of the content, e g `dog1` and `dog5` for a child being allergic (yes/no) to dogs at 1 and 5 years of age respectively. In In such cases, it is critical to assign good explanations to the variables. How this is done depends on your software. Irrespective of how you set up such explanatory labels, you should always keep a system for this kind of information. 
 
 If the software you use allows such labels to be set, then your analyses will also be simplied with such labels since the output - tables and graphs - will make direct use of these labels in full text. 
@@ -235,7 +235,7 @@ Categorical variables consist of markers for categories, such as age group. The 
 
 If you work with spreadsheets, you could at least use comments.
 
-#### Variables measured at different points
+### Variables measured at different points
 Given that the dataset is in a wide format (see [Wide or long format?](#wide-or-long-format), variables measures at different time points should be given excectly the same name, except for a (short) suffix. 
 
 Bad example: `Hba1c_at_baseline`, `hba1c_at_3month_followup`, `hba1c_12_mon_fu`
@@ -350,7 +350,7 @@ Good example:
  2 | m | 32 | | 32 |  | 33 | error? 
 
 ### No calculations in the raw data files
-<!---Calculations, avser det formler i Excel-blad? Det är förstås inte bra, men hit hör kanske också färgade celler?-->
+Calculations, avser det formler i Excel-blad? Eller calculated/aggregated values, typ medelvärden, standardavvikelser/...? Eller färgade celler?
 
 Bad example:
 
