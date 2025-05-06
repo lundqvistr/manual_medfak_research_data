@@ -13,7 +13,8 @@
 - Diagram/grafisk beskrivning av flödet ![image](https://github.com/user-attachments/assets/4a34b5a4-f0bc-4fa4-9e1c-c9dfda9478f6)
 - Tid, hur räkna? Månader inte bra, kalenderår tveksamt. Dagar? Decimalår?
 - Lägg in missing i exempel på bad/good
-- 
+- Placering av avsnitt som "Import of data..."? Det är på en annan nivå än de annars rätt handgripliga delarna. Det finns fler avsnitt av den sorten. Placering för dessa?
+-  
     
 
 ## Målgrupp
