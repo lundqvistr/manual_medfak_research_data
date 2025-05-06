@@ -5,7 +5,7 @@
 - Ngt i intro om att den som följer manualens rekommendationer kan få hjälp att minimera fel
 - Varna för att konstruera "kombinerade" variabler, typ "män >34 år" istället för att ha två separata variabler
 - I Tidy data, eller ngn annanstans, ta upp detta att för lagring och inmatning av data kan det vara smart at använda flera "tabeller": en med baslinjedata, en rad per individ, och en med uppföljningsdata, flera rader per skalle. Och att det för analysen är bäst att föra ihop allt i en rektangulär form.
-- snake_sase->CamelCase och tvärtom i texten
+- snake_case->CamelCase och tvärtom i texten
 - Exempel på "hård" kodning av missing: en kolumn med data innehållande missing och en tillhörande kolumn med registrering av orsak till missing
 - Skriv om "Avoid having empty cells..." till "No empty cells..."  för rådata
 - Betona att rådata ska vara rått: inga beräknade värden (bmi, medelvärden,...)
