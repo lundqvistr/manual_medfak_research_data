@@ -114,6 +114,14 @@ id | female | male | age
 2 |     | yes | 38
 3 |     | yes | 42
 
+##### Another bad example
+
+id | stage_1 | stage_2 | stage_3 | stage_4
+--- | --- | --- | --- | ---
+1 | yes |     |     |
+2 |     |     | yes | 
+3 |     | yes |     |
+
 ##### Good example
 
 id | sex | age
@@ -121,6 +129,14 @@ id | sex | age
 1 | f | 34
 2 | m | 38
 3 | m | 42
+
+##### Another good example
+
+id | stage  
+--- | ---  
+1 | 1   
+2 | 3  
+3 | 2  
 
 When the dategories are mutually exclusive, there is only need for one variable/column. When there can be more than one category, as when the question is "Which of the following medications have been prescribed?", this could be dealt with in several ways, see [Multiple response](#multiple-response).
 
@@ -200,6 +216,8 @@ Better example: `type_of_primary_cardiovascular_event`
 
 An even better example: `cv_type`
 
+Use of underscore is otebn called "snake_case".
+
 #### Keep your variable names short
 Name variables so that the names provide a sufficiently clear description of the content. They do not have to be exhaustive. Short and meaningful is worth striving for.
 
@@ -209,7 +227,7 @@ Good example: `cv_type`
 
 #### Use only lower case letters
 - Do not begin variable names with upper case letters
-- Do not use names with mixed cases ("SnakeCase")
+- Do not use names with mixed cases ("CamelCase")
 
 Bad example: `RespondenStatus`
 
@@ -363,8 +381,6 @@ It is often not so easy to be consistent. During the research process where you 
 - Don't calculate the time between events by manual calculations based on your calendar. There are always better ways to do this in your software.
 - Don't try to combine data stored in separate files by manual cut-and-paste operations. See [Compilation of data split into pieces into one dataset](#compilation-of-data-split-into-pieces-into-one-dataset).
 
-These commeents are of course not absolute, there could be cases with small datasets where manual handling could be reasonable. However, as soon as the dataset covers more than one screen on your computer, consider more structured ways to work.
-
 ### Multiple response
 One fairly common type of data which needs extra attention is when there could be one more more answers, as for example to the question "Which of the following medicines have been prescribed during the last year? One or more alternatives can be marked" followed by possible alternatives such as "substance A", "substance B" and so on.
 
@@ -380,7 +396,7 @@ id | medicine
 4 | ab
 5 | c
 
-One possible and common drawback is that there could be many different combinations, so an effective summary of the variable might be hard to set up.
+This is technically possible, but not one that can be recommended. One common consequence is that there could be many different combinations, so an effective summary of the variable is usually hard to set up.
 
 #### Many possible combinations
 One column/variable for each alternative, where each alternative is a binary variable either with 0's and 1's or simply 1's:
@@ -392,31 +408,7 @@ id | med_1 | med_2 | med_3
 4 | 1 | 1 | 0
 5 | 0 | 0 | 1
 
-or 
-
-id | med_1 | med_2 | med_3
---- | --- | --- |---
-1 | 1 |   |  
-2 | 1 |   |  
-3 |   | 1 | 
-4 | 1 | 1 | 
-5 |   |   | 1
-
 This is usually the best approach, both because the data can easily be summarized and because all information is available and fairly strightforward to set up into other formats. 
-
-#### Many possible combinations converted into one numerical value
-The 0's and 1's in the previous example could be seen as a binary number which in turn could be converted in a decimal value (e g the binary sequence "100" is equal to "8" in the decimal system). The other way round, i e conversion of a decimal number into a binary number is naturally possible and not too difficult.
-id | med
---- | ---
-1 | 8 
-2 | 8 
-3 | 4
-4 | 9
-5 | 1
-
-All information is there, the values are unique, but the readability is still low. It is however a very compact format which could be expanded into the formats above.
-
-(Ska detta med binära tal med alls? Känns mer som en kul grej...)
 
 ### Import of files from others
 It is common to have datasets coming from other sources: Socialstyrelsen, other data bases and the like, where their export is done into files in formats you do not use yourself. For example are files from Socialstyrelsen often SAS files, and you might work wth SPSS, Stata or R. Files of this kind can almost always be imported directly into your statistical software. 
