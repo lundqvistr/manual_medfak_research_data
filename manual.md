@@ -263,7 +263,7 @@ Good example: `hba1c_0`, `hba1c_3m`, `hba1c_12m`
 If you have a [long](#wide-or-long-format) format for this kind of data, then the `hba1c` data should consist of one variable with the actual `hba1c` levels and another (`time`) with values such as 0, 3, 12 for each observation.
 
 ### Create and maintain a codebook
-A codebook describes the contents, structure, and layout of a data collection. More specifically explanations of variables, units for measurement variables, explanation of codes used in categorical variables, codes used for missing values and other attributes of the variables in your dataset. There are routines in the software most comonly used to generate such codebooks, but it could also consist of an Excel file with one sheet containing explanations for variable names, another sheet with explanations of the codes used. A short example of a Excel code book is found in one of appendix 2.
+A codebook describes the contents, structure, and layout of a data collection. More specifically explanations of variables, units for measurement variables, explanation of codes used in categorical variables, codes used for missing values and other attributes of the variables in your dataset. There are routines in the software most commonly used to generate such codebooks, but it could also consist of an Excel file with one sheet containing explanations for variable names, another sheet with explanations of the codes used. A short example of a Excel code book is found in one of appendix 2.
 
 
 ### Style guides
@@ -444,7 +444,7 @@ There are systems available for version control, e g "git" or "github", which ar
 
 ### When the project is about to be closed?
 - Create codebooks for your data files.
-- Save the codebook in different formats: as plain text, pdf, HTML, Word, Excel, any format which could be suitable for another reader.
+- Save the codebook in different formats: as plain text, pdf, HTML, Word, Excel, simply in any format which could be suitable for another reader.
 - Save the data in the format used in your software system.
 - Save the data in other formats: CSV, tab separated, Excel, SAS,... Here the most important are the "non-proprietary" formats (CSV, tab separated) since such files should be possible to read in all systems.
 
@@ -483,7 +483,7 @@ A basic recommendation is to have different scripts for different tasks, typical
 * Analysis, possibly in steps
 
 ### More on scripts in different software
-? Ska detta med?
+? Ska detta med? Känns inte alls självklart.
 
 ### Some notes for specific software systems 
 
@@ -520,14 +520,14 @@ Another issue is the way SPSS treat missing values in assignments:
  - Use of functions such as `SUM` uses all non-missing values: `COMPUTE sum=SUM(var1, var2).` sums the content of `var1` and `var2` when one or both them are non-missing.
 
 ##### Codebook
-Codebooks can be produced by use of `Analyze/Reports/Codebook`. The result can preferably be placed as the single output in an output window which subsequently can be saved as an SPSS output file, but perhaps eve better as a pdf or HTML file.
+Codebooks can be produced by use of `Analyze/Reports/Codebook`. The result can preferably be placed as the single output in an output window which subsequently can be saved as an SPSS output file, but perhaps even better as a pdf or HTML file.
 
 The structure in the codebook is also determined by the attributes set for your variables, most importantly the measure attribute. In order to make the best documentation of the data, it is clearly recommended that you assign "correct" attributes to your variables as fully as possible. 
 
 ##### Syntax files
 The overall recommendation is that you use syntax for your processing. With time, you might learn how to write syntax directly for some commands. However, the easiest tool is usually the `Paste` button found in almost everywhere. So press `Paste` instead of `OK`. Often directly, sometimes after you have experimented with different versions by use of menus and the OK button, but after which you press the Paste button when you think you have come up with a more definite version.
 
-The syntax files can also become quite large. As a way to split the commands into more manageable chunks, see [How should syntax/scripts be organized?](#how-should-syntaxscripts-be-organized), you can use a "master" syntax file to invoke sub files by `INSERT FILE`.
+The syntax files can also become quite large. As a way to split the commands into more manageable chunks, see [How should syntax/scripts be organized?](#how-should-syntaxscripts-be-organized), you can use a "master" syntax file to invoke sub files by `INSERT FILE` (for details, see the help documentation for `INSERT`). Another way is to have one file for reading the raw files, another for the cleaning, in which you invoke the previous file in the beginning with the `INSERT FILE` command.
 
 #### Help
 Help files can be found for almost every part of the menu system. If you have an open syntax file, pressing F1 will open the help file for the actual command your marker is placed in. You can also see the Help menu in the menu system.
