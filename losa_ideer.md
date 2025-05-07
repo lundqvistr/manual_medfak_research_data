@@ -1,6 +1,7 @@
 # Lösa idéer och frågor
 
 ## Tekniskt/innehåll/...
+- Kodbok Excel? Ska vi snyta ihop något eget, eller knycka WLeveransrapport" från LISA? Den senare har laddats upp hit.
 - Ska vi ta med något om avidentifierade/pseudonymiserade material? En del verkar rätt rädda för att ha med löpnummer i filer överhuvudtaget, andra verkar inte ha några hämningar alls.
 - Ngt i intro om att den som följer manualens rekommendationer kan få hjälp att minimera fel
 - Varna för att konstruera "kombinerade" variabler, typ "män >34 år" istället för att ha två separata variabler
