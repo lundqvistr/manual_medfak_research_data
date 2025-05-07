@@ -413,9 +413,9 @@ This is usually the best approach, both because the data can easily be summarize
 ### Import of files from others
 It is common to have datasets coming from other sources: Socialstyrelsen, other data bases and the like, where their export is done into files in formats you do not use yourself. For example are files from Socialstyrelsen often SAS files, and you might work wth SPSS, Stata or R. Files of this kind can almost always be imported directly into your statistical software. 
 
-There can still be problems though depending on the structure in the files you receive. One common example is when a numeric variabels such as dates are formatted as "string" variables rather than numeric variables. Such variables can ususally be converted into the format you need, but the time needed for such conversions can be quite demanding. 
+There can still be problems though depending on the structure in the files you receive. One common example is when a numeric variabels such as dates are formatted as "string" variables rather than numeric variables. Such variables can usually be converted into the format you need, but the time needed for such conversions can be quite demanding. 
 
-As a general rule, try to communicate with the organization, preferably _before_ they send files to you, with the original files in order to see if they can send files in formats which are as easy for you to work with as possible. Do not simply accept files of the format they use.
+As a general rule, try to communicate with the organization, preferably _before_ they send files to you, in order to see if they can send files in formats which are as easy for you to work with as possible. Do not simply accept files in the format they use.
 
 Another advice is to see if you can get the source to send files in both _their_ preferred format and other formats. It might be possible for them to send SPSS, Stat or R data files. They can also always export data files into non-proprietary formats such as comma or tab-delimited files. You can always import such files yourself. In this process, you are usually able to control the finer details of the import, so even it this could be seen as a rather laborious workaround, it can still take less time than converting variables _after_ import. 
 
@@ -443,6 +443,7 @@ It is also good practice to make changes in new copies of the file rather than k
 There are systems available for version control, e g "git" or "github", which are particularly suitable for R users. For users of other systems, git does not really support a smooth work process, so other alternatives should be used. A simple solution is to add the current date in the file names whenever a change is made. In that way, you might end up with perhaps many different but similar versions of the files. However, that is a small problem, and one that you can solve in the later stages of the process when there are files you clearly do not need anymore.
 
 ### When the project is about to be closed?
+- Contact the person or unit responsible for archiving in order to find out what parts of your files and documents should be archived, what formats they prefer and how the whole package should be stored.
 - Create codebooks for your data files.
 - Save the codebook in different formats: as plain text, pdf, HTML, Word, Excel, simply in any format which could be suitable for another reader.
 - Save the data in the format used in your software system.
@@ -500,7 +501,7 @@ A basic recommendation is to have different scripts for different tasks, typical
 ##### Variable attributes
 In SPSS, variables have _attributes_ such as `type` (numeric, string, date,...), `missing`, `measure` (nominal, ordinal, scale) and some other aspects of the variables at hand. The `measure` attribute is particularly important since calculations or representations of your variables are in many routines determined by this attribute: in Custom Tables, for a scale variable the default is to calculate a mean, whereas the default for a nominal variable is a count. As a general rule, it is recommended that attributes are set for your variables of interest. However, in those routines where the measure attribute is important, you can make temporary change the measure level.
 
-You can also define your own attributes, which could be a way to store other types of metadata, units for measurements is one simple example. In the menu system, the place to define such attributes is `Data/Define Variable Properties`. 
+You can also define your own attributes, which could be a way to store other types of metadata, units for measurements is one simple example. In the menu system, the place to define such attributes is `Data/Define Variable Properties`. These attributes can also be included in the codebook.
 
 ##### Missing values
 Some sources recommend that missing vallues in numeric variables should not be coded with numeric values, but rather by other means. This does however _not_ work in SPSS. A numeric variable can only contain numeric values, any attempt to use both numbers and string data in the same variable results in it being defined as a string variable. 
