@@ -244,7 +244,7 @@ Good example: `diabetes`
 Another good example: `type_primary_event`
 
 ### If possible, assign explanatory "labels" to variables
-Variables should of course be understandable. This is however not always that simple to achieve, especially if a variable name is sort and there are many versions of the content, e g `dog1` and `dog5` for a child being allergic (yes/no) to dogs at 1 and 5 years of age respectively. In In such cases, it is critical to assign good explanations to the variables. How this is done depends on your software. Irrespective of how you set up such explanatory labels, you should always keep a system for this kind of information. 
+Variables should of course be understandable. This is however not always that simple to achieve, especially if a variable name is short and there are many versions of the content, e g `dog1` and `dog5` for a child being allergic (yes/no) to dogs at 1 and 5 years of age respectively. In such cases, it is critical to assign good explanations to the variables. How this is done depends on your software. Irrespective of how you set up such explanatory labels, you should always keep a system for this kind of information. 
 
 If the software you use allows such labels to be set, then your analyses will also be simplied with such labels since the output - tables and graphs - will make direct use of these labels in full text. 
 
