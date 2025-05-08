@@ -249,12 +249,12 @@ Variables should of course be understandable. This is however not always that si
 If the software you use allows such labels to be set, then your analyses will also be simplied with such labels since the output - tables and graphs - will make direct use of these labels in full text. 
 
 ### Codes should be assigned explanations
-Categorical variables consist of markers for categories, such as age group. The data _can_ consist of text in full text, such as "25-64", "65-". It could alsoe be the case that you work with numerical values, in which case these values must be assigned explanations. The suggestions made for variables are valid or codes too: they should not be longer than needed, and and informative. These codes are an important part of your [codebook](#create-and-maintain-a-codebook).
+Categorical variables consist of markers for categories, such as age group. The data _can_ consist of text in full text, such as "25-64", "65-". It could alsoe be the case that you work with numerical values, in which case these values must be assigned explanations. The suggestions made for variables are valid or codes too: they should not be longer than needed, and informative. These codes are an important part of your [codebook](#create-and-maintain-a-codebook).
 
 If you work with spreadsheets, you could at least use comments.
 
 ### Variables measured at different points
-Given that the dataset is in a wide format (see [Wide or long format?](#wide-or-long-format), variables measures at different time points should be given excectly the same name, except for a (short) suffix. 
+Given that the dataset is in a wide format (see [Wide or long format?](#wide-or-long-format), variables measured at different time points should be given exactly the same name, except for a (short) suffix. 
 
 Bad example: `Hba1c_at_baseline`, `hba1c_at_3month_followup`, `hba1c_12_mon_fu`
 
@@ -263,16 +263,18 @@ Good example: `hba1c_0`, `hba1c_3m`, `hba1c_12m`
 If you have a [long](#wide-or-long-format) format for this kind of data, then the `hba1c` data should consist of one variable with the actual `hba1c` levels and another (`time`) with values such as 0, 3, 12 for each observation.
 
 ### Create and maintain a codebook
-A codebook describes the contents, structure, and layout of a data collection. More specifically explanations of variables, units for measurement variables, explanation of codes used in categorical variables, codes used for missing values and other attributes of the variables in your dataset. There are routines in the software most commonly used to generate such codebooks, but it could also consist of an Excel file with one sheet containing explanations for variable names, another sheet with explanations of the codes used. A short example of a Excel code book is found in one of appendix 2.
+A codebook describes the contents, structure, and layout of a data collection. More specifically explanations of variables, units for measurement variables, explanation of codes used in categorical variables, codes used for missing values and other attributes of the variables in your dataset. There are routines in the software most commonly used to generate such codebooks, but it could also consist of an Excel file with one sheet containing explanations for variable names, another sheet with explanations of the codes used. A short example of a Excel code book is found in one of the appendices.
 
 
 ### Style guides
-There are many style guides for the use of specific softwares, such as [Google's R style guide](https://google.github.io/styleguide/Rguide.html#:~:text=R%20is%20a%20high-level%20programming%20language%20used%20primarily,the%20Tidyverse%20Style%20Guide%20by%20Hadley%20Wickham%20license) or [The DIME Analytics Stata Style Guide](https://worldbank.github.io/dime-data-handbook/coding.html#the-dime-analytics-stata-style-guide). It is however important to realize that there are many such guides, and they might not be telling the same story. 
+There are many style guides for the use of specific softwares, such as [Google's R style guide](https://google.github.io/styleguide/Rguide.html#:~:text=R%20is%20a%20high-level%20programming%20language%20used%20primarily,the%20Tidyverse%20Style%20Guide%20by%20Hadley%20Wickham%20license) or [The DIME Analytics Stata Style Guide](https://worldbank.github.io/dime-data-handbook/coding.html#the-dime-analytics-stata-style-guide). 
+
+It is however important to realize that there are many such guides, and they might not be telling the same story. 
 
 ### Wide or long format?
 Many datasets consists of data points from one measurement period, and the basic structure can be a fairly simple "rectangular" set of data.  It is however also common with datasets where _time_ is a fundamental variable. Follow-up of patients makes it necessary to have data on patients from baseline, from 3 months, 12 monts and possibly later that that. The structure in such cases has to take these different times into account, and there are basically two ways to do so: wide formats and long formats.
 
-There is no simple correct structure for such data, it can even be necessary to have both structures in parallel due to the details in how your software works. As a consequence, switching from one format to the other is a common task. It can however be quite demanding, so it could be wise to consult a statistician in order when the need arises.
+There is no simple correct structure for such data, it can even be necessary to have both structures in parallel due to the details in how your software works. As a consequence, switching from one format to the other is a common task. It can however be quite demanding, so it could be wise to consult a statistician when the need arises.
 
 Naturally this also applies for other cases where there is some repetition of similar measurements: different places, different parts of the body,...
 
@@ -295,7 +297,7 @@ Example:
 
 
 #### Long format
-The basic observation in such a structure is the combination of individual _and_ timepoint. There are one row for each such combination, resulting in several rows for each individual
+The basic observation in such a structure is the combination of individual _and_ timepoint. Then there is one row for each such combination, resulting in several rows for each individual
 
 Example: 
 
@@ -309,12 +311,17 @@ Example:
  2 | f | 33 | 3 
 
 ### Missing values
-Few datasets are free from missing values. Survey respondents might have left questions unanswered. In a study of the effects of some treatment, participants drop out from the followup for a number of reasons. Medical records often have gaps for variables which at the time for registration were not considered as sufficiently important to register. Such gaps should be treated with care. A general advice is to put effort into keeping track of such gaps since the subsequent analyses could be hampered. Some typical problems:
+Few datasets are free from missing values, and there can be many reasons behind:
+- Survey respondents might have left questions unanswered.
+- In a study of the effects of some treatment, participants drop out from the followup for a number of reasons.
+- Medical records often have gaps for variables which at the time for registration were not considered as sufficiently important to register. 
 
-- There could be many types of reasons for a missing value. In order to make readers of your results trust your findings, you should be able to keep track of and report such reasons and the frequence with which they have occurred.
+Such gaps should be treated with care. A general advice is to put effort into keeping track of such gaps since the subsequent analyses could be hampered. Some typical problems:
+
+- In order to make readers of your results trust your findings, you should be able to keep track of and report such reasons and the frequence with which they have occurred.
 - Depending on software, missing values are in some systems coded with numerical values, such as 999 eller -999. If these are not defined as missing values, any calculation of such a variable will be flawed.
 
-You should also scan through your data and codebooks accompanying your data and look for indications of how missing values have been dealt with. A general advice, especially when you work with datasets delivered to you, is to in an early stage to go through the variables by sorting (both ascending and descending order) or in any other way search make your self aquainted with your data.
+You should also scan through your data and codebooks accompanying your data and look for indications of how missing values have been dealt with. A general advice, especially when you work with datasets delivered to you, is to in an early stage to go through the variables by sorting (both ascending and descending order) or in any other way which could help you find missing values. You need to make your self aquainted with your data.
 
 Generally, it is good to deal with missing values explicitly so that one can distinguish between truly missing values and unintentionally missing values. In other words, it is recommended to work with files where gaps in your original data have been filled. If you find empty cells later on in the process, you know that their origin lies in the calculations you have made. 
 
@@ -330,7 +337,7 @@ It is sometimes good to store data for the same individuals in different files. 
 It is also very important that variables with any kind of repetition, in time or otherwise, have the same names and formats when data in parts are to be joined, see [Variables measured at the same time point](#variables-measured-at-the-same-time-point).
 
 ### Compilation of data split into pieces into one dataset
-Data stored in separate parts must in most cases be compiled into one dataset. The most straightforward matching is when you have one row for each individual in all files, a 1-to-1 matching. Another kind of matching is when you want to assign information from one file with unique records for each individual into a file with many rows for the individuals involved, a so called 1-to-many matching. 
+Data stored in separate parts must in most cases be compiled into one dataset. The most straightforward matching is when you have one row for each individual in all files, a 1-to-1 matching. Another kind of matching is when you want to assign information from one file with unique records for each individual into a file with many rows for the individuals involved, a so called 1-to-n or 1-to-many matching. 
 
 These matching procedures can be made in any decent statistical software. It could however be quite demanding to make it work, so do not hesitate to consult a statistician.
 
