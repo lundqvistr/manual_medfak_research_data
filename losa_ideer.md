@@ -1,6 +1,7 @@
 # Lösa idéer och frågor
 
 ## Tekniskt/innehåll/...
+- Inledningen om en doktorand känns lite luddig. Det är inte heller givet att det klarnar med tiden. Ska texten i avanittet "For whom..." flyttas hit?
 - Kodbok Excel? Ska vi snyta ihop något eget, eller knycka WLeveransrapport" från LISA? Den senare har laddats upp hit.
 - Ska vi ta med något om avidentifierade/pseudonymiserade material? En del verkar rätt rädda för att ha med löpnummer i filer överhuvudtaget, andra verkar inte ha några hämningar alls.
 - Ngt i intro om att den som följer manualens rekommendationer kan få hjälp att minimera fel
