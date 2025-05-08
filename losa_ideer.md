@@ -3,7 +3,7 @@
 ## Tekniskt/innehåll/...
 - Exemplet undet "Each row corresponds to one observation" är väl exempel på något annat?
 - Skrivning om data som a changing entity under "Examples of common problems", hör det hit? Vari ligger problemet?
-- Avsnittet om consistency under "Principles..." ser inklämt ut. Hur ska det lyftas fram? Med en egen rubrik?
+- Avsnittet om consistency under "Principles..." ser inklämt ut. Hur ska det lyftas fram? Med en egen rubrik? Det kanske räcker med det som finns under "Variable names", där det kanske ska lyftas fram?
 - Avsnittet "Suggestions or style guides for particular software systems", det stämmer ju inte  I appendix kommer kommentarer för olika system. Ska detta stycke strykas eller flyttas eller skrivas om?
 - I "Reproducibility/open data/open science", är legal staff eätt begrepp?
 - Exemplen i  "Projects often live long", ska det göras en punktlista av dem?
