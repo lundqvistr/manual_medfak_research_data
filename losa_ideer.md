@@ -1,6 +1,7 @@
 # Lösa idéer och frågor
 
 ## Tekniskt/innehåll/...
+- Skrivning om data som a changing entity under "Examples of common problems", hör det hit? Vari ligger problemet?
 - Avsnittet om consistency under "Principles..." ser inklämt ut. Hur ska det lyftas fram? Med en egen rubrik?
 - Avsnittet "Suggestions or style guides for particular software systems", det stämmer ju inte  I appendix kommer kommentarer för olika system. Ska detta stycke strykas eller flyttas eller skrivas om?
 - I "Reproducibility/open data/open science", är legal staff eätt begrepp?
