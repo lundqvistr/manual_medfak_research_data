@@ -216,7 +216,7 @@ Better example: `type_of_primary_cardiovascular_event`
 
 An even better example: `cv_type`
 
-Use of underscore is otebn called "snake_case".
+Use of underscore is often called "snake_case".
 
 #### Keep your variable names short
 Name variables so that the names provide a sufficiently clear description of the content. They do not have to be exhaustive. Short and meaningful is worth striving for.
