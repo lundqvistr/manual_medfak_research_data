@@ -70,8 +70,8 @@ The concept of data management plans (DMP) has become emphasized in many context
 #### Archiving
 There are legal requirements for the archiving of completed research projects: _what_, _how_, _for how long_ are typical questions. Universities and health care providers have their own implementations for the procedures involved.  
 
-#### Suggestions or style guides for particular software systems
-Software used for statistical analyses encompass a range of systems, from spreadsheets to more comprehensive systems specifically designed for statistics. If you search for style guides or more general suggestions for how a particular system should be used, you can probably find many sources. A couple of examples can be found here, see [Style guides](#style-guides). 
+#### Manuals for particular software systems
+Software used for statistical analyses encompass a range of systems, from spreadsheets to more comprehensive systems specifically designed for statistics. There is a lot of material for almost any software, such as style guides or more technical details for how the system should be used. The scope for this document is however a general one, so the main text will not cover details for any particular system. There are however some software specific notes for some of the aspects covered in the main text in the [Appendices](#appendices).
 
 ## Principles for data file organization
 The most important advice is to be as _consistent_ as possible irrespective of the chosen structure. 
@@ -265,12 +265,6 @@ If you have a [long](#wide-or-long-format) format for this kind of data, then th
 ### Create and maintain a codebook
 A codebook describes the contents, structure, and layout of a data collection. More specifically explanations of variables, units for measurement variables, explanation of codes used in categorical variables, codes used for missing values and other attributes of the variables in your dataset. There are routines in the software most commonly used to generate such codebooks, but it could also consist of an Excel file with one sheet containing explanations for variable names, another sheet with explanations of the codes used. A short example of a Excel code book is found in one of the appendices.
 
-
-### Style guides
-There are many style guides for the use of specific softwares, such as [Google's R style guide](https://google.github.io/styleguide/Rguide.html#:~:text=R%20is%20a%20high-level%20programming%20language%20used%20primarily,the%20Tidyverse%20Style%20Guide%20by%20Hadley%20Wickham%20license) or [The DIME Analytics Stata Style Guide](https://worldbank.github.io/dime-data-handbook/coding.html#the-dime-analytics-stata-style-guide). 
-
-It is however important to realize that there are many such guides, and they might not be telling the same story. 
-
 ### Wide or long format?
 Many datasets consists of data points from one measurement period, and the basic structure can be a fairly simple "rectangular" set of data.  It is however also common with datasets where _time_ is a fundamental variable. Follow-up of patients makes it necessary to have data on patients from baseline, from 3 months, 12 monts and possibly later that that. The structure in such cases has to take these different times into account, and there are basically two ways to do so: wide formats and long formats.
 
@@ -321,13 +315,14 @@ Such gaps should be treated with care. A general advice is to put effort into ke
 - In order to make readers of your results trust your findings, you should be able to keep track of and report such reasons and the frequence with which they have occurred.
 - Depending on software, missing values are in some systems coded with numerical values, such as 999 eller -999. If these are not defined as missing values, any calculation of such a variable will be flawed.
 
-You should also scan through your data and codebooks accompanying your data and look for indications of how missing values have been dealt with. A general advice, especially when you work with datasets delivered to you, is to in an early stage to go through the variables by sorting (both ascending and descending order) or in any other way which could help you find missing values. You need to make your self aquainted with your data.
-
-Generally, it is good to deal with missing values explicitly so that one can distinguish between truly missing values and unintentionally missing values. In other words, it is recommended to work with files where gaps in your original data have been filled. If you find empty cells later on in the process, you know that their origin lies in the calculations you have made. 
+Generally, it is good to deal with missing values explicitly so that one can distinguish between truly missing values and unintentionally missing values. In other words, it is recommended to work with files where gaps in your original data have been filled. This is especially important in the raw data file. If you find empty cells later on in the process, you know that their origin lies in the calculations you have made. 
 
 An approach which works in all systems is to accompany a variable with missing values with another separate variable/column where the reasons for the missingness is recorded. This could however result in a large amount of variables. There are also other built-in mechanisms to deal with missing data in different software systems, see [Some notes for specific software systems](#some-notes-for-specific-software-systems). 
 
-#### Avoid having empty cells in the raw dataset
+You should also scan through your data and codebooks accompanying your data and look for indications of how missing values have been dealt with. A general advice, especially when you work with datasets delivered to you, is to in an early stage to go through the variables by sorting (both ascending and descending order) or in any other way which could help you find missing values. You need to make your self aquainted with your data.
+
+(Stryks? Det täcks om än inte lika direkt ovan.)
+#### No empty cells in the raw dataset
 
 #### Ytterligare punkter...
 
@@ -387,6 +382,7 @@ It is often not so easy to be consistent. During the research process where you 
 ### Don't do this in your data! (Flyttas till mer allmänt ställe?)
 - Don't calculate the time between events by manual calculations based on your calendar. There are always better ways to do this in your software.
 - Don't try to combine data stored in separate files by manual cut-and-paste operations. See [Compilation of data split into pieces into one dataset](#compilation-of-data-split-into-pieces-into-one-dataset).
+- Don't calculate new variables for combinations of your basic variables, such as a binary variable for "males_age_34_and_older", unless it is absolutely necessary. In most cases, you can use the two variables "gender" and "age" together to filter out such records, leaving you with a lot fewer variables. 
 
 ### Multiple response
 One fairly common type of data which needs extra attention is when there could be one more more answers, as for example to the question "Which of the following medicines have been prescribed during the last year? One or more alternatives can be marked" followed by possible alternatives such as "substance A", "substance B" and so on.
@@ -437,7 +433,7 @@ We strongly recommend that you should work with "syntax" as a way to run your pr
 Depending on the software, the creation of syntax can be more or less straightforward, but it can always be done. Put in another way, one reason, along with several others, why we would not recommend use of spreadsheets for more systematic statistical work is that there is not any simple way to run such software with syntax.
 
 ### The raw data file
-The original datafiles containg raw data should be kept unchanged, preferably also in some other folder than files cleaned files and/or files with new derived variables. It could also be set as write protected.
+The original datafiles containg raw data should be kept raw, i e unchanged, preferably also in some other folder than files cleaned files and/or files with new derived variables. It could also be set as write protected.
 
 ### How should additions and corrections to data files be made?
 It is easier to say how aditions and changes should _not_ be made: avoid manual changes in the datafiles. Such changes seldom leave any trace, and it could become impossible to  to understand what changes have beeen. A better approach is to use scripts/syntax. If scripts are not used, then all such changes should be clearly documented in a log book.
@@ -494,6 +490,11 @@ A basic recommendation is to have different scripts for different tasks, typical
 ? Ska detta med? Känns inte alls självklart.
 
 ### Some notes for specific software systems 
+
+#### Style guides
+There are many style guides for the use of specific softwares, such as [Google's R style guide](https://google.github.io/styleguide/Rguide.html#:~:text=R%20is%20a%20high-level%20programming%20language%20used%20primarily,the%20Tidyverse%20Style%20Guide%20by%20Hadley%20Wickham%20license) or [The DIME Analytics Stata Style Guide](https://worldbank.github.io/dime-data-handbook/coding.html#the-dime-analytics-stata-style-guide). 
+
+It is however important to realize that there are many such guides, and they might not be telling the same story. 
 
 #### R
 
