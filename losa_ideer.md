@@ -13,12 +13,25 @@
 - Ngt i intro om att den som följer manualens rekommendationer kan få hjälp att minimera fel
 - Varna för att konstruera "kombinerade" variabler, typ "män >34 år" istället för att ha två separata variabler
 - I Tidy data, eller ngn annanstans, ta upp detta att för lagring och inmatning av data kan det vara smart at använda flera "tabeller": en med baslinjedata, en rad per individ, och en med uppföljningsdata, flera rader per skalle. Och att det för analysen är bäst att föra ihop allt i en rektangulär form.
-- snake_case->CamelCase och tvärtom i texten
 - Exempel på "hård" kodning av missing: en kolumn med data innehållande missing och en tillhörande kolumn med registrering av orsak till missing
 - Skriv om "Avoid having empty cells..." till "No empty cells..."  för rådata
 - Betona att rådata ska vara rått: inga beräknade värden (bmi, medelvärden,...)
 - Flika in att de inte behöver vara rädda för att ha data i flera filer. Passar bäst i avsnittet om matchning?
-- Diagram/grafisk beskrivning av flödet ![image](https://github.com/user-attachments/assets/4a34b5a4-f0bc-4fa4-9e1c-c9dfda9478f6)
+- Diagram/grafisk beskrivning av flödet ![image](https://github.com/user-attachments/assets/4a34b5a4-f0bc-4fa4-9e1c-c9dfda9478f6). Var ska det ligga?
+
+```mermaid
+---
+config:
+      theme: redux
+---
+flowchart LR
+        A(["Raw data, 
+        keep unchanged"])
+        A --> |Cleaning, 
+        preferably with scripts|B(["Study file"])
+        B --> |Analysis|C(["Result"])     
+```
+
 - Tid, hur räkna? Månader inte bra, kalenderår tveksamt. Dagar? Decimalår?
 - Lägg in missing i exempel på bad/good
 - Placering av avsnitt som "Import of data..."? Det är på en annan nivå än de annars rätt handgripliga delarna. Det finns fler avsnitt av den sorten. Placering för dessa?
