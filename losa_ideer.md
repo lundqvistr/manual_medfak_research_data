@@ -17,19 +17,19 @@
 - Skriv om "Avoid having empty cells..." till "No empty cells..."  för rådata
 - Betona att rådata ska vara rått: inga beräknade värden (bmi, medelvärden,...)
 - Flika in att de inte behöver vara rädda för att ha data i flera filer. Passar bäst i avsnittet om matchning?
-- Diagram/grafisk beskrivning av flödet ![image](https://github.com/user-attachments/assets/4a34b5a4-f0bc-4fa4-9e1c-c9dfda9478f6). Var ska det ligga?
+- Diagram/grafisk beskrivning av flödet. Var ska det ligga? Ska det alls med? ![image](https://github.com/user-attachments/assets/4a34b5a4-f0bc-4fa4-9e1c-c9dfda9478f6)
 
 ```mermaid
 ---
 config:
-      theme: redux
+      theme: default
 ---
 flowchart LR
         A(["Raw data, 
         keep unchanged"])
         A --> |Cleaning, 
         preferably with scripts|B(["Study file"])
-        B --> |Analysis|C(["Result"])     
+        B --> |Analysis|C(["Results"])     
 ```
 
 - Tid, hur räkna? Månader inte bra, kalenderår tveksamt. Dagar? Decimalår?
