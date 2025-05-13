@@ -119,9 +119,9 @@ Unit of observation |
 
 ### Tidy data
 There are many ways to organize data where subsequent processing can be difficult. The ways in which they should be organized to make processing easier is however not that many. Some general recommendations:
-- Each column corresponds to one variable in the dataset
-- Each row corresponds to one observation
-- All variables in the dataset have the same unit of observation -förklara vad som menas. Handlar detta om att data kan organiseras i flera "tabeller", ex en med "basic charcteristics" och en rad per skalle, och en annan med flera rader per skalle? Det är i alla fall ett av Wickhams förslag.
+- Let each column correspond to one variable in the dataset
+- Let each row correspond to one observation
+- Lat all variables in the dataset have the same unit of observation -förklara vad som menas. Handlar detta om att data kan organiseras i flera "tabeller", ex en med "basic charcteristics" och en rad per skalle, och en annan med flera rader per skalle? Det är i alla fall ett av Wickhams förslag.
 <!---ref?-->
 <!---Exempel?-->
 <!---https://www.tablesgenerator.com/markdown_tables-->
