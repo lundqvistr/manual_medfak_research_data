@@ -274,7 +274,7 @@ Categorical variables consist of markers for categories, such as age group. The 
 
 If you work with spreadsheets, you could at least use comments.
 
-### Variables measured at different points
+### Variables measured at different time points
 Given that the dataset is in a wide format (see [Wide or long format?](#wide-or-long-format), variables measured at different time points should be given exactly the same name, except for a (short) suffix. 
 
 Bad example: `Hba1c_at_baseline`, `hba1c_at_3month_followup`, `hba1c_12_mon_fu`
@@ -340,7 +340,7 @@ Generally, it is good to deal with missing values explicitly so that one can dis
 
 An approach which works in all systems is to accompany a variable with missing values with another separate variable/column where the reasons for the missingness is recorded. This could however result in a large amount of variables. There are also other built-in mechanisms to deal with missing data in different software systems, see [Some notes for specific software systems](#some-notes-for-specific-software-systems). 
 
-You should also scan through your data and codebooks accompanying your data and look for indications of how missing values have been dealt with. A general advice, especially when you work with datasets delivered to you, is to in an early stage to go through the variables by sorting (both ascending and descending order) or in any other way which could help you find missing values. You need to make your self aquainted with your data.
+You should also scan through your data and codebooks accompanying your data and look for indications of how missing values have been dealt with. A general advice, especially when you work with datasets delivered to you, is that you in an early stage go through the variables by sorting (both ascending and descending order) or scan the data in any other way which could help you find missing values. You need to make your self acquainted with your data.
 
 (Stryks? Det täcks om än inte lika direkt ovan.)
 #### No empty cells in the raw dataset
@@ -350,10 +350,10 @@ You should also scan through your data and codebooks accompanying your data and 
 ### Data on the same individuals in more than one place
 It is sometimes good to store data for the same individuals in different files. However, those files must often be combined into one single file before you can begin with your analyses. Then it is necessary to have a common "key" variable in all parts meant to be joined: "personnummer" or some other identifying variable. The "key" could also consist of more than one variable, e g `id` _and_ `time`if the basic unit of observations is one particular individual at a specific point in time.
  
-It is also very important that variables with any kind of repetition, in time or otherwise, have the same names and formats when data in parts are to be joined, see [Variables measured at the same time point](#variables-measured-at-the-same-time-point).
+It is also very important that variables with any kind of repetition, in time or otherwise, have the same names and formats when data in parts are to be joined, see [Variables measured at different time points](#variables-measured-at-different-time-points).
 
 ### Compilation of data split into pieces into one dataset
-Data stored in separate parts must in most cases be compiled into one dataset. The most straightforward matching is when you have one row for each individual in all files, a 1-to-1 matching. Another kind of matching is when you want to assign information from one file with unique records for each individual into a file with many rows for the individuals involved, a so called 1-to-n or 1-to-many matching. 
+Data stored in separate parts must in most cases be compiled into one dataset, a process often called "matching", "merging" or "joining". The most straightforward matching is when you have one row for each individual in all files, a 1-to-1 matching. Another kind of matching is when you want to assign information from one file with unique records for each individual into a file with many rows for the individuals involved, a so called 1-to-n or 1-to-many matching. 
 
 These matching procedures can be made in any decent statistical software. It could however be quite demanding to make it work, so do not hesitate to consult a statistician.
 
@@ -390,11 +390,23 @@ Good example:
  1 | m | 34 | | 36 |? | 38 | 
  2 | m | 32 | | 32 |  | 33 | error? 
 
-### No calculations in the raw data files
+### No calculated values in the raw data files
 Calculations, avser det formler i Excel-blad? Eller calculated/aggregated values, typ medelvärden, standardavvikelser/...? Eller färgade celler?
 
-Bad example:
+(Ett försök) Bad example:
+ id | sex | hba1c_1 | hba1c_1_c | hba1c_2  | hba1c_2_c | hba1c_3 | hba1c_3_c   
+ --- | --- | ---| --- | ---| --- | --- | ---
+ 1 | m | 34 | | 36 |? | 38 | 
+ 2 | m | 32 | | 32 |  | 33 | error? 
+ . | . | .  |.|  . |. | . | .
+ . | . | .  |.|  . |. | . | .
+ . | . | .  |.|  . |. | . | .
+ 356| f | 31 | | 31 | | 30 || 
+  | | Mean | 32.3 || 32.1 || 31.9 ||
+  | | Std | 3.4 || 3.5 || 3.6 ||
 
+Such additions of means and/or other calculated entities have no place in your raw data. In the best case, it only makes the structure more complicated than necessary. In the worst case, you end up using such aggregated values in your subsequent calculations.  
+   
 ### Consistency again
 It is often not so easy to be consistent. During the research process where you assign namns to new derived variables, add explanatory labels to the variables and to codes used,  maintain a codebook, there are a number of steps where choices have to be made and where inconsistencies can enter. And as authors of this document we cannot claim that we succeed in being entirely consistent ourselves. The basic message here is however that you should strive to be as consistent as possible. The more consistent, the better. And you shouldn't hope that it will get any easier in the future. The gaps left behind today often will not be covered later.
 
