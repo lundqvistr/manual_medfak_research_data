@@ -418,7 +418,7 @@ It is often not so easy to be consistent. During the research process where you 
 - Don't calculate new variables for combinations of your basic variables, such as a binary variable for "males_age_34_and_older", unless it is absolutely necessary. In most cases, you can use the two variables "gender" and "age" together to filter out such records, leaving you with a lot fewer variables. 
 
 ### Multiple response
-One fairly common type of data which needs extra attention is when there could be one more more answers, as for example to the question "Which of the following medicines have been prescribed during the last year? One or more alternatives can be marked" followed by possible alternatives such as "substance A", "substance B" and so on.
+One fairly common type of data which needs extra attention is when there could be more than one answer, as for example to the question "Which of the following medicines have been prescribed during the last year? One or more alternatives can be marked" followed by possible alternatives such as "substance A", "substance B" and so on.
 
 This kind of data can be dealt with in more than one way:
 
