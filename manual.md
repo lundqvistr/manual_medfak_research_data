@@ -16,7 +16,22 @@ We do not claim that the suggestions made here are the only possible ways to wor
 The primary audience is of course those new in research, such as PhD students. There are however others involved which also could make use of the recommendations. It is first of all not a given that time spent in research always results in effective and efficient procedures, experience is simply not enough. We also hope that the document can be used by supervisors to ease the way for their students. So the targeted audience is a general one: staff in any way involved in research - PhD students, supervisors,... - inexperienced and experienced alike. 
 
 ### How to use this document
-?Vad ska in här? Kan rubrik och avsnitt strykas?
+A very short description of a typical research process, at least the quantitative type we are focusing on here, is the following figure:
+
+```mermaid
+---
+config:
+      theme: default
+---
+flowchart LR
+        A(["Raw data, 
+        keep unchanged"])
+        A --> |Cleaning, 
+        preferably with scripts|B(["Study file"])
+        B --> |Analysis|C(["Results"])     
+```
+
+In this document we are focusing on the first parts up until "Study file", i e the analysis part is not covered.
 
 ### For what kind of data is this document written?
 Data is stored in different forms and for different purposes. Some forms are suited for tasks such as _follow-up of individual patients_ in their daily care. Then the use of the file can be simplified by using a "visual layout", colors, bold text or the like. The goal in such cases usually is to collect and use data for each individual, not to calculate summaries such as means for several individuals.
@@ -34,6 +49,12 @@ Our recommendation is that whatever approach is chosen, you should try to make t
 
 ### Why is a good structure in research data so important?
 Having a good structure is simply fundamental for working efficiently, both for yourself during the project and in other contexts.
+
+#### Import and cleaning takes time
+In the typical statistics course you learn about procedures for analysis, often with neat and tidy datasets. So when the research on real data is begun, many less experienced researchers are surprised or even overwhelmed by the amount of time needed for importing data files and cleaning the data. Further, if the documentation for variables and codes is lacking, the analysis takes unnecessarily much time simply because you have to go back to other sources in order to find out what yoou are working with. 
+
+#### Errors
+There are also often flaws end errors in the data. You can hope to find them early in the cleaning process, but even if they turn up later, a good structure simplifies finding and correcting these errors.
 
 #### Projects often live long 
 Many research projects have an afterlife. After some years, you might yourself want to do a follow-up study: what are the longterm effects? There could be other researchers interested to make such a followup. A supervisor might want to put previously collected data in the hands of new PhD students. You could be contacted by other researchers who are interested in your work, ending in a new joint project. In all those and many other situations there is a definite need for the original datasets to be well-structured and well-documented.
