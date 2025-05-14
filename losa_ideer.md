@@ -32,6 +32,25 @@ flowchart LR
         B --> |Analysis|C(["Results"])     
 ```
 
+eller kanske
+
+```mermaid
+---
+config:
+      theme: default
+---
+flowchart LR
+        A(["Data from others"])
+        B(["Data manually 
+        entered by you"])
+        C(["Study file"])
+        D(["Results"])
+        A --> |Import and 
+        cleaning|C
+        B --> C
+        C -->|Analysis|D     
+```
+
 - Tid, hur räkna? Månader inte bra, kalenderår tveksamt. Dagar? Decimalår?
 - Lägg in missing i exempel på bad/good
 - Placering av avsnitt som "Import of data..."? Det är på en annan nivå än de annars rätt handgripliga delarna. Det finns fler avsnitt av den sorten. Placering för dessa?
