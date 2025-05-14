@@ -15,7 +15,7 @@ We do not claim that the suggestions made here are the only possible ways to wor
 ### For whom is this document written?
 The primary audience is of course those new in research, such as PhD students. There are however others involved which also could make use of the recommendations. It is first of all not a given that time spent in research always results in effective and efficient procedures, experience is simply not enough. We also hope that the document can be used by supervisors to ease the way for their students. So the targeted audience is a general one: staff in any way involved in research - PhD students, supervisors,... - inexperienced and experienced alike. 
 
-### How to use this document
+### The scope for this document
 A very short description of a typical research process, at least the quantitative type we are focusing on here, is the following figure:
 
 ```mermaid
@@ -31,7 +31,34 @@ flowchart LR
         B --> |Analysis|C(["Results"])     
 ```
 
+eller kanske
+
+```mermaid
+---
+config:
+      theme: default
+---
+flowchart LR
+        A(["Data from others"])
+        B(["Data manually 
+        entered by you"])
+        C(["Study file"])
+        D(["Results"])
+        A --> |Import and 
+        cleaning|C
+        B --> C
+        C -->|Analysis|D     
+```
 In this document we are focusing on the first parts up until "Study file", i e the analysis part is not covered.
+
+There are of course projects where there is only one kind of data sources, either only data from others or only manually entered data, but the description is meant to cover the following steps:
+
+- Import of data
+- Cleaning
+- Matching data in more than one file into one single file
+- Manual entry of data
+
+To be more precise, procedures for import, cleaning and matching will _not_ be covered, but rather steps you can take to make the work in all of them a lot smoother. Manual entry however will be covered.
 
 ### For what kind of data is this document written?
 Data is stored in different forms and for different purposes. Some forms are suited for tasks such as _follow-up of individual patients_ in their daily care. Then the use of the file can be simplified by using a "visual layout", colors, bold text or the like. The goal in such cases usually is to collect and use data for each individual, not to calculate summaries such as means for several individuals.
@@ -40,7 +67,7 @@ Another purpose is _research_ where the goal is to summarize important aspects o
 
 Further, the data considered is of the kind usually referred to as _quantitative_. Considerations for the structure in qualitative data must be found elsewhere.
 
-### The scope for the recommendations made here
+### The scope for the recommendations made here/Här behövs annan rubrik
 In many research projects, data comes from several sources: your own manually entered data, external databases, data collected by others or the like. The suggestions made are meant to be of use especially when you are setting up your own structure. 
 
 In the case of data from other sources, you are not in complete control yourself. There might be a lot of variables already named, having more or less complete documentation, and the structures might not be in line with the recommendations made here. Then you have to make a decision about if "old" structures should be changed or not. There is not any simple rule for how to proceed in such cases. You could limit your efforts to only new derived variables, or you could set out to change all of the old variables. 
@@ -232,7 +259,7 @@ Good example: `treatment`
 - Do not use spaces, dots (".") or upper case letters to separate parts
 
 Bad example: `Type of primary cardiovascular event`
-
+      
 Better example: `type_of_primary_cardiovascular_event`
 
 An even better example: `cv_type`
@@ -407,6 +434,13 @@ Calculations, avser det formler i Excel-blad? Eller calculated/aggregated values
 
 Such additions of means and/or other calculated entities have no place in your raw data. In the best case, it only makes the structure more complicated than necessary. In the worst case, you end up using such aggregated values in your subsequent calculations.  
    
+### Should all parts of the datasets be put in good order?
+As has been stated elsewhere in this document, data often comes from different sources: your own manually entered data, external databases, data collected by others or the like. 
+
+In the case of data from other sources, you are not in complete control yourself. There might be a lot of variables already named, having more or less complete documentation, and the structures might not be in line with the recommendations made here. Then you have to make a decision about if "old" structures should be changed or not. There is not any simple rule for how to proceed in such cases. You could limit your efforts to only your own nwewly derived variables, or you could set out to change all of the old variables. 
+
+Our recommendation is that whatever approach is chosen, you should try to make these decisions early in the process. It does not become easier to set up a good structure for the data later.
+
 ### Consistency again
 It is often not so easy to be consistent. During the research process where you assign namns to new derived variables, add explanatory labels to the variables and to codes used,  maintain a codebook, there are a number of steps where choices have to be made and where inconsistencies can enter. And as authors of this document we cannot claim that we succeed in being entirely consistent ourselves. The basic message here is however that you should strive to be as consistent as possible. The more consistent, the better. And you shouldn't hope that it will get any easier in the future. The gaps left behind today often will not be covered later.
 
@@ -445,6 +479,16 @@ id | med_1 | med_2 | med_3
 5 | 0 | 0 | 1
 
 This is usually the best approach, both because the data can easily be summarized and because all information is available and fairly strightforward to set up into other formats. 
+
+### Multi-centre studies
+Multi-centre studies are prevalent. In most cases, there is an overall ambition to collect data in the centres in a streamlined fashion. Our experience however is that the resulting parts from the centres often are unnecessarily different. Some examples:
+
+- Formats for dates differ, one centre could have used "2025.01.01" and another "250101"
+- In one centre, someone finds ways to "simplify" their own data entry using special formats, not taking into account that their part then becomes different from the parts from other centres
+- Data is structured and stored in an Excel file with a "visual" layout rather than having separate files or at least separate worksheets for each centre
+-  ... (Andra exempel?)
+
+The overall recommendation is that you devote time and energy on communication and calibrating the procedures for data entry. Also try to make all involved understand that even small changes in the data entry procedures will cause problems. On a more technical level, if you use Excel or similar, try also to add "validation" of the contents in the columns in order to minimize the risk for errors and inconsistencies.
 
 ### Import of files from others
 It is common to have datasets coming from other sources: Socialstyrelsen, other data bases and the like, where their export is done into files in formats you do not use yourself. For example are files from Socialstyrelsen often SAS files, and you might work wth SPSS, Stata or R. Files of this kind can almost always be imported directly into your statistical software. 
