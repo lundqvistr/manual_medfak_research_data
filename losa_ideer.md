@@ -18,7 +18,7 @@
 - Betona att rådata ska vara rått: inga beräknade värden (bmi, medelvärden,...)
 - Flika in att de inte behöver vara rädda för att ha data i flera filer. Passar bäst i avsnittet om matchning?
 - Diagram/grafisk beskrivning av flödet. Var ska det ligga? Ska det alls med? ![image](https://github.com/user-attachments/assets/4a34b5a4-f0bc-4fa4-9e1c-c9dfda9478f6)
-
+- Ta upp vikten om att prata ihop sig om man ska samla in data på olika håll, för att undvika att strukturen/format blir olika. 
 ```mermaid
 ---
 config:
