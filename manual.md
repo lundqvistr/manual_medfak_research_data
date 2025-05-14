@@ -67,13 +67,6 @@ Another purpose is _research_ where the goal is to summarize important aspects o
 
 Further, the data considered is of the kind usually referred to as _quantitative_. Considerations for the structure in qualitative data must be found elsewhere.
 
-### The scope for the recommendations made here/Här behövs annan rubrik
-In many research projects, data comes from several sources: your own manually entered data, external databases, data collected by others or the like. The suggestions made are meant to be of use especially when you are setting up your own structure. 
-
-In the case of data from other sources, you are not in complete control yourself. There might be a lot of variables already named, having more or less complete documentation, and the structures might not be in line with the recommendations made here. Then you have to make a decision about if "old" structures should be changed or not. There is not any simple rule for how to proceed in such cases. You could limit your efforts to only new derived variables, or you could set out to change all of the old variables. 
-
-Our recommendation is that whatever approach is chosen, you should try to make these decisions early in the process. It does not become easier to set up a good structure for the data later.
-
 ### Why is a good structure in research data so important?
 Having a good structure is simply fundamental for working efficiently, both for yourself during the project and in other contexts.
 
