@@ -1,5 +1,6 @@
 ## Introduction
-The authors of the present document work as biostatisticians ~~all have extensive experience from working as biostatisticians where we~~ and we encounter data from many different projects. We have ~~all~~ seen many examples of data files structured in ways that have been demanding for both ourselves and the final users. Usually, a typical basic course of biostatistics does not cover the aspects we aim at here, namely how to set up a good data structure, despite this being a fundamental part of analysing data. A PhD student who has only recently begun his or her research career cannot be expected to know how to structure a data file in a way that facilitates research on the data for many years to come. Thus, the student is therefore dependent on their supervisor and others involved having sufficient knowledge in this area, and also on that knowledge being effectively communicated early in the doctoral training. This is a fragile system. 
+The authors of the present document work as biostatisticians ~~all have extensive experience from working as biostatisticians where we~~ and we encounter data from many different projects. We have ~~all~~ seen many examples of data files structured in ways that have been demanding for both ourselves and the final users. Usually, a typical basic course of biostatistics does not cover the aspects we aim at here, namely how to set up a good data structure, despite this being a fundamental part of analysing data. 
+Stryks? Det kommer tillbaks under "For whom...". ~~A PhD student who has only recently begun his or her research career cannot be expected to know how to structure a data file in a way that facilitates research on the data for many years to come. Thus, the student is therefore dependent on their supervisor and others involved having sufficient knowledge in this area, and also on that knowledge being effectively communicated early in the doctoral training. This is a fragile system.~~ 
 
 Our hope is that this document will offer useful guidance on how to avoid issues related to data management, analysis, and archiving, facilitating work for all researchers/staff involved, both during and after the course of the research project. We also hope that if the recommendations are followed in a broader context at the medical faculty at UMU, this will simplify collaboration across research groups. Ultimately, the goal is to increase the quality of the research. 
 
@@ -137,14 +138,17 @@ Observation |
 Variable | 
 Unit of observation | 
 
+### Basic structure of the study file
+The basic structure of your study file should typically be _one_ rectangle. This however can be achieved in a number of ways. There are cases where your you have muotiple observations for each individual, when the rectangle can be set up with variables for the different time points, a so called _wide_ format, or with mutiple rows for each individual, a _long_ format. Depending on the calculations you will perform, it could be necessary to use either of these setups, or even both, see [Wide or long format](#wide-or-long-format). In both cases, you have a rectangular design.
+
+It should also be noted that data often comes in separate files where each file preferably should be organized as such rectangles. Having such multiple files could be the best way to store and archive your data, but for the analysis you want to do, the relevant pieces usually have to be merged into one single rectangular study file, see [Compilation of data split into pieces...](#compilation-of-data-split-into-pieces-into-one-dataset). 
+
 ### Tidy data
 There are many ways to organize data where subsequent processing can be difficult. The ways in which they should be organized to make processing easier is however not that many. Some general recommendations:
 - Let each column correspond to one variable in the dataset
 - Let each row correspond to one observation
-- Lat all variables in the dataset have the same unit of observation -förklara vad som menas. Handlar detta om att data kan organiseras i flera "tabeller", ex en med "basic charcteristics" och en rad per skalle, och en annan med flera rader per skalle? Det är i alla fall ett av Wickhams förslag.
-<!---ref?-->
-<!---Exempel?-->
-<!---https://www.tablesgenerator.com/markdown_tables-->
+- [Den här skrivningen känns svår. Räcker det med att skriva det som kommer efter?] Let all variables in the dataset have the same unit of observation -förklara vad som menas. Handlar detta om att data kan organiseras i flera "tabeller", ex en med "basic charcteristics" och en rad per skalle, och en annan med flera rader per skalle? Det är i alla fall ett av Wickhams förslag.
+- Let each cell contain only a single value
 
 #### Each column corresponds to one variable in the dataset
 ##### Bad example
@@ -223,17 +227,23 @@ id | time | sex | age | hba1c
 
 If the unit of observation is a unique combination of more than one variable, such as here with id and time, then all cells should be filled with the correct content.
 
-#### All variables in the dataset have the same unit of observation
-<!---Kan behöva utvecklas...-->
+#### All cells contain only one value
+
 ##### Bad example
- id | age | sex 
- --- | --- | --- 
- 1 | 34 | "male" 
+Here the variable `birthplace` is meant to cover geographical region and municipality:   
+ id | age | sex | birthplace 
+ --- | --- | --- | --- 
+1 | f | 34 | 24A
+2 | m | 38 | 25C
+3 | m | 42 | 24B
 
 ##### Good example
- id | age | sex 
- --- | --- | --- 
- 1 | 34 | "male" 
+Use separate variables for region and municipality:
+ id | age | sex | birth_region | birth_municipality 
+ --- | --- | --- | --- | ---
+1 | f | 34 | 24 | A
+2 | m | 38 | 25 | C
+3 | m | 42 | 24 | B
 
 #### Make the datasets rectangular - kanske överflödigt
 <!---Vad tänkte vi här? Vad skulle ett altenativ vara? Flera rektanglar? Exempel från Broman & Woo?-->
