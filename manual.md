@@ -134,12 +134,12 @@ The list of problems when dealing with research data can be made very long. Ther
 
 Concept/term | Intended meaning
 --- | ---
-Observation | 
-Variable | 
-Unit of observation | 
+`Individual` | Used here to denote any kind of "basic unit":  a person, an animal, an organization,... Even though it does not necessarily denote a human, the term will for the sake of simplicity be used throughout this document
+`Observation` | Often called _record_ or _case_, where there could be one observation or more for each individual 
+? | Andra begrepp som bör definieras?
 
 ### Basic structure of the study file
-The basic structure of your study file should typically be _one_ rectangle. This however can be achieved in a number of ways. There are cases where your you have muotiple observations for each individual, when the rectangle can be set up with variables for the different time points, a so called _wide_ format, or with mutiple rows for each individual, a _long_ format. Depending on the calculations you will perform, it could be necessary to use either of these setups, or even both, see [Wide or long format](#wide-or-long-format). In both cases, you have a rectangular design.
+The basic structure of your study file should typically be _one_ rectangle, preferably as a complete rectangle with no gaps, see [Missing values](#missing-values). This however can be achieved in a number of ways. There are cases where your you have multiple observations for each individual, when the rectangle can be set up with variables for the different time points, a so called _wide_ format, or with multiple rows for each individual, a _long_ format. Depending on the calculations you want to make, it could be necessary to use either of these setups, or even both, see [Wide or long format](#wide-or-long-format). In both cases, you have a rectangular design.
 
 It should also be noted that data often comes in separate files where each file preferably should be organized as such rectangles. Having such multiple files could be the best way to store and archive your data, but for the analysis you want to do, the relevant pieces usually have to be merged into one single rectangular study file, see [Compilation of data split into pieces...](#compilation-of-data-split-into-pieces-into-one-dataset). 
 
@@ -149,6 +149,8 @@ There are many ways to organize data where subsequent processing can be difficul
 - Let each row correspond to one observation
 - [Den här skrivningen känns svår. Räcker det med att skriva det som kommer efter?] Let all variables in the dataset have the same unit of observation -förklara vad som menas. Handlar detta om att data kan organiseras i flera "tabeller", ex en med "basic charcteristics" och en rad per skalle, och en annan med flera rader per skalle? Det är i alla fall ett av Wickhams förslag.
 - Let each cell contain only a single value
+
+In the following examples, there are often combinations of flaws, not just the ones mentioned in the header. Especially important are the missing cells, see [Missing values](#missing-values). 
 
 #### Each column corresponds to one variable in the dataset
 ##### Bad example
@@ -339,7 +341,7 @@ Example:
 
 
 #### Long format
-The basic observation in such a structure is the combination of individual _and_ timepoint. Then there is one row for each such combination, resulting in several rows for each individual
+The basic observation in such a structure is the combination of individual _and_ timepoint. Then there is one row for each such combination, resulting in several rows for each individual.
 
 Example: 
 
