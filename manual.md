@@ -245,9 +245,6 @@ Use separate variables for region and municipality:
 2 | m | 38 | 25 | C
 3 | m | 42 | 24 | B
 
-#### Make the datasets rectangular - kanske överflödigt
-<!---Vad tänkte vi här? Vad skulle ett altenativ vara? Flera rektanglar? Exempel från Broman & Woo?-->
-
 ### Variable names 
 Our recommendation is to use a simple structure since it works everywhere. Be consistent. 
 
