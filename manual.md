@@ -43,7 +43,7 @@ flowchart LR
         B(["Data manually 
         entered by you"])
         C(["Study file"])
-        D(["Results"])yoou
+        D(["Results"])
         A --> |Import and 
         cleaning|C
         B --> C
