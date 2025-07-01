@@ -12,6 +12,7 @@
    - Förslag: stryks. behåll "For whom..."
 - Kodbok Excel? Ska vi snyta ihop något eget, eller knycka WLeveransrapport" från LISA? Den senare har laddats upp hit.
 - Ska vi ta med något om avidentifierade/pseudonymiserade material? En del verkar rätt rädda för att ha med löpnummer i filer överhuvudtaget, andra verkar inte ha några hämningar alls.
+   - Förslag: Nytt avsnitt "Anonymous or pseudonymized data" i delen om vad som inte täcks.
 - Varna för att konstruera "kombinerade" variabler, typ "män >34 år" istället för att ha två separata variabler
 - I Tidy data, eller ngn annanstans, ta upp detta att för lagring och inmatning av data kan det vara smart at använda flera "tabeller": en med baslinjedata, en rad per individ, och en med uppföljningsdata, flera rader per skalle. Och att det för analysen är bäst att föra ihop allt i en rektangulär form.
   - Nytt avsnitt rätt tidigt om "basic structure", rektanglar. Hänvisningar till wide/long och till merge-beskrivningar.
