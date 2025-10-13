@@ -531,7 +531,7 @@ Depending on the software, the creation of syntax can be more or less straightfo
 The original datafiles containg raw data should be kept raw, i e unchanged, preferably also in some other folder than cleaned files and/or files with new derived variables. Raw data files could also be write protected as an extra countermeasure against possible errors.
 
 ### How should additions and corrections to data files be made?
-It is easier to say how additions and changes should _not_ be made: avoid manual changes in the datafiles. Such changes seldom leave any trace, and it could become impossible to  to understand what changes have been made. A better approach is to use scripts/syntax. If scripts are not used, then all such changes should be clearly documented in a log book.
+It is easier to say how additions and changes should _not_ be made: manual changes in the datafiles. Such changes seldom leave any trace, and it could become impossible to  to understand what changes have been made. A better approach is to use scripts/syntax. If scripts are not used, then all such changes should be clearly documented in a log book.
 
 Changes should also be made in new copies of the file rather than keeping one single file, see [Version control](#version-control).
 
