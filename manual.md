@@ -87,7 +87,7 @@ Stryks?
 ~~For this reason, the level of detail is occasionally high.~~
 
 #### Archiving/transparency
-When research projects have reached their final days, many just wither away. Given the resources spent, this seems as a poor outcome. It is both a matter of making it possible to wake projects for future research and part of making the research efforts transparent. The latter could simply be seen as an important part of maintaining the publics' trust in the scientific community. So the research data should eventually be stored and archived in a manner that makes it possible to dig up even dead projects. 
+When research projects have reached their final days, many just wither away. Given the resources spent, this seems as a poor outcome. It is both a matter of making it possible to wake projects for future research and part of making the research efforts transparent. The latter could simply be seen as an important part of maintaining the publics' trust in the scientific community. So the research data should eventually be stored and archived in a manner that makes it possible to dig up even previously buried projects. 
 
 #### Reproducibility/open data/open science
 There has been an increasing emphasis in many areas on _reproducibility_, on _open data_ and _open science_. None of these goals can be attained if the underlying datasets are poorly documented, stored in formats no one can access and the like. However, there are limitations to what can be made open when it comes to data in typical medical research. It is also an area where both practical and legal issues have to be considered, so it is often necessary to consult legal and technical staff.
