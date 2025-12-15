@@ -411,7 +411,7 @@ Database systems: MS Access, SQL,... | Perhaps the safest tool, however setting 
 Whatever structure, one single file for all data or data split in separate parts, make your utmost to set up a _simple_ structure which is easy for all involved parties to understand and follow. Simplicity, consistency and ease of use is the best way to minimize errors and to avoid timeconsuming pitfalls.
 
 #### Different worksheets or different files for data in the same individuals
-If you use a spreadsheet for manual entry and there are different sources for the basic sources, such as repeated data from different time points, then the different pieces can be stored as separate files or as separate weorksheets in one single spreadsheet.
+If you use a spreadsheet for manual entry and there are different sources for the basic sources, such as repeated data from different time points, then the different pieces can be stored as separate files or as separate worksheets in one single spreadsheet.
 
 #### If there are questions, put comments in adjoining columns
 
@@ -515,7 +515,7 @@ There can still be problems depending on the structure in the files you receive.
 
 As a general rule, try to communicate with the organization, preferably _before_ they send files to you, in order to see if they can send files in formats which are as easy for you to work with as possible. Do not simply accept files in the format they use.
 
-Another advice is to see if you can get the source to send files in both _their_ preferred format and other formats. It might be possible for them to send SPSS, Stat or R data files. They can also always export data files into non-proprietary formats such as comma or tab-delimited files. You can always import such files yourself. In this process, you are usually able to control the finer details of the import, so even it this could be seen as a rather laborious workaround, it can still take less time than converting variables _after_ import. 
+Another advice is to see if you can get the source to send files in both _their_ preferred format and other formats. It might be possible for them to send SPSS, Stata or R data files. They can also always export data files into non-proprietary formats such as comma or tab-delimited files. You can always import such files yourself. In this process, you are usually able to control the finer details of the import, so even it this could be seen as a rather laborious workaround, it can still take less time than converting variables _after_ import. 
 
 ### Syntax/scripts/do files
 We strongly recommend that you work with "syntax" as a way to run your processing of data, i e setting up "code" which is stored in specific files for whatever you want to achieve, code which subsequently can be executed. It is not uncommon that users begin with using menus rather than syntax, so it could be preceived as a hurdle. However, our experience that there are many advantages with using syntax, and not that many disadvantages:
@@ -615,7 +615,7 @@ The way missing values for numeric variables is treated in SPSS is to use the _s
 
 It is generally common to use "impossible" values to define user missing, e g -9 in a variable for height, or 999 in a variable containing answers to a question with five alternatives in a questionnaire. 
 
-The use of numerical values to define missing values makes subsequent processing of the data relatively simple, but there is also a definite drawback: all values intended to be markers for missing values _must_ be defined as such. In case you get datasets from other sources, take your time to chewck if such values have been used. If you do not set the missing defintions correctly, all calculations based on variables with these gaps will be erroneous. In case you use procedures for imputation of missing values, then these procedures will also not work properly if there are values which should be defined as missing values but are not.
+The use of numerical values to define missing values makes subsequent processing of the data relatively simple, but there is also a definite drawback: all values intended to be markers for missing values _must_ be defined as such. In case you get datasets from other sources, take your time to check if such values have been used. If you do not set the missing defintions correctly, all calculations based on variables with these gaps will be erroneous. In case you use procedures for imputation of missing values, then these procedures will also not work properly if there are values which should be defined as missing values but are not.
 
 Besides using syntax for the definition of missing values, you can also use `Data/Define Variable Properties` in the menu system. The missing definition can also be set in the `Variable View` window, but since changes there are done without trace, this is not the recommended way.  
 
@@ -636,7 +636,7 @@ The overall recommendation is that you use syntax for your processing. With time
 The syntax files can also become quite large. As a way to split the commands into more manageable chunks, see [How should syntax/scripts be organized?](#how-should-syntaxscripts-be-organized), you can use a "master" syntax file to invoke sub files by `INSERT FILE` (for details, see the help documentation for `INSERT`). Another way is to have one file for reading the raw files, another for the cleaning, in which you invoke the previous file in the beginning with the `INSERT FILE` command.
 
 #### Help
-Help files can be found for almost every part of the menu system. If you have an open syntax file, pressing F1 will open the help file for the actual command your marker is placed in. There is also a Help button in most of the windows/frames opened through the menus. You can also see the `Help` menu in the menu system.
+Help files can be found for almost every part of the menu system. One way to find such support is to use the `Help` button found in most of the windows/frames opened through the menus. For help with syntax, pressing F1 will open the help file for the actual command your marker is placed in. You can also see the `Help` menu in the menu system.
 
 #### Stata
 
