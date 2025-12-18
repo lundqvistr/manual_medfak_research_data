@@ -5,7 +5,7 @@ Stryks? Det kommer tillbaks under "For whom...". ~~A PhD student who has only re
 Our hope is that this document will offer useful guidance on how to avoid issues related to data management, analysis, and archiving, facilitating work for all researchers/staff involved, both during and after the course of the research project. We also hope that if the recommendations are followed in a broader context at the medical faculty at UMU, this will simplify collaboration across research groups. Ultimately, the goal is to increase the quality of the research. 
 
 ### What is this document?
-This document is intended as a template for how to structure reseach data files at the Medical faculty of Umeå University. 
+This document is intended as a template for how to structure research data files at the Medical faculty of Umeå University. 
 
 The recommendations made here are valid and relevant for projects especially in their beginning stages. Having well-designed structures from the outset will usually not increase the total amount of time and resources spent on data management, but rather simplify subsequent work. 
 
@@ -75,10 +75,10 @@ Having a good structure is simply fundamental for working efficiently, both for 
 In the typical statistics course you learn about procedures for analysis, often with neat and tidy datasets. So when the research on real data is begun, many less experienced researchers are surprised or even overwhelmed by the amount of time needed for importing data files and cleaning the data. Further, if the documentation for variables and codes is lacking, the analysis takes unnecessarily much time simply because you have to go back to other sources in order to find out what you are working with. 
 
 #### Errors
-There are also often flaws end errors in the data. You can hope to find them early in the cleaning process, but even if they turn up later, a good structure simplifies finding and correcting these errors.
+There are also often flaws and errors in the data. You can hope to find them early in the cleaning process, but even if they turn up later, a good structure simplifies finding and correcting these errors.
 
 #### Projects often live long 
-Many research projects have an afterlife. After some years, you might yourself want to do a follow-up study: what are the longterm effects? There could be other researchers interested to make such a followup. A supervisor might want to put previously collected data in the hands of new PhD students. You could be contacted by other researchers who are interested in your work, ending in a new joint project. In all those and many other situations there is a definite need for the original datasets to be well-structured and well-documented.
+Many research projects have an afterlife. After some years, you might yourself want to do a follow-up study: what are the long-term effects? There could be other researchers interested to make such a followup. A supervisor might want to put previously collected data in the hands of new PhD students. You could be contacted by other researchers who are interested in your work, ending in a new joint project. In all those and many other situations there is a definite need for the original datasets to be well-structured and well-documented.
 
 #### Cooperation
 Some projects are from the start set up as based on more than one researcher or research group. Data can be collected in multiple centres, and the combined dataset can also be used in multiple centres. In such cases, there is a definite need for well-designed data structures. 
@@ -127,7 +127,7 @@ The most important advice is to be as _consistent_ as possible irrespective of t
 The list of problems when dealing with research data can be made very long. There are however some more common problems:
   - Inconsistencies in naming variables can make coding and writing challenging
   - Lack of documention of variable content and codes used can make calculations or creation of new derived variables more or less impossible
-  - Data structured in vizually appealing format - parts of data placed in different spots in the file, colored cells,... - is often difficult to process for statistical analysis
+  - Data structured in visually appealing format - parts of data placed in different spots in the file, colored cells,... - is often difficult to process for statistical analysis
   - A database is often a changing entity. A structure which is not well-defined in advance can make the subsequent work a lot more difficult than needed.
     - New data points might be added, others can be filtered out from analysis.
     - New derived variables are created during the project.
@@ -253,7 +253,7 @@ Use separate variables for region and municipality:
 3 | m | 42 | 24 | B
 
 ### Variable names 
-Our recommendation is to use a simple structure since it works everywhere. Be consistent. 
+We  recommend using a simple structure as it well works everywhere. Be consistent. 
 
 #### Use names in English
 - Do not use diacritics such as _å_, _ä_, _ö_ or the like in variable names
@@ -262,7 +262,7 @@ Bad example: `Åtgärd`
 
 Good example: `treatment`
 
-#### Separate parts in names with underscore ("_")
+#### Separate parts in names with an underscore ("_")
 - Do not use spaces, dots (".") or upper case letters to separate parts
 
 Bad example: `Type of primary cardiovascular event`
@@ -328,9 +328,9 @@ Many datasets consists of data points from one measurement period, and the basic
 
 There is no single correct structure for such data, it can even be necessary to have both structures in parallel due to the details for  your software. As a consequence, switching from one format to the other is a common task. It can however be quite demanding, so it could be wise to consult a statistician when the need arises.
 
-Naturally this also applies for other cases where there is some repetition of similar measurements: different places, different parts of the body,...
+Naturally this also applies for other cases where there is some repetition of similar measurements: different places, different parts of the body etc.
 
-Data from such instances in time can be also be stored in different ways:
+Data from such instances in time can also be stored in different ways:
 - As one file for each point in time
 - As different worksheets in the same spreadsheet
 - With all the observations in one single file
@@ -484,7 +484,7 @@ id | medicine
 4 | ab
 5 | c
 
-This is technically possible, but not one that can be recommended. One common consequence is that there could be many different combinations, so an effective summary of the variable is usually hard to set up.
+This is technically possible, but not recommended. One common consequence is that there could be many different combinations, making it difficult to effectively summarize the variable..
 
 #### Many possible combinations
 One column/variable for each alternative, where each alternative is a binary variable either with 0's and 1's or simply 1's:
@@ -538,7 +538,7 @@ Changes should also be made in new copies of the file rather than keeping one si
 ### Backup
 
 ### Version control
-There are systems available for version control, e g "git" or "github", which are particularly suitable for R users. For users of other systems, git does not really support a smooth work process, so other alternatives should be used. A simple solution is to add the current date in the file names whenever a change is made. In that way, you might perhaps end up with many different but similar versions of the files. However, that is a small problem, and one that you can solve in the later stages of the process when there are files you clearly do not need anymore.
+There are systems available for version control, e g "git" or "github", which are particularly suitable for R users. However, for users of other systems, Git may not provide a smooth workflow, so other alternatives should be used. A simple solution is to add the current date in the file names whenever a change is made. In that way, you might perhaps end up with many different but similar versions of the files. However, that is a small problem, and one that you can solve in the later stages of the process when there are files you clearly do not need anymore.
 
 ### When the project is about to be closed?
 - Contact the person or unit responsible for archiving in order to find out what parts of your files and documents should be archived, what formats they prefer and how the whole package should be stored.
@@ -604,7 +604,7 @@ One way to get an explicit account of the steps taken is to add the syntax text 
 There is also a "journal" keeping track of what has been done, which is simply a text file with the underlying syntax. This journal can be used as a security measure in case you have not remembered to save files as intended. The default location of the journal file can be seen in the `File locations` part of the `Edit/Options`.
 
 ##### Variable attributes
-In SPSS, variables have _attributes_ such as `type` (numeric, string, date,...), `missing`, `measure` (nominal, ordinal, scale) and some other aspects of the variables at hand. The `measure` attribute is particularly important since calculations or representations of your variables are in many routines determined by this attribute. Two examples are _Custom Tables_ and _Chart Builder_, where for a scale variable the default is to calculate a mean, whereas the default for a nominal variable is a count. As a general rule, it is recommended that attributes are set for your variables of interest. However, in those routines where the measure attribute is important, you can make temporary changes of the measure level.
+In SPSS, variables have _attributes_ such as `type` (numeric, string, date etc), `missing`, `measure` (nominal, ordinal, scale) and some other aspects of the variables at hand. The `measure` attribute is particularly important since calculations or representations of your variables are in many routines determined by this attribute. Two examples are _Custom Tables_ and _Chart Builder_, where for a scale variable the default is to calculate a mean, whereas the default for a nominal variable is a count. As a general rule, it is recommended that attributes are set for your variables of interest. However, in those routines where the measure attribute is important, you can make temporary changes of the measure level.
 
 You can also define your own attributes, which could be a way to store other types of metadata, units for measurements is one simple example. In the menu system, the place to define such attributes is `Data/Define Variable Properties`. These attributes can also be included in the codebook.
 
