@@ -228,8 +228,9 @@ you work.
 
 The concept of FAIR data (Findable, Accessible, Interoperable and
 Reusable) has been discussed during the last decade. As the [GO
-FAIR](https://www.go-fair.org) network describes the ambitions: \> The
-ultimate goal of FAIR is to optimise the reuse of data. To achieve this,
+FAIR](https://www.go-fair.org) network describes the ambitions: 
+
+> The ultimate goal of FAIR is to optimise the reuse of data. To achieve this,
 metadata and data should be well-described so that they can be
 replicated and/or combined in different settings.
 
@@ -340,22 +341,23 @@ each file preferably should be organized as such rectangles. Having such
 multiple files could be the best way to store and archive your data, but
 for the analysis you want to do, the relevant pieces usually have to be
 merged into one single rectangular study file, see [Compilation of data
-split into
-pieces...](#compilation-of-data-split-into-pieces-into-one-dataset).
+split into pieces...](#compilation-of-data-split-into-pieces-into-one-dataset).
 
 ## Tidy data
 
 There are many ways to organize data where subsequent processing can be
 difficult. The ways in which they should be organized to make processing
-easier is however not that many. Some general recommendations: - Let
-each column correspond to one variable - Let each row correspond to one
-observation - [Den här skrivningen känns svår. Räcker det med att skriva
-det som kommer efter?] Let all variables in the dataset have the same
-unit of observation -förklara vad som menas. Handlar detta om att data
+easier is however not that many. Some general recommendations: 
+
+- Let each column correspond to one variable 
+- Let each row correspond to one observation 
+- Let all variables in the dataset have the same
+unit of observation [Den här skrivningen känns svår. Räcker det med att skriva
+det som kommer efter? förklara vad som menas. Handlar detta om att data
 kan organiseras i flera "tabeller", ex en med "basic charcteristics" och
 en rad per skalle, och en annan med flera rader per skalle? Det är i
-alla fall ett av Wickhams förslag. - Let each cell contain only a single
-value
+alla fall ett av Wickhams förslag. 
+- Let each cell contain only a single value
 
 In the following examples, there are often combinations of flaws, not
 just the ones mentioned in the header. Especially important are the
@@ -445,14 +447,14 @@ id   time   sex   age   hba1c
 3    2      m     38    32    
 
 If the unit of observation is a unique combination of more than one
-variable, such as here with id and time, then all cells should be filled
+variable, such as here with `id` and  time`, then all cells should be filled
 with the correct content.
 
 ## All cells contain only one value
 
 ### Bad example
 
-Here the variable `birthplace` is meant to cover geographical region and
+Here the variable `birthplace` is meant to cover geographical region *and*
 municipality:
 
 id   sex   age   birthplace
@@ -485,7 +487,7 @@ consistent.
 
 -   Good example: `treatment`
 
-# Separate parts in names with an underscore ("\_")
+## Separate parts in names with an underscore ("\_")
 
 -   Do not use spaces, dots (".") or upper case letters to separate
     parts
@@ -498,7 +500,7 @@ An even better example: `cv_type`
 
 Use of underscore is often called "snake_case".
 
-# Keep your variable names short
+## Keep your variable names short
 
 Name variables so that the names provide a sufficiently clear
 description of the content. They do not have to be exhaustive. Short and
@@ -508,7 +510,7 @@ Bad example: `type_of_primary_cardiovascular_event`
 
 Good example: `cv_type`
 
-# Use only lower case letters
+## Use only lower case letters
 
 -   Do not begin variable names with upper case letters
 -   Do not use names with mixed cases ("CamelCase")
@@ -517,7 +519,7 @@ Bad example: `RespondenStatus`
 
 Good example: `respondent_status`
 
-# Do not include explanations of codes in the variable name
+## Do not include explanations of codes in the variable name
 
 Bad example: `diabetes_1_yes_0_no`
 
@@ -612,16 +614,17 @@ Naturally this also applies for other cases where there is some
 repetition of similar measurements: different places, different parts of
 the body etc.
 
-Data from such instances in time can also be stored in different ways: -
-As one file for each point in time - As different worksheets in the same
-spreadsheet - With all the observations in one single file
+Data from such instances in time can also be stored in different ways: 
+
+- As one file for each point in time 
+- As different worksheets in the same spreadsheet 
+- With all the observations in one single file
 
 If the structure is one of the two first you will probably have to join
 the parts together sooner or later. Such joining is described in [Data
-on the same
-individuals...](#data-on-the-same-individuals-in-more-than-one-place).
+on the same individuals...](#data-on-the-same-individuals-in-more-than-one-place).
 
-# Wide format
+## Wide format
 
 Here the basic observation is one "individual": one row per individual,
 several variables for each timepoint.
@@ -633,7 +636,7 @@ id   sex   hba1c_1   hba1c_2   hba1c_3
 1    m     34        36        38      
 2    m     32        32        33      
 
-# Long format
+## Long format
 
 The basic observation in such a structure is the combination of
 individual *and* timepoint. Then there is one row for each such
@@ -736,7 +739,7 @@ you have entered data manually yourself. Such manual entry is an
 important stage where you should strive to minimize the risk for errors
 and to make the entry process as smooth as possible.
 
-# Systems for data entry
+## Systems for data entry
 
 Data could be entered in a number of ways:
 
@@ -747,7 +750,7 @@ Statistical software (SPSS, Stata R,...)          Works similarly to spreadsheet
 Redcap or other systems for "case report forms"   Works quite well, validation is possible, data can be exported to formats suitable for import into statistical software. 
 Database systems: MS Access, SQL,...              Perhaps the safest tool, however setting up a good database structure is not always that straightforward. 
 
-# Keep the structure simple in order to minimize errors
+## Keep the structure simple in order to minimize errors
 
 Whatever structure, one single file for all data or data split in
 separate parts, make your utmost to set up a *simple* structure which is
@@ -755,14 +758,14 @@ easy for all involved parties to understand and follow. Simplicity,
 consistency and ease of use is the best way to minimize errors and to
 avoid timeconsuming pitfalls.
 
-# Different worksheets or different files for data in the same individuals
+## Different worksheets or different files for data in the same individuals
 
 If you use a spreadsheet for manual entry and there are different
 sources for the basic sources, such as repeated data from different time
 points, then the different pieces can be stored as separate files or as
 separate worksheets in one single spreadsheet.
 
-# If there are questions, put comments in adjoining columns
+## If there are questions, put comments in adjoining columns
 
 Bad example: 
 
@@ -857,23 +860,6 @@ consistent, the better. And you should not hope that it will get any
 easier in the future. The gaps left behind today will most often not be
 covered later.
 
-# Other aspects
-
-# Don't do this in your data! (Flyttas till mer allmänt ställe?)
-
--   Don't calculate the time between events by manual calculations based
-    on your calendar. There are always better ways to do this in your
-    software.
--   Don't try to combine data stored in separate files by manual
-    cut-and-paste operations. See [Compilation of data split into pieces
-    into one
-    dataset](#compilation-of-data-split-into-pieces-into-one-dataset).
--   Don't calculate new variables for combinations of your basic
-    variables, such as a binary variable for "males_age_34_and_older",
-    unless it is absolutely necessary. In most cases, you can use the
-    two variables "gender" and "age" together to filter out such
-    records, leaving you with a lot fewer variables.
-
 # Multiple response {#multiple-response}
 
 One fairly common type of data which needs extra attention is when there
@@ -884,7 +870,7 @@ such as "substance A", "substance B" and so on.
 
 This kind of data can be dealt with in more than one way:
 
-# Only a few combinations, mostly only one of the alternative is chosen
+## Only a few combinations, mostly only one of the alternative is chosen
 
 One single variable, combinations are entered as more than one code: 
 
@@ -900,7 +886,7 @@ This is technically possible, but not recommended. One common
 consequence is that there could be many different combinations, making
 it difficult to effectively summarize the variable..
 
-# Many possible combinations
+## Many possible combinations
 
 One column/variable for each alternative, where each alternative is a
 binary variable either with 0's and 1's or simply 1's: 
@@ -1047,6 +1033,21 @@ process when there are files you clearly do not need anymore.
 
 Vad menar vi här?
 
+#Some final warnings
+
+-   Don't calculate the time between events by manual calculations based
+    on your calendar. There are always better ways to do this in your
+    software.
+-   Don't try to combine data stored in separate files by manual
+    cut-and-paste operations. See [Compilation of data split into pieces
+    into one dataset](#compilation-of-data-split-into-pieces-into-one-dataset).
+-   Don't calculate new variables for combinations of your basic
+    variables, such as a binary variable for "males_age_34_and_older",
+    unless it is absolutely necessary. In most cases, you can use the
+    two variables "gender" and "age" together to filter out such
+    records, leaving you with a lot fewer variables.
+
+
 # Referera till UB på ngt sätt?
 
 # References
@@ -1056,8 +1057,7 @@ Vad menar vi här?
     <https://doi.org/10.1080/00031305.2017.1375989>
 -   Wickham, H. (2014). Tidy Data. Journal of Statistical Software,
     59(10), 1–23. <https://doi.org/10.18637/jss.v059.i10>
--   FAIR-principles, <https://www.go-fair.org/fair-principles> eller
-    annan hänvisning?
+-   The FAIR principles, <https://www.go-fair.org/fair-principles>
 
 # Other sources
 
@@ -1066,8 +1066,9 @@ Vad menar vi här?
 -   R for Data Science?
 -   Corti, L., Van den Eynden, V., Bishop, L., Woollard, M. (2019),
     Managing and Sharing Research Data - A Guide to Good Practice,
-    Second Edition, SAGE Publications Ltd
--   Collier, J., Using SPSS Syntax: A Beginner's Guide, 2009, SAGE
+    Second Edition, SAGE Publications Ltd, <https://uk.sagepub.com/en-gb/eur/managing-and-sharing-research-data/book262873>
+-   Collier, J. (2009), Using SPSS Syntax: A Beginner's Guide, SAGE, <https://uk.sagepub.com/en-gb/eur/using-spss-syntax/book229167?_gl=1%2A1emm9pb%2A_up%2AMQ..%2A_ga%2AOTI1NTI3NDMuMTc4MDM5OTgyMQ..%2A_ga_60R758KFDG%2AczE3ODAzOTk4MjAkbzEkZzAkdDE3ODAzOTk4MjAkajYwJGwwJGgxMjMxNzc2MzU0>
+- Long, J.S. (2009), The Workflow of Data Analysis Using Stata, Stata Press, Stata Press, <https://www.stata.com/bookstore/workflow-data-analysis-stata/>
 
 # Appendices {#appendices}
 
@@ -1085,33 +1086,34 @@ LABELS```. Samtidigt är den hyfsat generell och någorlunda lättläst.
 # How should syntax/scripts be organized? {#how-should-syntaxscripts-be-organized}
 
 A basic recommendation is to have different scripts for different tasks,
-typically \* Import of data file \* Data cleaning \* Analysis, possibly
-in steps
-
-# Some notes for specific software systems {#some-notes-for-specific-software-systems}
+typically 
+- Import of data file 
+- Data cleaning 
+- Analysis, possibly in steps.
 
 # Style guides
 
 There are many style guides for the use of specific softwares, such as
-[Google's R style
-guide](https://google.github.io/styleguide/Rguide.html#:~:text=R%20is%20a%20high-level%20programming%20language%20used%20primarily,the%20Tidyverse%20Style%20Guide%20by%20Hadley%20Wickham%20license)
+[Google's R style guide](https://google.github.io/styleguide/Rguide.html#:~:text=R%20is%20a%20high-level%20programming%20language%20used%20primarily,the%20Tidyverse%20Style%20Guide%20by%20Hadley%20Wickham%20license)
 or [The DIME Analytics Stata Style
 Guide](https://worldbank.github.io/dime-data-handbook/coding.html#the-dime-analytics-stata-style-guide).
 
 It is however important to realize that there are many such guides, and
 they might not be telling the same story.
 
-# Notes on R
+# Some notes for specific software systems {#some-notes-for-specific-software-systems}
 
-## Missing values
+## Notes on R
 
-# Notes on SAS
+### Missing values
 
-## Missing values
+## Notes on SAS
 
-# Notes on SPSS
+### Missing values
 
-## Logging steps taken
+## Notes on SPSS
+
+### Logging steps taken
 
 One way to get an explicit account of the steps taken is to add the
 syntax text to the output generated by the software. Go to
@@ -1126,7 +1128,7 @@ as a security measure in case you have not remembered to save files as
 intended. The default location of the journal file can be seen in the
 `File locations` part of the `Edit/Options`.
 
-## Variable attributes
+### Variable attributes
 
 In SPSS, variables have *attributes* such as `type` (numeric, string,
 date etc), `missing`, `measure` (nominal, ordinal, scale) and some other
@@ -1146,7 +1148,7 @@ In the menu system, the place to define such attributes is
 `Data/Define Variable Properties`. These attributes can also be included
 in the codebook.
 
-## Missing values
+### Missing values
 
 Some sources recommend that missing values in numeric variables should
 not be coded with numeric values, but rather by other means. This does
@@ -1198,7 +1200,7 @@ one or both of `var1` and `var2` are missing. - Use of functions such as
 `SUM` uses all non-missing values: `COMPUTE sum=SUM(var1, var2).` sums
 the content of `var1` and `var2` when one or both them are non-missing.
 
-## Codebook
+### Codebook
 
 Codebooks can be produced by use of `Analyze/Reports/Codebook`. The
 result can preferably be placed as the single output in an output window
@@ -1210,7 +1212,7 @@ for your variables, most importantly the measure attribute. In order to
 make the best documentation of the data, it is clearly recommended that
 you assign "correct" attributes to your variables as fully as possible.
 
-## Syntax files
+### Syntax files
 
 The overall recommendation is that you use syntax for your processing.
 With time, you might learn how to write syntax directly for some
@@ -1229,7 +1231,7 @@ file for reading the raw files, another for the cleaning, in which you
 invoke the previous file in the beginning with the `INSERT FILE`
 command.
 
-# Help
+### Help
 
 Help files can be found for almost every part of the menu system. One
 way to find such support is to use the `Help` button found in most of
@@ -1237,10 +1239,6 @@ the windows/frames opened through the menus. For help with syntax,
 pressing F1 will open the help file for the actual command your marker
 is placed in. You can also see the `Help` menu in the menu system.
 
-# Stata
+## Stata
 
-## Missing values
-
-# Some good examples
-
-# Some bad examples
+### Missing values
