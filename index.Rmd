@@ -1,6 +1,7 @@
 ---
 title: "Manual for dealing with data in research projects"
-author: "Statistikernätverket norra sjukvårdsregionen"
+subtitle: "Work in progress..."
+author: "By: Forum Norr Statistikernätverket"
 site: bookdown::bookdown_site
 output:
   bookdown::gitbook:
@@ -541,10 +542,10 @@ How this is done depends on your software. Irrespective of how you set
 up such explanatory labels, you should always keep a system for this
 kind of information.
 
-~~If the software you use allows such labels to be set, then your
-analyses will also be simplied with such labels since the output -
-tables and graphs - will make direct use of these labels in full text.~~
-Stämmer väl inte? SPSS ja, men inte R väl?
+If the software you use allows such labels to be set, then your
+analyses could also be simplified with such labels since the output -
+tables and graphs - in many software systems will make direct use of 
+these labels in full text.
 
 # Categorical variables - numerical or text/string?
 
@@ -987,7 +988,7 @@ any simple way to run such software with syntax.
 The original datafiles containg raw data should be kept raw, i e
 unchanged, preferably also in some other folder than cleaned files
 and/or files with new derived variables. Raw data files could also be
-write protected as an extra countermeasure against possible errors.
+write-protected as an extra countermeasure against possible errors.
 
 # How should additions and corrections to data files be made?
 
