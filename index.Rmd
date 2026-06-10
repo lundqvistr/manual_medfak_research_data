@@ -531,7 +531,9 @@ Good example: `diabetes`
 
 Another good example: `type_primary_event`
 
-# If possible, assign explanatory "labels" to variables
+#Documentation of variables and codes
+
+## If possible, assign explanatory "labels" to variables
 
 Variables should of course be understandable. This is however not always
 that simple to achieve, especially if a variable name is short and there
@@ -547,7 +549,7 @@ analyses could also be simplified with such labels since the output -
 tables and graphs - in many software systems will make direct use of 
 these labels in full text.
 
-# Categorical variables - numerical or text/string?
+## Categorical variables - numerical or text/string?
 
 Categorical variables such as age group *can* consist of text in string
 formats, i e stored as text rather than numbers, such as "25-64", "65-".
@@ -555,7 +557,7 @@ Most statistical software can handle such formats. However, it is often
 simpler to use numerical codes, so if you use string formatted
 variables, be prepared to convert these to numerical ones.
 
-# Codes should be assigned explanations
+## Codes should be assigned explanations
 
 Categorical variables consist of markers for categories, such as age
 group. The codes used in such variables must be assigned explanations.
@@ -565,7 +567,7 @@ part of your [codebook](#create-and-maintain-a-codebook).
 
 If you work with spreadsheets, you could at least use comments.
 
-# Variables measured at different time points {#variables-measured-at-different-time-points}
+## Variables measured at different time points {#variables-measured-at-different-time-points}
 
 Given that the dataset is in a wide format (see [Wide or long
 format?](#wide-or-long-format), variables measured at different time
@@ -582,7 +584,7 @@ then the `hba1c` data should consist of one variable with the actual
 `hba1c` levels and another (`time`) with values such as 0, 3, 12 for
 each observation.
 
-# Create and maintain a codebook {#create-and-maintain-a-codebook}
+## Create and maintain a codebook {#create-and-maintain-a-codebook}
 
 A codebook describes the contents, structure, and layout of a data
 collection. More specifically explanations of variables, units for
@@ -697,12 +699,9 @@ through the data in any way you can imagine, e g by sorting (both
 ascending and descending order) to help you find missing values. You
 need to make your self acquainted with your data.
 
-(Stryks? Det täcks om än inte lika direkt ovan.) \# No empty cells in
-the raw dataset
+# Miscellaneous
 
-# Ytterligare punkter...
-
-# Data on the same individuals in more than one place {#data-on-the-same-individuals-in-more-than-one-place}
+## Data on the same individuals in more than one place {#data-on-the-same-individuals-in-more-than-one-place}
 
 It is sometimes good to store data for the same individuals in different
 files. However, those files must often be combined into one single study
@@ -718,7 +717,7 @@ also good to have the same names and formats when data in parts are to
 be joined, see [Variables measured at different time
 points](#variables-measured-at-different-time-points).
 
-# Compilation of data split into pieces into one dataset {#compilation-of-data-split-into-pieces-into-one-dataset}
+## Compilation of data split into pieces into one dataset {#compilation-of-data-split-into-pieces-into-one-dataset}
 
 Data stored in separate parts must in most cases be compiled into one
 dataset, a process often called "matching", "merging" or "joining". The
@@ -731,6 +730,128 @@ involved, a so called 1-to-n or 1-to-many matching.
 These matching procedures can be made in any decent statistical
 software. It could however be quite demanding to make it work, so do not
 hesitate to consult a statistician.
+
+## Import of files from others
+
+It is common to have datasets coming from other sources:
+Socialstyrelsen, other data bases and the like, where their export is
+done into files in formats you do not use yourself. For example are
+files from Socialstyrelsen often SAS files, and you might work wth SPSS,
+Stata or R. Files of this kind can almost always be imported directly
+into your statistical software.
+
+There can still be problems depending on the structure in the files you
+receive. One common example is when a numeric variables such as dates
+are formatted as "string" variables rather than numeric variables. Such
+variables can usually be converted into the format you need, but the
+time needed for such conversions can be quite demanding.
+
+As a general rule, try to communicate with the organization, preferably
+*before* they send files to you, in order to see if they can send files
+in formats which are as easy for you to work with as possible. Do not
+simply accept files in the format they use.
+
+Another advice is to see if you can get the source to send files in both
+*their* preferred format and other formats. It might be possible for
+them to send SPSS, Stata or R data files. They can also always export
+data files into non-proprietary formats such as comma or tab-delimited
+files. You can always import such files yourself. In this process, you
+are usually able to control the finer details of the import, so even it
+this could be seen as a rather laborious workaround, it can still take
+less time than converting variables *after* import.
+
+## Should all parts of the datasets be put in good order?
+
+As has been stated elsewhere in this document, data often comes from
+different sources: your own manually entered data, external databases,
+data collected by others or the like.
+
+In the case of data from other sources, you are not in complete control
+yourself. There might be a lot of variables already named, having more
+or less complete documentation, and the structures might not be in line
+with the recommendations made here. Then you have to make a decision
+about to what extent "old" structures should be changed. There is not
+any simple rule for how to proceed in such cases. You could limit your
+efforts to your own nwewly derived variables only, or you could set out
+to change all of the old variables.
+
+Our recommendation is that whatever approach is chosen, you should try
+to make these decisions early in the process. It does not become easier
+to set up a good structure for the data later.
+
+## The raw data file
+
+The original datafiles containg raw data should be kept raw, i e
+unchanged, preferably also in some other folder than cleaned files
+and/or files with new derived variables. Raw data files could also be
+write-protected as an extra countermeasure against possible errors.
+
+## How should additions and corrections to data files be made?
+
+It is easier to say how additions and changes should *not* be made:
+manual changes in the datafiles. Such changes seldom leave any trace,
+and it could become impossible to to understand what changes have been
+made. A better approach is to use scripts/syntax. If scripts are not
+used, then all such changes should be clearly documented in a log book.
+
+Changes should also be made in new copies of the file rather than
+keeping one single file, see [Version control](#version-control).
+
+## Backup
+
+## Version control {#version-control}
+
+There are systems available for version control, e g "git" or "github",
+which are particularly suitable for R users. However, for users of other
+systems, Git may not provide a smooth workflow, so other alternatives
+should be used. A simple solution is to add the current date in the file
+names whenever a change is made. In that way, you might perhaps end up
+with many different but similar versions of the files. However, that is
+a small problem, and one that you can solve in the later stages of the
+process when there are files you clearly do not need anymore.
+
+## Multiple response {#multiple-response}
+
+One fairly common type of data which needs extra attention is when there
+could be more than one answer, as for example to the question *Which of
+the following medicines have been prescribed during the last year? One
+or more alternatives can be marked* followed by possible alternatives
+such as "substance A", "substance B" and so on.
+
+This kind of data can be dealt with in more than one way:
+
+### Only a few combinations, mostly only one of the alternative is chosen
+
+One single variable, combinations are entered as more than one code: 
+
+id   medicine 
+---  --------- 
+1    a 
+2    a 
+3    b 
+4    ab 
+5    c
+
+This is technically possible, but not recommended. One common
+consequence is that there could be many different combinations, making
+it difficult to effectively summarize the variable..
+
+### Many possible combinations
+
+One column/variable for each alternative, where each alternative is a
+binary variable either with 0's and 1's or simply 1's: 
+
+id   med_1   med_2   med_3 
+---  ------  ------  ------ 
+1    1       0       0 
+2    1       0       0
+3    0       1       0 
+4    1       1       0 
+5    0       0       1
+
+This is usually the best approach, both because the data can easily be
+summarized and because all information is available and fairly
+strightforward to set up into other formats.
 
 # Advice for manual entry of data
 
@@ -782,7 +903,7 @@ id   sex   hba1c_1   hba1c_1_c   hba1c_2   hba1c_2_c   hba1c_3    hba1c_3_c
 1    m     34                    36        ?           38         
 2    m     32                    32                    33         error?
 
-# Dates
+## Dates
 
 In many research projects, *time* is involved. Counting the time from
 diagnosis to death and delimiting the records to some specific time
@@ -803,7 +924,7 @@ especially relevant when you enter dates manually:
     software which can be used to combine these into a working date/time
     variable.
 
-# No calculated values in the raw data files
+## No calculated values in the raw data files
 
 Calculations, avser det formler i Excel-blad? Eller
 calculated/aggregated values, typ medelvärden, standardavvikelser/...?
@@ -829,82 +950,7 @@ in your raw data. In the best case, it only makes the structure more
 complicated than necessary. In the worst case, you end up using such
 aggregated values in your subsequent calculations.
 
-# Should all parts of the datasets be put in good order?
-
-As has been stated elsewhere in this document, data often comes from
-different sources: your own manually entered data, external databases,
-data collected by others or the like.
-
-In the case of data from other sources, you are not in complete control
-yourself. There might be a lot of variables already named, having more
-or less complete documentation, and the structures might not be in line
-with the recommendations made here. Then you have to make a decision
-about to what extent "old" structures should be changed. There is not
-any simple rule for how to proceed in such cases. You could limit your
-efforts to your own nwewly derived variables only, or you could set out
-to change all of the old variables.
-
-Our recommendation is that whatever approach is chosen, you should try
-to make these decisions early in the process. It does not become easier
-to set up a good structure for the data later.
-
-# Consistency again
-
-It is often not so easy to be consistent. During the research process
-where you assign namns to new derived variables, add explanatory labels
-to the variables and to codes used, maintain a codebook, there are a
-number of steps where choices have to be made and where inconsistencies
-can enter. As authors of this document, we cannot claim that we succeed
-in being entirely consistent ourselves. The basic message here is
-however that you should strive to be as consistent as possible. The more
-consistent, the better. And you should not hope that it will get any
-easier in the future. The gaps left behind today will most often not be
-covered later.
-
-# Multiple response {#multiple-response}
-
-One fairly common type of data which needs extra attention is when there
-could be more than one answer, as for example to the question *Which of
-the following medicines have been prescribed during the last year? One
-or more alternatives can be marked* followed by possible alternatives
-such as "substance A", "substance B" and so on.
-
-This kind of data can be dealt with in more than one way:
-
-## Only a few combinations, mostly only one of the alternative is chosen
-
-One single variable, combinations are entered as more than one code: 
-
-id   medicine 
----  --------- 
-1    a 
-2    a 
-3    b 
-4    ab 
-5    c
-
-This is technically possible, but not recommended. One common
-consequence is that there could be many different combinations, making
-it difficult to effectively summarize the variable..
-
-## Many possible combinations
-
-One column/variable for each alternative, where each alternative is a
-binary variable either with 0's and 1's or simply 1's: 
-
-id   med_1   med_2   med_3 
----  ------  ------  ------ 
-1    1       0       0 
-2    1       0       0
-3    0       1       0 
-4    1       1       0 
-5    0       0       1
-
-This is usually the best approach, both because the data can easily be
-summarized and because all information is available and fairly
-strightforward to set up into other formats.
-
-# Multi-centre studies
+## Multi-centre studies
 
 Multi-centre studies are prevalent. In most cases, there is an overall
 ambition to collect data in the centres in a streamlined fashion. Our
@@ -928,34 +974,20 @@ procedures will cause problems. On a more technical level, if you use
 Excel or similar, try also to add "validation" of the contents in the
 columns in order to minimize the risk for errors and inconsistencies.
 
-# Import of files from others
 
-It is common to have datasets coming from other sources:
-Socialstyrelsen, other data bases and the like, where their export is
-done into files in formats you do not use yourself. For example are
-files from Socialstyrelsen often SAS files, and you might work wth SPSS,
-Stata or R. Files of this kind can almost always be imported directly
-into your statistical software.
+# Consistency again
 
-There can still be problems depending on the structure in the files you
-receive. One common example is when a numeric variables such as dates
-are formatted as "string" variables rather than numeric variables. Such
-variables can usually be converted into the format you need, but the
-time needed for such conversions can be quite demanding.
+It is often not so easy to be consistent. During the research process
+where you assign namns to new derived variables, add explanatory labels
+to the variables and to codes used, maintain a codebook, there are a
+number of steps where choices have to be made and where inconsistencies
+can enter. As authors of this document, we cannot claim that we succeed
+in being entirely consistent ourselves. The basic message here is
+however that you should strive to be as consistent as possible. The more
+consistent, the better. And you should not hope that it will get any
+easier in the future. The gaps left behind today will most often not be
+covered later.
 
-As a general rule, try to communicate with the organization, preferably
-*before* they send files to you, in order to see if they can send files
-in formats which are as easy for you to work with as possible. Do not
-simply accept files in the format they use.
-
-Another advice is to see if you can get the source to send files in both
-*their* preferred format and other formats. It might be possible for
-them to send SPSS, Stata or R data files. They can also always export
-data files into non-proprietary formats such as comma or tab-delimited
-files. You can always import such files yourself. In this process, you
-are usually able to control the finer details of the import, so even it
-this could be seen as a rather laborious workaround, it can still take
-less time than converting variables *after* import.
 
 # Syntax/scripts/do files
 
@@ -983,36 +1015,13 @@ reason, along with several others, why we would not recommend use of
 spreadsheets for more systematic statistical work is that there is not
 any simple way to run such software with syntax.
 
-# The raw data file
+When you choose to use syntax, a basic recommendation is to have different scripts for different tasks,
+typically 
+- Import of data file 
+- Data cleaning 
+- Analysis, possibly in steps.
 
-The original datafiles containg raw data should be kept raw, i e
-unchanged, preferably also in some other folder than cleaned files
-and/or files with new derived variables. Raw data files could also be
-write-protected as an extra countermeasure against possible errors.
-
-# How should additions and corrections to data files be made?
-
-It is easier to say how additions and changes should *not* be made:
-manual changes in the datafiles. Such changes seldom leave any trace,
-and it could become impossible to to understand what changes have been
-made. A better approach is to use scripts/syntax. If scripts are not
-used, then all such changes should be clearly documented in a log book.
-
-Changes should also be made in new copies of the file rather than
-keeping one single file, see [Version control](#version-control).
-
-# Backup
-
-# Version control {#version-control}
-
-There are systems available for version control, e g "git" or "github",
-which are particularly suitable for R users. However, for users of other
-systems, Git may not provide a smooth workflow, so other alternatives
-should be used. A simple solution is to add the current date in the file
-names whenever a change is made. In that way, you might perhaps end up
-with many different but similar versions of the files. However, that is
-a small problem, and one that you can solve in the later stages of the
-process when there are files you clearly do not need anymore.
+You could of course use a single syntax file for all parts - import of files, cleaning, analysis and presentation - but this tends to result in long files which can be difficult to navigate your way through. 
 
 # When the project is about to be closed?
 
@@ -1030,11 +1039,7 @@ process when there are files you clearly do not need anymore.
     such files should be possible to read in all systems. However,
     keeping other formats can simplify future use.
 
-# File formats
-
-Vad menar vi här?
-
-#Some final warnings
+# Some final warnings
 
 -   Don't calculate the time between events by manual calculations based
     on your calendar. There are always better ways to do this in your
@@ -1048,8 +1053,10 @@ Vad menar vi här?
     two variables "gender" and "age" together to filter out such
     records, leaving you with a lot fewer variables.
 
+# Other support at UMU
 
-# Referera till UB på ngt sätt?
+Most or even all university libraries provide support for working with research 
+data. At UMU, you can read more at [Hantera forskningsdata](https://www.umu.se/forskare/planera-och-genomfora/hantera-forskningsdata).
 
 # References
 
@@ -1062,18 +1069,18 @@ Vad menar vi här?
 
 # Other sources
 
--   SND?
+-   Svensk Nationell datatjänst (SND), <https://snd.se/sv>
 -   Reproducible research?
 -   R for Data Science?
 -   Corti, L., Van den Eynden, V., Bishop, L., Woollard, M. (2019),
-    Managing and Sharing Research Data - A Guide to Good Practice,
-    Second Edition, SAGE Publications Ltd, <https://uk.sagepub.com/en-gb/eur/managing-and-sharing-research-data/book262873>
--   Collier, J. (2009), Using SPSS Syntax: A Beginner's Guide, SAGE, <https://uk.sagepub.com/en-gb/eur/using-spss-syntax/book229167?_gl=1%2A1emm9pb%2A_up%2AMQ..%2A_ga%2AOTI1NTI3NDMuMTc4MDM5OTgyMQ..%2A_ga_60R758KFDG%2AczE3ODAzOTk4MjAkbzEkZzAkdDE3ODAzOTk4MjAkajYwJGwwJGgxMjMxNzc2MzU0>
-- Long, J.S. (2009), The Workflow of Data Analysis Using Stata, Stata Press, Stata Press, <https://www.stata.com/bookstore/workflow-data-analysis-stata/>
+    [Managing and Sharing Research Data - A Guide to Good Practice](https://uk.sagepub.com/en-gb/eur/managing-and-sharing-research-data/book262873),
+    Second Edition, SAGE
+-   Collier, J. (2009), [Using SPSS Syntax: A Beginner's Guide](https://uk.sagepub.com/en-gb/eur/using-spss-syntax/book229167?_gl=1%2A1emm9pb%2A_up%2AMQ..%2A_ga%2AOTI1NTI3NDMuMTc4MDM5OTgyMQ..%2A_ga_60R758KFDG%2AczE3ODAzOTk4MjAkbzEkZzAkdDE3ODAzOTk4MjAkajYwJGwwJGgxMjMxNzc2MzU0), SAGE
+- Long, J.S. (2009), [The Workflow of Data Analysis Using Stata](https://www.stata.com/bookstore/workflow-data-analysis-stata), Stata Press, Stata Press
 
 # Appendices {#appendices}
 
-# Codebook in Excel
+## Codebook in Excel
 
 ```{=html}
 <!---Min (RL) tanke här är att ge förslag på hur filinformation ska sparas ner om man nu nödvändigtvis vill ha det i Excel, eller kanske allra helst csv-format. Typ:
@@ -1084,15 +1091,10 @@ LABELS```. Samtidigt är den hyfsat generell och någorlunda lättläst.
 * Annan information, ex enheter (“mmol/ml”), helst med variabelnamn och enhet (eller annat) som separata kolumner. Detta kan vara bra för arkiveringsvinkeln också i och med att det kan sparas ner i ett icke-proprietärt filformat. Eller är detta överflödigt och/eller kan lämnas till UB:s förslag/mallar?-->
 ```
 
-# How should syntax/scripts be organized? {#how-should-syntaxscripts-be-organized}
 
-A basic recommendation is to have different scripts for different tasks,
-typically 
-- Import of data file 
-- Data cleaning 
-- Analysis, possibly in steps.
 
-# Style guides
+
+## Style guides
 
 There are many style guides for the use of specific softwares, such as
 [Google's R style guide](https://google.github.io/styleguide/Rguide.html#:~:text=R%20is%20a%20high-level%20programming%20language%20used%20primarily,the%20Tidyverse%20Style%20Guide%20by%20Hadley%20Wickham%20license)
@@ -1101,8 +1103,6 @@ Guide](https://worldbank.github.io/dime-data-handbook/coding.html#the-dime-analy
 
 It is however important to realize that there are many such guides, and
 they might not be telling the same story.
-
-# Some notes for specific software systems {#some-notes-for-specific-software-systems}
 
 ## Notes on R
 
