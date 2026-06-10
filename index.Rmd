@@ -989,7 +989,7 @@ easier in the future. The gaps left behind today will most often not be
 covered later.
 
 
-# Syntax/scripts/do files
+# Syntax/scripts/do files {#syntax-files}
 
 We strongly recommend that you work with "syntax" as a way to run your
 processing of data, i e setting up "code" which is stored in specific
@@ -1016,7 +1016,8 @@ spreadsheets for more systematic statistical work is that there is not
 any simple way to run such software with syntax.
 
 When you choose to use syntax, a basic recommendation is to have different scripts for different tasks,
-typically 
+typically
+
 - Import of data file 
 - Data cleaning 
 - Analysis, possibly in steps.
@@ -1060,21 +1061,25 @@ data. At UMU, you can read more at [Hantera forskningsdata](https://www.umu.se/f
 
 # References
 
+
 -   Broman, K. W., & Woo, K. H. (2018). Data Organization in
     Spreadsheets. The American Statistician, 72(1), 2–10.
     <https://doi.org/10.1080/00031305.2017.1375989>
+- Eloranta, S. et al, (2013). [Att strukturera och dokumentera forskningsprojekt](https://lakartidningen.se/klinik-och-vetenskap-1/2013/02/att-strukturera-och-dokumentera-forskningsprojekt) . Läkartidningen, nr 8.    
 -   Wickham, H. (2014). Tidy Data. Journal of Statistical Software,
     59(10), 1–23. <https://doi.org/10.18637/jss.v059.i10>
--   The FAIR principles, <https://www.go-fair.org/fair-principles>
+
+https://lakartidningen.se/vetenskap/att-strukturera-och-dokumentera-forskningsprojekt/
 
 # Other sources
 
+-   The FAIR principles, <https://www.go-fair.org/fair-principles>
 -   Svensk Nationell datatjänst (SND), <https://snd.se/sv>
 -   Reproducible research?
 -   R for Data Science?
 -   Corti, L., Van den Eynden, V., Bishop, L., Woollard, M. (2019),
-    [Managing and Sharing Research Data - A Guide to Good Practice](https://uk.sagepub.com/en-gb/eur/managing-and-sharing-research-data/book262873),
-    Second Edition, SAGE
+    [Managing and Sharing Research Data - A Guide to Good Practice](https://uk.sagepub.com/en-gb/eur/managing-and-sharing-research-data/book262873,
+    Second Edition), SAGE
 -   Collier, J. (2009), [Using SPSS Syntax: A Beginner's Guide](https://uk.sagepub.com/en-gb/eur/using-spss-syntax/book229167?_gl=1%2A1emm9pb%2A_up%2AMQ..%2A_ga%2AOTI1NTI3NDMuMTc4MDM5OTgyMQ..%2A_ga_60R758KFDG%2AczE3ODAzOTk4MjAkbzEkZzAkdDE3ODAzOTk4MjAkajYwJGwwJGgxMjMxNzc2MzU0), SAGE
 - Long, J.S. (2009), [The Workflow of Data Analysis Using Stata](https://www.stata.com/bookstore/workflow-data-analysis-stata), Stata Press, Stata Press
 
@@ -1224,9 +1229,8 @@ menus and the OK button, but after which you press the Paste button when
 you think you have come up with a more definite version.
 
 The syntax files can also become quite large. As a way to split the
-commands into more manageable chunks, see [How should syntax/scripts be
-organized?](#how-should-syntaxscripts-be-organized), you can use a
-"master" syntax file to invoke sub files by `INSERT FILE` (for details,
+commands into more manageable chunks, see [Syntax/scripts/do files](#syntax-files), 
+you can use a "master" syntax file to invoke sub files by `INSERT FILE` (for details,
 see the help documentation for `INSERT`). Another way is to have one
 file for reading the raw files, another for the cleaning, in which you
 invoke the previous file in the beginning with the `INSERT FILE`
