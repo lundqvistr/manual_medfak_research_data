@@ -1,6 +1,10 @@
 title: "Manual for dealing with data in research projects"
 subtitle: "Work in progress..."
-author: "By: Forum Norr Statistikernätverket"
+author: "Forum Norr Statistikernätverket"
+format:
+  html:
+    toc: true
+    toc-location: left # Or 'right' or 'body'
 site: bookdown::bookdown_site
 output:
   bookdown::gitbook:
