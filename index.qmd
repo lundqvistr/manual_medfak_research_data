@@ -1,0 +1,1250 @@
+---
+title: "Manual for dealing with data in research projects"
+subtitle: "Work in progress..."
+author: "By: Forum Norr Statistikernätverket"
+site: bookdown::bookdown_site
+output:
+  bookdown::gitbook:
+    number_sections: true
+    toc_depth: 4
+  bookdown::pdf_book:
+    number_sections: true
+    toc: true
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+# Introduction
+
+The authors of the present document work as biostatisticians where we
+encounter data from many different projects. We have seen many examples
+of data files structured in ways that have been demanding for both
+ourselves and the final users. Usually, a typical basic course of
+biostatistics does not cover the aspects we aim at here, namely how to
+set up a good data structure, despite this being a fundamental part of
+analysing data.
+
+A PhD student who has only recently begun his or her research career
+cannot be expected to know how to structure a data file in a way that
+facilitates research on the data for many years to come. Thus, the
+student is therefore dependent on their supervisor and others involved
+having sufficient knowledge in this area, and also on that knowledge
+being effectively communicated early in the doctoral training. This is a
+fragile system.
+
+Our hope is that this document will offer useful guidance on how to
+avoid issues related to data management, analysis, and archiving,
+facilitating work for all researchers/staff involved, both during and
+after the course of the research project. We also hope that if the
+recommendations are followed in a broader context at the medical faculty
+at UMU, this will simplify collaboration across research groups.
+Ultimately, the goal is to increase the quality of the research.
+
+It should be noted that the entire document is to be regarded as a "Work in progress". It will evolve, hopefully with input from yourself and other readers.
+
+# What is this document?
+
+This document is intended as a template for how to structure research
+data files at the Medical faculty of Umeå University.
+
+The recommendations made here are valid and relevant for projects
+especially in their beginning stages. Having well-designed structures
+from the outset will usually not increase the total amount of time and
+resources spent on data management, but rather simplify subsequent work.
+
+In case you are not involved in medical research, we still hope that the
+suggestions made here are relevant to you. After all, even though there
+are many fields in science, there are also many common tasks in the
+analysis of the data.
+
+We do not claim that the suggestions made here are the only possible
+ways to work or the unequivocally "best" ways. We do however claim that
+the approach suggested is simple enough to use in most or even all
+research projects, and that adherence to the suggestions can be expected
+to make your life in research smoother.
+
+# For whom is this document written?
+
+The primary audience is of course those new in research, such as PhD
+students. There are however others involved which also could make use of
+the recommendations. It is first of all not a given that time spent in
+research always results in effective and efficient procedures,
+experience is simply not enough. We also hope that the document can be
+used by supervisors to ease the way for their students. So the targeted
+audience is a general one: staff in any way involved in research - PhD
+students, supervisors,... - inexperienced and experienced alike.
+
+# The scope for this document
+
+A very short description of a typical research process, at least the
+quantitative type we are focusing on here, is the following figure:
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE) 
+```
+```{r}
+library(DiagrammeR)
+mermaid('
+graph LR
+  A(Raw data, keep unchanged)-->|Cleaning, preferably with scripts|B(Study file)
+  B --> |Analysis|C(Results)     
+')
+```
+
+Eller detta?
+
+```{r, echo=FALSE}
+mermaid('
+graph LR
+  A[Data from others] --> |Import and cleaning|C
+  B[Data you manage] --> C[Study file]
+  D[Results]
+  C -->|Analysis|D     
+')
+```
+
+In this document we are focusing on the first parts up until "Study
+file", _i e_ the analysis part is not covered.
+
+There are of course projects where there is only one kind of data
+source, either only data from others or only manually entered data, but
+the description is meant to cover the following steps:
+
+-   Import of data
+-   Cleaning
+-   Matching data in more than one file into one single file
+-   Manual entry of data
+
+To be more precise, procedures for import, cleaning and matching will
+*not* be covered, but rather steps you can take to make the work in all
+of them a lot smoother. Manual entry however will be covered.
+
+# For what kind of data is this document written?
+
+Data is stored in different forms and for different purposes. Some forms
+are suited for tasks such as *follow-up of individual patients* in their
+daily care. Then the use of the file can be simplified by using a
+"visual layout", colors, bold text or the like. The goal in such cases
+usually is to collect and use data for each individual, not to calculate
+summaries such as means for several individuals.
+
+Another purpose is *research* where the goal is to summarize important
+aspects of the individual records, and where data on individuals usually
+is not important. This latter kind of use most often requires a layout
+for the data which is different from the former one. Here we are
+concerned with this latter use.
+
+Further, the data considered is of the kind usually referred to as
+*quantitative*. Considerations for the structure in qualitative data
+must be found elsewhere.
+
+# Why is a good structure in research data so important?
+
+Having a good structure is simply fundamental for working efficiently,
+both for yourself during the project and in other contexts.
+
+## Import and cleaning takes time
+
+In the typical statistics course you learn about procedures for
+analysis, often with neat and tidy datasets. So when the research on
+real data is begun, many less experienced researchers are surprised or
+even overwhelmed by the amount of time needed for importing data files
+and cleaning the data. Further, if the documentation for variables and
+codes is lacking, the analysis takes unnecessarily much time simply
+because you have to go back to other sources in order to find out what
+you are working with.
+
+## Errors
+
+There are also often flaws and errors in the data. You can hope to find
+them early in the cleaning process, but even if they turn up later, a
+good structure simplifies finding and correcting these errors.
+
+## Projects often live long
+
+Many research projects have an afterlife. After some years, you might
+yourself want to do a follow-up study: what are the long-term effects?
+There could be other researchers interested to make such a followup. A
+supervisor might want to put previously collected data in the hands of
+new PhD students. You could be contacted by other researchers who are
+interested in your work, ending in a new joint project. In all those and
+many other situations there is a definite need for the original datasets
+to be well-structured and well-documented.
+
+## Cooperation
+
+Some projects are from the start set up as based on more than one
+researcher or research group. Data can be collected in multiple centres,
+and the combined dataset can also be used in multiple centres. In such
+cases, there is a definite need for well-designed data structures.
+
+## Archiving/transparency
+
+When research projects have reached their final days, many just wither
+away. Given the resources spent, this seems as a poor outcome. It is
+both a matter of making it possible to wake projects for future research
+and part of making the research efforts transparent. The latter could
+simply be seen as an important part of maintaining the publics' trust in
+the scientific community. So the research data should eventually be
+stored and archived in a manner that makes it possible to dig up even
+previously buried projects.
+
+## Reproducibility/open data/open science
+
+There has been an increasing emphasis in many areas on
+*reproducibility*, on *open data* and *open science*. None of these
+goals can be attained if the underlying datasets are poorly documented,
+stored in formats no one can access and the like. However, there are
+limitations to what can be made open when it comes to data in typical
+medical research. It is also an area where both practical and legal
+issues have to be considered, so it is often necessary to consult legal
+and technical staff.
+
+# What aspects are *not* covered in this document?
+
+## The structure of data files and folders
+
+A structured approach to storage of data and other documents in a
+research project is of course important. However, the level in this
+document is on a somewhat lower level with a focus on more practical
+aspects of data management. A good source for more details on structures
+on the higher level is an 
+[article](https://lakartidningen.se/klinik-och-vetenskap-1/2013/02/att-strukturera-och-dokumentera-forskningsprojekt/) by Eloranta et al, as well as information at the [UMU library
+web](https://www.umu.se/bibliotek/forskningsdata/samla-och-organisera/).
+
+## Anonymous or pseudonymized data
+
+In most research involving humans, issues of integrity and handling data
+on individuals securely are important. At the same time, the subjects
+are unique individuals, and some way of keeping track of everyone is
+needed. It has become common to use some *key*, an identifying variable.
+
+Procedures and legal frameworks for dealing with these issues are mostly
+general, but the local implementation is often specific to the actual
+organization. So in this document the choice has been not to cover these
+issues but rather to refer to frameworks which should be at place where
+you work.
+
+## FAIR data
+
+The concept of FAIR data (Findable, Accessible, Interoperable and
+Reusable) has been discussed during the last decade. As the [GO
+FAIR](https://www.go-fair.org) network describes the ambitions: 
+
+> The ultimate goal of FAIR is to optimise the reuse of data. To achieve this,
+metadata and data should be well-described so that they can be
+replicated and/or combined in different settings.
+
+The focus is on systems and structures to make data available and is
+part of a "movement" emphasizing "open data" and open science". This
+implies a focus on both legal and practical arrangements - repositories,
+identifiers for data,... - and are as such commendable. The suggestions
+put forward in this document certainly are in line with the suggestions
+made by the GO FAIR network. However, we limit the scope for this
+document to more direct suggestions for how you should work with your
+own datasets to simplify your research life. The possible extension into
+making research data comply to the FAIR principles is covered by
+university libraries, see for example [UMU: Research
+data](https://www.umu.se/bibliotek/forskningsdata). The recommendations
+made here should make this process smoother.
+
+## Storage of data
+
+Researchers and students involved in the kind of research we have
+focused upon here are active in different organizational settings:
+mainly within universities, mainly in clinical work or mixtures of the
+two, within a smaller group or with a multicenter approach spanning an
+entire country or even several countries. Depending on the organization
+you find yourself in, there are hopefully structures in place for
+storing your research data in a secure way. However, the practical
+arrangements are so different that it is not possible to provide any
+specific suggestions here.
+
+## Data management plans
+
+The concept of data management plans (DMP) has become emphasized in many
+contexts. Funding agencies increasingly require that applications
+contain such DMP's. The basic idea is that a DMP should provide
+information on how research data is managed throughout the project, and
+the purpose is to ensure that data is handled securely, legally and
+ethically. A good source is [Checklist for data management
+plans](https://snd.se/en/resources/checklist-data-management-plans)
+provided by [the Swedish National Data Service
+(SND)](https://snd.se/en).
+
+## Archiving
+
+There are legal requirements for the archiving of completed research
+projects: *what*, *how*, *for how long* are typical questions.
+Universities and health care providers have their own implementations
+for the procedures involved.
+
+## Manuals for particular software systems
+
+Software used for statistical analyses encompass a range of systems,
+from spreadsheets to more comprehensive systems specifically designed
+for statistics. There is a lot of material for almost any software, such
+as style guides or more technical details for how the system should be
+used. The scope for this document is however a general one, so the main
+text will not cover details for any particular system. There are however
+some software specific notes for some of the aspects covered in the main
+text in the [Appendices](#appendices).
+
+# Principles for data file organization
+
+The most important advice is to be as *consistent* as possible
+irrespective of the chosen structure.
+
+## Examples of common problems
+
+The list of problems when dealing with research data can be made very
+long. There are however some more common problems: - Inconsistencies in
+naming variables can make coding and writing challenging - Lack of
+documention of variable content and codes used can make calculations or
+creation of new derived variables more or less impossible - Data
+structured in visually appealing format - parts of data placed in
+different spots in the file, colored cells,... - is often difficult to
+process for statistical analysis - A database is often a changing
+entity. A structure which is not well-defined in advance can make the
+subsequent work a lot more difficult than needed. - New data points
+might be added, others can be filtered out from analysis. - New derived
+variables are created during the project. - Dates can be stored in a
+number of formats, and the process to convert dates into a format that
+works in your software can be hard - Exchange of data between different
+software systems can be difficult - Datasets collected in more than one
+centre are often marred by inconsistencies in the formats used by the
+centres involved, making the compilation of data challenging
+
+## Definitions
+
+| Concept/term | Intended meaning |
+|------------------------------------|------------------------------------|
+| `Individual` | Any kind of "basic unit": a person, an animal, an organization,... It does not necessarily denote a human, but the term *individual* will for the of simplicity be used throughout this document |
+| `Observation` | Often called *record* or *case*, where there could be one observation or more for each individual |
+| ? | Andra begrepp som bör definieras? |
+
+## Basic structure of the study file
+
+The basic structure of your study file should typically be *one*
+rectangle, preferably as a complete rectangle with no gaps, see [Missing
+values](#missing-values). This however can be achieved in a number of
+ways. There are cases where you have multiple observations for each
+individual, and here the rectangle can be set up with separate variables
+for the different time points, a so called *wide* format, or with
+multiple rows for each individual, a *long* format. Depending on the
+calculations you want to make, it could be necessary to use either of
+these setups, or even both, see [Wide or long
+format](#wide-or-long-format). In both cases, you have a rectangular
+design.
+
+It should also be noted that data often comes in separate files where
+each file preferably should be organized as such rectangles. Having such
+multiple files could be the best way to store and archive your data, but
+for the analysis you want to do, the relevant pieces usually have to be
+merged into one single rectangular study file, see [Compilation of data
+split into pieces...](#compilation-of-data-split-into-pieces-into-one-dataset).
+
+## Tidy data
+
+There are many ways to organize data where subsequent processing can be
+difficult. The ways in which they should be organized to make processing
+easier is however not that many. Some general recommendations: 
+
+- Let each column correspond to one variable 
+- Let each row correspond to one observation 
+- Let all variables in the dataset have the same
+unit of observation [Den här skrivningen känns svår. Räcker det med att skriva
+det som kommer efter? förklara vad som menas. Handlar detta om att data
+kan organiseras i flera "tabeller", ex en med "basic charcteristics" och
+en rad per skalle, och en annan med flera rader per skalle? Det är i
+alla fall ett av Wickhams förslag. 
+- Let each cell contain only a single value
+
+In the following examples, there are often combinations of flaws, not
+just the ones mentioned in the header. Especially important are the
+missing cells, see [Missing values](#missing-values).
+
+## Each column corresponds to one variable in the dataset
+
+Bad example
+
+id    female   male   age
+---   -------  -----  ----
+1     yes             34
+2              yes    38
+3              yes    42
+
+Another bad example
+
+id   stage_1    stage_2   stage_3    stage_4 
+---  --------   --------  --------   --------
+1    yes                                
+2                         yes              
+3               yes                       
+
+A good example
+
+id   sex   age
+---  ----  ----
+1    f     34
+2    m     38
+3    m     42
+
+Another good example
+
+id   stage 
+---  ------
+1    1    
+2    3    
+3    2    
+
+When the dategories are mutually exclusive, there is only need for one
+variable/column. When there can be more than one category, as when the
+question is "Which of the following medications have been prescribed?",
+this could be dealt with in several ways, see [Multiple
+response](#multiple-response).
+
+## Each row corresponds to one observation
+
+### Bad example
+
+id    variable   value  
+---   ---------  -------
+1     sex        female 
+1     age        34     
+2     sex        male   
+2     age        38     
+3     sex        male   
+3     age        42     
+
+### A better example
+
+id   sex    age 
+---  ----   ----
+1    f      34  
+2    m      38  
+3    m      42  
+
+### Another bad example
+
+id    time   sex   age   hba1c 
+---   -----  ----  ----  ------
+1     1      f     34    32    
+      2                  29    
+2     1      m     38    33    
+      2                  30    
+3     1      m     38    31    
+      2                  32    
+
+### A better example
+
+id   time   sex   age   hba1c 
+---  -----  ----  ----  ------------
+1    1      f     34    32    
+1    2      f     34    29    
+2    1      m     38    33    
+2    2      m     38    30    
+3    1      m     38    31    
+3    2      m     38    32    
+
+If the unit of observation is a unique combination of more than one
+variable, such as here with `id` and  time`, then all cells should be filled
+with the correct content.
+
+## All cells contain only one value
+
+### Bad example
+
+Here the variable `birthplace` is meant to cover geographical region *and*
+municipality:
+
+id   sex   age   birthplace
+---  ----  ----  ----------- 
+1    f     34    24A 
+2    m     38    25C 
+3    m     42    24B
+
+### Good example
+
+Use separate variables for region and municipality: 
+
+id   sex   age   birth_region   birth_municipality
+---  ----  ----  -------------  ------------------- 
+1    f     34    24             A 
+2    m     38    25             C 
+3    m     42    24             B
+
+# Variable names
+
+We recommend using a simple structure as it well works everywhere. Be
+consistent.
+
+## Use names in English
+
+-   Do not use diacritics such as *å*, *ä*, *ö* or the like in variable
+    names
+
+-   Bad example: `Åtgärd`
+
+-   Good example: `treatment`
+
+## Separate parts in names with an underscore ("\_")
+
+-   Do not use spaces, dots (".") or upper case letters to separate
+    parts
+
+Bad example: `Type of primary cardiovascular event`
+
+Better example: `type_of_primary_cardiovascular_event`
+
+An even better example: `cv_type`
+
+Use of underscore is often called "snake_case".
+
+## Keep your variable names short
+
+Name variables so that the names provide a sufficiently clear
+description of the content. They do not have to be exhaustive. Short and
+meaningful is worth striving for.
+
+Bad example: `type_of_primary_cardiovascular_event`
+
+Good example: `cv_type`
+
+## Use only lower case letters
+
+-   Do not begin variable names with upper case letters
+-   Do not use names with mixed cases ("CamelCase")
+
+Bad example: `RespondenStatus`
+
+Good example: `respondent_status`
+
+## Do not include explanations of codes in the variable name
+
+Bad example: `diabetes_1_yes_0_no`
+
+An even worse example:
+`Type of primary event: 1= IS; 2=ICH; 3=SE; 4: Bleeding BARC 3a,b,c or 5; 5: All cause of death`
+
+Good example: `diabetes`
+
+Another good example: `type_primary_event`
+
+#Documentation of variables and codes
+
+## If possible, assign explanatory "labels" to variables
+
+Variables should of course be understandable. This is however not always
+that simple to achieve, especially if a variable name is short and there
+are many versions of the content, e g `dog1` and `dog5` for a child
+being allergic (yes/no) to dogs at 1 and 5 years of age respectively. In
+such cases, it is critical to assign good explanations to the variables.
+How this is done depends on your software. Irrespective of how you set
+up such explanatory labels, you should always keep a system for this
+kind of information.
+
+If the software you use allows such labels to be set, then your
+analyses could also be simplified with such labels since the output -
+tables and graphs - in many software systems will make direct use of 
+these labels in full text.
+
+## Categorical variables - numerical or text/string?
+
+Categorical variables such as age group *can* consist of text in string
+formats, i e stored as text rather than numbers, such as "25-64", "65-".
+Most statistical software can handle such formats. However, it is often
+simpler to use numerical codes, so if you use string formatted
+variables, be prepared to convert these to numerical ones.
+
+## Codes should be assigned explanations
+
+Categorical variables consist of markers for categories, such as age
+group. The codes used in such variables must be assigned explanations.
+The suggestions made for variables are valid or codes too: they should
+be informative but not longer than needed. These codes are an important
+part of your [codebook](#create-and-maintain-a-codebook).
+
+If you work with spreadsheets, you could at least use comments.
+
+## Variables measured at different time points {#variables-measured-at-different-time-points}
+
+Given that the dataset is in a wide format (see [Wide or long
+format?](#wide-or-long-format), variables measured at different time
+points should be given exactly the same name, except for a (short)
+suffix.
+
+Bad example: `Hba1c_at_baseline`, `hba1c_at_3month_followup`,
+`hba1c_12_mon_fu`
+
+Good example: `hba1c_0`, `hba1c_3m`, `hba1c_12m`
+
+If you have a [long](#wide-or-long-format) format for this kind of data,
+then the `hba1c` data should consist of one variable with the actual
+`hba1c` levels and another (`time`) with values such as 0, 3, 12 for
+each observation.
+
+## Create and maintain a codebook {#create-and-maintain-a-codebook}
+
+A codebook describes the contents, structure, and layout of a data
+collection. More specifically explanations of variables, units for
+measurement variables, explanation of codes used in categorical
+variables, codes used for missing values and other attributes of the
+variables in your dataset. There are routines in the software most
+commonly used to generate such codebooks, but it could also consist of
+an Excel file with one sheet containing explanations for variable names,
+another sheet with explanations of the codes used. A short example of a
+Excel code book is found in one of the appendices.
+
+# Wide or long format? {#wide-or-long-format}
+
+Many datasets consists of data points from one measurement period, and
+the basic structure can be a fairly simple "rectangular" set of data. It
+is however also common with datasets where *time* is a fundamental
+variable. Follow-up of patients makes it necessary to have data on
+patients from baseline, from 3 months, 12 monts and possibly later than
+that. The structure in such cases has to take these different times into
+account, and there are basically two ways to do so: *wide* and *long*
+formats.
+
+There is no single correct structure for such data, it can even be
+necessary to have both structures in parallel due to the details for
+your software. As a consequence, switching from one format to the other
+is a common task. It can however be quite demanding, so it could be wise
+to consult a statistician when the need arises.
+
+Naturally this also applies for other cases where there is some
+repetition of similar measurements: different places, different parts of
+the body etc.
+
+Data from such instances in time can also be stored in different ways: 
+
+- As one file for each point in time 
+- As different worksheets in the same spreadsheet 
+- With all the observations in one single file
+
+If the structure is one of the two first you will probably have to join
+the parts together sooner or later. Such joining is described in [Data
+on the same individuals...](#data-on-the-same-individuals-in-more-than-one-place).
+
+## Wide format
+
+Here the basic observation is one "individual": one row per individual,
+several variables for each timepoint.
+
+Example:
+
+id   sex   hba1c_1   hba1c_2   hba1c_3 
+---  ----  --------  --------  --------
+1    m     34        36        38      
+2    m     32        32        33      
+
+## Long format
+
+The basic observation in such a structure is the combination of
+individual *and* timepoint. Then there is one row for each such
+combination, resulting in several rows for each individual.
+
+Example:
+
+id   sex   hba1c   time 
+---  ----  ------  -----
+1    m     34      1    
+1    m     36      2    
+1    m     38      3    
+2    f     32      1    
+2    f     32      2    
+2    f     33      3    
+
+# Missing values {#missing-values}
+
+Few datasets are free from missing values, and there can be many reasons
+behind: - Survey respondents might have left questions unanswered. - In
+a study of the effects of some treatment, participants can drop out from
+planned followup. - Medical records often have gaps for variables which
+at the time for registration were not considered as sufficiently
+important to register.
+
+Such gaps should be treated with care. A general advice is to put effort
+into keeping track of such gaps since the subsequent analyses could be
+hampered. Some typical problems:
+
+-   In order to make readers of your results trust your findings, you
+    should be able to keep track of and report such reasons and the
+    frequence with which they have occurred.
+-   Depending on software, missing values are in some systems coded with
+    numerical values, such as 999 eller -999. If these are not defined
+    as missing values, any calculation of such a variable will be
+    erroneus.
+
+Generally, it is good to deal with missing values explicitly so that you
+can distinguish between truly missing values and unintentionally missing
+values. In other words, it is recommended to work with files where gaps
+in your original data have been filled. This is especially important in
+the raw data file. If you find empty cells later on in the process, you
+know that their origin lies in the calculations you have made.
+
+An approach which works in all systems is to accompany a variable with
+missing values with another separate variable/column where the reasons
+for the missingness is recorded. This could however result in a large
+amount of variables. There are also other built-in mechanisms to deal
+with missing data in different software systems, see [Some notes for
+specific software systems](#some-notes-for-specific-software-systems).
+
+You should also scan through your data and codebooks accompanying your
+data and look for indications of how missing values have been dealt
+with. A general advice, especially when you work with datasets delivered
+to you, is that you in an early stage go through the variables. Go
+through the data in any way you can imagine, e g by sorting (both
+ascending and descending order) to help you find missing values. You
+need to make your self acquainted with your data.
+
+# Miscellaneous
+
+## Data on the same individuals in more than one place {#data-on-the-same-individuals-in-more-than-one-place}
+
+It is sometimes good to store data for the same individuals in different
+files. However, those files must often be combined into one single study
+file before you can begin with your analyses. Then it is necessary to
+have a common "key" variable in all parts meant to be joined:
+"personnummer" or some other identifying variable. The "key" could also
+consist of more than one variable, e g `id` *and* `time` if the basic
+unit of observation is one particular individual at a specific point in
+time.
+
+For variables with any kind of repetition, in time or otherwise, it is
+also good to have the same names and formats when data in parts are to
+be joined, see [Variables measured at different time
+points](#variables-measured-at-different-time-points).
+
+## Compilation of data split into pieces into one dataset {#compilation-of-data-split-into-pieces-into-one-dataset}
+
+Data stored in separate parts must in most cases be compiled into one
+dataset, a process often called "matching", "merging" or "joining". The
+most straightforward matching is when you have one row for each
+individual in all files, a 1-to-1 matching. Another kind of matching is
+when you want to assign information from one file with unique records
+for each individual into a file with many rows for the individuals
+involved, a so called 1-to-n or 1-to-many matching.
+
+These matching procedures can be made in any decent statistical
+software. It could however be quite demanding to make it work, so do not
+hesitate to consult a statistician.
+
+## Import of files from others
+
+It is common to have datasets coming from other sources:
+Socialstyrelsen, other data bases and the like, where their export is
+done into files in formats you do not use yourself. For example are
+files from Socialstyrelsen often SAS files, and you might work wth SPSS,
+Stata or R. Files of this kind can almost always be imported directly
+into your statistical software.
+
+There can still be problems depending on the structure in the files you
+receive. One common example is when a numeric variables such as dates
+are formatted as "string" variables rather than numeric variables. Such
+variables can usually be converted into the format you need, but the
+time needed for such conversions can be quite demanding.
+
+As a general rule, try to communicate with the organization, preferably
+*before* they send files to you, in order to see if they can send files
+in formats which are as easy for you to work with as possible. Do not
+simply accept files in the format they use.
+
+Another advice is to see if you can get the source to send files in both
+*their* preferred format and other formats. It might be possible for
+them to send SPSS, Stata or R data files. They can also always export
+data files into non-proprietary formats such as comma or tab-delimited
+files. You can always import such files yourself. In this process, you
+are usually able to control the finer details of the import, so even it
+this could be seen as a rather laborious workaround, it can still take
+less time than converting variables *after* import.
+
+## Should all parts of the datasets be put in good order?
+
+As has been stated elsewhere in this document, data often comes from
+different sources: your own manually entered data, external databases,
+data collected by others or the like.
+
+In the case of data from other sources, you are not in complete control
+yourself. There might be a lot of variables already named, having more
+or less complete documentation, and the structures might not be in line
+with the recommendations made here. Then you have to make a decision
+about to what extent "old" structures should be changed. There is not
+any simple rule for how to proceed in such cases. You could limit your
+efforts to your own nwewly derived variables only, or you could set out
+to change all of the old variables.
+
+Our recommendation is that whatever approach is chosen, you should try
+to make these decisions early in the process. It does not become easier
+to set up a good structure for the data later.
+
+## The raw data file
+
+The original datafiles containg raw data should be kept raw, i e
+unchanged, preferably also in some other folder than cleaned files
+and/or files with new derived variables. Raw data files could also be
+write-protected as an extra countermeasure against possible errors.
+
+## How should additions and corrections to data files be made?
+
+It is easier to say how additions and changes should *not* be made:
+manual changes in the datafiles. Such changes seldom leave any trace,
+and it could become impossible to to understand what changes have been
+made. A better approach is to use scripts/syntax. If scripts are not
+used, then all such changes should be clearly documented in a log book.
+
+Changes should also be made in new copies of the file rather than
+keeping one single file, see [Version control](#version-control).
+
+## Backup
+
+## Version control {#version-control}
+
+There are systems available for version control, e g "git" or "github",
+which are particularly suitable for R users. However, for users of other
+systems, Git may not provide a smooth workflow, so other alternatives
+should be used. A simple solution is to add the current date in the file
+names whenever a change is made. In that way, you might perhaps end up
+with many different but similar versions of the files. However, that is
+a small problem, and one that you can solve in the later stages of the
+process when there are files you clearly do not need anymore.
+
+## Multiple response {#multiple-response}
+
+One fairly common type of data which needs extra attention is when there
+could be more than one answer, as for example to the question *Which of
+the following medicines have been prescribed during the last year? One
+or more alternatives can be marked* followed by possible alternatives
+such as "substance A", "substance B" and so on.
+
+This kind of data can be dealt with in more than one way:
+
+### Only a few combinations, mostly only one of the alternative is chosen
+
+One single variable, combinations are entered as more than one code: 
+
+id   medicine 
+---  --------- 
+1    a 
+2    a 
+3    b 
+4    ab 
+5    c
+
+This is technically possible, but not recommended. One common
+consequence is that there could be many different combinations, making
+it difficult to effectively summarize the variable..
+
+### Many possible combinations
+
+One column/variable for each alternative, where each alternative is a
+binary variable either with 0's and 1's or simply 1's: 
+
+id   med_1   med_2   med_3 
+---  ------  ------  ------ 
+1    1       0       0 
+2    1       0       0
+3    0       1       0 
+4    1       1       0 
+5    0       0       1
+
+This is usually the best approach, both because the data can easily be
+summarized and because all information is available and fairly
+strightforward to set up into other formats.
+
+# Advice for manual entry of data
+
+The recommendations made in this document are meant to be valid for any
+kind of data, irrespective of whether the source is someone else or if
+you have entered data manually yourself. Such manual entry is an
+important stage where you should strive to minimize the risk for errors
+and to make the entry process as smooth as possible.
+
+## Systems for data entry
+
+Data could be entered in a number of ways:
+
+System                                            Comments 
+-------------------                               -----------------------------------------------------------------
+Excel/spreadsheets                                Possible, flexible and available, but not particlarly safe. Consider adding "validation" to the data entry. 
+Statistical software (SPSS, Stata R,...)          Works similarly to spreadsheets, perhaps less flexible and usually without validation procedures. 
+Redcap or other systems for "case report forms"   Works quite well, validation is possible, data can be exported to formats suitable for import into statistical software. 
+Database systems: MS Access, SQL,...              Perhaps the safest tool, however setting up a good database structure is not always that straightforward. 
+
+## Keep the structure simple in order to minimize errors
+
+Whatever structure, one single file for all data or data split in
+separate parts, make your utmost to set up a *simple* structure which is
+easy for all involved parties to understand and follow. Simplicity,
+consistency and ease of use is the best way to minimize errors and to
+avoid timeconsuming pitfalls.
+
+## Different worksheets or different files for data in the same individuals
+
+If you use a spreadsheet for manual entry and there are different
+sources for the basic sources, such as repeated data from different time
+points, then the different pieces can be stored as separate files or as
+separate worksheets in one single spreadsheet.
+
+## If there are questions, put comments in adjoining columns
+
+Bad example: 
+
+id   sex   hba1c_1   hba1c_2   hba1c_3
+---  ----  --------  --------  --------
+1    m     34        36?       38 
+2    m     32        32        33 (error?)
+
+Good example: 
+
+id   sex   hba1c_1   hba1c_1_c   hba1c_2   hba1c_2_c   hba1c_3    hba1c_3_c
+---  ----  --------  ----------  --------  ----------  ---------  ---------- 
+1    m     34                    36        ?           38         
+2    m     32                    32                    33         error?
+
+## Dates
+
+In many research projects, *time* is involved. Counting the time from
+diagnosis to death and delimiting the records to some specific time
+period are common tasks. In order to make the treatment of time
+variables as simple as possible, there are some general suggestions
+especially relevant when you enter dates manually:
+
+-   Be consistent. Whatever way dates are entered, use one system.
+-   Avoid formats for dates which can be misunderstood: 121110 could
+    mean Nov 10 2012, Nov 12 2010 or even Dec 11 2010.
+-   A good way to enter dates in line with international standards (ISO
+    8601) is the YYYY-MM-DD format, i e four digits for the year and two
+    for month and day repsectively. The "-" separator is preferred, but
+    not always necessary.
+-   A safe way to enter dates (and times if needed) is to use separate
+    variabels for year, month and day (and possibly hour, minute and
+    second too). There are most certainly procedures in your statistical
+    software which can be used to combine these into a working date/time
+    variable.
+
+## No calculated values in the raw data files
+
+Calculations, avser det formler i Excel-blad? Eller
+calculated/aggregated values, typ medelvärden, standardavvikelser/...?
+Eller färgade celler?
+
+(Ett försök) 
+
+Bad example: 
+
+id    sex   hba1c_1   hba1c_1_c   hba1c_2   hba1c_2_c   hba1c_3   hba1c_3_c
+----  ----  --------  ----------  --------  ----------  --------  ---------- 
+1     m     34                    36        ?           38         
+2     m     32                    32                    33        error?
+.     .     .         .           .         .           .         .
+.     .     .         .           .         .           .         .
+.     .     .         .           .         .           .         .
+356   f     31                    31                    30    
+Mean        32.3                  32.1                  31.9    
+Std         3.4                   3.5                   3.6 
+
+Such additions of means and/or other calculated entities have no place
+in your raw data. In the best case, it only makes the structure more
+complicated than necessary. In the worst case, you end up using such
+aggregated values in your subsequent calculations.
+
+## Multi-centre studies
+
+Multi-centre studies are prevalent. In most cases, there is an overall
+ambition to collect data in the centres in a streamlined fashion. Our
+experience however is that the resulting parts from the centres often
+are unnecessarily different. Some examples:
+
+-   Formats for dates differ, one centre could have used "2025.01.01"
+    and another "250101"
+-   In one centre, someone finds ways to "simplify" their own data entry
+    using special formats, not taking into account that their part then
+    becomes different from the parts from other centres
+-   Data is structured and stored in an Excel file with a "visual"
+    layout rather than having separate files or at least separate
+    worksheets for each centre
+-   ... (Andra exempel?)
+
+The overall recommendation is that you devote time and energy on
+communication and calibrating the procedures for data entry. Also try to
+make all involved understand that even small changes in the data entry
+procedures will cause problems. On a more technical level, if you use
+Excel or similar, try also to add "validation" of the contents in the
+columns in order to minimize the risk for errors and inconsistencies.
+
+
+# Consistency again
+
+It is often not so easy to be consistent. During the research process
+where you assign namns to new derived variables, add explanatory labels
+to the variables and to codes used, maintain a codebook, there are a
+number of steps where choices have to be made and where inconsistencies
+can enter. As authors of this document, we cannot claim that we succeed
+in being entirely consistent ourselves. The basic message here is
+however that you should strive to be as consistent as possible. The more
+consistent, the better. And you should not hope that it will get any
+easier in the future. The gaps left behind today will most often not be
+covered later.
+
+
+# Syntax/scripts/do files {#syntax-files}
+
+We strongly recommend that you work with "syntax" as a way to run your
+processing of data, i e setting up "code" which is stored in specific
+files for whatever you want to achieve, code which subsequently can be
+executed. It is not uncommon that users begin with using menus rather
+than syntax, so it could be preceived as a hurdle. However, our
+experience that there are many advantages with using syntax, and not
+that many disadvantages:
+
+-   You can add explanatory comments in the syntax files, making it much
+    easier afterwards to see what you have done.
+-   A syntax files is a rather complete record of what you have done.
+-   If data is changed, e g additions of new records or the deletion of
+    others, then going through all steps already done through the use of
+    menus is often not possible or at least very demanding. With syntax
+    it is often a matter of a few clicks.
+-   In many statistical procedures there are options which might not be
+    available in the menus.
+
+Depending on the software, the creation of syntax can be more or less
+straightforward, but it can always be done. Put in another way, one
+reason, along with several others, why we would not recommend use of
+spreadsheets for more systematic statistical work is that there is not
+any simple way to run such software with syntax.
+
+When you choose to use syntax, a basic recommendation is to have different scripts for different tasks,
+typically
+
+- Import of data file 
+- Data cleaning 
+- Analysis, possibly in steps.
+
+You could of course use a single syntax file for all parts - import of files, cleaning, analysis and presentation - but this tends to result in long files which can be difficult to navigate your way through. 
+
+# When the project is about to be closed?
+
+-   Contact the person or unit responsible for archiving in order to
+    find out what parts of your files and documents should be archived,
+    what formats they prefer and how the whole package should be stored.
+-   Create codebooks for your data files.
+-   Save the codebook in different formats: as plain text, pdf, HTML,
+    Word, Excel, simply in any format which could be suitable for
+    another reader.
+-   Save the data in the format used in your software system.
+-   Save the data in non-proprietary formats such as CSV or tab
+    separated, perhaps also in proprietary formats such as Excel or SAS
+    files. Here the most important are the non-proprietary formats since
+    such files should be possible to read in all systems. However,
+    keeping other formats can simplify future use.
+
+# Some final warnings
+
+-   Don't calculate the time between events by manual calculations based
+    on your calendar. There are always better ways to do this in your
+    software.
+-   Don't try to combine data stored in separate files by manual
+    cut-and-paste operations. See [Compilation of data split into pieces
+    into one dataset](#compilation-of-data-split-into-pieces-into-one-dataset).
+-   Don't calculate new variables for combinations of your basic
+    variables, such as a binary variable for "males_age_34_and_older",
+    unless it is absolutely necessary. In most cases, you can use the
+    two variables "gender" and "age" together to filter out such
+    records, leaving you with a lot fewer variables.
+
+# Other support at UMU
+
+Most or even all university libraries provide support for working with research 
+data. At UMU, you can read more at [Hantera forskningsdata](https://www.umu.se/forskare/planera-och-genomfora/hantera-forskningsdata).
+
+# References
+
+
+-   Broman, K. W., & Woo, K. H. (2018). Data Organization in
+    Spreadsheets. The American Statistician, 72(1), 2–10.
+    <https://doi.org/10.1080/00031305.2017.1375989>
+- Eloranta, S. et al, (2013). [Att strukturera och dokumentera forskningsprojekt](https://lakartidningen.se/klinik-och-vetenskap-1/2013/02/att-strukturera-och-dokumentera-forskningsprojekt). Läkartidningen, nr 8.    
+-   Wickham, H. (2014). Tidy Data. Journal of Statistical Software,
+    59(10), 1–23. <https://doi.org/10.18637/jss.v059.i10>
+
+# Other sources
+
+-   [The FAIR principles](https://www.go-fair.org/fair-principles)
+-   Svensk Nationell datatjänst (SND), <https://snd.se/sv>
+-   Reproducible research?
+-   [R for Data Science (2nd ed)](https://r4ds.hadley.nz/)
+-   Corti, L., Van den Eynden, V., Bishop, L., Woollard, M. (2019),
+    [Managing and Sharing Research Data - A Guide to Good
+    Practice (Second Edition)](https://uk.sagepub.com/en-gb/eur/managing-and-sharing-research-data/book262873), SAGE
+-   Collier, J. (2009), [Using SPSS Syntax: A Beginner's
+Guide](https://uk.sagepub.com/en-gb/eur/using-spss-syntax/book229167?_gl=1%2A1emm9pb%2A_up%2AMQ..%2A_ga%2AOTI1NTI3NDMuMTc4MDM5OTgyMQ..%2A_ga_60R758KFDG%2AczE3ODAzOTk4MjAkbzEkZzAkdDE3ODAzOTk4MjAkajYwJGwwJGgxMjMxNzc2MzU0), SAGE
+- Long, J.S. (2009), [The Workflow of Data Analysis Using Stata](https://www.stata.com/bookstore/workflow-data-analysis-stata), Stata Press, Stata Press
+
+# Appendices {#appendices}
+
+## Codebook in Excel
+
+```{=html}
+<!---Min (RL) tanke här är att ge förslag på hur filinformation ska sparas ner om man nu nödvändigtvis vill ha det i Excel, eller kanske allra helst csv-format. Typ:
+* En flik/fil med grundläggande information om datamaterialet: projektnamn, år, ansvarig,... Eventuellt referenser till metodbeskrivningar?
+* En flik/fil med variabelnamn och variabelförklaringar, helst i separata kolumner
+* En flik/fil med variabelnamn och kodförklaringar, gärna med en rad per variabel och flera kolumner för koder och förklaringar, typ “sex|1|man|2|kvinna|” (utan |). Den strukturen är rätt lätt att importera till SPSS och generera syntax för ```VALUE
+LABELS```. Samtidigt är den hyfsat generell och någorlunda lättläst.
+* Annan information, ex enheter (“mmol/ml”), helst med variabelnamn och enhet (eller annat) som separata kolumner. Detta kan vara bra för arkiveringsvinkeln också i och med att det kan sparas ner i ett icke-proprietärt filformat. Eller är detta överflödigt och/eller kan lämnas till UB:s förslag/mallar?-->
+```
+
+
+
+
+## Style guides
+
+There are many style guides for the use of specific softwares, such as
+[Google's R style guide](https://google.github.io/styleguide/Rguide.html#:~:text=R%20is%20a%20high-level%20programming%20language%20used%20primarily,the%20Tidyverse%20Style%20Guide%20by%20Hadley%20Wickham%20license)
+or [The DIME Analytics Stata Style
+Guide](https://worldbank.github.io/dime-data-handbook/coding.html#the-dime-analytics-stata-style-guide).
+
+It is however important to realize that there are many such guides, and
+they might not be telling the same story.
+
+## Notes on R
+
+### Missing values
+
+## Notes on SAS
+
+### Missing values
+
+## Notes on SPSS
+
+### Logging steps taken
+
+One way to get an explicit account of the steps taken is to add the
+syntax text to the output generated by the software. Go to
+`Edit/Options` where you go to the `Viewer` window. There the "Display
+commands in the log" can be marked. Besides giving a more complete
+account of what you have done, the text can also be copied into syntax
+files.
+
+There is also a "journal" keeping track of what has been done, which is
+simply a text file with the underlying syntax. This journal can be used
+as a security measure in case you have not remembered to save files as
+intended. The default location of the journal file can be seen in the
+`File locations` part of the `Edit/Options`.
+
+### Variable attributes
+
+In SPSS, variables have *attributes* such as `type` (numeric, string,
+date etc), `missing`, `measure` (nominal, ordinal, scale) and some other
+aspects of the variables at hand. The `measure` attribute is
+particularly important since calculations or representations of your
+variables are in many routines determined by this attribute. Two
+examples are *Custom Tables* and *Chart Builder*, where for a scale
+variable the default is to calculate a mean, whereas the default for a
+nominal variable is a count. As a general rule, it is recommended that
+attributes are set for your variables of interest. However, in those
+routines where the measure attribute is important, you can make
+temporary changes of the measure level.
+
+You can also define your own attributes, which could be a way to store
+other types of metadata, units for measurements is one simple example.
+In the menu system, the place to define such attributes is
+`Data/Define Variable Properties`. These attributes can also be included
+in the codebook.
+
+### Missing values
+
+Some sources recommend that missing values in numeric variables should
+not be coded with numeric values, but rather by other means. This does
+however *not* work in SPSS. A numeric variable can only contain numeric
+values, so any attempt to use both numbers and string data in the same
+variable results in it being defined as a string variable.
+
+The way missing values for numeric variables is treated in SPSS is to
+use the *system missing* and *user defined missing* status. *System
+missing* is simply an empty cell, displayed as a dot (.) in the cell.
+*User defined missing* means that you can define a specific number as a
+missing value, which makes the system exclude that cell in all
+calculations. You can also set more than one value to discern between
+different reasons for the missing mechanism, e g "77: no answer", "88:
+wrong answer", "99: no known reason for missing" or the like. This also
+requires that labels are assigned to these different values.
+
+It is generally common to use "impossible" values to define user
+missing, e g -9 in a variable for height, or 999 in a variable
+containing answers to a question with five alternatives in a
+questionnaire.
+
+The use of numerical values to define missing values makes subsequent
+processing of the data relatively simple, but there is also a definite
+drawback: all values intended to be markers for missing values *must* be
+defined as such. In case you get datasets from other sources, take your
+time to check if such values have been used. If you do not set the
+missing defintions correctly, all calculations based on variables with
+these gaps will be erroneous. In case you use procedures for imputation
+of missing values, then these procedures will also not work properly if
+there are values which should be defined as missing values but are not.
+
+Besides using syntax for the definition of missing values, you can also
+use `Data/Define Variable Properties` in the menu system. The missing
+definition can also be set in the `Variable View` window, but since
+changes there are done without trace, this is not the recommended way.
+
+For string variables, there is no specific code for a missing value, it
+is simply shown as an empty cell. You *can* define missing values for
+string variables, but it not that common. A more common approach is to
+convert categorical string variables into numeric ones (see e g
+`Transform/Automatic Recode`) followed by defining numerical values as
+user missing.
+
+Another issue is the way SPSS treat missing values in assignments: - Use
+of operators such as "+" for addition yield missing values when there
+are missing values: `COMPUTE sum=var1+var2.`gives a missing a value if
+one or both of `var1` and `var2` are missing. - Use of functions such as
+`SUM` uses all non-missing values: `COMPUTE sum=SUM(var1, var2).` sums
+the content of `var1` and `var2` when one or both them are non-missing.
+
+### Codebook
+
+Codebooks can be produced by use of `Analyze/Reports/Codebook`. The
+result can preferably be placed as the single output in an output window
+which subsequently can be saved as an SPSS output file, but perhaps even
+better as a pdf or HTML file.
+
+The structure in the codebook is also determined by the attributes set
+for your variables, most importantly the measure attribute. In order to
+make the best documentation of the data, it is clearly recommended that
+you assign "correct" attributes to your variables as fully as possible.
+
+### Syntax files
+
+The overall recommendation is that you use syntax for your processing.
+With time, you might learn how to write syntax directly for some
+commands. However, the easiest tool is usually the `Paste` button found
+in almost everywhere. So press `Paste` instead of `OK`. Often directly,
+sometimes after you have experimented with different versions by use of
+menus and the OK button, but after which you press the Paste button when
+you think you have come up with a more definite version.
+
+The syntax files can also become quite large. As a way to split the
+commands into more manageable chunks, see [Syntax/scripts/do files](#syntax-files), 
+you can use a "master" syntax file to invoke sub files by `INSERT FILE` (for details,
+see the help documentation for `INSERT`). Another way is to have one
+file for reading the raw files, another for the cleaning, in which you
+invoke the previous file in the beginning with the `INSERT FILE`
+command.
+
+### Help
+
+Help files can be found for almost every part of the menu system. One
+way to find such support is to use the `Help` button found in most of
+the windows/frames opened through the menus. For help with syntax,
+pressing F1 will open the help file for the actual command your marker
+is placed in. You can also see the `Help` menu in the menu system.
+
+## Stata
+
+### Missing values
