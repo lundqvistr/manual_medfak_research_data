@@ -4,7 +4,8 @@ author: "Forum Norr Statistikernätverket"
 format:
   html:
     toc: true
-    toc-location: left # Or 'right' or 'body'
+    number-sections: true
+    toc-location: left
 site: bookdown::bookdown_site
 output:
   bookdown::gitbook:
