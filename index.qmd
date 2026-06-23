@@ -1,20 +1,3 @@
----
-title: "Manual for dealing with data in research projects"
-subtitle: "Work in progress..."
-author: "By: Forum Norr Statistikernätverket"
-site: bookdown::bookdown_site
-output:
-  bookdown::gitbook:
-    number_sections: true
-    toc_depth: 4
-  bookdown::pdf_book:
-    number_sections: true
-    toc: true
-editor_options: 
-  markdown: 
-    wrap: 72
----
-
 # Introduction
 
 The authors of the present document work as biostatisticians where we
