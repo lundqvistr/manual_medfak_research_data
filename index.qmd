@@ -238,7 +238,7 @@ made here should make this process smoother.
 Researchers and students involved in the kind of research we have
 focused upon here are active in different organizational settings:
 mainly within universities, mainly in clinical work or mixtures of the
-two, within a smaller group or with a multicenter approach spanning an
+two, within a smaller group or with a multicentre approach spanning an
 entire country or even several countries. Depending on the organization
 you find yourself in, there are hopefully structures in place for
 storing your research data in a secure way. However, the practical
@@ -935,9 +935,9 @@ in your raw data. In the best case, it only makes the structure more
 complicated than necessary. In the worst case, you end up using such
 aggregated values in your subsequent calculations.
 
-## Multi-centre studies
+## Multicentre studies
 
-Multi-centre studies are prevalent. In most cases, there is an overall
+Multicentre studies are prevalent. In most cases, there is an overall
 ambition to collect data in the centres in a streamlined fashion. Our
 experience however is that the resulting parts from the centres often
 are unnecessarily different. Some examples:
