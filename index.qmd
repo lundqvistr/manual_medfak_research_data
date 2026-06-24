@@ -99,10 +99,10 @@ There are of course projects where there is only one kind of data
 source, either only data from others or only manually entered data, but
 the description is meant to cover the following steps:
 
--   Import of data
--   Cleaning
--   Matching data in more than one file into one single file
--   Manual entry of data
+*   Import of data
+*   Cleaning
+*   Matching data in more than one file into one single file
+*   Manual entry of data
 
 To be more precise, procedures for import, cleaning and matching will
 *not* be covered, but rather steps you can take to make the work in all
@@ -289,28 +289,28 @@ irrespective of the chosen structure.
 The list of problems when dealing with research data can be made very
 long. There are however some more common problems: 
 
-- Inconsistencies in naming variables can make coding and writing challenging 
+* Inconsistencies in naming variables can make coding and writing challenging 
 
-- Lack of documention of variable content and codes used can make calculations or
+* Lack of documention of variable content and codes used can make calculations or
 creation of new derived variables more or less impossible 
 
-- Data structured in visually appealing format - parts of data placed in
+* Data structured in visually appealing format - parts of data placed in
 different spots in the file, colored cells,... - is often difficult to
 process for statistical analysis 
 
-- A database is often a changing entity. A structure which is not well-defined in advance can make the
+* A database is often a changing entity. A structure which is not well-defined in advance can make the
 subsequent work a lot more difficult than needed. 
 
-- New data points might be added, others can be filtered out from analysis. 
+* New data points might be added, others can be filtered out from analysis. 
 
-- New derived variables are created during the project. 
+* New derived variables are created during the project. 
 
-- Dates can be stored in a number of formats, and the process to convert dates into a format that
+* Dates can be stored in a number of formats, and the process to convert dates into a format that
 works in your software can be hard 
 
-- Exchange of data between different software systems can be difficult 
+* Exchange of data between different software systems can be difficult 
 
-- Datasets collected in more than one centre are often marred by inconsistencies in the formats used by the
+* Datasets collected in more than one centre are often marred by inconsistencies in the formats used by the
 centres involved, making the compilation of data challenging
 
 ## Definitions
@@ -348,15 +348,15 @@ There are many ways to organize data where subsequent processing can be
 difficult. The ways in which they should be organized to make processing
 easier is however not that many. Some general recommendations: 
 
-- Let each column correspond to one variable 
-- Let each row correspond to one observation 
-- Let all variables in the dataset have the same
+* Let each column correspond to one variable 
+* Let each row correspond to one observation 
+* Let all variables in the dataset have the same
 unit of observation [Den här skrivningen känns svår. Räcker det med att skriva
 det som kommer efter? förklara vad som menas. Handlar detta om att data
 kan organiseras i flera "tabeller", ex en med "basic charcteristics" och
 en rad per skalle, och en annan med flera rader per skalle? Det är i
 alla fall ett av Wickhams förslag. 
-- Let each cell contain only a single value
+* Let each cell contain only a single value
 
 In the following examples, there are often combinations of flaws, not
 just the ones mentioned in the header. Especially important are the
@@ -479,7 +479,7 @@ consistent.
 
 ## Use names in English
 
--   Do not use diacritics such as *å*, *ä*, *ö* or the like in variable
+*   Do not use diacritics such as *å*, *ä*, *ö* or the like in variable
     names
 
 -   Bad example: `Åtgärd`
@@ -488,7 +488,7 @@ consistent.
 
 ## Separate parts in names with an underscore ("\_")
 
--   Do not use spaces, dots (".") or upper case letters to separate
+*   Do not use spaces, dots (".") or upper case letters to separate
     parts
 
 Bad example: `Type of primary cardiovascular event`
@@ -511,8 +511,8 @@ Good example: `cv_type`
 
 ## Use only lower case letters
 
--   Do not begin variable names with upper case letters
--   Do not use names with mixed cases ("CamelCase")
+*   Do not begin variable names with upper case letters
+*   Do not use names with mixed cases ("CamelCase")
 
 Bad example: `RespondenStatus`
 
@@ -617,9 +617,9 @@ the body etc.
 
 Data from such instances in time can also be stored in different ways: 
 
-- As one file for each point in time 
-- As different worksheets in the same spreadsheet 
-- With all the observations in one single file
+* As one file for each point in time 
+* As different worksheets in the same spreadsheet 
+* With all the observations in one single file
 
 If the structure is one of the two first you will probably have to join
 the parts together sooner or later. Such joining is described in [Data
@@ -657,12 +657,14 @@ id   sex   hba1c   time
 # Missing values {#missing-values}
 
 Few datasets are free from missing values, and there can be many reasons
-behind: - Survey respondents might have left questions unanswered. 
+behind: 
 
-- In a study of the effects of some treatment, participants can drop out from
+* Survey respondents might have left questions unanswered. 
+
+* In a study of the effects of some treatment, participants can drop out from
 planned followup. 
 
-- Medical records often have gaps for variables which
+* Medical records often have gaps for variables which
 at the time for registration were not considered as sufficiently
 important to register.
 
@@ -670,10 +672,10 @@ Such gaps should be treated with care. A general advice is to put effort
 into keeping track of such gaps since the subsequent analyses could be
 hampered. Some typical problems:
 
--   In order to make readers of your results trust your findings, you
+*   In order to make readers of your results trust your findings, you
     should be able to keep track of and report such reasons and the
     frequence with which they have occurred.
--   Depending on software, missing values are in some systems coded with
+*   Depending on software, missing values are in some systems coded with
     numerical values, such as 999 eller -999. If these are not defined
     as missing values, any calculation of such a variable will be
     erroneus.
@@ -912,14 +914,14 @@ period are common tasks. In order to make the treatment of time
 variables as simple as possible, there are some general suggestions
 especially relevant when you enter dates manually:
 
--   Be consistent. Whatever way dates are entered, use one system.
--   Avoid formats for dates which can be misunderstood: 121110 could
+*   Be consistent. Whatever way dates are entered, use one system.
+*   Avoid formats for dates which can be misunderstood: 121110 could
     mean Nov 10 2012, Nov 12 2010 or even Dec 11 2010.
--   A good way to enter dates in line with international standards (ISO
+*   A good way to enter dates in line with international standards (ISO
     8601) is the YYYY-MM-DD format, *i e* four digits for the year and two
     for month and day respectively. The "-" separator is preferred, but
     not always necessary.
--   A safe way to enter dates (and times if needed) is to use separate
+*   A safe way to enter dates (and times if needed) is to use separate
     variabels for year, month and day (and possibly hour, minute and
     second too). There are most certainly procedures in your statistical
     software which can be used to combine these into a working date/time
@@ -958,15 +960,15 @@ ambition to collect data in the centres in a streamlined fashion. Our
 experience however is that the resulting parts from the centres often
 are unnecessarily different. Some examples:
 
--   Formats for dates differ, one centre could have used "2025.01.01"
+*   Formats for dates differ, one centre could have used "2025.01.01"
     and another "250101"
--   In one centre, someone finds ways to "simplify" their own data entry
+*   In one centre, someone finds ways to "simplify" their own data entry
     using special formats, not taking into account that their part then
     becomes different from the parts from other centres
--   Data is structured and stored in an Excel file with a "visual"
+*   Data is structured and stored in an Excel file with a "visual"
     layout rather than having separate files or at least separate
     worksheets for each centre
--   ... (Andra exempel?)
+*   ... (Andra exempel?)
 
 The overall recommendation is that you devote time and energy on
 communication and calibrating the procedures for data entry. Also try to
@@ -1000,14 +1002,14 @@ than syntax, so it could be preceived as a hurdle. However, our
 experience that there are many advantages with using syntax, and not
 that many disadvantages:
 
--   You can add explanatory comments in the syntax files, making it much
+*   You can add explanatory comments in the syntax files, making it much
     easier afterwards to see what you have done.
--   A syntax files is a rather complete record of what you have done.
--   If data is changed, e g additions of new records or the deletion of
+*   A syntax files is a rather complete record of what you have done.
+*   If data is changed, e g additions of new records or the deletion of
     others, then going through all steps already done through the use of
     menus is often not possible or at least very demanding. With syntax
     it is often a matter of a few clicks.
--   In many statistical procedures there are options which might not be
+*   In many statistical procedures there are options which might not be
     available in the menus.
 
 Depending on the software, the creation of syntax can be more or less
@@ -1019,23 +1021,23 @@ any simple way to run such software with syntax.
 When you choose to use syntax, a basic recommendation is to have different scripts for different tasks,
 typically
 
-- Import of data file 
-- Data cleaning 
-- Analysis, possibly in steps.
+* Import of data file 
+* Data cleaning 
+* Analysis, possibly in steps.
 
 You could of course use a single syntax file for all parts - import of files, cleaning, analysis and presentation - but this tends to result in long files which can be difficult to navigate your way through. 
 
 # When the project is about to be closed?
 
--   Contact the person or unit responsible for archiving in order to
+*   Contact the person or unit responsible for archiving in order to
     find out what parts of your files and documents should be archived,
     what formats they prefer and how the whole package should be stored.
--   Create codebooks for your data files.
--   Save the codebook in different formats: as plain text, pdf, HTML,
+*   Create codebooks for your data files.
+*   Save the codebook in different formats: as plain text, pdf, HTML,
     Word, Excel, simply in any format which could be suitable for
     another reader.
--   Save the data in the format used in your software system.
--   Save the data in non-proprietary formats such as CSV or tab
+*   Save the data in the format used in your software system.
+*   Save the data in non-proprietary formats such as CSV or tab
     separated, perhaps also in proprietary formats such as Excel or SAS
     files. Here the most important are the non-proprietary formats since
     such files should be possible to read in all systems. However,
@@ -1043,13 +1045,13 @@ You could of course use a single syntax file for all parts - import of files, cl
 
 # Some final warnings
 
--   Don't calculate the time between events by manual calculations based
+*   Don't calculate the time between events by manual calculations based
     on your calendar. There are always better ways to do this in your
     software.
--   Don't try to combine data stored in separate files by manual
+*   Don't try to combine data stored in separate files by manual
     cut-and-paste operations. See [Compilation of data split into pieces
     into one dataset](#compilation-of-data-split-into-pieces-into-one-dataset).
--   Don't calculate new variables for combinations of your basic
+*   Don't calculate new variables for combinations of your basic
     variables, such as a binary variable for "males_age_34_and_older",
     unless it is absolutely necessary. In most cases, you can use the
     two variables "gender" and "age" together to filter out such
@@ -1063,25 +1065,25 @@ data. At UMU, you can read more at [Hantera forskningsdata](https://www.umu.se/f
 # References
 
 
--   Broman, K. W., & Woo, K. H. (2018). Data Organization in
+*   Broman, K. W., & Woo, K. H. (2018). Data Organization in
     Spreadsheets. The American Statistician, 72(1), 2–10.
     <https://doi.org/10.1080/00031305.2017.1375989>
-- Eloranta, S. et al, (2013). [Att strukturera och dokumentera forskningsprojekt](https://lakartidningen.se/klinik-och-vetenskap-1/2013/02/att-strukturera-och-dokumentera-forskningsprojekt). Läkartidningen, nr 8.    
--   Wickham, H. (2014). Tidy Data. Journal of Statistical Software,
+* Eloranta, S. et al, (2013). [Att strukturera och dokumentera forskningsprojekt](https://lakartidningen.se/klinik-och-vetenskap-1/2013/02/att-strukturera-och-dokumentera-forskningsprojekt). Läkartidningen, nr 8.    
+*   Wickham, H. (2014). Tidy Data. Journal of Statistical Software,
     59(10), 1–23. <https://doi.org/10.18637/jss.v059.i10>
 
 # Other sources
 
--   [The FAIR principles](https://www.go-fair.org/fair-principles)
--   Svensk Nationell datatjänst (SND), <https://snd.se/sv>
--   Reproducible research?
--   [R for Data Science (2nd ed)](https://r4ds.hadley.nz/)
--   Corti, L., Van den Eynden, V., Bishop, L., Woollard, M. (2019),
+*   [The FAIR principles](https://www.go-fair.org/fair-principles)
+*   Svensk Nationell datatjänst (SND), <https://snd.se/sv>
+*   Reproducible research?
+*   [R for Data Science (2nd ed)](https://r4ds.hadley.nz/)
+*   Corti, L., Van den Eynden, V., Bishop, L., Woollard, M. (2019),
     [Managing and Sharing Research Data - A Guide to Good
     Practice (Second Edition)](https://uk.sagepub.com/en-gb/eur/managing-and-sharing-research-data/book262873), SAGE
--   Collier, J. (2009), [Using SPSS Syntax: A Beginner's
+*   Collier, J. (2009), [Using SPSS Syntax: A Beginner's
 Guide](https://uk.sagepub.com/en-gb/eur/using-spss-syntax/book229167?_gl=1%2A1emm9pb%2A_up%2AMQ..%2A_ga%2AOTI1NTI3NDMuMTc4MDM5OTgyMQ..%2A_ga_60R758KFDG%2AczE3ODAzOTk4MjAkbzEkZzAkdDE3ODAzOTk4MjAkajYwJGwwJGgxMjMxNzc2MzU0), SAGE
-- Long, J.S. (2009), [The Workflow of Data Analysis Using Stata](https://www.stata.com/bookstore/workflow-data-analysis-stata), Stata Press, Stata Press
+* Long, J.S. (2009), [The Workflow of Data Analysis Using Stata](https://www.stata.com/bookstore/workflow-data-analysis-stata), Stata Press, Stata Press
 
 # Appendices {#appendices}
 
