@@ -516,7 +516,7 @@ Good example: `diabetes`
 
 Another good example: `type_primary_event`
 
-#Documentation of variables and codes
+# Documentation of variables and codes
 
 ## If possible, assign explanatory "labels" to variables
 
