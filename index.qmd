@@ -404,7 +404,7 @@ response](#multiple-response).
 
 ## Each row corresponds to one observation
 
-### Bad example
+Bad example
 
 id    variable   value  
 ---   ---------  -------
@@ -415,7 +415,7 @@ id    variable   value
 3     sex        male   
 3     age        42     
 
-### A better example
+A better example
 
 id   sex    age 
 ---  ----   ----
@@ -423,7 +423,7 @@ id   sex    age
 2    m      38  
 3    m      42  
 
-### Another bad example
+Another bad example
 
 id    time   sex   age   hba1c 
 ---   -----  ----  ----  ------
@@ -434,7 +434,7 @@ id    time   sex   age   hba1c
 3     1      m     38    31    
       2                  32    
 
-### A better example
+A better example
 
 id   time   sex   age   hba1c 
 ---  -----  ----  ----  ------------
@@ -451,7 +451,7 @@ with the correct content.
 
 ## All cells contain only one value
 
-### Bad example
+Bad example
 
 Here the variable `birthplace` is meant to cover geographical region *and*
 municipality:
@@ -462,7 +462,7 @@ id   sex   age   birthplace
 2    m     38    25C 
 3    m     42    24B
 
-### Good example
+Good example
 
 Use separate variables for region and municipality: 
 
@@ -482,9 +482,9 @@ consistent.
 *   Do not use diacritics such as *å*, *ä*, *ö* or the like in variable
     names
 
--   Bad example: `Åtgärd`
+Bad example: `Åtgärd`
 
--   Good example: `treatment`
+Good example: `treatment`
 
 ## Separate parts in names with an underscore ("\_")
 
