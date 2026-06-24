@@ -283,21 +283,30 @@ irrespective of the chosen structure.
 ## Examples of common problems
 
 The list of problems when dealing with research data can be made very
-long. There are however some more common problems: - Inconsistencies in
-naming variables can make coding and writing challenging - Lack of
-documention of variable content and codes used can make calculations or
-creation of new derived variables more or less impossible - Data
-structured in visually appealing format - parts of data placed in
+long. There are however some more common problems: 
+
+- Inconsistencies in naming variables can make coding and writing challenging 
+
+- Lack of documention of variable content and codes used can make calculations or
+creation of new derived variables more or less impossible 
+
+- Data structured in visually appealing format - parts of data placed in
 different spots in the file, colored cells,... - is often difficult to
-process for statistical analysis - A database is often a changing
-entity. A structure which is not well-defined in advance can make the
-subsequent work a lot more difficult than needed. - New data points
-might be added, others can be filtered out from analysis. - New derived
-variables are created during the project. - Dates can be stored in a
-number of formats, and the process to convert dates into a format that
-works in your software can be hard - Exchange of data between different
-software systems can be difficult - Datasets collected in more than one
-centre are often marred by inconsistencies in the formats used by the
+process for statistical analysis 
+
+- A database is often a changing entity. A structure which is not well-defined in advance can make the
+subsequent work a lot more difficult than needed. 
+
+- New data points might be added, others can be filtered out from analysis. 
+
+- New derived variables are created during the project. 
+
+- Dates can be stored in a number of formats, and the process to convert dates into a format that
+works in your software can be hard 
+
+- Exchange of data between different software systems can be difficult 
+
+- Datasets collected in more than one centre are often marred by inconsistencies in the formats used by the
 centres involved, making the compilation of data challenging
 
 ## Definitions
@@ -644,9 +653,12 @@ id   sex   hba1c   time
 # Missing values {#missing-values}
 
 Few datasets are free from missing values, and there can be many reasons
-behind: - Survey respondents might have left questions unanswered. - In
-a study of the effects of some treatment, participants can drop out from
-planned followup. - Medical records often have gaps for variables which
+behind: - Survey respondents might have left questions unanswered. 
+
+- In a study of the effects of some treatment, participants can drop out from
+planned followup. 
+
+- Medical records often have gaps for variables which
 at the time for registration were not considered as sufficiently
 important to register.
 
@@ -1183,11 +1195,12 @@ convert categorical string variables into numeric ones (see e g
 `Transform/Automatic Recode`) followed by defining numerical values as
 user missing.
 
-Another issue is the way SPSS treat missing values in assignments: - Use
-of operators such as "+" for addition yield missing values when there
+Another issue is the way SPSS treat missing values in assignments: 
+
+* Use of operators such as "+" for addition yield missing values when there
 are missing values: `COMPUTE sum=var1+var2.`gives a missing a value if
-one or both of `var1` and `var2` are missing. - Use of functions such as
-`SUM` uses all non-missing values: `COMPUTE sum=SUM(var1, var2).` sums
+one or both of `var1` and `var2` are missing. 
+* Use of functions such as `SUM` uses all non-missing values: `COMPUTE sum=SUM(var1, var2).` sums
 the content of `var1` and `var2` when one or both them are non-missing.
 
 ### Codebook
