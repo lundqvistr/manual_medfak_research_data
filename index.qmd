@@ -114,7 +114,7 @@ Data is stored in different forms and for different purposes. Some forms
 are suited for tasks such as *follow-up of individual patients* in their
 daily care. Then the use of the file can be simplified by using a
 "visual layout", colors, bold text or the like. The goal in such cases
-usually is to collect and use data for each individual, not to calculate
+is usually to collect and use data for each individual, not to calculate
 summaries such as means for several individuals.
 
 Another purpose is *research* where the goal is to summarize important
@@ -550,7 +550,7 @@ these labels in full text.
 ## Categorical variables - numerical or text/string?
 
 Categorical variables such as age group *can* consist of text in string
-formats, i e stored as text rather than numbers, such as "25-64", "65-".
+formats, _i e_ stored as text rather than numbers, such as "25-64", "65-".
 Most statistical software can handle such formats. However, it is often
 simpler to use numerical codes, so if you use string formatted
 variables, be prepared to convert these to numerical ones.
@@ -782,7 +782,7 @@ to set up a good structure for the data later.
 
 ## The raw data file
 
-The original datafiles containg raw data should be kept raw, i e
+The original datafiles containg raw data should be kept raw, _i e_
 unchanged, preferably also in some other folder than cleaned files
 and/or files with new derived variables. Raw data files could also be
 write-protected as an extra countermeasure against possible errors.
@@ -916,8 +916,8 @@ especially relevant when you enter dates manually:
 -   Avoid formats for dates which can be misunderstood: 121110 could
     mean Nov 10 2012, Nov 12 2010 or even Dec 11 2010.
 -   A good way to enter dates in line with international standards (ISO
-    8601) is the YYYY-MM-DD format, i e four digits for the year and two
-    for month and day repsectively. The "-" separator is preferred, but
+    8601) is the YYYY-MM-DD format, _i e_ four digits for the year and two
+    for month and day respectively. The "-" separator is preferred, but
     not always necessary.
 -   A safe way to enter dates (and times if needed) is to use separate
     variabels for year, month and day (and possibly hour, minute and
@@ -993,7 +993,7 @@ covered later.
 # Syntax/scripts/do files {#syntax-files}
 
 We strongly recommend that you work with "syntax" as a way to run your
-processing of data, i e setting up "code" which is stored in specific
+processing of data, _i e_ setting up "code" which is stored in specific
 files for whatever you want to achieve, code which subsequently can be
 executed. It is not uncommon that users begin with using menus rather
 than syntax, so it could be preceived as a hurdle. However, our
