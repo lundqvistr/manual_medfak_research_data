@@ -1,3 +1,7 @@
+::: {.callout-warning}
+## Work in progress
+:::
+
 # Introduction
 
 The authors of the present document work as biostatisticians where we
