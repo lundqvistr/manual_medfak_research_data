@@ -1178,7 +1178,7 @@ changes there are done without trace, this is not the recommended way.
 
 For string variables, there is no specific code for a missing value, it
 is simply shown as an empty cell. You *can* define missing values for
-string variables, but it not that common. A more common approach is to
+string variables, but it is not that common. A more common approach is to
 convert categorical string variables into numeric ones (see e g
 `Transform/Automatic Recode`) followed by defining numerical values as
 user missing.
