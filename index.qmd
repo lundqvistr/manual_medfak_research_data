@@ -1,4 +1,4 @@
-::: {.callout-warning}
+::: {.callout-important}
 ## Work in progress
 :::
 
