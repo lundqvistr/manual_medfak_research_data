@@ -75,7 +75,7 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 library(DiagrammeR)
 mermaid('
 graph LR
-  A(Raw data, keep unchanged)-->|Cleaning, preferably <br/>with scripts|B(Study file)
+  A(Raw data, keep unchanged)-->|Cleaning, <br/>preferably <br/>with scripts|B(Study file)
   B --> |Analysis|C(Results)     
 ')
 ```
@@ -85,7 +85,7 @@ Eller detta?
 ```{r, echo=FALSE}
 mermaid('
 graph LR
-  A[Data from others] --> |Import <br/>and <br/>cleaning|C
+  A[Data from others] --> |Import and <br/>cleaning|C
   B[Data you manage] --> C[Study file]
   D[Results]
   C -->|Analysis|D     
