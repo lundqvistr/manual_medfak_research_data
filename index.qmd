@@ -306,12 +306,12 @@ subsequent work a lot more difficult than needed.
 * New derived variables are created during the project. 
 
 * Dates can be stored in a number of formats, and the process to convert dates into a format that
-works in your software can be hard 
+works in your software can be hard. 
 
-* Exchange of data between different software systems can be difficult 
+* Exchange of data between different software systems can be difficult. 
 
 * Datasets collected in more than one centre are often marred by inconsistencies in the formats used by the
-centres involved, making the compilation of data challenging
+centres involved, making the compilation of data challenging.
 
 ## Definitions
 
@@ -319,7 +319,7 @@ centres involved, making the compilation of data challenging
 |------------------------------------|------------------------------------|
 | `Individual` | Any kind of "basic unit": a person, an animal, an organization,... It does not necessarily denote a human, but the term *individual* will for the of simplicity be used throughout this document |
 | `Observation` | Often called *record* or *case*, where there could be one observation or more for each individual |
-| ? | Andra begrepp som bör definieras? |
+| ? | [Andra begrepp som bör definieras?]{.mark} |
 
 ## Basic structure of the study file
 
@@ -351,11 +351,12 @@ easier is however not that many. Some general recommendations:
 * Let each column correspond to one variable 
 * Let each row correspond to one observation 
 * Let all variables in the dataset have the same
-unit of observation [Den här skrivningen känns svår. Räcker det med att skriva
+unit of observation 
+    [Den här skrivningen känns svår. Räcker det med att skriva
 det som kommer efter? förklara vad som menas. Handlar detta om att data
 kan organiseras i flera "tabeller", ex en med "basic charcteristics" och
 en rad per skalle, och en annan med flera rader per skalle? Det är i
-alla fall ett av Wickhams förslag. 
+alla fall ett av Wickhams förslag.]{.mark} 
 * Let each cell contain only a single value
 
 In the following examples, there are often combinations of flaws, not
@@ -691,8 +692,8 @@ An approach which works in all systems is to accompany a variable with
 missing values with another separate variable/column where the reasons
 for the missingness is recorded. This could however result in a large
 amount of variables. There are also other built-in mechanisms to deal
-with missing data in different software systems, see [Some notes for
-specific software systems](#some-notes-for-specific-software-systems).
+with missing data in different software systems, see notes for some 
+specific systems in the [Appendices](#appendices).
 
 You should also scan through your data and codebooks accompanying your
 data and look for indications of how missing values have been dealt
@@ -801,12 +802,16 @@ Changes should also be made in new copies of the file rather than
 keeping one single file, see [Version control](#version-control).
 
 ## Backup
+Backup is important. The simple solution is to store all files at secure 
+servers made available where you work. If such resources are not available 
+or if you for some other reason want to set up backup procedures yourself, 
+make sure backup is done systematically and with regular intervals. 
 
 ## Version control {#version-control}
 
 There are systems available for version control, e g "git" or "github",
 which are particularly suitable for R users. However, for users of other
-systems, Git may not provide a smooth workflow, so other alternatives
+systems, git may not provide a smooth workflow, so other alternatives
 should be used. A simple solution is to add the current date in the file
 names whenever a change is made. In that way, you might perhaps end up
 with many different but similar versions of the files. However, that is
@@ -929,11 +934,11 @@ especially relevant when you enter dates manually:
 
 ## No calculated values in the raw data files
 
-Calculations, avser det formler i Excel-blad? Eller
+    [Calculations, avser det formler i Excel-blad? Eller
 calculated/aggregated values, typ medelvärden, standardavvikelser/...?
-Eller färgade celler?
+Eller färgade celler?]{.mark}
 
-(Ett försök) 
+[(Ett försök)]{.mark}
 
 Bad example: 
 
@@ -1098,12 +1103,9 @@ LABELS```. Samtidigt är den hyfsat generell och någorlunda lättläst.
 * Annan information, ex enheter (“mmol/ml”), helst med variabelnamn och enhet (eller annat) som separata kolumner. Detta kan vara bra för arkiveringsvinkeln också i och med att det kan sparas ner i ett icke-proprietärt filformat. Eller är detta överflödigt och/eller kan lämnas till UB:s förslag/mallar?-->
 ```
 
-
-
-
 ## Style guides
 
-There are many style guides for the use of specific softwares, such as
+There are many style guides for the use of specific software, such as
 [Google's R style guide](https://google.github.io/styleguide/Rguide.html#:~:text=R%20is%20a%20high-level%20programming%20language%20used%20primarily,the%20Tidyverse%20Style%20Guide%20by%20Hadley%20Wickham%20license)
 or [The DIME Analytics Stata Style
 Guide](https://worldbank.github.io/dime-data-handbook/coding.html#the-dime-analytics-stata-style-guide).
