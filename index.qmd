@@ -276,7 +276,7 @@ for statistics. There is a lot of material for almost any software, such
 as style guides or more technical details for how the system should be
 used. The scope for this document is however a general one, so the main
 text will not cover details for any particular system. There are however
-some software specific notes for some of the aspects covered in the main
+some software-specific notes for some of the aspects covered in the main
 text in the [Appendices](#appendices).
 
 # Principles for data file organization
