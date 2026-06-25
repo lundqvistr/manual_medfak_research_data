@@ -447,7 +447,7 @@ id   time   sex   age   hba1c
 3    2      m     38    32    
 
 If the unit of observation is a unique combination of more than one
-variable, such as here with `id` and  time`, then all cells should be filled
+variable, such as here with `id` and  `time`, then all cells should be filled
 with the correct content.
 
 ## All cells contain only one value
@@ -515,7 +515,7 @@ Good example: `cv_type`
 *   Do not begin variable names with upper case letters
 *   Do not use names with mixed cases ("CamelCase")
 
-Bad example: `RespondenStatus`
+Bad example: `RespondentStatus`
 
 Good example: `respondent_status`
 
@@ -536,7 +536,7 @@ Another good example: `type_primary_event`
 
 Variables should of course be understandable. This is however not always
 that simple to achieve, especially if a variable name is short and there
-are many versions of the content, e g `dog1` and `dog5` for a child
+are many versions of the content, *e g* `dog1` and `dog5` for a child
 being allergic (yes/no) to dogs at 1 and 5 years of age respectively. In
 such cases, it is critical to assign good explanations to the variables.
 How this is done depends on your software. Irrespective of how you set
@@ -934,9 +934,7 @@ especially relevant when you enter dates manually:
 
 ## No calculated values in the raw data files
 
-    [Calculations, avser det formler i Excel-blad? Eller
-calculated/aggregated values, typ medelvärden, standardavvikelser/...?
-Eller färgade celler?]{.mark}
+[Calculations, avser det formler i Excel-blad? Eller calculated/aggregated values, typ medelvärden, standardavvikelser/...? Eller färgade celler?]{.mark}
 
 [(Ett försök)]{.mark}
 
