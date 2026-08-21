@@ -93,7 +93,7 @@ graph LR
 ```
 
 In this document we are focusing on the first parts up until "Study
-file", *i e* the analysis part is not covered.
+file", i.a. the analysis part is not covered.
 
 There are of course projects where there is only one kind of data
 source, either only data from others or only manually entered data, but
@@ -536,7 +536,7 @@ Another good example: `type_primary_event`
 
 Variables should of course be understandable. This is however not always
 that simple to achieve, especially if a variable name is short and there
-are many versions of the content, *e g* `dog1` and `dog5` for a child
+are many versions of the content, e.g. `dog1` and `dog5` for a child
 being allergic (yes/no) to dogs at 1 and 5 years of age respectively. In
 such cases, it is critical to assign good explanations to the variables.
 How this is done depends on your software. Irrespective of how you set
@@ -551,7 +551,7 @@ these labels in full text.
 ## Categorical variables - numerical or text/string?
 
 Categorical variables such as age group *can* consist of text in string
-formats, *i e* stored as text rather than numbers, such as "25-64", "65-".
+formats, i.a. stored as text rather than numbers, such as "25-64", "65-".
 Most statistical software can handle such formats. However, it is often
 simpler to use numerical codes, so if you use string formatted
 variables, be prepared to convert these to numerical ones.
@@ -699,7 +699,7 @@ You should also scan through your data and codebooks accompanying your
 data and look for indications of how missing values have been dealt
 with. A general advice, especially when you work with datasets delivered
 to you, is that you in an early stage go through the variables. Go
-through the data in any way you can imagine, *e g* by sorting (both
+through the data in any way you can imagine, e.g. by sorting (both
 ascending and descending order) to help you find missing values. You
 need to make your self acquainted with your data.
 
@@ -712,7 +712,7 @@ files. However, those files must often be combined into one single study
 file before you can begin with your analyses. Then it is necessary to
 have a common "key" variable in all parts meant to be joined:
 "personnummer" or some other identifying variable. The "key" could also
-consist of more than one variable, *e g* `id` *and* `time` if the basic
+consist of more than one variable, e.g. `id` *and* `time` if the basic
 unit of observation is one particular individual at a specific point in
 time.
 
@@ -785,7 +785,7 @@ to set up a good structure for the data later.
 
 ## The raw data file
 
-The original datafiles containg raw data should be kept raw, *i e*
+The original datafiles containg raw data should be kept raw, i.a.
 unchanged, preferably also in some other folder than cleaned files
 and/or files with new derived variables. Raw data files could also be
 write-protected as an extra countermeasure against possible errors.
@@ -809,7 +809,7 @@ make sure backup is done systematically and with regular intervals.
 
 ## Version control {#version-control}
 
-There are systems available for version control, *e g* "git" or "github",
+There are systems available for version control, e.g. "git" or "github",
 which are particularly suitable for R users. However, for users of other
 systems, git may not provide a smooth workflow, so other alternatives
 should be used. A simple solution is to add the current date in the file
@@ -921,7 +921,7 @@ especially relevant when you enter dates manually:
 
 * Be consistent. Whatever way dates are entered, use one system.
 * Avoid formats for dates which can be misunderstood: 121110 could mean Nov 10 2012, Nov 12 2010 or even Dec 11 2010.
-* A good way to enter dates in line with international standards (ISO 8601) is the YYYY-MM-DD format, *i e* four digits for the year and two for month and day respectively. The "-" separator is preferred, but not always necessary.
+* A good way to enter dates in line with international standards (ISO 8601) is the YYYY-MM-DD format, i.a. four digits for the year and two for month and day respectively. The "-" separator is preferred, but not always necessary.
 * A safe way to enter dates (and times if needed) is to use separate
   variabels for year, month and day (and possibly hour, minute and
   second too). There are most certainly procedures in your statistical
@@ -994,7 +994,7 @@ covered later.
 # Syntax/scripts/do files {#syntax-files}
 
 We strongly recommend that you work with "syntax" as a way to run your
-processing of data, *i e* setting up "code" which is stored in specific
+processing of data, i.a. setting up "code" which is stored in specific
 files for whatever you want to achieve, code which subsequently can be
 executed. It is not uncommon that users begin with using menus rather
 than syntax, so it could be preceived as a hurdle. However, our
@@ -1004,7 +1004,7 @@ that many disadvantages:
 * You can add explanatory comments in the syntax files, making it much
   easier afterwards to see what you have done.
 * A syntax files is a rather complete record of what you have done.
-* If data is changed, *e g* additions of new records or the deletion of
+* If data is changed, e.g. additions of new records or the deletion of
   others, then going through all steps already done through the use of
   menus is often not possible or at least very demanding. With syntax
   it is often a matter of a few clicks.
@@ -1167,12 +1167,12 @@ missing* is simply an empty cell, displayed as a dot (.) in the cell.
 *User defined missing* means that you can define a specific number as a
 missing value, which makes the system exclude that cell in all
 calculations. You can also set more than one value to discern between
-different reasons for the missing mechanism, *e g* "77: no answer", "88:
+different reasons for the missing mechanism, e.g. "77: no answer", "88:
 wrong answer", "99: no known reason for missing" or the like. This also
 requires that labels are assigned to these different values.
 
 It is generally common to use "impossible" values to define user
-missing, *e g* -9 in a variable for height, or 999 in a variable
+missing, e.g. -9 in a variable for height, or 999 in a variable
 containing answers to a question with five alternatives in a
 questionnaire.
 
