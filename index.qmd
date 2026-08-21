@@ -776,7 +776,7 @@ or less complete documentation, and the structures might not be in line
 with the recommendations made here. Then you have to make a decision
 about to what extent "old" structures should be changed. There is not
 any simple rule for how to proceed in such cases. You could limit your
-efforts to your own nwewly derived variables only, or you could set out
+efforts to your own newly derived variables only, or you could set out
 to change all of the old variables.
 
 Our recommendation is that whatever approach is chosen, you should try
