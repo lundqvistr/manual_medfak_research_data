@@ -980,7 +980,7 @@ columns in order to minimize the risk for errors and inconsistencies.
 # Consistency again
 
 It is often not so easy to be consistent. During the research process
-where you assign namns to new derived variables, add explanatory labels
+where you assign names to new derived variables, add explanatory labels
 to the variables and to codes used, maintain a codebook, there are a
 number of steps where choices have to be made and where inconsistencies
 can enter. As authors of this document, we cannot claim that we succeed
