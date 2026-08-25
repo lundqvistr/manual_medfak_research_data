@@ -1181,7 +1181,7 @@ processing of the data relatively simple, but there is also a definite
 drawback: all values intended to be markers for missing values *must* be
 defined as such. In case you get datasets from other sources, take your
 time to check if such values have been used. If you do not set the
-missing defintions correctly, all calculations based on variables with
+missing definitions correctly, all calculations based on variables with
 these gaps will be erroneous. In case you use procedures for imputation
 of missing values, then these procedures will also not work properly if
 there are values which should be defined as missing values but are not.
@@ -1198,7 +1198,7 @@ convert categorical string variables into numeric ones (see e g
 `Transform/Automatic Recode`) followed by defining numerical values as
 user missing.
 
-Another issue is the way SPSS treat missing values in assignments: 
+Another issue is the way SPSS treats missing values in assignments: 
 
 * Use of operators such as "+" for addition yield missing values when there
 are missing values: `COMPUTE sum=var1+var2.`gives a missing a value if
@@ -1228,6 +1228,10 @@ sometimes after you have experimented with different versions by use of
 menus and the OK button, but after which you press the Paste button when
 you think you have come up with a more definite version.
 
+If you want to write syntax directly in the syntax file, the system 
+should complete the name of the commands when you enter the first letters 
+in the command. The same goes for subcommands beginning with `\`.
+
 The syntax files can also become quite large. As a way to split the
 commands into more manageable chunks, see [Syntax/scripts/do files](#syntax-files), 
 you can use a "master" syntax file to invoke sub files by `INSERT FILE` (for details,
@@ -1235,6 +1239,14 @@ see the help documentation for `INSERT`). Another way is to have one
 file for reading the raw files, another for the cleaning, in which you
 invoke the previous file in the beginning with the `INSERT FILE`
 command.
+
+There are also often ways to write more compact syntax than what you get from use 
+of `Paste`. An example is when you assign the same labels to a set of similar 
+variables. It is of course possible to do this one variable at a time, but you 
+can write `VALUE LABELS var1 var2 var 3 var4 1 'Yes' 2 'No'.` If the variables 
+are located together as a block you can also use 
+`VALUE LABELS var1 TO var4 1 'Yes' 2 'No'.` For details, read the `Help` files 
+for that actual syntax command.
 
 ### Help
 
