@@ -1140,8 +1140,8 @@ date etc), `missing`, `measure` (nominal, ordinal, scale) and some other
 aspects of the variables at hand. The `measure` attribute is
 particularly important since calculations or representations of your
 variables are in many routines determined by this attribute. Two
-examples are *Custom Tables* and *Chart Builder*, where for a scale
-variable the default is to calculate a mean, whereas the default for a
+examples are *Custom Tables* and *Chart Builder*, where the default for a scale
+variable is to calculate a mean, whereas the default for a
 nominal variable is a count. As a general rule, it is recommended that
 attributes are set for your variables of interest. However, in those
 routines where the measure attribute is important, you can make
