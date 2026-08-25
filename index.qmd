@@ -1118,7 +1118,9 @@ they might not be telling the same story.
 
 ## Notes on SPSS
 
-### One way to learn more about practical issues when working with SPSS is material - recorded lectures, manuals,... - found on [our canvas site](#support). 
+### Practical issues in SPSS
+
+One way to learn more about practical issues when working with SPSS is material - recorded lectures, manuals,... - found on [our canvas site](#support). 
 
 ### Logging steps taken
 
