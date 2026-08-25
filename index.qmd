@@ -1061,7 +1061,7 @@ You could of course use a single syntax file for all parts - import of files, cl
 * Most or even all university libraries provide support for working with research 
 data. At UMU, you can read more at [Hantera forskningsdata](https://www.umu.se/forskare/planera-och-genomfora/hantera-forskningsdata).
 
-* This document has been put together by statisticians working at [Registercentrum Norr](https://rcnorr.se) in Region Västerbotten or in one of the other regions withon Norra sjukvårdsregionen, i.e. Norrbotten, Västernorrland or Jämtland/Härjedalen. Our activities are held as part of [Forum Norr](https://kliniskastudier.se/forum-norr). If you have questions about statistical issues in your research, you are welcome to contact us. More information about past and future activities, especially short lectures on statistics in clinical research, and ways to contact us can be found on [our canvas site]https://canvas.umu.se/courses/2600).
+* This document has been put together by statisticians working at [Registercentrum Norr](https://rcnorr.se) in Region Västerbotten or in one of the other regions within Norra sjukvårdsregionen, i.e. Norrbotten, Västernorrland or Jämtland/Härjedalen. Our activities are held as part of [Forum Norr](https://kliniskastudier.se/forum-norr). If you have questions about statistical issues in your research, you are welcome to contact us. More information about past and future activities, especially short lectures on statistics in clinical research, and ways to contact us can be found on [our canvas site]https://canvas.umu.se/courses/2600).
 # References
 
 * Broman, K. W., & Woo, K. H. (2018). Data Organization in
