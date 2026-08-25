@@ -1206,9 +1206,9 @@ user missing.
 Another issue is the way SPSS treats missing values in assignments: 
 
 * Use of operators such as "+" for addition yield missing values when there
-are missing values: `COMPUTE sum=var1+var2.`gives a missing a value if
+are missing values: ```COMPUTE sum=var1+var2.````gives a missing a value if
 one or both of `var1` and `var2` are missing. 
-* Use of functions such as `SUM` uses all non-missing values: `COMPUTE sum=SUM(var1, var2).` sums
+* Use of functions such as `SUM` uses all non-missing values: ```COMPUTE sum=SUM(var1, var2).``` sums
 the content of `var1` and `var2` when one or both them are non-missing.
 
 ### Codebook
@@ -1248,9 +1248,10 @@ command.
 There are also often ways to write more compact syntax than what you get from use 
 of `Paste`. An example is when you assign the same labels to a set of similar 
 variables. It is of course possible to do this one variable at a time, but you 
-can write `VALUE LABELS var1 var2 var 3 var4 1 'Yes' 2 'No'.` If the variables 
+can write ```VALUE LABELS var1 var2 var 3 var4 1 'Yes' 2 'No'.``` If the variables 
 are located together as a block you can also use 
-`VALUE LABELS var1 TO var4 1 'Yes' 2 'No'.` For details, read the `Help` files 
+```VALUE LABELS var1 TO var4 1 'Yes' 2 'No'.``` 
+For details, read the `Help` files 
 for that actual syntax command.
 
 ### Help
