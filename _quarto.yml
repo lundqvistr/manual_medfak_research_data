@@ -1,5 +1,7 @@
 title: "Manual for dealing with data in research projects"
-author: "Forum Norr Statistikernätverket"
+author: 
+  - name: "Statistikernätverket Forum Norr"
+    url: https://canvas.umu.se/courses/2600
 format:
   html:
     toc: true
