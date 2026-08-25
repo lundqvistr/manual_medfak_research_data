@@ -4,6 +4,7 @@ author:
     url: https://canvas.umu.se/courses/2600
 format:
   html:
+    css: styles.css
     toc: true
     number-sections: true
     toc-location: left
