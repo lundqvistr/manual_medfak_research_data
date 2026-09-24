@@ -16,12 +16,12 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
-      - name: Dölj QMD-filer för att stoppa R-motorn
+      - name: Dölj QMD och RMD-filer för att stoppa R-motorn
         run: |
-          # Vi ändrar filändelsen helt på servern så Quarto bara ser textfiler (.md)
-          for f in *.qmd; do
+          # Vi ändrar filändelsen på BÅDE .qmd och .Rmd till .md på servern
+          for f in *.qmd *.Rmd; do
             if [ -f "$f" ]; then
-              mv "$f" "${f%.qmd}.md"
+              mv "$f" "${f%.*}.md"
             fi
           done
 
