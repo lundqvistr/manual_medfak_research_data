@@ -19,9 +19,13 @@ jobs:
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
-      - name: Rendera och publicera till GitHub Pages
-        uses: quarto-dev/quarto-actions/publish@v2
+      - name: Bygg dokumentet till HTML
+        run: |
+          quarto render --no-execute
+
+      - name: Publicera till GitHub Pages via gh-pages branch
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          target: gh-pages
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site # Om din _quarto.yml sparar på annat ställe (t.ex. docs), ändra här!
+          publish_branch: gh-pages
