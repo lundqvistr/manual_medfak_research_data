@@ -1,8 +1,11 @@
+name: Publicera Quarto-dokument
+
 on:
   push:
-    branches: main
-
-name: Render and Publish
+    branches:
+      - main
+      - master
+  workflow_dispatch:
 
 jobs:
   build-deploy:
@@ -16,9 +19,10 @@ jobs:
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
-      - name: Render and Publish
+      - name: Render and Publish to GitHub Pages
         uses: quarto-dev/quarto-actions/publish@v2
         with:
           target: gh-pages
+          path: . # Detta tvingar Quarto att leta i den nuvarande mappen
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
