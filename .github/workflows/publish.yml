@@ -27,5 +27,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site # Om din _quarto.yml sparar på annat ställe (t.ex. docs), ändra här!
+          publish_dir: ./_site
           publish_branch: gh-pages
