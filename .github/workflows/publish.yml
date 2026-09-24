@@ -19,13 +19,13 @@ jobs:
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
-      - name: Gör om filen till en hemsida
+      - name: Rendera dokument med befintlig layout
         run: |
-          quarto render *.qmd --to html --output-dir public
+          quarto render --no-execute
 
       - name: Publicera på GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
+          publish_dir: ./_site # Om _quarto.yml sparar på annat ställe (t.ex. docs eller output), ändra här!
           publish_branch: gh-pages
