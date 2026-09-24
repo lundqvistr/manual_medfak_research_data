@@ -19,10 +19,13 @@ jobs:
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
-      - name: Render and Publish to GitHub Pages
-        uses: quarto-dev/quarto-actions/publish@v2
+      - name: Rendera Quarto-fil till HTML
+        run: |
+          quarto render *.qmd --to html
+
+      - name: Flytta HTML till GitHub Pages branch
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          target: gh-pages
-          path: . # Detta tvingar Quarto att leta i den nuvarande mappen
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .
+          publish_branch: gh-pages
