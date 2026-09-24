@@ -2,7 +2,7 @@ project:
   type: website
   output-dir: _site
 
-engine: markdown  # <-- DETTA SÄGER TILL QUARTO ATT STRUNTA I R/PYTHON HELT
+engine: markdown  
 
 website:
   title: "Manual for dealing with data in research projects"
@@ -20,7 +20,7 @@ format:
 
 author: 
   - name: "Statistikernätverket Forum Norr"
-    url: https://umu.se
+    url: https://canvas.umu.se/courses/2600
 
 execute:
   freeze: true
