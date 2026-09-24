@@ -1,33 +1,50 @@
-name: Deploy
+# Simple workflow for deploying static content to GitHub Pages
+name: Publish Quarto page to GitHub Pages
 
 on:
-  workflow_dispatch:
+  # Runs on pushes targeting the default branch
   push:
-    branches:
-      - main
+    branches: ["main"]
 
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
+  pages: write
+  id-token: write
 
+# Allow one concurrent deployment
 concurrency:
-  group: ${{ github.workflow }}
+  group: "pages"
   cancel-in-progress: true
 
 jobs:
-  deploy:
+  # Single deploy job since we're just deploying
+  publish-site:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    permissions: 
-      contents: write
-      pages: write
+    container:
+      image: ghcr.io/dukestatsci/r_gh_actions:latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-      - name: Install Quarto
-        uses: quarto-dev/quarto-actions/setup@v2
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Build site
+        run: |
+          quarto render
+      
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+      
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
         with:
-          version: pre-release
-      # Add any additional steps as needed, such as installing dependencies
-      - name: Build and Deploy
-        uses: quarto-dev/quarto-actions/publish@v2
-        with:
-          target: gh-pages
+          path: '_site/'
+      
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
