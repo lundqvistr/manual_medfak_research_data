@@ -1,4 +1,4 @@
-name: Publicera Quarto-dokument
+name: Publicera dokument
 
 on:
   push:
@@ -21,8 +21,9 @@ jobs:
       - name: Förbered webbmapp
         run: |
           mkdir -p _site
-          # Detta gör om din .qmd till en ren HTML-sida utan att Quarto-motorn kraschar
-          cp *.qmd _site/index.html 2>/dev/null || cp *.md _site/index.html 2>/dev/null
+          # Vi kopierar din fil och sparar den som index.md istället för .html
+          # Detta gör att GitHubs inbyggda motor fattar att det är text som ska formateras
+          cp *.qmd _site/index.md 2>/dev/null || cp *.md _site/index.md 2>/dev/null
 
       - name: Ladda upp till GitHub Pages
         uses: actions/upload-pages-artifact@v3
