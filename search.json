@@ -1,17 +1,31 @@
 [
   {
-    "objectID": "examples_bad_2.html",
-    "href": "examples_bad_2.html",
-    "title": "Manual for dealing with data in research projects",
-    "section": "",
-    "text": "Bad format:\n\n\n\nid\ndate\ndiag\nmain_diag\n\n\n\n\n1\n2021/11/20\nI10.1\n1\n\n\n\n\nE05.2\n0\n\n\n2\n2021/12/14\nI10.5\n1\n\n\n3\n2021/11/20\nJ05.5\n1\n\n\n\n\nE04.9\n0\n\n\n\n\nM07.2\n0\n\n\n\nFill all blanks:\n\n\n\nid\ndate\ndiag\nmain_diag\n\n\n\n\n1\n2021/11/20\nI10.1\n1\n\n\n1\n2021/11/20\nE05.2\n0\n\n\n2\n2021/12/14\nI10.5\n1\n\n\n3\n2021/03/20\nJ05.5\n1\n\n\n3\n2021/03/20\nE04.9\n0\n\n\n3\n2021/03/20\nM07.2\n0"
-  },
-  {
     "objectID": "examples_bad_1.html",
     "href": "examples_bad_1.html",
     "title": "Manual for dealing with data in research projects",
     "section": "",
     "text": "Bad format:\n\n\n\nid\n1\n2\n3\n\n\n\n\nage\n45\n56\n54\n\n\nsex\n1\n1\n2\n\n\n\nUse columns for variables, rows for individuals:\n\n\n\nid\nage\nsex\n\n\n\n\n1\n45\n1\n\n\n2\n56\n1\n\n\n3\n54\n2"
+  },
+  {
+    "objectID": "losa_ideer.html",
+    "href": "losa_ideer.html",
+    "title": "1 Lösa idéer och frågor",
+    "section": "",
+    "text": "Nu är det många numrerade avsnitt som är rätt tunna, med lite text. Ska avsnittsindelning göras så attfler delar förs ihop till huvudavsnitt?\nExemplet undet “Each row corresponds to one observation” är väl exempel på något annat?\n\nÄndrat till “Each cell contain only one value”\n\nSkrivning om data som a changing entity under “Examples of common problems”, hör det hit? Vari ligger problemet?\nAvsnittet om consistency under “Principles…” ser inklämt ut. Hur ska det lyftas fram? Med en egen rubrik? Det kanske räcker med det som finns under “Variable names”, där det kanske ska lyftas fram?\nKodbok Excel? Ska vi snyta ihop något eget, eller knycka WLeveransrapport” från LISA? Den senare har laddats upp hit.\nTid, hur räkna? Månader inte bra, kalenderår tveksamt. Dagar? Decimalår?\n\nHör det hit? Är inte det mer av en beskrivning hur bearbetning ska göras? Förslag: ta inte med det, utan ta med ett avsnitt om datum/tid i delen om “manual entry”.\n\n\n\n\n\n\nVilka är inblandade vid UMU, vilka kan tänkas vara intresserade och eventuellt ha förslag och synpunkter?\n\nKlinForsk Norr, Anne-Marie Fors Connolly\nT10: Julia Otten, Marcus Schnitt-Egenolf…\nDoktorander? Eller ska det bli indirekt, via handledare, fakultet,…\nFinns det forum/kanal för handledare? Handledarutbildning?\nBiblioteket? Vem?\n\nBehöver regioner komma med på något sätt? Inte alls givet."
+  },
+  {
+    "objectID": "losa_ideer.html#teknisktinnehåll",
+    "href": "losa_ideer.html#teknisktinnehåll",
+    "title": "1 Lösa idéer och frågor",
+    "section": "",
+    "text": "Nu är det många numrerade avsnitt som är rätt tunna, med lite text. Ska avsnittsindelning göras så attfler delar förs ihop till huvudavsnitt?\nExemplet undet “Each row corresponds to one observation” är väl exempel på något annat?\n\nÄndrat till “Each cell contain only one value”\n\nSkrivning om data som a changing entity under “Examples of common problems”, hör det hit? Vari ligger problemet?\nAvsnittet om consistency under “Principles…” ser inklämt ut. Hur ska det lyftas fram? Med en egen rubrik? Det kanske räcker med det som finns under “Variable names”, där det kanske ska lyftas fram?\nKodbok Excel? Ska vi snyta ihop något eget, eller knycka WLeveransrapport” från LISA? Den senare har laddats upp hit.\nTid, hur räkna? Månader inte bra, kalenderår tveksamt. Dagar? Decimalår?\n\nHör det hit? Är inte det mer av en beskrivning hur bearbetning ska göras? Förslag: ta inte med det, utan ta med ett avsnitt om datum/tid i delen om “manual entry”."
+  },
+  {
+    "objectID": "losa_ideer.html#hur-paketera-organisera-sprida",
+    "href": "losa_ideer.html#hur-paketera-organisera-sprida",
+    "title": "1 Lösa idéer och frågor",
+    "section": "",
+    "text": "Vilka är inblandade vid UMU, vilka kan tänkas vara intresserade och eventuellt ha förslag och synpunkter?\n\nKlinForsk Norr, Anne-Marie Fors Connolly\nT10: Julia Otten, Marcus Schnitt-Egenolf…\nDoktorander? Eller ska det bli indirekt, via handledare, fakultet,…\nFinns det forum/kanal för handledare? Handledarutbildning?\nBiblioteket? Vem?\n\nBehöver regioner komma med på något sätt? Inte alls givet."
   },
   {
     "objectID": "index.html",
@@ -399,24 +413,10 @@
     "text": "22.6 Stata\n\n22.6.1 Missing values"
   },
   {
-    "objectID": "losa_ideer.html",
-    "href": "losa_ideer.html",
-    "title": "1 Lösa idéer och frågor",
+    "objectID": "examples_bad_2.html",
+    "href": "examples_bad_2.html",
+    "title": "Manual for dealing with data in research projects",
     "section": "",
-    "text": "Nu är det många numrerade avsnitt som är rätt tunna, med lite text. Ska avsnittsindelning göras så attfler delar förs ihop till huvudavsnitt?\nExemplet undet “Each row corresponds to one observation” är väl exempel på något annat?\n\nÄndrat till “Each cell contain only one value”\n\nSkrivning om data som a changing entity under “Examples of common problems”, hör det hit? Vari ligger problemet?\nAvsnittet om consistency under “Principles…” ser inklämt ut. Hur ska det lyftas fram? Med en egen rubrik? Det kanske räcker med det som finns under “Variable names”, där det kanske ska lyftas fram?\nKodbok Excel? Ska vi snyta ihop något eget, eller knycka WLeveransrapport” från LISA? Den senare har laddats upp hit.\nTid, hur räkna? Månader inte bra, kalenderår tveksamt. Dagar? Decimalår?\n\nHör det hit? Är inte det mer av en beskrivning hur bearbetning ska göras? Förslag: ta inte med det, utan ta med ett avsnitt om datum/tid i delen om “manual entry”.\n\n\n\n\n\n\nVilka är inblandade vid UMU, vilka kan tänkas vara intresserade och eventuellt ha förslag och synpunkter?\n\nKlinForsk Norr, Anne-Marie Fors Connolly\nT10: Julia Otten, Marcus Schnitt-Egenolf…\nDoktorander? Eller ska det bli indirekt, via handledare, fakultet,…\nFinns det forum/kanal för handledare? Handledarutbildning?\nBiblioteket? Vem?\n\nBehöver regioner komma med på något sätt? Inte alls givet."
-  },
-  {
-    "objectID": "losa_ideer.html#teknisktinnehåll",
-    "href": "losa_ideer.html#teknisktinnehåll",
-    "title": "1 Lösa idéer och frågor",
-    "section": "",
-    "text": "Nu är det många numrerade avsnitt som är rätt tunna, med lite text. Ska avsnittsindelning göras så attfler delar förs ihop till huvudavsnitt?\nExemplet undet “Each row corresponds to one observation” är väl exempel på något annat?\n\nÄndrat till “Each cell contain only one value”\n\nSkrivning om data som a changing entity under “Examples of common problems”, hör det hit? Vari ligger problemet?\nAvsnittet om consistency under “Principles…” ser inklämt ut. Hur ska det lyftas fram? Med en egen rubrik? Det kanske räcker med det som finns under “Variable names”, där det kanske ska lyftas fram?\nKodbok Excel? Ska vi snyta ihop något eget, eller knycka WLeveransrapport” från LISA? Den senare har laddats upp hit.\nTid, hur räkna? Månader inte bra, kalenderår tveksamt. Dagar? Decimalår?\n\nHör det hit? Är inte det mer av en beskrivning hur bearbetning ska göras? Förslag: ta inte med det, utan ta med ett avsnitt om datum/tid i delen om “manual entry”."
-  },
-  {
-    "objectID": "losa_ideer.html#hur-paketera-organisera-sprida",
-    "href": "losa_ideer.html#hur-paketera-organisera-sprida",
-    "title": "1 Lösa idéer och frågor",
-    "section": "",
-    "text": "Vilka är inblandade vid UMU, vilka kan tänkas vara intresserade och eventuellt ha förslag och synpunkter?\n\nKlinForsk Norr, Anne-Marie Fors Connolly\nT10: Julia Otten, Marcus Schnitt-Egenolf…\nDoktorander? Eller ska det bli indirekt, via handledare, fakultet,…\nFinns det forum/kanal för handledare? Handledarutbildning?\nBiblioteket? Vem?\n\nBehöver regioner komma med på något sätt? Inte alls givet."
+    "text": "Bad format:\n\n\n\nid\ndate\ndiag\nmain_diag\n\n\n\n\n1\n2021/11/20\nI10.1\n1\n\n\n\n\nE05.2\n0\n\n\n2\n2021/12/14\nI10.5\n1\n\n\n3\n2021/11/20\nJ05.5\n1\n\n\n\n\nE04.9\n0\n\n\n\n\nM07.2\n0\n\n\n\nFill all blanks:\n\n\n\nid\ndate\ndiag\nmain_diag\n\n\n\n\n1\n2021/11/20\nI10.1\n1\n\n\n1\n2021/11/20\nE05.2\n0\n\n\n2\n2021/12/14\nI10.5\n1\n\n\n3\n2021/03/20\nJ05.5\n1\n\n\n3\n2021/03/20\nE04.9\n0\n\n\n3\n2021/03/20\nM07.2\n0"
   }
 ]
