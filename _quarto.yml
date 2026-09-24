@@ -1,23 +1,24 @@
-title: "Manual for dealing with data in research projects"
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Manual for dealing with data in research projects"
+  sidebar:
+    style: "floating"
+    search: true
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-location: left
+    number-sections: true
+    code-fold: true
+
 author: 
   - name: "Statistikernätverket Forum Norr"
     url: https://canvas.umu.se/courses/2600
-format:
-  html:
-    css: styles.css
-    toc: true
-    number-sections: true
-    toc-location: left
-site: bookdown::bookdown_site
-output:
-  bookdown::gitbook:
-    number_sections: true
-    toc_depth: 4
-  bookdown::pdf_book:
-    number_sections: true
-    toc: true
-editor_options: 
-  markdown: 
-    wrap: 72
+
 execute:
   freeze: true
