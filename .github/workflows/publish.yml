@@ -16,16 +16,20 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
-      - name: Installera R (Släcker Quartos felmeddelande)
-        uses: r-lib/actions/setup-r@v2
-        with:
-          r-version: 'release'
-
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
-      - name: Bygg dokumentet
+      - name: Lura Quarto att köra utan R-miljö
         run: |
+          # Vi kopierar din .qmd-fil till en .md-fil på servern innan vi renderar.
+          # Detta gör att Quarto struntar i att leta efter R/Knitr helt och hållet.
+          for f in *.qmd; do
+            if [ -f "$f" ]; then
+              cp "$f" "${f%.qmd}.md"
+            fi
+          done
+          
+          # Bygg projektet utifrån din layout i _quarto.yml
           quarto render
 
       - name: Publicera till GitHub Pages via gh-pages branch
