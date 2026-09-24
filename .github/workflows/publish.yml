@@ -19,10 +19,13 @@ jobs:
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
-      - name: Rendera och publicera specifik fil
-        uses: quarto-dev/quarto-actions/publish@v2
+      - name: Gör om filen till en hemsida
+        run: |
+          quarto render *.qmd --to html --output-dir public
+
+      - name: Publicera på GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          target: gh-pages
-          path: .
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          publish_branch: gh-pages
