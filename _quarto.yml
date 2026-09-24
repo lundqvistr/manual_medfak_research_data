@@ -19,3 +19,5 @@ output:
 editor_options: 
   markdown: 
     wrap: 72
+execute:
+  freeze: true
