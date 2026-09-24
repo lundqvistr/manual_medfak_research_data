@@ -1,4 +1,4 @@
-name: Publicera dokument
+name: Publicera Dokument
 
 on:
   push:
@@ -18,12 +18,54 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
-      - name: Förbered webbmapp
+      - name: Skapa en vacker HTML-sida direkt
         run: |
           mkdir -p _site
-          # Vi kopierar din fil och sparar den som index.md istället för .html
-          # Detta gör att GitHubs inbyggda motor fattar att det är text som ska formateras
-          cp *.qmd _site/index.md 2>/dev/null || cp *.md _site/index.md 2>/dev/null
+          
+          # 1. Hitta din textfil (oavsett om den heter .qmd eller .md)
+          TEXT_FILE=\$(ls *.qmd *.md 2>/dev/null | head -n 1)
+          
+          # 2. Skapa en snygg, modern och extremt läsbar HTML-sida (index.html)
+          cat << 'EOF' > _site/index.html
+          <!DOCTYPE html>
+          <html lang="sv">
+          <head>
+              <meta charset="UTF-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <title>Dokument</title>
+              <!-- Vi hämtar en modern och ren minimalistisk design -->
+              <link rel="stylesheet" href="https://jsdelivr.net">
+              <style>
+                  body { max-width: 800px; margin: 40px auto; padding: 0 20px; line-height: 1.6; }
+                  pre { background: #f4f4f4; padding: 15px; border-left: 5px solid #0076d1; overflow-x: auto; }
+                  code { font-family: monospace; }
+                  /* Fixar till Quartos callouts så de blir snygga rutor */
+                  .callout-important, .callout-note, .callout-warning { 
+                      background: #fff3cd; border-left: 5px solid #ffc107; padding: 15px; margin: 20px 0; border-radius: 4px;
+                  }
+              </style>
+          </head>
+          <body>
+              <main id="content"></main>
+              
+              <!-- Ett litet smart skript som gör om din text till snygga rubriker och stycken live -->
+              <script src="https://jsdelivr.net"></script>
+              <script>
+                  const rawMarkdown = `
+          EOF
+          
+          # Infoga din text inuti HTML-strukturen
+          cat "$TEXT_FILE" >> _site/index.html
+          
+          cat << 'EOF' >> _site/index.html
+                  `;
+                  // Rensa bort YAML-headern högst upp om det finns en sådan
+                  const cleanMarkdown = rawMarkdown.replace(/^---[\s\S]+?---/, '');
+                  document.getElementById('content').innerHTML = marked.parse(cleanMarkdown);
+              </script>
+          </body>
+          </html>
+          EOF
 
       - name: Ladda upp till GitHub Pages
         uses: actions/upload-pages-artifact@v3
