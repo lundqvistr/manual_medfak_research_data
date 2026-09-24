@@ -19,9 +19,9 @@ jobs:
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
-      - name: Bygg dokumentet
+      - name: Bygg dokumentet utan interaktiva frågor
         run: |
-          quarto render
+          quarto render --no-prompt --verbose
 
       - name: Publicera till GitHub Pages via gh-pages branch
         uses: peaceiris/actions-gh-pages@v4
