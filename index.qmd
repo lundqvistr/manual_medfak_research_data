@@ -86,7 +86,7 @@ graph LR
 ```
 
 In this document we are focusing on the first parts up until "Study
-file", i.a. the analysis part is not covered.
+file", i.e. the analysis part is not covered.
 
 There are of course projects where there is only one kind of data
 source, either only data from others or only manually entered data, but
@@ -544,7 +544,7 @@ these labels in full text.
 ## Categorical variables - numerical or text/string?
 
 Categorical variables such as age group *can* consist of text in string
-formats, i.a. stored as text rather than numbers, such as "25-64", "65-".
+formats, i.e. stored as text rather than numbers, such as "25-64", "65-".
 Most statistical software can handle such formats. However, it is often
 simpler to use numerical codes, so if you use string formatted
 variables, be prepared to convert these to numerical ones.
@@ -778,7 +778,7 @@ to set up a good structure for the data later.
 
 ## The raw data file
 
-The original datafiles containg raw data should be kept raw, i.a.
+The original datafiles containg raw data should be kept raw, i.e.
 unchanged, preferably also in some other folder than cleaned files
 and/or files with new derived variables. Raw data files could also be
 write-protected as an extra countermeasure against possible errors.
@@ -914,7 +914,7 @@ especially relevant when you enter dates manually:
 
 * Be consistent. Whatever way dates are entered, use one system.
 * Avoid formats for dates which can be misunderstood: 121110 could mean Nov 10 2012, Nov 12 2010 or even Dec 11 2010.
-* A good way to enter dates in line with international standards (ISO 8601) is the YYYY-MM-DD format, i.a. four digits for the year and two for month and day respectively. The "-" separator is preferred, but not always necessary.
+* A good way to enter dates in line with international standards (ISO 8601) is the YYYY-MM-DD format, i.e. four digits for the year and two for month and day respectively. The "-" separator is preferred, but not always necessary.
 * A safe way to enter dates (and times if needed) is to use separate
   variabels for year, month and day (and possibly hour, minute and
   second too). There are most certainly procedures in your statistical
@@ -987,7 +987,7 @@ covered later.
 # Syntax/scripts/do files {#syntax-files}
 
 We strongly recommend that you work with "syntax" as a way to run your
-processing of data, i.a. setting up "code" which is stored in specific
+processing of data, i.e. setting up "code" which is stored in specific
 files for whatever you want to achieve, code which subsequently can be
 executed. It is not uncommon that users begin with using menus rather
 than syntax, so it could be preceived as a hurdle. However, our
