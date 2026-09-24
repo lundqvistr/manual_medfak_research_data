@@ -19,9 +19,9 @@ jobs:
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
-      - name: Bygg dokumentet till HTML
+      - name: Bygg dokumentet som ren text
         run: |
-          quarto render --no-execute
+          quarto render --engine markdown
 
       - name: Publicera till GitHub Pages via gh-pages branch
         uses: peaceiris/actions-gh-pages@v4
