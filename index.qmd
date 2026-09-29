@@ -923,10 +923,6 @@ especially relevant when you enter dates manually:
 
 ## No calculated values in the raw data files
 
-[Calculations, avser det formler i Excel-blad? Eller calculated/aggregated values, typ medelvärden, standardavvikelser/...? Eller färgade celler?]{.mark}
-
-[(Ett försök)]{.mark}
-
 Bad example: 
 
 id    sex   hba1c_1   hba1c_1_c   hba1c_2   hba1c_2_c   hba1c_3   hba1c_3_c
