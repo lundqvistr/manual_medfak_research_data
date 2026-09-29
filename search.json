@@ -361,7 +361,7 @@
     "href": "index.html#no-calculated-values-in-the-raw-data-files",
     "title": "1 Introduction",
     "section": "14.6 No calculated values in the raw data files",
-    "text": "14.6 No calculated values in the raw data files\nCalculations, avser det formler i Excel-blad? Eller calculated/aggregated values, typ medelvärden, standardavvikelser/…? Eller färgade celler?\n(Ett försök)\nBad example:\n\n\n\nid\nsex\nhba1c_1\nhba1c_1_c\nhba1c_2\nhba1c_2_c\nhba1c_3\nhba1c_3_c\n\n\n\n\n1\nm\n34\n\n36\n?\n38\n\n\n\n2\nm\n32\n\n32\n\n33\nerror?\n\n\n.\n.\n.\n.\n.\n.\n.\n.\n\n\n.\n.\n.\n.\n.\n.\n.\n.\n\n\n.\n.\n.\n.\n.\n.\n.\n.\n\n\n356\nf\n31\n\n31\n\n30\n\n\n\nMean\n\n32.3\n\n32.1\n\n31.9\n\n\n\nStd\n\n3.4\n\n3.5\n\n3.6\n\n\n\n\nSuch additions of means and/or other calculated entities have no place in your raw data. In the best case, it only makes the structure more complicated than necessary. In the worst case, you end up using such aggregated values in your subsequent calculations."
+    "text": "14.6 No calculated values in the raw data files\nBad example:\n\n\n\nid\nsex\nhba1c_1\nhba1c_1_c\nhba1c_2\nhba1c_2_c\nhba1c_3\nhba1c_3_c\n\n\n\n\n1\nm\n34\n\n36\n?\n38\n\n\n\n2\nm\n32\n\n32\n\n33\nerror?\n\n\n.\n.\n.\n.\n.\n.\n.\n.\n\n\n.\n.\n.\n.\n.\n.\n.\n.\n\n\n.\n.\n.\n.\n.\n.\n.\n.\n\n\n356\nf\n31\n\n31\n\n30\n\n\n\nMean\n\n32.3\n\n32.1\n\n31.9\n\n\n\nStd\n\n3.4\n\n3.5\n\n3.6\n\n\n\n\nSuch additions of means and/or other calculated entities have no place in your raw data. In the best case, it only makes the structure more complicated than necessary. In the worst case, you end up using such aggregated values in your subsequent calculations."
   },
   {
     "objectID": "index.html#multicentre-studies",
