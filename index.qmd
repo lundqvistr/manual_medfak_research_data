@@ -312,7 +312,7 @@ centres involved, making the compilation of data challenging.
 |------------------------------------|------------------------------------|
 | `Individual` | Any kind of "basic unit": a person, an animal, an organization,... It does not necessarily denote a human, but the term *individual* will for the of simplicity be used throughout this document |
 | `Observation` | Often called *record* or *case*, where there could be one observation or more for each individual |
-| ? | [Andra begrepp som bör definieras?]{.mark} |
+| | [? Andra begrepp som bör definieras?]{.mark} |
 
 ## Basic structure of the study file
 
@@ -960,7 +960,7 @@ are unnecessarily different. Some examples:
 * Data is structured and stored in an Excel file with a "visual"
   layout rather than having separate files or at least separate
   worksheets for each centre
-* ... (Andra exempel?)
+* [? Andra exempel?]{.mark}
 
 The overall recommendation is that you devote time and energy on
 communication and calibrating the procedures for data entry. Also try to
